@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Занятие 11 · Трапеция</title>
+<link rel="stylesheet" href="../assets/core.css">
+</head>
+<body data-lesson="L11">
+
+<nav class="topnav"><div class="in">
+  <a class="home" href="../geometry.html">📐 <span>Геометрия · ОГЭ</span></a>
+  <div class="links"></div>
+  <a class="home" href="../spravochnik.html" title="Справочник">📖</a>
+  <div class="progress-pill">Решено <b>0 / 0</b><div class="progress-bar"><i></i></div></div>
+</div></nav>
+
+<div class="container">
+
+<header class="hero">
+  <span class="tag">Раздел 3 · Четырёхугольники</span><span class="tag">Занятие 11 из 23</span><span class="tag">Учебник: гл. VI §2; гл. X §3 (п. 92)</span>
+  <h1>Трапеция. Средняя линия трапеции</h1>
+  <p>Трапеция, равнобедренная и прямоугольная трапеции, высоты равнобедренной трапеции, средняя линия.</p>
+  <div class="timeline">
+    <a href="#warmup">① Проверка ДЗ <small>0–10′</small></a>
+    <a href="#theory">② Теория <small>10–25′</small></a>
+    <a href="#practice">③ Практика <small>25–45′</small></a>
+    <a href="#oge">④ ОГЭ <small>45–55′</small></a>
+    <a href="#hw">⑤ Итог и ДЗ <small>55–60′</small></a>
+    <a href="#bonus">★ Бонус</a>
+  </div>
+</header>
+
+<div class="teacher-panel teacher-only">
+  <h3>План занятия (60 минут)</h3>
+  <ol><li><b>0–10′</b> Проверка ДЗ занятия 10.</li><li><b>10–25′</b> Теория. Лаборатория: поймать равнобедренную и прямоугольную трапецию; в режиме «Высоты» увидеть, что AH = KD = (AD − BC) / 2. Средняя линия — полусумма оснований (в учебнике: задача 489, теорема — п. 92).</li><li><b>25–45′</b> Тренажёр, затем П1–П10. Главный приём: высоты из вершин меньшего основания → прямоугольник + два прямоугольных треугольника.</li><li><b>45–55′</b> ОГЭ №17 и №19.</li><li><b>55–60′</b> Шпаргалка, ДЗ.</li></ol>
+  <p class="muted" style="margin:0">Типичные ошибки: берут AH = AD − BC вместо (AD − BC) / 2; считают среднюю линию полуразностью или суммой оснований; путают углы при основании с углами при боковой стороне; приписывают свойства равнобедренной трапеции любой трапеции.</p>
+</div>
+
+<section class="card" id="warmup" data-nav="Проверка ДЗ">
+  <h2><span class="step">1</span> Проверка ДЗ <span class="mins">0–10 мин</span></h2>
+  <div class="tasks"><div class="task" data-id="h1"><div class="task-head"><span class="tnum">ДЗ 1</span></div>
+<p>Стороны прямоугольника 8 и 15. Найдите его диагональ.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="17"></label></div>
+</div>
+<div class="task" data-id="h2"><div class="task-head"><span class="tnum">ДЗ 2</span></div>
+<p>Диагонали ромба 10 и 24. Найдите периметр ромба.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="52"></label></div>
+</div>
+<div class="task" data-id="h3"><div class="task-head"><span class="tnum">ДЗ 3</span></div>
+<p>В ромбе ABCD ∠ABC = 140°. Найдите угол ACD.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="20"></label></div>
+</div>
+<div class="task" data-id="h4"><div class="task-head"><span class="tnum">ДЗ 4</span></div>
+<p>Диагонали прямоугольника пересекаются под углом 60°, меньшая сторона 9. Найдите диагональ.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="18"></label></div>
+</div>
+<div class="task" data-id="h5" data-mode="digits"><div class="task-head"><span class="tnum">ДЗ 5</span><span class="pill oge">ОГЭ №19</span></div>
+<p>1) Диагонали квадрата взаимно перпендикулярны. 2) Если в параллелограмме диагонали равны, то этот параллелограмм — ромб. 3) Точка пересечения диагоналей параллелограмма является его центром симметрии.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="13"></label></div>
+</div>
+</div>
+</section>
+
+<section class="card" id="theory" data-nav="Теория">
+  <h2><span class="step">2</span> Теория <span class="mins">10–25 мин</span></h2>
+
+  <div class="grid2">
+    <div class="box def"><span class="title">Трапеция</span>
+      Четырёхугольник, у которого <b>две стороны параллельны</b>, а две другие — нет. AD ∥ BC — <b>основания</b>, AB и CD — <b>боковые стороны</b>.
+      <ul class="rules">
+        <li><b>Равнобедренная</b>: боковые стороны равны.</li>
+        <li><b>Прямоугольная</b>: один из углов прямой (тогда высота равна боковой стороне AB).</li>
+        <li>Углы, прилежащие к боковой стороне, в сумме <b>180°</b>: ∠A + ∠B = ∠C + ∠D = 180°.</li>
+      </ul>
+      <div class="eg">AD ∥ BC, ∠A = 36°, ∠C = 117° → ∠B = 144°, ∠D = 63°.</div>
+      <div class="eg trap">∠A + ∠D ≠ 180°: A и D лежат на одном основании.</div></div>
+    <div class="box rule"><span class="title">Равнобедренная трапеция</span>
+      <ul class="rules">
+        <li>Углы при каждом основании <b>равны</b>: ∠A = ∠D, ∠B = ∠C.</li>
+        <li>Диагонали <b>равны</b>: AC = BD.</li>
+        <li>Обратно: если углы при основании равны или диагонали равны, трапеция равнобедренная.</li>
+        <li>Высоты BH и CK отсекают равные отрезки: <b>AH = KD = (AD − BC) / 2</b>.</li>
+      </ul>
+      <div class="eg">AD = 14, BC = 6, AB = 5 → AH = (14 − 6) / 2 = 4, BH = √(25 − 16) = 3.</div>
+      <div class="eg trap">AH = (AD − BC) / 2, а не AD − BC: разность делится на два одинаковых «хвостика».</div></div>
+  </div>
+  <div class="grid2" style="margin-top:14px">
+    <div class="box rule"><span class="title">Средняя линия трапеции</span>
+      Отрезок, соединяющий <b>середины боковых сторон</b>. Параллельна основаниям и равна их полусумме:
+      <div class="formula">MN = (AD + BC) / 2</div>
+      <div class="eg">Основания 6 и 14 → MN = 10.</div>
+      <div class="eg">MN = 10, AD = 14 → BC = 2 · 10 − 14 = 6.</div>
+      <div class="eg trap">Неизвестное основание: 2 · MN − AD, а не MN − AD.</div></div>
+    <div class="box tip"><span class="title">Полезно для ОГЭ</span>
+      <ul class="rules">
+        <li>Диагональ AC делит среднюю линию на отрезки <b>BC / 2</b> и <b>AD / 2</b> (это средние линии треугольников ABC и ACD).</li>
+        <li>Угол 45° при основании р/б трапеции → высота = AH. Угол 60° → AH = половина боковой стороны.</li>
+        <li>Треугольники BOC и DOA, образованные диагоналями, подобны с k = BC / AD.</li>
+      </ul>
+      <div class="eg">Основания 4 и 10: диагональ делит среднюю линию на 2 и 5.</div></div>
+  </div>
+  <h3>Лаборатория: трапеция</h3>
+  <div class="lab">
+    <svg id="labT" viewBox="0 0 600 330"></svg>
+    <div class="readout" id="tRead"></div>
+    <div class="controls">
+      <button class="btn small" type="button" data-tm="mid">Средняя линия</button>
+      <button class="btn small ghost" type="button" data-tm="h">Высоты и диагонали</button>
+    </div>
+    <p class="muted" style="margin:8px 0 0;font-size:14px">Перетаскивайте вершины: A и D — вдоль нижнего основания, B и C задают верхнее. Вершины прилипают к сетке с шагом 0,5: так проще поймать равнобедренную и прямоугольную трапецию.</p>
+  </div>
+
+</section>
+
+<section class="card" id="examples" data-nav="Примеры">
+  <h2><span class="step">↳</span> Разбор примеров</h2>
+  <div class="grid3"><div class="box example"><span class="title">Пример 1. Углы</span><p>В трапеции ABCD (AD ∥ BC) ∠A = 36°, ∠C = 117°. Найдите ∠B и ∠D.</p><details class="reveal"><summary>Показать решение</summary><p><b>Решение.</b> ∠A и ∠B прилежат к боковой стороне AB: ∠B = 180° − 36° = 144°. Аналогично ∠D = 180° − 117° = 63°.</p><p><b>Ответ:</b> 144° и 63°.</p></details></div><div class="box example"><span class="title">Пример 2. Высота р/б трапеции</span><p>Основания равнобедренной трапеции 6 и 14, боковая сторона 5. Найдите высоту.</p><details class="reveal"><summary>Показать решение</summary><p><b>Решение.</b> AH = (14 − 6) / 2 = 4. Из △ABH: h = √(25 − 16) = 3.</p><p><b>Ответ:</b> 3.</p></details></div><div class="box example"><span class="title">Пример 3. Средняя линия</span><p>Средняя линия трапеции 12, одно из оснований 15. Найдите другое основание.</p><details class="reveal"><summary>Показать решение</summary><p><b>Решение.</b> (15 + x) / 2 = 12 → x = 24 − 15 = 9.</p><p><b>Ответ:</b> 9.</p></details></div></div>
+</section>
+
+<section class="card" id="practice" data-nav="Практика">
+  <h2><span class="step">3</span> Интерактивная практика <span class="mins">25–45 мин</span></h2>
+  <h3>🎯 Тренажёр «Трапеция»</h3>
+  <div class="lab task" id="trainer" data-id="trainer" data-noauto><div id="trainerBox"></div>
+    <div class="sol">Задачи генерируются случайно. Засчитывается при 5 верных из 6.</div></div>
+
+  <h3>Блок А. База</h3>
+  <div class="tasks"><div class="task" data-id="p1"><div class="task-head"><span class="tnum">П1</span><span class="pill lvl1">база</span></div>
+<p>Основания трапеции равны 7 и 15. Найдите её среднюю линию.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="11"></label></div>
+</div>
+<div class="task" data-id="p2"><div class="task-head"><span class="tnum">П2</span><span class="pill lvl1">база</span></div>
+<p>Средняя линия трапеции равна 13, одно из оснований 9. Найдите другое основание.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="17"></label></div>
+</div>
+<div class="task" data-id="p3"><div class="task-head"><span class="tnum">П3</span><span class="pill lvl1">база</span></div>
+<p>В трапеции ABCD с основаниями AD и BC ∠A = 48°. Найдите ∠B.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="132"></label></div>
+</div>
+<div class="task" data-id="p4"><div class="task-head"><span class="tnum">П4</span><span class="pill lvl1">база</span></div>
+<p>В равнобедренной трапеции ABCD с основаниями AD и BC ∠A = 70°. Найдите ∠C.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="110"></label></div>
+<div class="sol">∠D = ∠A = 70°, ∠C = 180° − 70° = 110°.</div>
+</div>
+<div class="task" data-id="p5"><div class="task-head"><span class="tnum">П5</span><span class="pill lvl1">база</span></div>
+<p>Основания равнобедренной трапеции равны 8 и 20, боковая сторона 10. Найдите высоту.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="8"></label></div>
+<div class="sol">AH = (20 − 8) / 2 = 6, h = √(100 − 36) = 8.</div>
+</div>
+<div class="task" data-id="p6"><div class="task-head"><span class="tnum">П6</span><span class="pill lvl1">база</span></div>
+<p>Основания равнобедренной трапеции 5 и 17, высота 8. Найдите боковую сторону.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="10"></label></div>
+<div class="sol">AH = 6, AB = √(36 + 64) = 10.</div>
+</div>
+</div>
+  <h3>Блок Б. Посложнее</h3>
+  <div class="tasks"><div class="task" data-id="p7"><div class="task-head"><span class="tnum">П7</span><span class="pill lvl2">средний</span></div>
+<p>Боковая сторона равнобедренной трапеции 12, острый угол 60°, меньшее основание 7. Найдите большее основание.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="19"></label></div>
+<div class="sol">AH = 12 · cos 60° = 6 (катет против 30°). AD = 7 + 2 · 6 = 19.</div>
+</div>
+<div class="task" data-id="p8"><div class="task-head"><span class="tnum">П8</span><span class="pill lvl2">средний</span></div>
+<p>Основания равнобедренной трапеции 4 и 10, острый угол 45°. Найдите высоту.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="3"></label></div>
+<div class="sol">AH = 3, △ABH равнобедренный: h = 3.</div>
+</div>
+<div class="task" data-id="p9"><div class="task-head"><span class="tnum">П9</span><span class="pill lvl2">средний</span></div>
+<p>Основания прямоугольной трапеции равны 6 и 11, большая боковая сторона 13. Найдите меньшую боковую сторону.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="12"></label></div>
+<div class="sol">Проекция наклонной стороны 11 − 6 = 5, высота √(169 − 25) = 12 — это и есть меньшая боковая сторона.</div>
+</div>
+<div class="task" data-id="p10"><div class="task-head"><span class="tnum">П10</span><span class="pill lvl3">сложнее</span></div>
+<p>Основания трапеции 4 и 10. Найдите больший из отрезков, на которые делит её среднюю линию одна из диагоналей.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="5"></label></div>
+<div class="sol">Отрезки — средние линии треугольников: 4 / 2 = 2 и 10 / 2 = 5.</div>
+</div>
+</div>
+</section>
+
+<section class="card oge" id="oge" data-nav="ОГЭ">
+  <h2><span class="step">4</span> Задачи в формате ОГЭ <span class="mins">45–55 мин</span></h2>
+  <div class="tasks"><div class="task" data-id="o1"><div class="task-head"><span class="tnum">О1</span><span class="pill oge">ОГЭ №17</span></div>
+<p>Основания трапеции равны 1 и 11. Найдите больший из отрезков, на которые делит среднюю линию этой трапеции одна из её диагоналей.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="5,5"></label></div>
+</div>
+<div class="task" data-id="o2"><div class="task-head"><span class="tnum">О2</span><span class="pill oge">ОГЭ №17</span></div>
+<p>Сумма двух углов равнобедренной трапеции равна 140°. Найдите больший угол трапеции. Ответ дайте в градусах.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="110"></label></div>
+<div class="sol">Сумма 140° ≠ 180°, значит, это два равных угла при основании: по 70°. Больший угол 110°.</div>
+</div>
+<div class="task" data-id="o3"><div class="task-head"><span class="tnum">О3</span><span class="pill oge">ОГЭ №17</span></div>
+<p>Основания равнобедренной трапеции равны 7 и 51. Тангенс острого угла трапеции равен 5/11. Найдите высоту трапеции.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="10"></label></div>
+<div class="sol">AH = (51 − 7) / 2 = 22, h = 22 · 5/11 = 10.</div>
+</div>
+<div class="task" data-id="o4"><div class="task-head"><span class="tnum">О4</span><span class="pill oge">ОГЭ №17</span></div>
+<p>Средняя линия трапеции равна 11, а меньшее основание равно 5. Найдите большее основание трапеции.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="17"></label></div>
+</div>
+<div class="task" data-id="o5" data-mode="digits"><div class="task-head"><span class="tnum">О5</span><span class="pill oge">ОГЭ №19</span></div>
+<p>Какие из следующих утверждений верны?</p><ol style="margin:6px 0"><li>В любой трапеции диагонали равны.</li><li>Сумма углов трапеции, прилежащих к боковой стороне, равна 180°.</li><li>Средняя линия трапеции равна полусумме её оснований.</li></ol>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="23"></label></div>
+<div class="sol">1 — неверно: только в равнобедренной.</div>
+</div>
+</div>
+</section>
+
+<section class="card" id="hw" data-nav="Итог и ДЗ">
+  <h2><span class="step">5</span> Итог и домашнее задание <span class="mins">55–60 мин</span></h2>
+  <h3>Шпаргалка</h3>
+  <div class="cheat"><div><b>Углы при боковой стороне:</b> 180°</div><div><b>Р/б:</b> углы при основании и диагонали равны</div><div><b>Р/б:</b> AH = (AD − BC) / 2</div><div><b>Средняя линия:</b> (a + b) / 2</div><div><b>Диагональ</b> делит ср. линию на a/2 и b/2</div></div>
+  <h3>📚 Домашнее задание</h3>
+  <p class="muted">Ответы проверяются в начале занятия 12.</p>
+  <ol class="hw"><li>Основания трапеции 9 и 17. Найдите среднюю линию.<div class="sol"><span class="ansline">Ответ: 13.</span> </div></li><li>В трапеции ABCD (AD ∥ BC) ∠D = 65°. Найдите ∠C.<div class="sol"><span class="ansline">Ответ: 115.</span> </div></li><li>Основания равнобедренной трапеции 6 и 16, боковая сторона 13. Найдите высоту.<div class="sol"><span class="ansline">Ответ: 12.</span> AH = 5.</div></li><li>Меньшее основание равнобедренной трапеции 5, боковая сторона 8, острый угол 60°. Найдите большее основание.<div class="sol"><span class="ansline">Ответ: 13.</span> AH = 4.</div></li><li>(ОГЭ №19) 1) Средняя линия трапеции параллельна её основаниям. 2) В равнобедренной трапеции углы при каждом основании равны. 3) Средняя линия трапеции равна полуразности её оснований.<div class="sol"><span class="ansline">Ответ: 12.</span> 3 — неверно: полусумме.</div></li></ol>
+  <h3>⭐ Бонусное ДЗ</h3>
+  <ol class="hw"><li>Докажите, что диагонали равнобедренной трапеции равны.<div class="sol">△ABD = △DCA: AB = DC, AD — общая, ∠BAD = ∠CDA (углы при основании). Значит, BD = CA.</div></li><li>В равнобедренной трапеции диагональ является биссектрисой острого угла, меньшее основание 10, периметр 50. Найдите большее основание.<div class="sol"><span class="ansline">Ответ: 20.</span> ∠CAD = ∠BCA (накрест лежащие) = ∠BAC → △ABC равнобедренный, AB = BC = 10 = CD. AD = 50 − 30 = 20.</div></li></ol>
+  <p style="margin-top:18px"><button class="btn small ghost" type="button" onclick="GeoResetLesson()">Сбросить прогресс занятия</button></p>
+</section>
+
+<section class="card bonus" id="bonus" data-nav="★ Бонус">
+  <h2><span class="step">★</span> Бонусная практика</h2>
+  <div class="tasks"><div class="task" data-id="b1"><div class="task-head"><span class="tnum">Б1</span><span class="pill lvl3">сложнее</span></div>
+<p>Диагонали равнобедренной трапеции перпендикулярны, основания 6 и 14. Найдите высоту трапеции.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="10"></label></div>
+<div class="hint">Проведите высоту через точку пересечения диагоналей.</div>
+<div class="sol">Треугольники BOC и AOD — прямоугольные равнобедренные, их высоты из O равны половинам гипотенуз: 3 и 7. h = 3 + 7 = 10.</div>
+</div>
+<div class="task" data-id="b2"><div class="task-head"><span class="tnum">Б2</span><span class="pill oge">ОГЭ №23</span></div>
+<p>Углы при одном из оснований трапеции равны 86° и 4°, а отрезки, соединяющие середины противоположных сторон трапеции, равны 11 и 10. Найдите основания трапеции.</p>
+<div class="ans-row"><label>меньшее = <input class="ans" data-a="1" data-label="меньшее"></label><label>большее = <input class="ans" data-a="21" data-label="большее"></label></div>
+<div class="sol">Продолжим боковые стороны до пересечения в точке P: ∠P = 180° − 86° − 4° = 90°. Середины оснований K (на AD) и L (на BC) лежат на одной прямой с P, PK = AD / 2, PL = BC / 2 (медианы к гипотенузам), KL = (AD − BC) / 2. Средняя линия (AD + BC) / 2 больше, чем (AD − BC) / 2, поэтому AD + BC = 22, AD − BC = 20: AD = 21, BC = 1.</div>
+</div>
+<div class="task" data-id="b3"><div class="task-head"><span class="tnum">Б3</span><span class="pill oge">ОГЭ №24</span></div>
+<p>Докажите, что если диагонали трапеции равны, то трапеция равнобедренная.</p>
+<div class="sol">Через C проведём CE ∥ BD (E на прямой AD). BCED — параллелограмм, CE = BD = AC, △ACE равнобедренный: ∠CAE = ∠CEA = ∠BDA. △ACD = △DBA (AC = DB, AD общая, ∠CAD = ∠BDA) → CD = AB.</div>
+</div>
+</div>
+</section>
+
+</div>
+
+<script src="../assets/core.js"></script>
+<script>
+
+(function(){
+  var G = GeoSVG, svg = document.getElementById('labT'), Y0 = 280, P = {A:{x:80, y:Y0}, D:{x:520, y:Y0}, B:{x:180, y:100}, C:{x:360, y:100}}, U = 40, mode = 'mid';
+  var M1 = '#8b5cf6', H1 = '#e5484d', S1 = '#2f7de1', G1 = '#16a34a';
+  function f(v){ return (Math.round(v * 100) / 100).toString().replace('.', ','); }
+  function seg(p, q, col, w, dash){ return G.el('line', {x1:p.x, y1:p.y, x2:q.x, y2:q.y, stroke:col, 'stroke-width':w || 3, 'stroke-dasharray':dash || '', 'stroke-linecap':'round'}, svg); }
+  function iso(o){ return Math.abs((o.B.x - o.A.x) - (o.D.x - o.C.x)) < 1e-6; }
+  function draw(){
+    G.clear(svg); var A = P.A, B = P.B, C = P.C, D = P.D, r = document.getElementById('tRead');
+    var ad = (D.x - A.x) / U, bc = (C.x - B.x) / U, h = (Y0 - B.y) / U, eq = iso(P), rA = Math.abs(A.x - B.x) < 1e-6, rD = Math.abs(D.x - C.x) < 1e-6;
+    G.el('path', {d:'M'+A.x+' '+A.y+' L'+B.x+' '+B.y+' L'+C.x+' '+C.y+' L'+D.x+' '+D.y+' Z', 'class':'st fl'}, svg);
+    seg(A, D, S1, 3.5); seg(B, C, S1, 3.5);
+    if(eq){ seg(A, B, G1, 3); seg(D, C, G1, 3); G.tick(svg, A, B, 1, G1); G.tick(svg, D, C, 1, G1); }
+    var aA = G.angle(A, B, D), aB = 180 - aA, aD = G.angle(D, C, A);
+    var info = '<span style="color:' + S1 + '">AD = ' + f(ad) + ', BC = ' + f(bc) + '</span>';
+    if(mode === 'mid'){
+      var M = G.mid(A, B), N = G.mid(D, C), X = G.mid(A, C);
+      seg(A, C, '#94a3b8', 1.8, '6 5');
+      seg(M, X, '#f08c00', 4); seg(X, N, M1, 4);
+      [M, N].forEach(function(p){ G.el('circle', {cx:p.x, cy:p.y, r:4.5, fill:M1}, svg); });
+      G.text(svg, M.x - 18, M.y + 4, 'M'); G.text(svg, N.x + 18, N.y + 4, 'N');
+      G.tick(svg, A, M, 1); G.tick(svg, M, B, 1); G.tick(svg, D, N, 2); G.tick(svg, N, C, 2);
+      info += '<span style="color:' + M1 + '">MN = (AD + BC) / 2 = ' + f((ad + bc) / 2) + '</span><span><span style="color:#f08c00">BC / 2 = ' + f(bc / 2) + '</span> + <span style="color:' + M1 + '">AD / 2 = ' + f(ad / 2) + '</span></span>' +
+        '<span>∠A + ∠B = ' + Math.round(aA) + '° + ' + Math.round(aB) + '° = 180°</span>';
+    } else {
+      var H = {x:B.x, y:Y0}, K = {x:C.x, y:Y0};
+      seg(A, C, '#94a3b8', 2); seg(B, D, '#94a3b8', 2);
+      if(!rA) seg(B, H, H1, 2.5, '6 5'); if(!rD) seg(C, K, H1, 2.5, '6 5');
+      if(!rA) G.rightMark(svg, H, B, D, 11, H1); if(!rD) G.rightMark(svg, K, C, A, 11, H1);
+      if(!rA) G.text(svg, H.x, Y0 + 24, 'H'); if(!rD) G.text(svg, K.x, Y0 + 24, 'K');
+      info += '<span style="color:' + H1 + '">h = ' + f(h) + '</span><span>AH = ' + f((B.x - A.x) / U) + ', KD = ' + f((D.x - C.x) / U) + '</span><span>AC = ' + f(G.dist(A, C) / U) + ', BD = ' + f(G.dist(B, D) / U) + '</span>';
+      if(eq) info += '<span style="color:' + G1 + '">AH = KD = (AD − BC) / 2 = ' + f((ad - bc) / 2) + '</span>';
+    }
+    if(rA) G.rightMark(svg, A, B, D, 14); if(rD) G.rightMark(svg, D, C, A, 14);
+    if(!rA) G.arc(svg, A, B, D, 26, eq ? G1 : '#e5484d'); if(!rD) G.arc(svg, D, A, C, 26, eq ? G1 : '#f08c00');
+    var kind = eq ? 'равнобедренная: ∠A = ∠D = ' + Math.round(aA) + '°, AB = CD' : (rA || rD) ? 'прямоугольная: высота = ' + (rA ? 'AB' : 'CD') : 'трапеция общего вида';
+    r.innerHTML = '<span style="color:#2f5bea">' + kind + '</span>' + info;
+    ['A','B','C','D'].forEach(function(n){ G.handle(svg, P[n], n); });
+    G.text(svg, A.x - 6, A.y + 28, 'A'); G.text(svg, D.x + 6, D.y + 28, 'D'); G.text(svg, B.x - 4, B.y - 16, 'B'); G.text(svg, C.x + 4, C.y - 16, 'C');
+  }
+  G.draggable(svg, function(n, p){
+    var o = {A:{x:P.A.x, y:Y0}, B:{x:P.B.x, y:P.B.y}, C:{x:P.C.x, y:P.C.y}, D:{x:P.D.x, y:Y0}}, x = Math.round(p.x / 20) * 20, T = 8;
+    if(n === 'A'){ if(Math.abs(x - o.B.x) < T) x = o.B.x; else if(Math.abs((o.B.x - x) - (o.D.x - o.C.x)) < T) x = o.B.x - (o.D.x - o.C.x); o.A.x = x; }
+    if(n === 'D'){ if(Math.abs(x - o.C.x) < T) x = o.C.x; else if(Math.abs((x - o.C.x) - (o.B.x - o.A.x)) < T) x = o.C.x + (o.B.x - o.A.x); o.D.x = x; }
+    if(n === 'B' || n === 'C'){
+      var y = Math.round(Math.max(60, Math.min(240, p.y)) / 20) * 20; o.B.y = o.C.y = y;
+      if(n === 'B'){ if(Math.abs(x - o.A.x) < T) x = o.A.x; else if(Math.abs((x - o.A.x) - (o.D.x - o.C.x)) < T) x = o.A.x + (o.D.x - o.C.x); o.B.x = x; }
+      else { if(Math.abs(x - o.D.x) < T) x = o.D.x; else if(Math.abs((o.D.x - x) - (o.B.x - o.A.x)) < T) x = o.D.x - (o.B.x - o.A.x); o.C.x = x; }
+    }
+    var xs = [o.A.x, o.B.x, o.C.x, o.D.x];
+    for(var i = 0; i < 4; i++) if(xs[i] < 25 || xs[i] > 575) return;
+    if(o.C.x - o.B.x < 50 || o.D.x - o.A.x < 60 || Math.abs((o.C.x - o.B.x) - (o.D.x - o.A.x)) < 25) return;
+    P = o; draw();
+  });
+  document.querySelectorAll('[data-tm]').forEach(function(b){ b.addEventListener('click', function(){ mode = b.getAttribute('data-tm'); document.querySelectorAll('[data-tm]').forEach(function(x){ x.classList.toggle('ghost', x !== b); }); draw(); }); });
+  draw();
+})();
+document.addEventListener('geo:ready', function(){
+  var TR = [[3,4,5],[6,8,10],[5,12,13],[8,15,17],[9,12,15],[4,3,5],[8,6,10],[12,5,13]];
+  GeoTrainer(document.getElementById('trainerBox'), {rounds:6, id:'trainer', gen:function(){
+    var q = GeoRand(1, 5);
+    if(q === 1){ var b = GeoRand(2, 12), a = b + 2 * GeoRand(1, 6); return {q:'Основания трапеции равны ' + b + ' и ' + a + '. Найдите среднюю линию.', a:String((a + b) / 2), why:'(' + a + ' + ' + b + ') / 2 = ' + (a + b) / 2 + '.'}; }
+    if(q === 2){ var m = GeoRand(6, 20), a2 = GeoRand(m + 1, 2 * m - 2); return {q:'Средняя линия трапеции равна ' + m + ', большее основание ' + a2 + '. Найдите меньшее основание.', a:String(2 * m - a2), why:'2 · ' + m + ' − ' + a2 + ' = ' + (2 * m - a2) + '.'}; }
+    if(q === 3){ var x = GeoRand(25, 85); return GeoRand(0, 1) ? {q:'В трапеции ABCD (AD ∥ BC) ∠A = ' + x + '°. Найдите ∠B.', a:String(180 - x), why:'∠A + ∠B = 180°: ' + (180 - x) + '°.'}
+      : {q:'В равнобедренной трапеции ABCD (AD ∥ BC) ∠A = ' + x + '°. Найдите ∠C.', a:String(180 - x), why:'∠D = ∠A = ' + x + '°, ∠C = 180° − ' + x + '° = ' + (180 - x) + '°.'}; }
+    if(q === 4){ var t = GeoPick(TR), s = GeoRand(2, 10), big = s + 2 * t[0];
+      return GeoRand(0, 1) ? {q:'Основания равнобедренной трапеции ' + s + ' и ' + big + ', боковая сторона ' + t[2] + '. Найдите высоту.', a:String(t[1]), why:'AH = (' + big + ' − ' + s + ') / 2 = ' + t[0] + ', h = √(' + t[2] * t[2] + ' − ' + t[0] * t[0] + ') = ' + t[1] + '.'}
+        : {q:'Основания равнобедренной трапеции ' + s + ' и ' + big + ', высота ' + t[1] + '. Найдите боковую сторону.', a:String(t[2]), why:'AH = ' + t[0] + ', AB = √(' + t[0] * t[0] + ' + ' + t[1] * t[1] + ') = ' + t[2] + '.'}; }
+    var l = 2 * GeoRand(2, 9), sm = GeoRand(2, 12);
+    return GeoRand(0, 1) ? {q:'Меньшее основание равнобедренной трапеции ' + sm + ', боковая сторона ' + l + ', острый угол 60°. Найдите большее основание.', a:String(sm + l), why:'AH = ' + l + ' / 2 = ' + l / 2 + ' (катет против 30°), большее основание ' + sm + ' + 2 · ' + l / 2 + ' = ' + (sm + l) + '.'}
+      : {q:'Основания равнобедренной трапеции ' + sm + ' и ' + (sm + l) + ', острый угол 45°. Найдите высоту.', a:String(l / 2), why:'AH = ' + l / 2 + ', при угле 45° h = AH = ' + l / 2 + '.'};
+  }});
+});
+
+</script>
+</body>
+</html>

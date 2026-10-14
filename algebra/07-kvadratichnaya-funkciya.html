@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Алгебра · занятие 7 · Квадратичная функция</title>
+<link rel="stylesheet" href="../assets/core.css">
+</head>
+<body data-lesson="A07">
+
+<nav class="topnav"><div class="in">
+  <a class="home" href="../algebra.html">🧮 <span>Алгебра · ОГЭ</span></a>
+  <div class="links"></div>
+  <a class="home" href="../spravochnik-algebra.html" title="Справочник">📖</a>
+  <div class="progress-pill">Решено <b>0 / 0</b><div class="progress-bar"><i></i></div></div>
+</div></nav>
+
+<div class="container">
+
+<header class="hero">
+  <span class="tag">Раздел 2 · Функции и графики</span><span class="tag">Алгебра · занятие 7 из 23</span><span class="tag">Учебник: гл. II §4, п. 11</span>
+  <h1>Квадратичная функция y = ax² + bx + c</h1>
+  <p>Вершина, ось симметрии, нули, точка пересечения с Oy, свойства и знаки коэффициентов по графику.</p>
+  <div class="timeline">
+    <a href="#warmup">① Проверка ДЗ <small>0–10′</small></a>
+    <a href="#theory">② Теория <small>10–25′</small></a>
+    <a href="#practice">③ Практика <small>25–45′</small></a>
+    <a href="#oge">④ ОГЭ <small>45–55′</small></a>
+    <a href="#hw">⑤ Итог и ДЗ <small>55–60′</small></a>
+    <a href="#bonus">★ Бонус</a>
+  </div>
+</header>
+
+<div class="teacher-panel teacher-only">
+  <h3>План занятия (60 минут)</h3>
+  <ol><li><b>0–10′</b> Проверка ДЗ занятия 6.</li><li><b>10–25′</b> Теория: алгоритм построения. В лаборатории менять b — вершина «ездит», а точка (0; c) стоит на месте.</li><li><b>25–45′</b> Игра «Знаки коэффициентов» (№11 ОГЭ), затем П1–П8.</li><li><b>45–55′</b> ОГЭ №11, задача-подготовка к №22.</li><li><b>55–60′</b> Шпаргалка, ДЗ.</li></ol>
+  <p class="muted" style="margin:0">Типичные ошибки: теряют минус в x₀ = −b/(2a); c путают с ординатой вершины; при поиске промежутка возрастания пишут значения y.</p>
+</div>
+
+<section class="card" id="warmup" data-nav="Проверка ДЗ">
+  <h2><span class="step">1</span> Проверка ДЗ <span class="mins">0–10 мин</span></h2>
+  <div class="tasks"><div class="task" data-id="h1"><div class="task-head"><span class="tnum">ДЗ 1</span></div>
+<p>y = −x². Найдите y(3).</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="-9"></label></div>
+</div>
+<div class="task" data-id="h2"><div class="task-head"><span class="tnum">ДЗ 2</span></div>
+<p>Вершина параболы y = (x + 1)² − 8.</p>
+<div class="ans-row"><label>x = <input class="ans" data-a="-1" data-label="x"></label><label>y = <input class="ans" data-a="-8" data-label="y"></label></div>
+</div>
+<div class="task" data-id="h3"><div class="task-head"><span class="tnum">ДЗ 3</span></div>
+<p>График y = ax² проходит через (3; 18). Найдите a.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="2"></label></div>
+</div>
+<div class="task" data-id="h4"><div class="task-head"><span class="tnum">ДЗ 4</span></div>
+<p>Нули функции y = (x + 2)² − 9.</p>
+<div class="ans-row"><label>меньший = <input class="ans" data-a="-5" data-label="меньший"></label><label>больший = <input class="ans" data-a="1" data-label="больший"></label></div>
+</div>
+<div class="task" data-id="h5" data-mode="digits"><div class="task-head"><span class="tnum">ДЗ 5</span><span class="pill oge">ОГЭ №19</span></div>
+<p>1) Парабола y = 5x² уже y = x². 2) Вершина y = (x − 1)² + 2 — (−1; 2). 3) y = −x² имеет наибольшее значение 0.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="13"></label></div>
+</div>
+</div>
+</section>
+
+<section class="card" id="theory" data-nav="Теория">
+  <h2><span class="step">2</span> Теория <span class="mins">10–25 мин</span></h2>
+
+  <div class="grid2">
+    <div class="box rule"><span class="title">Главное о параболе y = ax² + bx + c</span>
+      <div class="formula">x₀ = −b / (2a), &nbsp; y₀ = −(b² − 4ac) / (4a)</div>Формулы получаются выделением полного квадрата: ax² + bx + c = a(x − x₀)² + y₀. На практике y₀ проще найти подстановкой x₀.<br>
+      Ось симметрии — прямая x = x₀.<br>Пересечение с Oy — точка <b>(0; c)</b>.<br>
+      Нули — корни ax² + bx + c = 0: при D &gt; 0 — два, D = 0 — один (вершина на оси), D &lt; 0 — нет.
+      <div class="eg">y = x² − 4x + 3: x₀ = 4/2 = 2, y₀ = 4 − 8 + 3 = −1 → вершина (2; −1); с Oy — (0; 3); нули 1 и 3.</div></div>
+    <div class="box def"><span class="title">Алгоритм построения</span>
+      <ol class="rules"><li>Направление ветвей по знаку a.</li><li>Вершина (x₀; y₀) и ось симметрии.</li><li>Точка (0; c) и симметричная ей.</li><li>Нули (если есть).</li><li>Провести плавную кривую.</li></ol>
+      <div class="eg">y = x² − 4x + 3: точка (0; 3) симметрична точке (4; 3) относительно x = 2.</div></div>
+  </div>
+  <div class="grid2" style="margin-top:14px">
+    <div class="box tip"><span class="title">Знаки коэффициентов по графику (№11)</span>
+      <b>a</b>: ветви вверх → a &gt; 0.<br><b>c</b>: где парабола пересекает Oy — выше нуля → c &gt; 0.<br>
+      <b>D</b>: число точек пересечения с Ox.<br><b>b</b>: x₀ = −b/(2a) — знак b противоположен знаку a·x₀.
+      <div class="eg">Ветви вверх (a &gt; 0), вершина справа от Oy (x₀ &gt; 0) → b &lt; 0.</div></div>
+    <div class="box rule"><span class="title">Свойства (a &gt; 0)</span>
+      Убывает на (−∞; x₀], возрастает на [x₀; +∞).<br>Наименьшее значение y₀, E(y) = [y₀; +∞).<br>При a &lt; 0 — наоборот, наибольшее значение y₀.<div class="eg">y = x² − 4x + 3: убывает на (−∞; 2], возрастает на [2; +∞), E = [−1; +∞).</div></div>
+  </div>
+  <h3>Лаборатория: a, b, c</h3>
+  <div class="lab">
+    <svg id="labQ" class="plot"></svg>
+    <div class="readout" id="qRead"></div>
+    <div class="controls">
+      <label>a: <input type="range" id="qA" min="-2" max="2" step="0.5" value="1"></label><span class="pill" id="qAv">1</span>
+      <label>b: <input type="range" id="qB" min="-6" max="6" step="1" value="-2"></label><span class="pill" id="qBv">−2</span>
+      <label>c: <input type="range" id="qC" min="-5" max="5" step="1" value="-3"></label><span class="pill" id="qCv">−3</span>
+    </div>
+  </div>
+
+</section>
+
+<section class="card" id="examples" data-nav="Примеры">
+  <h2><span class="step">↳</span> Разбор примеров</h2>
+  <div class="grid3"><div class="box example"><span class="title">Пример 1. Вершина</span><p>y = x² − 6x + 5. Найдите вершину.</p><details class="reveal"><summary>Показать решение</summary><p><b>Решение.</b> x₀ = 6/2 = 3, y₀ = 9 − 18 + 5 = −4.</p><p><b>Ответ:</b> (3; −4).</p></details></div><div class="box example"><span class="title">Пример 2. Наибольшее значение</span><p>y = −x² + 4x + 1. Найдите наибольшее значение.</p><details class="reveal"><summary>Показать решение</summary><p><b>Решение.</b> x₀ = −4/(−2) = 2, y₀ = −4 + 8 + 1 = 5.</p><p><b>Ответ:</b> 5.</p></details></div><div class="box example"><span class="title">Пример 3. Найти b</span><p>Ось симметрии параболы y = x² + bx + 1 — прямая x = 3. Найдите b.</p><details class="reveal"><summary>Показать решение</summary><p><b>Решение.</b> −b/2 = 3 → b = −6.</p><p><b>Ответ:</b> −6.</p></details></div></div>
+</section>
+
+<section class="card" id="practice" data-nav="Практика">
+  <h2><span class="step">3</span> Интерактивная практика <span class="mins">25–45 мин</span></h2>
+  <h3>🎯 Игра «Знаки коэффициентов»</h3>
+  <div class="lab task" id="game" data-id="game" data-noauto>
+    <svg id="gameSvg" class="plot"></svg>
+    <div class="controls" style="justify-content:space-between"><b id="gRound"></b><span class="pill" id="gScore">Верно: 0</span></div>
+    <p style="margin:8px 0 0">На рисунке график y = ax² + bx + c. Какое утверждение верно?</p>
+    <div class="choice-btns" id="gBtns">
+      <button type="button" data-t="++">a &gt; 0, c &gt; 0</button><button type="button" data-t="+-">a &gt; 0, c &lt; 0</button>
+      <button type="button" data-t="-+">a &lt; 0, c &gt; 0</button><button type="button" data-t="--">a &lt; 0, c &lt; 0</button>
+    </div>
+    <div class="controls"><span class="feedback" id="gFb"></span><button class="btn small" type="button" id="gNext" style="display:none">Дальше →</button></div>
+    <div class="sol">Засчитывается при 6 верных из 8.</div>
+  </div>
+
+  <h3>Блок А. База</h3>
+  <div class="tasks"><div class="task" data-id="p1"><div class="task-head"><span class="tnum">П1</span><span class="pill lvl1">база</span></div>
+<p>Найдите координаты вершины параболы y = x² − 6x + 5.</p>
+<div class="ans-row"><label>x₀ = <input class="ans" data-a="3" data-label="x₀"></label><label>y₀ = <input class="ans" data-a="-4" data-label="y₀"></label></div>
+</div>
+<div class="task" data-id="p2"><div class="task-head"><span class="tnum">П2</span><span class="pill lvl1">база</span></div>
+<p>Найдите нули функции y = x² − 6x + 5.</p>
+<div class="ans-row"><label>меньший = <input class="ans" data-a="1" data-label="меньший"></label><label>больший = <input class="ans" data-a="5" data-label="больший"></label></div>
+</div>
+<div class="task" data-id="p3"><div class="task-head"><span class="tnum">П3</span><span class="pill lvl1">база</span></div>
+<p>Найдите ординату точки пересечения графика y = 2x² − 3x − 7 с осью Oy.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="-7"></label></div>
+</div>
+<div class="task" data-id="p4"><div class="task-head"><span class="tnum">П4</span><span class="pill lvl1">база</span></div>
+<p>Найдите абсциссу оси симметрии параболы y = −x² + 8x − 3.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="4"></label></div>
+</div>
+<div class="task" data-id="p5"><div class="task-head"><span class="tnum">П5</span><span class="pill lvl1">база</span></div>
+<p>Найдите наибольшее значение функции y = −x² + 4x + 1.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="5"></label></div>
+</div>
+<div class="task" data-id="p6"><div class="task-head"><span class="tnum">П6</span><span class="pill lvl1">база</span></div>
+<p>Функция y = x² + 2x − 3 возрастает на промежутке [x₀; +∞). Найдите x₀.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="-1"></label></div>
+</div>
+</div>
+  <h3>Блок Б. Посложнее</h3>
+  <div class="tasks"><div class="task" data-id="p7"><div class="task-head"><span class="tnum">П7</span><span class="pill lvl2">средний</span></div>
+<p>Найдите наименьшее значение функции y = x² − 4x + 7.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="3"></label></div>
+</div>
+<div class="task" data-id="p8"><div class="task-head"><span class="tnum">П8</span><span class="pill lvl2">средний</span></div>
+<p>Ось симметрии параболы y = x² + bx + 1 — прямая x = 3. Найдите b.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="-6"></label></div>
+</div>
+<div class="task" data-id="p9"><div class="task-head"><span class="tnum">П9</span><span class="pill lvl2">средний</span></div>
+<p>Парабола y = ax² + bx + c имеет вершину (1; 0) и проходит через точку (0; 2). Найдите a и b.</p>
+<div class="ans-row"><label>a = <input class="ans" data-a="2" data-label="a"></label><label>b = <input class="ans" data-a="-4" data-label="b"></label></div>
+<div class="sol">y = a(x − 1)², при x = 0: a = 2. y = 2x² − 4x + 2.</div>
+</div>
+<div class="task" data-id="p10"><div class="task-head"><span class="tnum">П10</span><span class="pill lvl3">сложнее</span></div>
+<p>При каком c наименьшее значение функции y = x² − 6x + c равно 1?</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="10"></label></div>
+<div class="sol">y(3) = 9 − 18 + c = c − 9 = 1.</div>
+</div>
+</div>
+</section>
+
+<section class="card oge" id="oge" data-nav="ОГЭ">
+  <h2><span class="step">4</span> Задачи в формате ОГЭ <span class="mins">45–55 мин</span></h2>
+  <div class="tasks"><div class="task" data-id="o1" data-mode="text"><div class="task-head"><span class="tnum">О1</span><span class="pill oge">ОГЭ №11</span></div>
+<p>На рисунках — графики y = ax² + bx + c. Установите соответствие между графиками и знаками коэффициентов a и c. Ответ — цифры в порядке А, Б, В.</p><div class="grid3" style="margin:8px 0"><figure style="margin:0"><svg id="o1a" class="mini"></svg><figcaption><b>А</b></figcaption></figure><figure style="margin:0"><svg id="o1b" class="mini"></svg><figcaption><b>Б</b></figcaption></figure><figure style="margin:0"><svg id="o1c" class="mini"></svg><figcaption><b>В</b></figcaption></figure></div><ol style="margin:6px 0"><li>a &gt; 0, c &gt; 0</li><li>a &lt; 0, c &gt; 0</li><li>a &gt; 0, c &lt; 0</li></ol>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="321"></label></div>
+</div>
+<div class="task" data-id="o2"><div class="task-head"><span class="tnum">О2</span><span class="pill oge">ОГЭ №11</span></div>
+<p>Найдите координаты вершины параболы y = 2x² + 8x − 1.</p>
+<div class="ans-row"><label>x₀ = <input class="ans" data-a="-2" data-label="x₀"></label><label>y₀ = <input class="ans" data-a="-9" data-label="y₀"></label></div>
+</div>
+<div class="task" data-id="o3"><div class="task-head"><span class="tnum">О3</span><span class="pill oge">ОГЭ №22</span></div>
+<p>Постройте график функции y = x² − 4x + 3. При каком m прямая y = m имеет с графиком ровно одну общую точку?</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="-1"></label></div>
+<div class="sol">Вершина (2; −1). Прямая y = m касается параболы только в вершине.</div>
+</div>
+<div class="task" data-id="o4" data-mode="digits"><div class="task-head"><span class="tnum">О4</span><span class="pill oge">ОГЭ №19</span></div>
+<p>Какие утверждения верны?</p><ol style="margin:6px 0"><li>Если a &gt; 0, ветви параболы y = ax² + bx + c направлены вверх.</li><li>График функции y = x² + 2x + 5 пересекает ось Ox.</li><li>График функции y = ax² + bx + c пересекает ось Oy в точке (0; c).</li></ol>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="13"></label></div>
+<div class="sol">2 — неверно: D = 4 − 20 &lt; 0.</div>
+</div>
+</div>
+</section>
+
+<section class="card" id="hw" data-nav="Итог и ДЗ">
+  <h2><span class="step">5</span> Итог и домашнее задание <span class="mins">55–60 мин</span></h2>
+  <h3>Шпаргалка</h3>
+  <div class="cheat"><div><b>x₀ = −b/(2a)</b>, y₀ = y(x₀) = −D/(4a)</div><div><b>(0; c)</b> — пересечение с Oy</div><div><b>D</b> — число нулей</div><div><b>a &gt; 0:</b> наименьшее значение y₀</div></div>
+  <h3>📚 Домашнее задание</h3>
+  <p class="muted">Ответы проверяются в начале занятия 8.</p>
+  <ol class="hw"><li>Найдите вершину параболы y = x² + 4x − 1.<div class="sol"><span class="ansline">Ответ: (−2; −5).</span> </div></li><li>Найдите нули функции y = −x² + 2x + 8.<div class="sol"><span class="ansline">Ответ: −2; 4.</span> </div></li><li>Найдите наименьшее значение функции y = x² − 10x + 30.<div class="sol"><span class="ansline">Ответ: 5.</span> </div></li><li>Найдите абсциссу оси симметрии параболы y = 3x² − 12x + 1.<div class="sol"><span class="ansline">Ответ: 2.</span> </div></li><li>(ОГЭ №19) 1) При a &lt; 0 ветви параболы направлены вниз. 2) Если D &lt; 0, парабола пересекает ось Ox в двух точках. 3) Абсцисса вершины параболы равна −b/(2a).<div class="sol"><span class="ansline">Ответ: 13.</span> </div></li></ol>
+  <h3>⭐ Бонусное ДЗ</h3>
+  <ol class="hw"><li>При каком c парабола y = x² + 4x + c касается оси Ox?<div class="sol"><span class="ansline">Ответ: 4.</span> D = 16 − 4c = 0.</div></li><li>Парабола y = ax² + bx проходит через точки (1; 3) и (2; 4). Найдите a и b.<div class="sol"><span class="ansline">Ответ: a = −1, b = 4.</span> a + b = 3, 4a + 2b = 4.</div></li></ol>
+  <p style="margin-top:18px"><button class="btn small ghost" type="button" onclick="GeoResetLesson()">Сбросить прогресс занятия</button></p>
+</section>
+
+<section class="card bonus" id="bonus" data-nav="★ Бонус">
+  <h2><span class="step">★</span> Бонусная практика</h2>
+  <div class="tasks"><div class="task" data-id="b1"><div class="task-head"><span class="tnum">Б1</span><span class="pill lvl3">сложнее</span></div>
+<p>Найдите наибольшее значение функции y = −2x² + 8x − 3.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="5"></label></div>
+</div>
+<div class="task" data-id="b2"><div class="task-head"><span class="tnum">Б2</span><span class="pill lvl3">сложнее</span></div>
+<p>При каком m прямая y = m касается параболы y = x² − 2x?</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="-1"></label></div>
+</div>
+<div class="task" data-id="b3"><div class="task-head"><span class="tnum">Б3</span><span class="pill lvl3">сложнее</span></div>
+<p>Сколько общих точек у графиков y = x² − 4 и y = 2x − 1?</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="2"></label></div>
+<div class="sol">x² − 2x − 3 = 0, D = 16 &gt; 0.</div>
+</div>
+</div>
+</section>
+
+</div>
+
+<script src="../assets/core.js"></script>
+<script>
+
+function miniPlot(id, f, o){
+  o = o || {}; var svg = document.getElementById(id); if(!svg) return;
+  var P = GeoPlot(svg, {xmin:o.xmin || -5, xmax:o.xmax || 5, ymin:o.ymin || -5, ymax:o.ymax || 5, w:300, h:300});
+  P.grid(); P.curve(f, o.color || '#2f5bea', {width:3}); if(o.after) o.after(P); return P;
+}
+
+miniPlot('o1a', function(x){ return x * x - 2 * x - 3; }); miniPlot('o1b', function(x){ return -x * x + x + 2; }); miniPlot('o1c', function(x){ return x * x + 1; }, {ymin:-2, ymax:8});
+(function(){
+  var svg = document.getElementById('labQ'), A = document.getElementById('qA'), B = document.getElementById('qB'), C = document.getElementById('qC');
+  function n(v){ return (Math.round(v * 100) / 100).toString().replace('.', ',').replace('-', '−'); }
+  function draw(){
+    if(+A.value === 0) A.value = 0.5;
+    var a = +A.value, b = +B.value, c = +C.value, x0 = -b / (2 * a), y0 = a * x0 * x0 + b * x0 + c, D = b * b - 4 * a * c;
+    var P = GeoPlot(svg, {xmin:-8, xmax:8, ymin:-8, ymax:8, w:600, h:440}); P.clear(); P.grid();
+    P.seg(x0, -8, x0, 8, '#8b5cf6', 1.5, '4 4');
+    P.curve(function(x){ return a * x * x + b * x + c; }, '#2f5bea');
+    P.point(x0, y0, '#e5484d', 'вершина'); P.point(0, c, '#16a34a', '(0; ' + n(c) + ')');
+    if(D >= 0){ var r1 = (-b - Math.sqrt(D)) / (2 * a), r2 = (-b + Math.sqrt(D)) / (2 * a); P.point(r1, 0, '#f59e0b'); if(D > 0) P.point(r2, 0, '#f59e0b'); }
+    document.getElementById('qAv').textContent = n(a); document.getElementById('qBv').textContent = n(b); document.getElementById('qCv').textContent = n(c);
+    document.getElementById('qRead').innerHTML = '<span>x₀ = −b/(2a) = ' + n(x0) + '</span><span>вершина (' + n(x0) + '; ' + n(y0) + ')</span><span>D = ' + n(D) + ' → ' + (D > 0 ? '2 нуля' : (D === 0 ? '1 нуль' : 'нулей нет')) + '</span><span>' + (a > 0 ? 'наименьшее' : 'наибольшее') + ' значение ' + n(y0) + '</span>';
+  }
+  [A, B, C].forEach(function(e){ e.addEventListener('input', draw); }); draw();
+})();
+document.addEventListener('geo:ready', function(){
+  var svg = document.getElementById('gameSvg'), ROUNDS = 8, round = 0, score = 0, cur, answered;
+  var fb = document.getElementById('gFb'), nx = document.getElementById('gNext'), btns = document.querySelectorAll('#gBtns button');
+  function newRound(){
+    answered = false; round++; var a, x0, y0, c;
+    do { a = GeoPick([-2, -1, -0.5, 0.5, 1, 2]); x0 = GeoPick([-3, -2, -1, 1, 2, 3]); y0 = GeoRand(-5, 5); c = a * x0 * x0 + y0; } while(Math.abs(c) < 1 || Math.abs(c) > 7);
+    cur = (a > 0 ? '+' : '-') + (c > 0 ? '+' : '-');
+    var P = GeoPlot(svg, {xmin:-7, xmax:7, ymin:-8, ymax:8, w:600, h:440}); P.clear(); P.grid(); P.curve(function(x){ return a * (x - x0) * (x - x0) + y0; }, '#2f5bea');
+    document.getElementById('gRound').textContent = 'Раунд ' + round + ' / ' + ROUNDS; fb.textContent = ''; nx.style.display = 'none';
+    btns.forEach(function(b){ b.classList.remove('good', 'wrong'); });
+  }
+  btns.forEach(function(b){ b.addEventListener('click', function(){
+    if(answered) return; answered = true; var ok = b.getAttribute('data-t') === cur;
+    if(ok){ score++; b.classList.add('good'); } else { b.classList.add('wrong'); btns.forEach(function(x){ if(x.getAttribute('data-t') === cur) x.classList.add('good'); }); }
+    fb.className = 'feedback ' + (ok ? 'ok' : 'bad'); fb.textContent = ok ? '✓ Верно!' : '✗ Смотрите: ветви ' + (cur[0] === '+' ? 'вверх (a &gt; 0)' : 'вниз (a &lt; 0)').replace(/&gt;/g, '>').replace(/&lt;/g, '<') + ', пересечение с Oy ' + (cur[1] === '+' ? 'выше нуля (c > 0).' : 'ниже нуля (c < 0).');
+    document.getElementById('gScore').textContent = 'Верно: ' + score;
+    if(round >= ROUNDS){ var pass = score >= 6; fb.textContent += pass ? ' Пройдено: ' + score + ' из 8 🎉' : ' Итог ' + score + ' из 8, нужно 6.'; if(pass){ GeoMarkSolved('game'); document.getElementById('game').classList.add('ok'); } nx.textContent = 'Ещё раз ↻'; }
+    else nx.textContent = 'Дальше →';
+    nx.style.display = '';
+  }); });
+  nx.addEventListener('click', function(){ if(round >= ROUNDS){ round = 0; score = 0; document.getElementById('gScore').textContent = 'Верно: 0'; } newRound(); });
+  if(GeoIsSolved('game')) document.getElementById('game').classList.add('ok');
+  newRound();
+});
+
+</script>
+</body>
+</html>

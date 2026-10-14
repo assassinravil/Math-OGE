@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Справочник · Алгебра 9 · ОГЭ</title>
+<link rel="stylesheet" href="assets/core.css">
+<style>
+.ref{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px}
+.ref .c{background:var(--soft);border:1px solid var(--line);border-radius:12px;padding:12px 14px;font-size:15px;line-height:1.55}
+.ref .c h4{margin:0 0 6px;font-size:15px;color:var(--primary)}
+.ref .c ul{margin:0;padding-left:18px}
+.ref .c .f{font-weight:650;font-size:16px;margin:4px 0}
+.ref .c.hide{display:none}
+section.card.hide{display:none}
+.search{width:100%;padding:11px 14px;border:1.5px solid var(--line);border-radius:12px;font:inherit;background:var(--card);color:var(--ink);margin-bottom:20px}
+.search:focus{outline:none;border-color:var(--primary)}
+table.tr{border-collapse:collapse;margin:6px 0;font-size:15px}
+table.tr td,table.tr th{border:1px solid var(--line);padding:4px 10px;text-align:center}
+.lnk{font-size:12px;font-weight:600;color:var(--muted);margin-left:auto}
+@media print{
+  .topnav,.hero,.search,.tlock,.noprint{display:none!important}
+  body{background:#fff;font-size:12px}
+  section.card{box-shadow:none;border:0;padding:0 0 8px;break-inside:avoid-page}
+  .ref{gap:6px}.ref .c{padding:6px 8px;font-size:11.5px;break-inside:avoid}
+  section.card > h2{font-size:16px}
+}
+</style>
+</head>
+<body>
+
+<nav class="topnav"><div class="in">
+  <a class="home" href="algebra.html">🧮 <span>Алгебра · ОГЭ</span></a>
+  <div class="links"></div>
+  <button class="btn small ghost noprint" type="button" onclick="window.print()">🖨 Печать</button>
+</div></nav>
+
+<div class="container">
+<header class="hero">
+  <span class="tag">Алгебра 7–9</span><span class="tag">Всё для ОГЭ</span>
+  <h1>📖 Справочник по алгебре</h1>
+  <p>Определения, свойства и формулы курса — коротко.</p>
+</header>
+
+<input class="search" id="q" type="search" placeholder="Поиск: дискриминант, прогрессия, вершина…">
+
+<section class="card" id="s1" data-nav="Числа">
+  <h2><span class="step">1</span> Числа и вычисления <span class="lnk">занятия 1–2, повторение</span></h2>
+  <div class="ref"><div class="c"><h4>Дроби</h4>a/b + c/d = (ad + bc)/(bd)<br>a/b · c/d = ac/(bd)<br>a/b : c/d = ad/(bc)<br>Порядок: скобки → степени → × и : → + и −.</div><div class="c"><h4>Проценты</h4>p% от a = a · p/100.<br>Увеличить на p%: a · (1 + p/100).<br>Уменьшить на p%: a · (1 − p/100).<br>Сколько процентов b от a: b/a · 100%.</div><div class="c"><h4>Сравнение и прямая</h4>Сравнить корни: возвести в квадрат.<br>√10 &lt; 3,2, т. к. 10 &lt; 10,24.<br>Округление: смотрим на следующую цифру (≥ 5 — вверх).</div><div class="c"><h4>Стандартный вид</h4>a · 10ⁿ, где 1 ≤ a &lt; 10.<br>45 000 = 4,5 · 10⁴, 0,0032 = 3,2 · 10⁻³.</div></div>
+</section>
+
+<section class="card" id="s2" data-nav="Степени и корни">
+  <h2><span class="step">2</span> Степени, корни, формулы сокращённого умножения <span class="lnk">повторение 7–8 кл.</span></h2>
+  <div class="ref"><div class="c"><h4>Степени</h4>aᵐ · aⁿ = aᵐ⁺ⁿ, &nbsp;aᵐ : aⁿ = aᵐ⁻ⁿ<br>(aᵐ)ⁿ = aᵐⁿ, &nbsp;(ab)ⁿ = aⁿbⁿ<br>a⁰ = 1, &nbsp;a⁻ⁿ = 1/aⁿ</div><div class="c"><h4>Квадратные корни</h4>√(ab) = √a · √b, &nbsp;√(a/b) = √a / √b<br>(√a)² = a, &nbsp;√(a²) = |a|<br>Вынесение: √50 = 5√2.<br>Избавление от корня в знаменателе: 1/√2 = √2/2.</div><div class="c"><h4>ФСУ</h4>(a ± b)² = a² ± 2ab + b²<br>a² − b² = (a − b)(a + b)<br>a³ ± b³ = (a ± b)(a² ∓ ab + b²)</div><div class="c"><h4>Алгебраические дроби</h4>Сокращать можно только множители.<br>ОДЗ: знаменатель ≠ 0.<br>Общий знаменатель — НОК знаменателей.</div></div>
+</section>
+
+<section class="card" id="s3" data-nav="Уравнения">
+  <h2><span class="step">3</span> Уравнения <span class="lnk">занятия 9–10, повторение</span></h2>
+  <div class="ref"><div class="c"><h4>Квадратное уравнение</h4>ax² + bx + c = 0<div class="f">D = b² − 4ac</div>x = (−b ± √D) / (2a)<br>D &gt; 0 — два корня, D = 0 — один, D &lt; 0 — нет.</div><div class="c"><h4>Теорема Виета</h4>x₁ + x₂ = −b/a, &nbsp;x₁ · x₂ = c/a.<br>Приведённое x² + px + q: сумма −p, произведение q.</div><div class="c"><h4>Неполные</h4>ax² + bx = 0 → x(ax + b) = 0.<br>ax² + c = 0 → x² = −c/a.</div><div class="c"><h4>Целые уравнения высших степеней</h4>Разложить на множители (вынести, сгруппировать).<br>Замена: биквадратное ax⁴ + bx² + c = 0, t = x² ≥ 0.</div><div class="c"><h4>Дробные уравнения</h4>1) ОДЗ: знаменатели ≠ 0.<br>2) Умножить на общий знаменатель.<br>3) Решить и <b>проверить корни по ОДЗ</b>.</div></div>
+</section>
+
+<section class="card" id="s4" data-nav="Неравенства">
+  <h2><span class="step">4</span> Неравенства и системы <span class="lnk">занятия 13–17, повторение</span></h2>
+  <div class="ref"><div class="c"><h4>Линейные</h4>При делении на отрицательное число знак <b>меняется</b>.<br>Система — пересечение решений, совокупность — объединение.</div><div class="c"><h4>Квадратные</h4>Найти корни, нарисовать параболу, взять нужные промежутки.<br>x² − 4 &lt; 0 → −2 &lt; x &lt; 2.</div><div class="c"><h4>Метод интервалов</h4>1) Корни множителей на прямую.<br>2) Знак в крайнем правом промежутке.<br>3) Чередовать знаки (кроме чётной кратности).<br>Нули знаменателя — всегда выколоты.</div><div class="c"><h4>Системы уравнений</h4>Подстановка: выразить и подставить.<br>Сложение: уравнять коэффициенты.<br>Графически: точки пересечения графиков.</div></div>
+</section>
+
+<section class="card" id="s5" data-nav="Функции">
+  <h2><span class="step">5</span> Функции и графики <span class="lnk">занятия 4–8</span></h2>
+  <div class="ref"><div class="c"><h4>Свойства</h4>D(f) — допустимые x, E(f) — значения.<br>Нули: f(x) = 0.<br>Чётная: D(f) симметрична и f(−x) = f(x); нечётная: D(f) симметрична и f(−x) = −f(x).<br>Схема: D, E, нули, знаки, монотонность, наиб./наим., чётность.</div><div class="c"><h4>y = kx + b</h4>k — наклон (k &gt; 0 — возрастает), b — пересечение с Oy.<br>Параллельны ⇔ равные k.</div><div class="c"><h4>y = k/x</h4>k &gt; 0 — I и III четверти, k &lt; 0 — II и IV.<br>y = k/(x − m) + n: асимптоты x = m, y = n.</div><div class="c"><h4>Парабола</h4>y = a(x − m)² + n → вершина (m; n).<div class="f">y = ax² + bx + c: x₀ = −b/(2a)</div>a &gt; 0 — ветви вверх; (0; c) — пересечение с Oy.</div><div class="c"><h4>y = √x, y = |x|, y = x³</h4>√x: x ≥ 0, y ≥ 0.<br>|x|: «галочка», чётная.<br>x³: нечётная, возрастает.</div><div class="c"><h4>№22: графики</h4>Сократили дробь — выколоть точку.<br>|f(x)| — отразить низ вверх.<br>Особые m: вершины, выколотые точки, стыки кусков.</div></div>
+</section>
+
+<section class="card" id="s6" data-nav="Задачи">
+  <h2><span class="step">6</span> Текстовые задачи <span class="lnk">занятия 11–12</span></h2>
+  <div class="ref"><div class="c"><h4>Движение</h4>s = v · t.<br>Навстречу: v₁ + v₂, вдогонку: v₁ − v₂.<br>По течению: v + vтеч, против: v − vтеч.</div><div class="c"><h4>Работа</h4>A = p · t (работа = производительность × время).<br>Вся работа = 1. Вместе: p₁ + p₂.</div><div class="c"><h4>Смеси и проценты</h4>Масса вещества = масса раствора × концентрация.<br>Вещество при смешивании складывается.</div></div>
+</section>
+
+<section class="card" id="s7" data-nav="Прогрессии">
+  <h2><span class="step">7</span> Прогрессии <span class="lnk">занятия 19–21</span></h2>
+  <div class="ref"><div class="c"><h4>Арифметическая</h4>aₙ = a₁ + d(n − 1)<div class="f">Sₙ = (a₁ + aₙ) · n / 2</div>Sₙ = (2a₁ + d(n − 1)) · n / 2</div><div class="c"><h4>Геометрическая</h4>bₙ = b₁ · qⁿ⁻¹<div class="f">Sₙ = b₁(qⁿ − 1) / (q − 1)</div>q ≠ 1.</div></div>
+</section>
+
+<section class="card" id="s8" data-nav="Вероятность">
+  <h2><span class="step">8</span> Вероятность и статистика <span class="lnk">занятия 22–23</span></h2>
+  <div class="ref"><div class="c"><h4>Классическая вероятность</h4><div class="f">P = m / n</div>m — благоприятные исходы, n — все.<br>0 ≤ P ≤ 1.</div><div class="c"><h4>Противоположное событие</h4>P(Ā) = 1 − P(A).<br>Независимые: P(A и B) = P(A) · P(B).</div><div class="c"><h4>Комбинаторика</h4>Перестановки: n! = 1 · 2 · … · n.<br>Правило умножения: m · n вариантов.</div><div class="c"><h4>Статистика</h4>Среднее — сумма / количество.<br>Медиана — середина упорядоченного ряда.<br>Мода — самое частое, размах — max − min.</div></div>
+</section>
+
+<section class="card oge" id="s★" data-nav="ОГЭ">
+  <h2><span class="step">★</span> Алгебра в ОГЭ <span class="lnk"></span></h2>
+  <div class="ref"><div class="c"><h4>Часть 1 — только ответ</h4>№1–5 — практико-ориентированные<br>№6 — вычисления · №7 — числовая прямая<br>№8 — степени и корни · №9 — уравнения<br>№10 — вероятность · №11 — графики<br>№12 — расчёты по формулам · №13 — неравенства<br>№14 — прогрессии (жизненная задача)</div><div class="c"><h4>Часть 2 — с решением</h4>№20 — уравнения, неравенства, системы<br>№21 — текстовая задача<br>№22 — график с параметром</div><div class="c"><h4>Ловушки</h4>Знак неравенства при делении на минус.<br>Проверка корней дробного уравнения по ОДЗ.<br>(x + 3)² — сдвиг влево.<br>В №11 ответ — цифры в порядке А, Б, В.</div></div>
+</section>
+
+</div>
+
+<script src="assets/core.js"></script>
+<script>
+(function(){
+  var q = document.getElementById('q');
+  q.addEventListener('input', function(){
+    var t = q.value.trim().toLowerCase();
+    document.querySelectorAll('section.card').forEach(function(s){
+      var any = false;
+      s.querySelectorAll('.ref .c').forEach(function(c){ var ok = !t || c.textContent.toLowerCase().indexOf(t) >= 0 || s.querySelector('h2').textContent.toLowerCase().indexOf(t) >= 0; c.classList.toggle('hide', !ok); if(ok) any = true; });
+      s.classList.toggle('hide', !any);
+    });
+  });
+})();
+</script>
+</body>
+</html>

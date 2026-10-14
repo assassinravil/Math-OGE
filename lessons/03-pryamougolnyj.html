@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Занятие 3 · Прямоугольный треугольник</title>
+<link rel="stylesheet" href="../assets/core.css">
+</head>
+<body data-lesson="L03">
+
+<nav class="topnav"><div class="in">
+  <a class="home" href="../geometry.html">📐 <span>Геометрия · ОГЭ</span></a>
+  <div class="links"></div>
+  <a class="home" href="../spravochnik.html" title="Справочник">📖</a>
+  <div class="progress-pill">Решено <b>0 / 0</b><div class="progress-bar"><i></i></div></div>
+</div></nav>
+
+<div class="container">
+
+<header class="hero">
+  <span class="tag">Раздел 1 · Треугольники</span><span class="tag">Занятие 3 из 23</span><span class="tag">Учебник: гл. IV §3, гл. V</span>
+  <h1>Прямоугольный треугольник</h1>
+  <p>Острые углы, катет против угла 30°, медиана к гипотенузе, высота из прямого угла.</p>
+  <div class="timeline">
+    <a href="#warmup">① Проверка ДЗ <small>0–10′</small></a>
+    <a href="#theory">② Теория <small>10–25′</small></a>
+    <a href="#practice">③ Практика <small>25–45′</small></a>
+    <a href="#oge">④ ОГЭ <small>45–55′</small></a>
+    <a href="#hw">⑤ Итог и ДЗ <small>55–60′</small></a>
+    <a href="#bonus">★ Бонус</a>
+  </div>
+</header>
+
+<div class="teacher-panel teacher-only">
+  <h3>План занятия (60 минут)</h3>
+  <ol>
+    <li><b>0–10′</b> Проверка ДЗ занятия 2.</li>
+    <li><b>10–25′</b> Теория. В лаборатории показать: окружность с центром в середине гипотенузы всегда проходит через C — отсюда CM = AB/2. Кнопка «∠A = 30°» — катет BC ровно половина гипотенузы.</li>
+    <li><b>25–45′</b> Тренажёр (6 раундов, генерируется заново), затем П1–П8; П9–П10 по времени.</li>
+    <li><b>45–55′</b> ОГЭ №15 и №19.</li>
+    <li><b>55–60′</b> Шпаргалка, ДЗ.</li>
+  </ol>
+  <p class="muted" style="margin:0">Типичные ошибки: берут половину гипотенузы как катет против угла 60°; не замечают, что медиана к гипотенузе образует два равнобедренных треугольника; путают, какой угол при высоте равен какому острому углу.</p>
+</div>
+
+<!-- ============ 1. ПРОВЕРКА ДЗ ============ -->
+<section class="card" id="warmup" data-nav="Проверка ДЗ">
+  <h2><span class="step">1</span> Проверка ДЗ <span class="mins">0–10 мин</span></h2>
+  <div class="tasks">
+    <div class="task" data-id="h1"><div class="task-head"><span class="tnum">ДЗ 1</span></div>
+      <p>Угол при вершине равнобедренного треугольника равен 56°. Найдите угол при основании.</p>
+      <div class="ans-row"><label>Ответ: <input class="ans" data-a="62"></label></div>
+      <div class="sol">(180° − 56°) : 2 = 62°.</div></div>
+    <div class="task" data-id="h2"><div class="task-head"><span class="tnum">ДЗ 2</span></div>
+      <p>Периметр равнобедренного треугольника 36, боковая сторона 13. Найдите основание.</p>
+      <div class="ans-row"><label>Ответ: <input class="ans" data-a="10"></label></div></div>
+    <div class="task" data-id="h3"><div class="task-head"><span class="tnum">ДЗ 3</span></div>
+      <p>В △ABC AB = BC, ∠A = 65°. Найдите ∠B.</p>
+      <div class="ans-row"><label>Ответ: <input class="ans" data-a="50"></label></div></div>
+    <div class="task" data-id="h4"><div class="task-head"><span class="tnum">ДЗ 4</span></div>
+      <p>В △ABC BM — медиана, AC = 26. Найдите MC.</p>
+      <div class="ans-row"><label>Ответ: <input class="ans" data-a="13"></label></div></div>
+    <div class="task" data-id="h5" data-mode="digits"><div class="task-head"><span class="tnum">ДЗ 5</span><span class="pill oge">№19</span></div>
+      <p>1) Медиана делит сторону пополам. 2) Треугольник с углом 60° — равносторонний. 3) Существует треугольник со сторонами 3, 4, 8.</p>
+      <div class="ans-row"><label>Ответ: <input class="ans" data-a="1"></label></div></div>
+  </div>
+</section>
+
+<!-- ============ 2. ТЕОРИЯ ============ -->
+<section class="card" id="theory" data-nav="Теория">
+  <h2><span class="step">2</span> Теория <span class="mins">10–25 мин</span></h2>
+  <div class="grid2">
+    <div class="box def">
+      <span class="title">Элементы</span>
+      ∠C = 90°. <b>AC</b> и <b>BC</b> — катеты, <b>AB</b> — гипотенуза (лежит против прямого угла, самая длинная сторона).
+      <div class="formula">∠A + ∠B = 90°</div>
+      <div class="eg">∠A = 37° → ∠B = 90° − 37° = 53°.</div>
+    </div>
+    <figure><svg viewBox="0 0 320 200" width="300">
+      <path class="st fl" d="M40 170 L280 170 L40 40 Z"/>
+      <path d="M40 156 L54 156 L54 170" fill="none" stroke="currentColor" stroke-width="2"/>
+      <text class="tx" x="26" y="186">C</text><text class="tx" x="284" y="186">A</text><text class="tx" x="26" y="36">B</text>
+      <text class="txs" x="160" y="190">катет</text><text class="txs" x="6" y="110">катет</text><text class="txs" x="170" y="95">гипотенуза</text>
+    </svg></figure>
+  </div>
+  <div class="grid3" style="margin-top:14px">
+    <div class="box rule"><span class="title">Катет против 30°</span>Равен половине гипотенузы. И обратно: если катет равен половине гипотенузы, противолежащий угол — 30°.<div class="eg">Гипотенуза 18, ∠A = 30° → BC = 9.</div><div class="eg trap">Против угла 60° — <b>не</b> половина гипотенузы.</div></div>
+    <div class="box rule"><span class="title">Медиана к гипотенузе <span class="muted" style="font-weight:400;font-size:13px">(гл. V)</span></span>Равна половине гипотенузы: CM = AM = MB. Середина гипотенузы — центр описанной окружности.<div class="eg">AB = 13 → CM = 6,5.</div></div>
+    <div class="box rule"><span class="title">Высота из прямого угла</span>CH ⊥ AB. Углы: ∠BCH = ∠A, ∠ACH = ∠B.<div class="eg">∠A = 28° → ∠BCH = 28°, ∠ACH = 62°.</div></div>
+  </div>
+  <div class="box tip" style="margin-top:14px">
+    <span class="title">Признаки равенства прямоугольных треугольников</span>
+    <ul class="rules"><li>по двум катетам;</li><li>по катету и прилежащему острому углу;</li><li>по гипотенузе и острому углу;</li><li><b>по гипотенузе и катету</b>.</li></ul>
+  </div>
+
+  <h3>Лаборатория: медиана к гипотенузе и угол 30°</h3>
+  <div class="lab">
+    <svg id="labR" viewBox="0 -80 600 430"></svg>
+    <div class="readout" id="rRead"></div>
+    <div class="controls">
+      <label><input type="checkbox" id="rCirc" checked> окружность</label>
+      <label><input type="checkbox" id="rH"> высота CH</label>
+      <button class="btn small ghost" type="button" id="r30">∠A = 30°</button>
+    </div>
+    <p class="muted" style="margin:8px 0 0;font-size:14px">Двигайте точки A и B вдоль катетов.</p>
+  </div>
+</section>
+
+<!-- ============ ПРИМЕРЫ ============ -->
+<section class="card" id="examples" data-nav="Примеры">
+  <h2><span class="step">↳</span> Разбор примеров</h2>
+  <div class="grid3">
+    <div class="box example"><span class="title">Пример 1</span>
+      <p>∠C = 90°, ∠B = 30°, AB = 16. Найдите AC.</p>
+      <details class="reveal"><summary>Показать решение</summary><p><b>Решение.</b> AC лежит против ∠B = 30°: AC = 16 : 2 = 8.</p><p><b>Ответ:</b> 8.</p></details></div>
+    <div class="box example"><span class="title">Пример 2</span>
+      <p>∠C = 90°, CM — медиана, ∠B = 35°. Найдите ∠BCM.</p>
+      <details class="reveal"><summary>Показать решение</summary><p><b>Решение.</b> CM = MB, △CMB равнобедренный: ∠BCM = ∠B = 35°.</p><p><b>Ответ:</b> 35.</p></details></div>
+    <div class="box example"><span class="title">Пример 3</span>
+      <p>∠C = 90°, CH — высота, ∠A = 25°. Найдите ∠BCH.</p>
+      <details class="reveal"><summary>Показать решение</summary><p><b>Решение.</b> ∠B = 65°, в △BCH: 90° − 65° = 25°. Короче: ∠BCH = ∠A.</p><p><b>Ответ:</b> 25.</p></details></div>
+  </div>
+</section>
+
+<!-- ============ 3. ПРАКТИКА ============ -->
+<section class="card" id="practice" data-nav="Практика">
+  <h2><span class="step">3</span> Интерактивная практика <span class="mins">25–45 мин</span></h2>
+  <h3>🎯 Тренажёр «Быстрый счёт»</h3>
+  <div class="lab task" id="trainer" data-id="trainer" data-noauto><div id="trainerBox"></div>
+    <div class="sol">Задачи генерируются случайно. Засчитывается при 5 верных из 6.</div></div>
+
+  <h3>Блок А. База</h3>
+  <div class="tasks">
+    <div class="task" data-id="p1"><div class="task-head"><span class="tnum">П1</span><span class="pill lvl1">база</span></div>
+      <p>Один из острых углов прямоугольного треугольника равен 37°. Найдите другой острый угол.</p>
+      <div class="ans-row"><label>Ответ: <input class="ans" data-a="53"></label></div></div>
+    <div class="task" data-id="p2"><div class="task-head"><span class="tnum">П2</span><span class="pill lvl1">база</span></div>
+      <p>Гипотенуза прямоугольного треугольника равна 18, один из углов — 30°. Найдите меньший катет.</p>
+      <div class="ans-row"><label>Ответ: <input class="ans" data-a="9"></label></div>
+      <div class="hint">Меньший катет лежит против меньшего угла — 30°.</div>
+      <div class="sol">18 : 2 = 9.</div></div>
+    <div class="task" data-id="p3"><div class="task-head"><span class="tnum">П3</span><span class="pill lvl1">база</span></div>
+      <p>Катет, лежащий против угла 30°, равен 7. Найдите гипотенузу.</p>
+      <div class="ans-row"><label>Ответ: <input class="ans" data-a="14"></label></div></div>
+    <div class="task" data-id="p4"><div class="task-head"><span class="tnum">П4</span><span class="pill lvl1">база</span></div>
+      <p>Медиана, проведённая к гипотенузе, равна 6,5. Найдите гипотенузу.</p>
+      <div class="ans-row"><label>Ответ: <input class="ans" data-a="13"></label></div></div>
+    <div class="task" data-id="p5"><div class="task-head"><span class="tnum">П5</span><span class="pill lvl1">база</span></div>
+      <p>В △ABC ∠C = 90°, CH — высота, ∠A = 28°. Найдите ∠BCH.</p>
+      <div class="ans-row"><label>Ответ: <input class="ans" data-a="28"></label></div>
+      <div class="sol">∠B = 62°, ∠BCH = 90° − 62° = 28°.</div></div>
+    <div class="task" data-id="p6"><div class="task-head"><span class="tnum">П6</span><span class="pill lvl1">база</span></div>
+      <p>В △ABC ∠C = 90°, CM — медиана, ∠A = 20°. Найдите ∠ACM.</p>
+      <div class="ans-row"><label>Ответ: <input class="ans" data-a="20"></label></div>
+      <div class="hint">CM = AM.</div>
+      <div class="sol">△ACM равнобедренный (CM = AM), ∠ACM = ∠A = 20°.</div></div>
+  </div>
+  <h3>Блок Б. Посложнее</h3>
+  <div class="tasks">
+    <div class="task" data-id="p7"><div class="task-head"><span class="tnum">П7</span><span class="pill lvl2">средний</span></div>
+      <p>Один из острых углов прямоугольного треугольника равен 60°, а сумма гипотенузы и меньшего катета равна 42. Найдите гипотенузу.</p>
+      <div class="ans-row"><label>Ответ: <input class="ans" data-a="28"></label></div>
+      <div class="hint">Меньший катет лежит против угла 30° и равен c/2.</div>
+      <div class="sol">c + c/2 = 42 → c = 28.</div></div>
+    <div class="task" data-id="p8"><div class="task-head"><span class="tnum">П8</span><span class="pill lvl2">средний</span></div>
+      <p>Внешний угол при вершине острого угла прямоугольного треугольника равен 150°, гипотенуза — 22. Найдите меньший катет.</p>
+      <div class="ans-row"><label>Ответ: <input class="ans" data-a="11"></label></div>
+      <div class="sol">Внутренний угол 30°, катет против него 11.</div></div>
+    <div class="task" data-id="p9"><div class="task-head"><span class="tnum">П9</span><span class="pill lvl2">средний</span></div>
+      <p>В △ABC ∠C = 90°, ∠A = 25°. CH — высота, CM — медиана. Найдите угол MCH.</p>
+      <div class="ans-row"><label>Ответ: <input class="ans" data-a="40"></label></div>
+      <div class="sol">∠ACM = 25°, ∠ACH = 90° − 25° = 65°. ∠MCH = 65° − 25° = 40°.</div></div>
+    <div class="task" data-id="p10"><div class="task-head"><span class="tnum">П10</span><span class="pill lvl3">сложнее</span></div>
+      <p>В △ABC ∠C = 90°, ∠A = 32°. CL — биссектриса, CH — высота. Найдите угол LCH.</p>
+      <div class="ans-row"><label>Ответ: <input class="ans" data-a="13"></label></div>
+      <div class="sol">∠ACL = 45°, ∠ACH = 58°, ∠LCH = 13°.</div></div>
+  </div>
+</section>
+
+<!-- ============ 4. ОГЭ ============ -->
+<section class="card oge" id="oge" data-nav="ОГЭ">
+  <h2><span class="step">4</span> Задачи в формате ОГЭ <span class="mins">45–55 мин</span></h2>
+  <div class="tasks">
+    <div class="task" data-id="o1"><div class="task-head"><span class="tnum">О1</span><span class="pill oge">ОГЭ №15</span></div>
+      <p>Катет прямоугольного треугольника, лежащий против угла 30°, равен 19. Найдите гипотенузу.</p>
+      <div class="ans-row"><label>Ответ: <input class="ans" data-a="38"></label></div></div>
+    <div class="task" data-id="o2"><div class="task-head"><span class="tnum">О2</span><span class="pill oge">ОГЭ №15</span></div>
+      <p>В треугольнике ABC угол C равен 90°, CH — высота, угол A равен 41°. Найдите угол BCH. Ответ дайте в градусах.</p>
+      <div class="ans-row"><label>Ответ: <input class="ans" data-a="41"></label></div></div>
+    <div class="task" data-id="o3"><div class="task-head"><span class="tnum">О3</span><span class="pill oge">ОГЭ №15</span></div>
+      <p>В треугольнике ABC угол C равен 90°, угол B равен 30°, AB = 46. Найдите AC.</p>
+      <div class="ans-row"><label>Ответ: <input class="ans" data-a="23"></label></div></div>
+    <div class="task" data-id="o4"><div class="task-head"><span class="tnum">О4</span><span class="pill oge">ОГЭ №15</span></div>
+      <p>Медиана прямоугольного треугольника, проведённая к гипотенузе, равна 17. Найдите гипотенузу.</p>
+      <div class="ans-row"><label>Ответ: <input class="ans" data-a="34"></label></div></div>
+    <div class="task" data-id="o5" data-mode="digits"><div class="task-head"><span class="tnum">О5</span><span class="pill oge">ОГЭ №19</span></div>
+      <p>Какие из следующих утверждений верны?</p>
+      <ol style="margin:6px 0"><li>В прямоугольном треугольнике гипотенуза равна сумме катетов.</li><li>Катет прямоугольного треугольника, лежащий против угла 30°, равен половине гипотенузы.</li><li>Медиана прямоугольного треугольника, проведённая к гипотенузе, равна половине гипотенузы.</li></ol>
+      <div class="ans-row"><label>Ответ: <input class="ans" data-a="23"></label></div></div>
+    <div class="task" data-id="o6" data-mode="digits"><div class="task-head"><span class="tnum">О6</span><span class="pill oge">ОГЭ №19</span></div>
+      <p>Какие из следующих утверждений верны?</p>
+      <ol style="margin:6px 0"><li>Сумма острых углов прямоугольного треугольника равна 90°.</li><li>Гипотенуза прямоугольного треугольника меньше его катета.</li><li>Если катет равен половине гипотенузы, то противолежащий ему угол равен 60°.</li></ol>
+      <div class="ans-row"><label>Ответ: <input class="ans" data-a="1"></label></div>
+      <div class="sol">3 — неверно: угол 30°.</div></div>
+  </div>
+</section>
+
+<!-- ============ 5. ИТОГ И ДЗ ============ -->
+<section class="card" id="hw" data-nav="Итог и ДЗ">
+  <h2><span class="step">5</span> Итог и домашнее задание <span class="mins">55–60 мин</span></h2>
+  <h3>Шпаргалка</h3>
+  <div class="cheat">
+    <div><b>Острые углы:</b> ∠A + ∠B = 90°</div>
+    <div><b>Против 30°:</b> катет = гипотенуза : 2</div>
+    <div><b>Медиана к гипотенузе</b> = гипотенуза : 2</div>
+    <div><b>Высота CH:</b> ∠BCH = ∠A, ∠ACH = ∠B</div>
+  </div>
+  <h3>📚 Домашнее задание</h3>
+  <p class="muted">Ответы проверяются в начале занятия 4.</p>
+  <ol class="hw">
+    <li>Один из острых углов прямоугольного треугольника равен 64°. Найдите другой.<div class="sol"><span class="ansline">Ответ: 26.</span></div></li>
+    <li>Гипотенуза равна 30, один из острых углов 30°. Найдите меньший катет.<div class="sol"><span class="ansline">Ответ: 15.</span></div></li>
+    <li>Медиана, проведённая к гипотенузе, равна 9. Найдите гипотенузу.<div class="sol"><span class="ansline">Ответ: 18.</span></div></li>
+    <li>В △ABC ∠C = 90°, CH — высота, ∠B = 55°. Найдите ∠ACH.<div class="sol"><span class="ansline">Ответ: 55.</span> ∠ACH = ∠B.</div></li>
+    <li>(ОГЭ №19) 1) Если сумма двух углов треугольника равна 90°, то треугольник прямоугольный. 2) Катет, лежащий против угла 60°, равен половине гипотенузы. 3) В прямоугольном треугольнике может быть тупой угол.<div class="sol"><span class="ansline">Ответ: 1.</span></div></li>
+  </ol>
+  <h3>⭐ Бонусное ДЗ</h3>
+  <ol class="hw">
+    <li>В △ABC ∠C = 90°, ∠A = 30°, AB = 40, CH — высота. Найдите BH.<div class="sol"><span class="ansline">Ответ: 10.</span> BC = 20 (против 30°). В △BCH ∠BCH = ∠A = 30°, значит BH = BC : 2 = 10.</div></li>
+    <li>Докажите: если медиана треугольника равна половине стороны, к которой она проведена, то треугольник прямоугольный.<div class="sol">MA = MB = MC. Треугольники AMC и BMC равнобедренные: ∠A = ∠ACM = α, ∠B = ∠BCM = β. Сумма углов: 2α + 2β = 180°, значит ∠C = α + β = 90°.</div></li>
+  </ol>
+  <p style="margin-top:18px"><button class="btn small ghost" type="button" onclick="GeoResetLesson()">Сбросить прогресс занятия</button></p>
+</section>
+
+<!-- ============ БОНУС ============ -->
+<section class="card bonus" id="bonus" data-nav="★ Бонус">
+  <h2><span class="step">★</span> Бонусная практика</h2>
+  <div class="tasks">
+    <div class="task" data-id="b1"><div class="task-head"><span class="tnum">Б1</span><span class="pill lvl3">сложнее</span></div>
+      <p>В △ABC ∠C = 90°, ∠A = 30°, AB = 12, CH — высота. Найдите AH.</p>
+      <div class="ans-row"><label>Ответ: <input class="ans" data-a="9"></label></div>
+      <div class="sol">BC = 6, ∠BCH = 30°, BH = 3, AH = 12 − 3 = 9.</div></div>
+    <div class="task" data-id="b2"><div class="task-head"><span class="tnum">Б2</span><span class="pill lvl3">сложнее</span></div>
+      <p>Высота прямоугольного треугольника, проведённая из вершины прямого угла, делит его на два угла, один из которых на 40° больше другого. Найдите больший острый угол треугольника.</p>
+      <div class="ans-row"><label>Ответ: <input class="ans" data-a="65"></label></div>
+      <div class="sol">Части прямого угла: 25° и 65°. Они равны острым углам треугольника, больший 65°.</div></div>
+    <div class="task" data-id="b3"><div class="task-head"><span class="tnum">Б3</span><span class="pill lvl3">сложнее</span></div>
+      <p>В прямоугольном треугольнике угол между высотой и медианой, проведёнными из вершины прямого угла, равен 20°. Найдите больший острый угол треугольника.</p>
+      <div class="ans-row"><label>Ответ: <input class="ans" data-a="55"></label></div>
+      <div class="sol">Угол между ними |90° − 2∠A| = 20°, ∠A = 35° или 55°. Больший острый угол 55°.</div></div>
+  </div>
+</section>
+
+</div>
+
+<script src="../assets/core.js"></script>
+<script>
+/* ===== Лаборатория: прямоугольный треугольник ===== */
+(function(){
+  var G = GeoSVG, svg = document.getElementById('labR');
+  var C = {x:110, y:300}, P = {A:{x:470, y:300}, B:{x:110, y:90}};
+  function L(p){ return (p / 40).toFixed(1).replace('.', ','); }
+  function draw(){
+    G.clear(svg); var A = P.A, B = P.B, M = G.mid(A, B), ab = G.dist(A, B);
+    if(document.getElementById('rCirc').checked) G.el('circle', {cx:M.x, cy:M.y, r:ab / 2, fill:'none', stroke:'#8b5cf6', 'stroke-width':1.5, 'stroke-dasharray':'6 6'}, svg);
+    G.el('path', {d:'M'+C.x+' '+C.y+' L'+A.x+' '+A.y+' L'+B.x+' '+B.y+' Z', 'class':'st fl'}, svg);
+    G.rightMark(svg, C, A, B, 14);
+    G.el('line', {x1:C.x, y1:C.y, x2:M.x, y2:M.y, stroke:'#16a34a', 'stroke-width':3}, svg);
+    G.tick(svg, A, M, 1, '#16a34a'); G.tick(svg, M, B, 1, '#16a34a'); G.tick(svg, C, M, 1, '#16a34a');
+    if(document.getElementById('rH').checked){ var H = G.foot(C, A, B); G.el('line', {x1:C.x, y1:C.y, x2:H.x, y2:H.y, stroke:'#e5484d', 'stroke-width':2.5}, svg); G.rightMark(svg, H, C, A, 10, '#e5484d'); G.text(svg, H.x + 14, H.y - 8, 'H'); }
+    var a = G.angle(A, B, C), b = 90 - a;
+    G.arc(svg, A, B, C, 34, '#e5484d'); G.angleLabel(svg, A, B, C, 56, Math.round(a) + '°', '#e5484d');
+    G.arc(svg, B, A, C, 34, '#2f7de1'); G.angleLabel(svg, B, A, C, 56, Math.round(b) + '°', '#2f7de1');
+    G.text(svg, C.x - 16, C.y + 22, 'C'); G.text(svg, M.x + 16, M.y - 10, 'M');
+    G.handle(svg, A, 'A'); G.text(svg, A.x + 4, A.y + 30, 'A'); G.handle(svg, B, 'B'); G.text(svg, B.x - 22, B.y + 5, 'B');
+    var near30 = Math.abs(a - 30) < 0.6;
+    document.getElementById('rRead').innerHTML = '<span>AB = ' + L(ab) + '</span><span style="color:#16a34a">CM = ' + L(ab / 2) + ' = AB : 2</span>' +
+      '<span>BC = ' + L(G.dist(B, C)) + '</span>' + (near30 ? '<span style="color:var(--res)">∠A = 30° → BC = AB : 2</span>' : '');
+  }
+  G.draggable(svg, function(n, p){
+    if(n === 'A') P.A = {x:Math.max(200, Math.min(580, p.x)), y:C.y};
+    else P.B = {x:C.x, y:Math.max(30, Math.min(220, p.y))};
+    draw();
+  });
+  document.getElementById('rCirc').addEventListener('change', draw);
+  document.getElementById('rH').addEventListener('change', draw);
+  document.getElementById('r30').addEventListener('click', function(){ var ac = 360; P.A = {x:C.x + ac, y:C.y}; P.B = {x:C.x, y:C.y - ac * Math.tan(Math.PI / 6)}; draw(); });
+  draw();
+})();
+
+/* ===== Тренажёр ===== */
+document.addEventListener('geo:ready', function(){
+  GeoTrainer(document.getElementById('trainerBox'), {rounds:6, id:'trainer', gen:function(){
+    var t = GeoRand(1, 6), x = GeoRand(15, 75), k = GeoRand(3, 19);
+    if(x === 45) x = 44;
+    switch(t){
+      case 1: return {q:'Острый угол прямоугольного треугольника равен ' + x + '°. Найдите другой острый угол.', a:String(90 - x), why:'90° − ' + x + '° = ' + (90 - x) + '°.'};
+      case 2: return {q:'∠C = 90°, CH — высота, ∠A = ' + x + '°. Найдите ∠BCH.', a:String(x), why:'∠BCH = ∠A.'};
+      case 3: return {q:'∠C = 90°, CM — медиана, ∠A = ' + x + '°. Найдите ∠BCM.', a:String(90 - x), why:'CM = MB, поэтому ∠BCM = ∠B = ' + (90 - x) + '°.'};
+      case 4: return {q:'Катет, лежащий против угла 30°, равен ' + k + '. Найдите гипотенузу.', a:String(2 * k), why:'Гипотенуза вдвое больше: ' + 2 * k + '.'};
+      case 5: return {q:'Гипотенуза равна ' + 2 * k + ', один из углов 30°. Найдите меньший катет.', a:String(k), why:'Против 30° — половина гипотенузы.'};
+      default: return {q:'Медиана, проведённая к гипотенузе, равна ' + k + '. Найдите гипотенузу.', a:String(2 * k), why:'Медиана к гипотенузе равна её половине.'};
+    }
+  }});
+});
+</script>
+</body>
+</html>

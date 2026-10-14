@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Алгебра · занятие 9 · Целые уравнения</title>
+<link rel="stylesheet" href="../assets/core.css">
+</head>
+<body data-lesson="A09">
+
+<nav class="topnav"><div class="in">
+  <a class="home" href="../algebra.html">🧮 <span>Алгебра · ОГЭ</span></a>
+  <div class="links"></div>
+  <a class="home" href="../spravochnik-algebra.html" title="Справочник">📖</a>
+  <div class="progress-pill">Решено <b>0 / 0</b><div class="progress-bar"><i></i></div></div>
+</div></nav>
+
+<div class="container">
+
+<header class="hero">
+  <span class="tag">Раздел 3 · Уравнения и неравенства с одной переменной</span><span class="tag">Алгебра · занятие 9 из 23</span><span class="tag">Учебник: гл. III §5, п. 13 и п. 18</span>
+  <h1>Целые уравнения: разложение, замена, биквадратные</h1>
+  <p>Степень уравнения, разложение на множители (вынесение, группировка), замена переменной, биквадратные уравнения. ОГЭ №9 и №20.</p>
+  <div class="timeline">
+    <a href="#warmup">① Проверка ДЗ <small>0–10′</small></a>
+    <a href="#theory">② Теория <small>10–25′</small></a>
+    <a href="#practice">③ Практика <small>25–45′</small></a>
+    <a href="#oge">④ ОГЭ <small>45–55′</small></a>
+    <a href="#hw">⑤ Итог и ДЗ <small>55–60′</small></a>
+    <a href="#bonus">★ Бонус</a>
+  </div>
+</header>
+
+<div class="teacher-panel teacher-only">
+  <h3>План занятия (60 минут)</h3>
+  <ol><li><b>0–10′</b> Проверка ДЗ занятия 8.</li><li><b>10–25′</b> Теория: степень уравнения, три приёма. Главная ловушка: нельзя делить на x. В лаборатории подобрать b и c, при которых у биквадратного уравнения 4, 2 и 0 корней.</li><li><b>25–45′</b> Тренажёр, затем П1–П10.</li><li><b>45–55′</b> ОГЭ №9 и №20: оформить решение №20 письменно.</li><li><b>55–60′</b> Шпаргалка, ДЗ.</li></ol>
+  <p class="muted" style="margin:0">Типичные ошибки: делят обе части на x (или на x − a) и теряют корень; в биквадратном уравнении не отбрасывают t &lt; 0 или забывают второй корень x = −√t; после замены не возвращаются к x.</p>
+</div>
+
+<section class="card" id="warmup" data-nav="Проверка ДЗ">
+  <h2><span class="step">1</span> Проверка ДЗ <span class="mins">0–10 мин</span></h2>
+  <div class="tasks"><div class="task" data-id="h1"><div class="task-head"><span class="tnum">ДЗ 1</span></div>
+<p>При каком x не определена функция y = 5/(x + 1) − 3?</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="-1"></label></div>
+</div>
+<div class="task" data-id="h2"><div class="task-head"><span class="tnum">ДЗ 2</span></div>
+<p>Найдите ординату выколотой точки графика y = (x² − 16)/(x − 4).</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="8"></label></div>
+</div>
+<div class="task" data-id="h3"><div class="task-head"><span class="tnum">ДЗ 3</span></div>
+<p>При каком m прямая y = m имеет с графиком y = |x² − 6x + 5| ровно три общие точки?</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="4"></label></div>
+</div>
+<div class="task" data-id="h4"><div class="task-head"><span class="tnum">ДЗ 4</span></div>
+<p>y = (x² − 25)/(x + 5). Найдите y(3).</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="-2"></label></div>
+</div>
+<div class="task" data-id="h5" data-mode="digits"><div class="task-head"><span class="tnum">ДЗ 5</span><span class="pill oge">ОГЭ №19</span></div>
+<p>1) Горизонтальная асимптота графика y = k/x + n — прямая y = n. 2) Функция y = |x| имеет наибольшее значение. 3) График y = (x − 3)(x + 3)/(x − 3) — прямая с выколотой точкой.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="13"></label></div>
+</div>
+</div>
+</section>
+
+<section class="card" id="theory" data-nav="Теория">
+  <h2><span class="step">2</span> Теория <span class="mins">10–25 мин</span></h2>
+
+  <div class="grid2">
+    <div class="box def"><span class="title">Целое уравнение и его степень</span>
+      <ul class="rules"><li>Обе части — целые выражения (нет деления на выражение с переменной).</li><li>Переносим всё в левую часть и упрощаем: P(x) = 0. <b>Степень уравнения</b> — степень многочлена P(x).</li><li>Уравнение n-й степени имеет <b>не более n</b> корней.</li></ul>
+      <div class="eg">(x − 2)(x + 3) = x² + 1 → x² + x − 6 = x² + 1 → x − 7 = 0. Уравнение первой степени, x = 7.</div>
+      <div class="eg trap">x³ = 4x. Делить на x <b>нельзя</b> — потеряется корень 0. Правильно: x³ − 4x = 0 → x(x − 2)(x + 2) = 0 → 0; ±2.</div></div>
+    <div class="box rule"><span class="title">Разложение на множители</span>
+      <div class="formula">A · B = 0 ⇔ A = 0 или B = 0</div>
+      <ol class="rules"><li>Перенести всё в одну часть.</li><li>Разложить: вынести общий множитель, сгруппировать, применить формулы.</li><li>Приравнять к нулю каждый множитель.</li></ol>
+      <div class="eg">Вынесение: x³ − 9x = 0 → x(x − 3)(x + 3) = 0 → x = 0; ±3.</div>
+      <div class="eg">Группировка: x³ + 2x² − 9x − 18 = 0 → x²(x + 2) − 9(x + 2) = 0 → (x + 2)(x − 3)(x + 3) = 0 → x = −3; −2; 3.</div></div>
+  </div>
+  <div class="grid2" style="margin-top:14px">
+    <div class="box rule"><span class="title">Замена переменной</span>
+      Одно и то же выражение повторяется → обозначаем его буквой t, решаем, <b>возвращаемся к x</b>.
+      <div class="eg">(x² + x)² − 8(x² + x) + 12 = 0. Пусть t = x² + x: t² − 8t + 12 = 0 → t = 2 или t = 6.<br>x² + x = 2 → x = 1; −2. &nbsp; x² + x = 6 → x = 2; −3.<br>Ответ: −3; −2; 1; 2.</div></div>
+    <div class="box def"><span class="title">Биквадратное уравнение</span>
+      <div class="formula">ax⁴ + bx² + c = 0, &nbsp; t = x², t ≥ 0</div>
+      <div class="eg">x⁴ − 5x² + 4 = 0 → t² − 5t + 4 = 0 → t = 1; 4 → x = ±1; ±2 (четыре корня).</div>
+      <div class="eg trap">x⁴ + 3x² − 4 = 0 → t = 1 или t = −4. x² = −4 корней не имеет → x = ±1.</div></div>
+  </div>
+  <h3>Лаборатория: сколько корней у x⁴ + bx² + c = 0</h3>
+  <div class="lab">
+    <svg id="labB" class="plot"></svg>
+    <div class="readout" id="bRead"></div>
+    <div class="controls">
+      <label>b: <input type="range" id="bB" min="-8" max="4" step="1" value="-5"></label><span class="pill" id="bBv">−5</span>
+      <label>c: <input type="range" id="bC" min="-4" max="8" step="1" value="4"></label><span class="pill" id="bCv">4</span>
+    </div>
+    <p class="muted" style="margin:8px 0 0;font-size:14px">Корни уравнения — точки пересечения графика y = x⁴ + bx² + c с осью Ox. Каждому t &gt; 0 соответствуют два корня ±√t, t = 0 — один корень, t &lt; 0 — ни одного.</p>
+  </div>
+
+</section>
+
+<section class="card" id="examples" data-nav="Примеры">
+  <h2><span class="step">↳</span> Разбор примеров</h2>
+  <div class="grid3"><div class="box example"><span class="title">Пример 1. Вынесение множителя</span><p>Решите уравнение 2x³ − 8x = 0.</p><details class="reveal"><summary>Показать решение</summary><p><b>Решение.</b> 2x(x² − 4) = 0 → 2x(x − 2)(x + 2) = 0 → x = 0, x = 2, x = −2.</p><p><b>Ответ:</b> −2; 0; 2.</p></details></div><div class="box example"><span class="title">Пример 2. Биквадратное</span><p>Решите уравнение x⁴ − 10x² + 9 = 0.</p><details class="reveal"><summary>Показать решение</summary><p><b>Решение.</b> t = x² ≥ 0: t² − 10t + 9 = 0 → t = 1 или t = 9. x² = 1 → x = ±1; x² = 9 → x = ±3.</p><p><b>Ответ:</b> −3; −1; 1; 3.</p></details></div><div class="box example"><span class="title">Пример 3. Замена</span><p>Решите уравнение (x² + 2x)² − 2(x² + 2x) − 3 = 0.</p><details class="reveal"><summary>Показать решение</summary><p><b>Решение.</b> t = x² + 2x: t² − 2t − 3 = 0 → t = 3 или t = −1.<br>x² + 2x − 3 = 0 → x = 1; −3.<br>x² + 2x + 1 = 0 → x = −1.</p><p><b>Ответ:</b> −3; −1; 1.</p></details></div></div>
+</section>
+
+<section class="card" id="practice" data-nav="Практика">
+  <h2><span class="step">3</span> Интерактивная практика <span class="mins">25–45 мин</span></h2>
+  <h3>🎯 Тренажёр «Целые уравнения»</h3>
+  <div class="lab task" id="trainer" data-id="trainer" data-noauto><div id="trainerBox"></div>
+    <div class="sol">Задачи генерируются случайно. Засчитывается при 5 верных из 6.</div></div>
+
+  <h3>Блок А. База</h3>
+  <div class="tasks"><div class="task" data-id="p1"><div class="task-head"><span class="tnum">П1</span><span class="pill lvl1">база</span></div>
+<p>Решите уравнение x³ − 16x = 0. Корни запишите в порядке возрастания.</p>
+<div class="ans-row"><label>x₁ = <input class="ans" data-a="-4" data-label="x₁"></label><label>x₂ = <input class="ans" data-a="0" data-label="x₂"></label><label>x₃ = <input class="ans" data-a="4" data-label="x₃"></label></div>
+</div>
+<div class="task" data-id="p2"><div class="task-head"><span class="tnum">П2</span><span class="pill lvl1">база</span></div>
+<p>Решите уравнение x⁴ − 13x² + 36 = 0. В ответе укажите наибольший корень.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="3"></label></div>
+</div>
+<div class="task" data-id="p3"><div class="task-head"><span class="tnum">П3</span><span class="pill lvl1">база</span></div>
+<p>Найдите сумму корней уравнения (x − 5)(x² − 4) = 0.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="5"></label></div>
+<div class="sol">Корни 5, 2, −2.</div>
+</div>
+<div class="task" data-id="p4"><div class="task-head"><span class="tnum">П4</span><span class="pill lvl1">база</span></div>
+<p>Решите уравнение x⁴ + 2x² − 3 = 0.</p>
+<div class="ans-row"><label>меньший = <input class="ans" data-a="-1" data-label="меньший"></label><label>больший = <input class="ans" data-a="1" data-label="больший"></label></div>
+<div class="sol">t = 1 или t = −3 (не подходит).</div>
+</div>
+<div class="task" data-id="p5"><div class="task-head"><span class="tnum">П5</span><span class="pill lvl1">база</span></div>
+<p>Найдите степень уравнения (x² − 1)(x³ + 2) = x⁵ + 3.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="3"></label></div>
+<div class="sol">x⁵ − x³ + 2x² − 2 = x⁵ + 3 → −x³ + 2x² − 5 = 0.</div>
+</div>
+<div class="task" data-id="p6"><div class="task-head"><span class="tnum">П6</span><span class="pill lvl1">база</span></div>
+<p>Решите уравнение x³ + 3x² − 4x − 12 = 0. Корни запишите в порядке возрастания.</p>
+<div class="ans-row"><label>x₁ = <input class="ans" data-a="-3" data-label="x₁"></label><label>x₂ = <input class="ans" data-a="-2" data-label="x₂"></label><label>x₃ = <input class="ans" data-a="2" data-label="x₃"></label></div>
+<div class="hint">Сгруппируйте первые два и последние два слагаемых.</div>
+<div class="sol">x²(x + 3) − 4(x + 3) = (x + 3)(x − 2)(x + 2).</div>
+</div>
+</div>
+  <h3>Блок Б. Посложнее</h3>
+  <div class="tasks"><div class="task" data-id="p7"><div class="task-head"><span class="tnum">П7</span><span class="pill lvl2">средний</span></div>
+<p>Решите уравнение x⁴ − 5x² − 36 = 0.</p>
+<div class="ans-row"><label>меньший = <input class="ans" data-a="-3" data-label="меньший"></label><label>больший = <input class="ans" data-a="3" data-label="больший"></label></div>
+<div class="sol">t = 9 или t = −4 (не подходит).</div>
+</div>
+<div class="task" data-id="p8"><div class="task-head"><span class="tnum">П8</span><span class="pill lvl2">средний</span></div>
+<p>Решите уравнение x³ − 2x² − x + 2 = 0. Корни запишите в порядке возрастания.</p>
+<div class="ans-row"><label>x₁ = <input class="ans" data-a="-1" data-label="x₁"></label><label>x₂ = <input class="ans" data-a="1" data-label="x₂"></label><label>x₃ = <input class="ans" data-a="2" data-label="x₃"></label></div>
+<div class="sol">x²(x − 2) − (x − 2) = (x − 2)(x − 1)(x + 1).</div>
+</div>
+<div class="task" data-id="p9"><div class="task-head"><span class="tnum">П9</span><span class="pill lvl2">средний</span></div>
+<p>Решите уравнение (x² − 2x)² − 2(x² − 2x) − 3 = 0. Корни запишите в порядке возрастания.</p>
+<div class="ans-row"><label>x₁ = <input class="ans" data-a="-1" data-label="x₁"></label><label>x₂ = <input class="ans" data-a="1" data-label="x₂"></label><label>x₃ = <input class="ans" data-a="3" data-label="x₃"></label></div>
+<div class="sol">t = x² − 2x: t = 3 или t = −1. x² − 2x = 3 → −1; 3. x² − 2x = −1 → x = 1.</div>
+</div>
+<div class="task" data-id="p10"><div class="task-head"><span class="tnum">П10</span><span class="pill lvl3">сложнее</span></div>
+<p>Решите уравнение (x² + 3x)² − 2(x² + 3x) = 8. Корни запишите в порядке возрастания.</p>
+<div class="ans-row"><label>x₁ = <input class="ans" data-a="-4" data-label="x₁"></label><label>x₂ = <input class="ans" data-a="-2" data-label="x₂"></label><label>x₃ = <input class="ans" data-a="-1" data-label="x₃"></label><label>x₄ = <input class="ans" data-a="1" data-label="x₄"></label></div>
+<div class="sol">t² − 2t − 8 = 0 → t = 4 или t = −2. x² + 3x = 4 → 1; −4. x² + 3x = −2 → −1; −2.</div>
+</div>
+</div>
+</section>
+
+<section class="card oge" id="oge" data-nav="ОГЭ">
+  <h2><span class="step">4</span> Задачи в формате ОГЭ <span class="mins">45–55 мин</span></h2>
+  <div class="tasks"><div class="task" data-id="o1"><div class="task-head"><span class="tnum">О1</span><span class="pill oge">ОГЭ №9</span></div>
+<p>Решите уравнение (5x − 2)(−x + 3) = 0. Если уравнение имеет более одного корня, в ответ запишите меньший из корней.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="0,4"></label></div>
+</div>
+<div class="task" data-id="o2"><div class="task-head"><span class="tnum">О2</span><span class="pill oge">ОГЭ №20</span></div>
+<p>Решите уравнение x⁴ = (x − 6)².</p>
+<div class="ans-row"><label>меньший = <input class="ans" data-a="-3" data-label="меньший"></label><label>больший = <input class="ans" data-a="2" data-label="больший"></label></div>
+<div class="sol">x² = x − 6 (D &lt; 0, корней нет) или x² = −(x − 6) → x² + x − 6 = 0 → x = −3; 2.</div>
+</div>
+<div class="task" data-id="o3"><div class="task-head"><span class="tnum">О3</span><span class="pill oge">ОГЭ №20</span></div>
+<p>Решите уравнение x³ + 5x² − 4x − 20 = 0. Корни запишите в порядке возрастания.</p>
+<div class="ans-row"><label>x₁ = <input class="ans" data-a="-5" data-label="x₁"></label><label>x₂ = <input class="ans" data-a="-2" data-label="x₂"></label><label>x₃ = <input class="ans" data-a="2" data-label="x₃"></label></div>
+<div class="sol">x²(x + 5) − 4(x + 5) = 0 → (x + 5)(x − 2)(x + 2) = 0.</div>
+</div>
+<div class="task" data-id="o4"><div class="task-head"><span class="tnum">О4</span><span class="pill oge">ОГЭ №20</span></div>
+<p>Решите уравнение (x² − 25)² + (x² + 3x − 10)² = 0.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="-5"></label></div>
+<div class="sol">Сумма квадратов равна 0, только если оба выражения равны 0. x² − 25 = 0 → ±5; x² + 3x − 10 = 0 → 2; −5. Общий корень −5.</div>
+</div>
+<div class="task" data-id="o5" data-mode="digits"><div class="task-head"><span class="tnum">О5</span><span class="pill oge">ОГЭ №19</span></div>
+<p>Какие утверждения верны?</p><ol style="margin:6px 0"><li>Уравнение x⁴ + 1 = 0 не имеет корней.</li><li>Уравнение третьей степени всегда имеет три корня.</li><li>Уравнение x(x − 1)(x + 2) = 0 имеет три корня.</li></ol>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="13"></label></div>
+<div class="sol">2 — неверно: например, x³ = 0 имеет один корень.</div>
+</div>
+</div>
+</section>
+
+<section class="card" id="hw" data-nav="Итог и ДЗ">
+  <h2><span class="step">5</span> Итог и домашнее задание <span class="mins">55–60 мин</span></h2>
+  <h3>Шпаргалка</h3>
+  <div class="cheat"><div><b>Всё влево → разложить → каждый множитель = 0</b></div><div><b>Делить на x нельзя</b> — теряется корень 0</div><div><b>Биквадратное:</b> t = x², t ≥ 0, x = ±√t</div><div><b>Замена:</b> повторяется выражение → t, потом вернуться к x</div><div><b>Степень n</b> — не более n корней</div></div>
+  <h3>📚 Домашнее задание</h3>
+  <p class="muted">Ответы проверяются в начале занятия 10.</p>
+  <ol class="hw"><li>Решите уравнение x³ − 36x = 0. В ответе укажите наибольший корень.<div class="sol"><span class="ansline">Ответ: 6.</span> x(x − 6)(x + 6) = 0.</div></li><li>Решите уравнение x⁴ − 17x² + 16 = 0. В ответе укажите наибольший корень.<div class="sol"><span class="ansline">Ответ: 4.</span> t = 1 или t = 16.</div></li><li>Решите уравнение x⁴ − 3x² − 4 = 0.<div class="sol"><span class="ansline">Ответ: −2; 2.</span> t = 4 или t = −1 (не подходит).</div></li><li>Найдите сумму корней уравнения x³ − 3x² − 4x + 12 = 0.<div class="sol"><span class="ansline">Ответ: 3.</span> x²(x − 3) − 4(x − 3) = 0 → корни 3, 2, −2.</div></li><li>(ОГЭ №19) 1) Уравнение x⁴ + 1 = 0 не имеет корней. 2) Уравнение третьей степени всегда имеет ровно три корня. 3) Произведение равно нулю, если хотя бы один из множителей равен нулю, а остальные имеют смысл.<div class="sol"><span class="ansline">Ответ: 13.</span> </div></li></ol>
+  <h3>⭐ Бонусное ДЗ</h3>
+  <ol class="hw"><li>Решите уравнение (x² − 4x)² + 9(x² − 4x) + 20 = 0.<div class="sol"><span class="ansline">Ответ: 2.</span> t = −4 или t = −5. x² − 4x + 4 = 0 → x = 2; x² − 4x + 5 = 0 — корней нет.</div></li><li>Решите уравнение x⁴ = (2x − 3)².<div class="sol"><span class="ansline">Ответ: −3; 1.</span> x² = 2x − 3 (корней нет) или x² = 3 − 2x → x = 1; −3.</div></li></ol>
+  <p style="margin-top:18px"><button class="btn small ghost" type="button" onclick="GeoResetLesson()">Сбросить прогресс занятия</button></p>
+</section>
+
+<section class="card bonus" id="bonus" data-nav="★ Бонус">
+  <h2><span class="step">★</span> Бонусная практика</h2>
+  <div class="tasks"><div class="task" data-id="b1"><div class="task-head"><span class="tnum">Б1</span><span class="pill lvl3">сложнее</span></div>
+<p>Решите уравнение x⁴ = (3x − 10)².</p>
+<div class="ans-row"><label>меньший = <input class="ans" data-a="-5" data-label="меньший"></label><label>больший = <input class="ans" data-a="2" data-label="больший"></label></div>
+<div class="sol">x² = 3x − 10 — D &lt; 0; x² = 10 − 3x → x = 2; −5.</div>
+</div>
+<div class="task" data-id="b2"><div class="task-head"><span class="tnum">Б2</span><span class="pill lvl3">сложнее</span></div>
+<p>Решите уравнение (x − 1)(x − 2)(x − 3)(x − 4) = 24.</p>
+<div class="ans-row"><label>меньший = <input class="ans" data-a="0" data-label="меньший"></label><label>больший = <input class="ans" data-a="5" data-label="больший"></label></div>
+<div class="hint">Перемножьте первую скобку с четвёртой, вторую с третьей.</div>
+<div class="sol">(x² − 5x + 4)(x² − 5x + 6) = 24, t = x² − 5x: (t + 4)(t + 6) = 24 → t² + 10t = 0 → t = 0 или t = −10. x² − 5x = 0 → 0; 5. x² − 5x + 10 = 0 — корней нет.</div>
+</div>
+<div class="task" data-id="b3"><div class="task-head"><span class="tnum">Б3</span><span class="pill lvl3">сложнее</span></div>
+<p>Сколько корней имеет уравнение x⁴ − 5x² + 6 = 0?</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="4"></label></div>
+<div class="sol">t = 2 или t = 3, оба положительны → x = ±√2, ±√3.</div>
+</div>
+</div>
+</section>
+
+</div>
+
+<script src="../assets/core.js"></script>
+<script>
+
+function fN(v){
+  var r = Math.round(v * 1000) / 1000, s;
+  if(Math.abs(r - Math.round(r)) < 1e-9) s = String(Math.round(r));
+  else if(Math.abs(r * 4 - Math.round(r * 4)) < 1e-9) s = String(r);
+  else s = '≈' + (Math.round(v * 100) / 100);
+  return s.replace('.', ',').replace('-', '−');
+}
+function poly(cs, vs){
+  var s = '';
+  for(var i = 0; i < cs.length; i++){ var c = cs[i]; if(!c) continue; var a = Math.abs(c), body = (a === 1 && vs[i] ? '' : String(a).replace('.', ',')) + vs[i];
+    s += s === '' ? (c < 0 ? '−' : '') + body : (c < 0 ? ' − ' : ' + ') + body; }
+  return s || '0';
+}
+function fct(a){ return a === 0 ? 'x' : '(x ' + (a > 0 ? '− ' + a : '+ ' + (-a)) + ')'; }
+function ineqSolve(num, den, lead, op){
+  var all = num.concat(den).slice().sort(function(a, b){ return a - b; }), pts = [];
+  all.forEach(function(p){ if(!pts.length || Math.abs(p - pts[pts.length - 1]) > 1e-9) pts.push(p); });
+  function sg(x){ var s = lead; num.concat(den).forEach(function(r){ s *= (x > r ? 1 : -1); }); return s; }
+  var n = pts.length, regs = [], signs = [], closed = [], strict = op.length === 1, i;
+  for(i = 0; i <= n; i++){ var t = n === 0 ? 0 : (i === 0 ? pts[0] - 1 : (i === n ? pts[n - 1] + 1 : (pts[i - 1] + pts[i]) / 2)), s = sg(t); signs.push(s > 0 ? '+' : '−'); regs.push(op[0] === '>' ? s > 0 : s < 0); }
+  pts.forEach(function(p){ var d = den.some(function(r){ return Math.abs(r - p) < 1e-9; }); closed.push(!strict && !d); });
+  var el = [], parts = [], cur = null, prev = null;
+  for(i = 0; i <= n; i++){ el.push({inc:regs[i], reg:i}); if(i < n) el.push({inc:closed[i], pt:i}); }
+  function close(rt, rc){ parts.push(cur.single != null ? '{' + cur.l + '}' : (cur.lc ? '[' : '(') + cur.l + '; ' + rt + (rc ? ']' : ')')); cur = null; }
+  el.forEach(function(e){
+    if(e.inc && !cur) cur = e.pt != null ? {l:fN(pts[e.pt]), lc:true, single:e.pt} : {l:e.reg === 0 ? '−∞' : fN(pts[e.reg - 1]), lc:false, single:null};
+    else if(e.inc && cur) cur.single = null;
+    else if(!e.inc && cur){ if(prev.pt != null) close(fN(pts[prev.pt]), true); else close(fN(pts[prev.reg]), false); }
+    prev = e;
+  });
+  if(cur) close('+∞', false);
+  return {pts:pts, regs:regs, closed:closed, signs:signs, str:parts.join(' ∪ ') || 'нет решений'};
+}
+function nlSVG(pts, regs, signs){
+  var W = 260, H = signs ? 62 : 46, y = H - 18, n = pts.length, L = 12, R = W - 16, xs = [], s, i, x;
+  for(i = 0; i < n; i++) xs.push(L + (R - L) * (i + 1) / (n + 1));
+  s = '<svg viewBox="0 0 ' + W + ' ' + H + '" style="width:100%;max-width:300px;display:block">';
+  for(i = 0; i <= n; i++){
+    var a = i ? xs[i - 1] : 4, b = i < n ? xs[i] : W - 10;
+    if(regs[i]) for(x = a + 2; x < b; x += 7){ var x2 = Math.min(x + 9, b); s += '<line x1="' + x + '" y1="' + y + '" x2="' + x2 + '" y2="' + (y - 13 * (x2 - x) / 9) + '" stroke="var(--primary)" stroke-width="1.6"/>'; }
+    if(signs) s += '<text x="' + (a + b) / 2 + '" y="14" text-anchor="middle" style="font-size:16px;font-weight:700;fill:' + (signs[i] === '+' ? 'var(--res)' : 'var(--a)') + '">' + signs[i] + '</text>';
+  }
+  s += '<line x1="2" y1="' + y + '" x2="' + (W - 2) + '" y2="' + y + '" stroke="var(--ink)" stroke-width="1.6"/><path d="M' + (W - 10) + ' ' + (y - 5) + ' L' + (W - 2) + ' ' + y + ' L' + (W - 10) + ' ' + (y + 5) + '" fill="none" stroke="var(--ink)" stroke-width="1.6"/>';
+  s += '<text x="' + (W - 8) + '" y="' + (H - 2) + '" text-anchor="middle" style="font-size:13px;fill:var(--muted)">x</text>';
+  for(i = 0; i < n; i++){
+    s += '<circle cx="' + xs[i] + '" cy="' + y + '" r="4.5" fill="' + (pts[i][1] ? 'var(--ink)' : 'var(--card)') + '" stroke="var(--ink)" stroke-width="1.6"/>';
+    s += '<text x="' + xs[i] + '" y="' + (H - 2) + '" text-anchor="middle" style="font-size:13px;fill:var(--ink)">' + pts[i][0] + '</text>';
+  }
+  return s + '</svg>';
+}
+document.querySelectorAll('[data-nl]').forEach(function(d){ var o = JSON.parse(d.getAttribute('data-nl')); d.innerHTML = nlSVG(o.p, o.r, o.s); });
+
+(function(){
+  var svg = document.getElementById('labB'), B = document.getElementById('bB'), C = document.getElementById('bC');
+  function draw(){
+    var b = +B.value, c = +C.value, D = b * b - 4 * c, ts = [], xs = [];
+    var P = GeoPlot(svg, {xmin:-4, xmax:4, ymin:-8, ymax:10, w:600, h:420}); P.clear(); P.grid();
+    P.curve(function(x){ return x * x * x * x + b * x * x + c; }, '#2f5bea');
+    if(D >= 0){ ts.push((-b - Math.sqrt(D)) / 2); if(D > 0) ts.push((-b + Math.sqrt(D)) / 2); }
+    ts.forEach(function(t){ if(t > 1e-9){ xs.push(-Math.sqrt(t), Math.sqrt(t)); } else if(Math.abs(t) < 1e-9) xs.push(0); });
+    xs.sort(function(p, q){ return p - q; }); xs.forEach(function(x){ P.point(x, 0, '#e5484d'); });
+    document.getElementById('bBv').textContent = fN(b); document.getElementById('bCv').textContent = fN(c);
+    var tt = ts.length ? ts.map(function(t){ return 't = ' + fN(t) + (t < -1e-9 ? ' (не подходит)' : ''); }).join(', ') : 'D &lt; 0 — корней нет';
+    document.getElementById('bRead').innerHTML = '<span>' + poly([1, b, c], ['x⁴', 'x²', '']) + ' = 0</span><span>t² ' + (b ? (b < 0 ? '− ' : '+ ') + (Math.abs(b) === 1 ? '' : Math.abs(b)) + 't ' : '') + (c ? (c < 0 ? '− ' : '+ ') + Math.abs(c) : '') + ' = 0: ' + tt + '</span><span><b>корней: ' + xs.length + '</b>' + (xs.length ? ' (' + xs.map(fN).join('; ') + ')' : '') + '</span>';
+  }
+  [B, C].forEach(function(e){ e.addEventListener('input', draw); }); draw();
+})();
+document.addEventListener('geo:ready', function(){
+  GeoTrainer(document.getElementById('trainerBox'), {rounds:6, id:'trainer', gen:function(){
+    var q = GeoRand(1, 4), p, r, a, b;
+    if(q === 1){ a = GeoRand(1, 9); if(GeoRand(0, 1)) return {q:'Решите уравнение ' + poly([1, -a * a], ['x³', 'x']) + ' = 0. В ответе укажите наибольший корень.', a:String(a), why:'x(x − ' + a + ')(x + ' + a + ') = 0 → x = 0; ±' + a + '.'};
+      return {q:'Сколько корней имеет уравнение ' + poly([1, -a * a], ['x³', 'x']) + ' = 0?', a:'3', why:'x(x − ' + a + ')(x + ' + a + ') = 0 → x = 0; ±' + a + '. Делить на x нельзя!'}; }
+    if(q === 2){ p = GeoRand(1, 4); r = GeoRand(p + 1, 6); var e = poly([1, -(p * p + r * r), p * p * r * r], ['x⁴', 'x²', '']), w = 't = x²: t = ' + p * p + ' или t = ' + r * r + ' → x = ±' + p + ', ±' + r + '.';
+      var k = GeoRand(1, 3); if(k === 1) return {q:'Решите уравнение ' + e + ' = 0. В ответе укажите наибольший корень.', a:String(r), why:w};
+      if(k === 2) return {q:'Решите уравнение ' + e + ' = 0. В ответе укажите наименьший корень.', a:String(-r), why:w};
+      return {q:'Решите уравнение ' + e + ' = 0. В ответе укажите наименьший положительный корень.', a:String(p), why:w}; }
+    if(q === 3){ p = GeoRand(1, 4); r = GeoRand(1, 9); var e3 = poly([1, r - p * p, -r * p * p], ['x⁴', 'x²', '']);
+      return {q:'Решите уравнение ' + e3 + ' = 0. В ответе укажите больший корень.', a:String(p), why:'t = ' + p * p + ' или t = ' + fN(-r) + ' (не подходит, t = x² ≥ 0) → x = ±' + p + '.'}; }
+    b = GeoRand(1, 6); do { a = GeoRand(-6, 6); } while(Math.abs(a) === b || a === 0);
+    return {q:'Найдите сумму корней уравнения ' + poly([1, -a, -b * b, a * b * b], ['x³', 'x²', 'x', '']) + ' = 0.', a:String(a), why:'Группировка: x²' + fct(a) + ' − ' + b * b + fct(a) + ' = ' + fct(a) + fct(b) + fct(-b) + '. Корни ' + a + ', ' + b + ', ' + (-b) + '.'};
+  }});
+});
+
+</script>
+</body>
+</html>

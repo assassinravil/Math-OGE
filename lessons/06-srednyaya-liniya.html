@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Занятие 6 · Средняя линия и пропорциональные отрезки</title>
+<link rel="stylesheet" href="../assets/core.css">
+</head>
+<body data-lesson="L06">
+
+<nav class="topnav"><div class="in">
+  <a class="home" href="../geometry.html">📐 <span>Геометрия · ОГЭ</span></a>
+  <div class="links"></div>
+  <a class="home" href="../spravochnik.html" title="Справочник">📖</a>
+  <div class="progress-pill">Решено <b>0 / 0</b><div class="progress-bar"><i></i></div></div>
+</div></nav>
+
+<div class="container">
+
+<header class="hero">
+  <span class="tag">Раздел 2 · Подобие и тригонометрия</span><span class="tag">Занятие 6 из 23</span><span class="tag">Учебник: гл. VIII §3</span>
+  <h1>Средняя линия, медианы, биссектриса, пропорциональные отрезки</h1>
+  <p>Применение подобия: средняя линия, точка пересечения медиан, свойство биссектрисы, отрезки в прямоугольном треугольнике.</p>
+  <div class="timeline">
+    <a href="#warmup">① Проверка ДЗ <small>0–10′</small></a>
+    <a href="#theory">② Теория <small>10–25′</small></a>
+    <a href="#practice">③ Практика <small>25–45′</small></a>
+    <a href="#oge">④ ОГЭ <small>45–55′</small></a>
+    <a href="#hw">⑤ Итог и ДЗ <small>55–60′</small></a>
+    <a href="#bonus">★ Бонус</a>
+  </div>
+</header>
+
+<div class="teacher-panel teacher-only">
+  <h3>План занятия (60 минут)</h3>
+  <ol><li><b>0–10′</b> Проверка ДЗ занятия 5.</li><li><b>10–25′</b> Теория. Лаборатория в трёх режимах: средние линии (площадь ¼), медианы (2 : 1), биссектриса (AL : LC = AB : BC).</li><li><b>25–45′</b> Тренажёр (отрезки в прямоугольном треугольнике и биссектриса), затем П1–П8.</li><li><b>45–55′</b> ОГЭ, О5 — задача уровня №23, оформить письменно.</li><li><b>55–60′</b> Шпаргалка, ДЗ.</li></ol>
+  <p class="muted" style="margin:0">Типичные ошибки: считают, что точка пересечения медиан делит медиану пополам; биссектрису путают с медианой; в формуле AC² = AB · AH берут не тот отрезок гипотенузы.</p>
+</div>
+
+<section class="card" id="warmup" data-nav="Проверка ДЗ">
+  <h2><span class="step">1</span> Проверка ДЗ <span class="mins">0–10 мин</span></h2>
+  <div class="tasks"><div class="task" data-id="h1"><div class="task-head"><span class="tnum">ДЗ 1</span></div>
+<p>△ABC ∼ △KLM, AB = 5, KL = 15, BC = 7. Найдите LM.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="21"></label></div>
+</div>
+<div class="task" data-id="h2"><div class="task-head"><span class="tnum">ДЗ 2</span></div>
+<p>Треугольники подобны с k = 4, площадь меньшего 3. Найдите площадь большего.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="48"></label></div>
+</div>
+<div class="task" data-id="h3"><div class="task-head"><span class="tnum">ДЗ 3</span></div>
+<p>MN ∥ AC, BM = 2, MA = 3, AC = 20. Найдите MN.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="8"></label></div>
+</div>
+<div class="task" data-id="h4"><div class="task-head"><span class="tnum">ДЗ 4</span></div>
+<p>Человек ростом 1,6 м стоит в 10 м от фонаря на высоте 4,8 м. Найдите длину тени.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="5"></label></div>
+</div>
+<div class="task" data-id="h5" data-mode="digits"><div class="task-head"><span class="tnum">ДЗ 5</span><span class="pill oge">ОГЭ №19</span></div>
+<p>1) Все равносторонние треугольники подобны. 2) Стороны в 2 раза больше ⇒ площадь в 2 раза больше. 3) Любые два прямоугольных треугольника подобны.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="1"></label></div>
+</div>
+</div>
+</section>
+
+<section class="card" id="theory" data-nav="Теория">
+  <h2><span class="step">2</span> Теория <span class="mins">10–25 мин</span></h2>
+
+  <div class="grid2">
+    <div class="box rule"><span class="title">Средняя линия треугольника</span>
+      Соединяет середины двух сторон. <b>Параллельна третьей стороне и равна её половине.</b>
+      <div class="formula">MN = AC / 2</div>Отсекает треугольник с k = ½ и площадью ¼ от исходной.<div class="eg">AC = 14 → MN = 7. S(ABC) = 40 → S(MBN) = 10.</div></div>
+    <div class="box rule"><span class="title">Точка пересечения медиан</span>
+      Три медианы пересекаются в одной точке G и делятся ею <b>в отношении 2 : 1, считая от вершины</b>.
+      <div class="formula">AG = ⅔ AM, &nbsp; GM = ⅓ AM</div>Медианы делят треугольник на 6 равновеликих частей.<div class="eg">Медиана AM = 12 → AG = 8, GM = 4.</div></div>
+  </div>
+  <div class="grid2" style="margin-top:14px">
+    <div class="box rule"><span class="title">Свойство биссектрисы <span class="muted" style="font-weight:400;font-size:13px">(в учебнике — задача №642)</span></span>
+      Биссектриса делит противоположную сторону на отрезки, пропорциональные прилежащим сторонам:
+      <div class="formula">AL : LC = AB : BC</div><div class="eg">AB = 6, BC = 9, AC = 10 → AL : LC = 2 : 3, AL = 4, LC = 6.</div></div>
+    <div class="box rule"><span class="title">Прямоугольный треугольник, высота CH</span>
+      CH делит △ABC на два подобных ему треугольника. Отсюда:
+      <div class="formula">CH² = AH · HB</div>
+      <div class="formula">AC² = AB · AH, &nbsp; BC² = AB · BH</div><div class="eg">AH = 4, HB = 9 → CH² = 36, CH = 6.</div></div>
+  </div>
+  <h3>Лаборатория</h3>
+  <div class="lab">
+    <svg id="labM" viewBox="0 0 600 330"></svg>
+    <div class="readout" id="mRead"></div>
+    <div class="controls">
+      <button class="btn small" type="button" data-mode="mid">Средние линии</button>
+      <button class="btn small ghost" type="button" data-mode="med">Медианы</button>
+      <button class="btn small ghost" type="button" data-mode="bis">Биссектриса</button>
+    </div>
+    <p class="muted" style="margin:8px 0 0;font-size:14px">Перетаскивайте вершины.</p>
+  </div>
+
+</section>
+
+<section class="card" id="examples" data-nav="Примеры">
+  <h2><span class="step">↳</span> Разбор примеров</h2>
+  <div class="grid3"><div class="box example"><span class="title">Пример 1. Медианы</span><p>Медиана AM = 18, G — точка пересечения медиан. Найдите AG.</p><details class="reveal"><summary>Показать решение</summary><p><b>Решение.</b> AG = ⅔ · 18 = 12.</p><p><b>Ответ:</b> 12.</p></details></div><div class="box example"><span class="title">Пример 2. Биссектриса</span><p>AB = 10, BC = 15, AC = 20, BL — биссектриса. Найдите AL.</p><details class="reveal"><summary>Показать решение</summary><p><b>Решение.</b> AL : LC = 10 : 15 = 2 : 3. AL = 20 · 2/5 = 8.</p><p><b>Ответ:</b> 8.</p></details></div><div class="box example"><span class="title">Пример 3. Высота к гипотенузе</span><p>∠C = 90°, AH = 4, HB = 9. Найдите CH.</p><details class="reveal"><summary>Показать решение</summary><p><b>Решение.</b> CH² = 4 · 9 = 36, CH = 6.</p><p><b>Ответ:</b> 6.</p></details></div></div>
+</section>
+
+<section class="card" id="practice" data-nav="Практика">
+  <h2><span class="step">3</span> Интерактивная практика <span class="mins">25–45 мин</span></h2>
+  <h3>🎯 Тренажёр «Пропорциональные отрезки»</h3>
+  <div class="lab task" id="trainer" data-id="trainer" data-noauto><div id="trainerBox"></div>
+    <div class="sol">Задачи генерируются случайно. Засчитывается при 5 верных из 6.</div></div>
+
+  <h3>Блок А. База</h3>
+  <div class="tasks"><div class="task" data-id="p1"><div class="task-head"><span class="tnum">П1</span><span class="pill lvl1">база</span></div>
+<p>Средняя линия треугольника, параллельная стороне AC, равна 7. Найдите AC.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="14"></label></div>
+</div>
+<div class="task" data-id="p2"><div class="task-head"><span class="tnum">П2</span><span class="pill lvl1">база</span></div>
+<p>Стороны треугольника равны 8, 12 и 14. Найдите периметр треугольника, образованного его средними линиями.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="17"></label></div>
+</div>
+<div class="task" data-id="p3"><div class="task-head"><span class="tnum">П3</span><span class="pill lvl1">база</span></div>
+<p>Медианы треугольника ABC пересекаются в точке G. Медиана AM равна 18. Найдите AG.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="12"></label></div>
+</div>
+<div class="task" data-id="p4"><div class="task-head"><span class="tnum">П4</span><span class="pill lvl1">база</span></div>
+<p>В △ABC AB = 10, BC = 15, AC = 20, BL — биссектриса. Найдите AL.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="8"></label></div>
+<div class="hint">AL : LC = AB : BC.</div>
+</div>
+<div class="task" data-id="p5"><div class="task-head"><span class="tnum">П5</span><span class="pill lvl1">база</span></div>
+<p>В прямоугольном треугольнике ABC (∠C = 90°) CH — высота, AH = 3, HB = 12. Найдите CH.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="6"></label></div>
+<div class="sol">CH² = 3 · 12 = 36.</div>
+</div>
+<div class="task" data-id="p6"><div class="task-head"><span class="tnum">П6</span><span class="pill lvl1">база</span></div>
+<p>Гипотенуза AB прямоугольного треугольника равна 25, CH — высота, AH = 9. Найдите катет AC.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="15"></label></div>
+<div class="sol">AC² = AB · AH = 225.</div>
+</div>
+</div>
+  <h3>Блок Б. Посложнее</h3>
+  <div class="tasks"><div class="task" data-id="p7"><div class="task-head"><span class="tnum">П7</span><span class="pill lvl2">средний</span></div>
+<p>∠C = 90°, CH — высота, CH = 12, AH = 9. Найдите HB и AB.</p>
+<div class="ans-row"><label>HB = <input class="ans" data-a="16" data-label="HB"></label><label>AB = <input class="ans" data-a="25" data-label="AB"></label></div>
+<div class="sol">HB = CH² / AH = 144 / 9 = 16; AB = 9 + 16 = 25.</div>
+</div>
+<div class="task" data-id="p8"><div class="task-head"><span class="tnum">П8</span><span class="pill lvl2">средний</span></div>
+<p>Средняя линия отсекает от треугольника ABC треугольник площадью 7. Найдите площадь треугольника ABC.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="28"></label></div>
+</div>
+<div class="task" data-id="p9"><div class="task-head"><span class="tnum">П9</span><span class="pill lvl2">средний</span></div>
+<p>Биссектриса AD треугольника ABC делит сторону BC на отрезки BD = 4 и DC = 6. AB = 8. Найдите AC.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="12"></label></div>
+<div class="sol">BD : DC = AB : AC → 4 : 6 = 8 : AC → AC = 12.</div>
+</div>
+<div class="task" data-id="p10"><div class="task-head"><span class="tnum">П10</span><span class="pill lvl3">сложнее</span></div>
+<p>Катеты прямоугольного треугольника равны 6 и 8. Найдите проекцию катета 6 на гипотенузу.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="3,6"></label></div>
+<div class="sol">Гипотенуза 10. 6² = 10 · x → x = 3,6.</div>
+</div>
+</div>
+</section>
+
+<section class="card oge" id="oge" data-nav="ОГЭ">
+  <h2><span class="step">4</span> Задачи в формате ОГЭ <span class="mins">45–55 мин</span></h2>
+  <div class="tasks"><div class="task" data-id="o1"><div class="task-head"><span class="tnum">О1</span><span class="pill oge">ОГЭ №15</span></div>
+<p>Точки M и N являются серединами сторон AB и BC треугольника ABC, MN = 23. Найдите AC.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="46"></label></div>
+</div>
+<div class="task" data-id="o2"><div class="task-head"><span class="tnum">О2</span><span class="pill oge">ОГЭ №15</span></div>
+<p>Площадь треугольника ABC равна 96. DE — средняя линия, параллельная стороне AB. Найдите площадь треугольника CDE.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="24"></label></div>
+</div>
+<div class="task" data-id="o3"><div class="task-head"><span class="tnum">О3</span><span class="pill oge">ОГЭ №15</span></div>
+<p>В прямоугольном треугольнике ABC с прямым углом C проведена высота CH. AC = 8, AB = 16. Найдите AH.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="4"></label></div>
+<div class="sol">AC² = AB · AH → 64 = 16 · AH.</div>
+</div>
+<div class="task" data-id="o4" data-mode="digits"><div class="task-head"><span class="tnum">О4</span><span class="pill oge">ОГЭ №19</span></div>
+<p>Какие из следующих утверждений верны?</p><ol style="margin:6px 0"><li>Средняя линия треугольника параллельна одной из его сторон и равна половине этой стороны.</li><li>Медианы треугольника точкой пересечения делятся в отношении 2 : 1, считая от вершины.</li><li>Биссектриса треугольника делит противоположную сторону пополам.</li></ol>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="12"></label></div>
+</div>
+<div class="task" data-id="o5"><div class="task-head"><span class="tnum">О5</span><span class="pill oge">ОГЭ №23</span></div>
+<p>Катеты прямоугольного треугольника равны 15 и 20. Найдите высоту, проведённую к гипотенузе, и отрезки, на которые она делит гипотенузу.</p>
+<div class="ans-row"><label>h = <input class="ans" data-a="12" data-label="h"></label><label>меньший отрезок = <input class="ans" data-a="9" data-label="меньший отрезок"></label><label>больший отрезок = <input class="ans" data-a="16" data-label="больший отрезок"></label></div>
+<div class="sol">Гипотенуза 25, h = 15 · 20 / 25 = 12. 15² = 25 · x → x = 9, второй отрезок 16.</div>
+</div>
+</div>
+</section>
+
+<section class="card" id="hw" data-nav="Итог и ДЗ">
+  <h2><span class="step">5</span> Итог и домашнее задание <span class="mins">55–60 мин</span></h2>
+  <h3>Шпаргалка</h3>
+  <div class="cheat"><div><b>Средняя линия</b> = ½ параллельной стороны</div><div><b>Медианы:</b> 2 : 1 от вершины</div><div><b>Биссектриса:</b> AL : LC = AB : BC</div><div><b>Высота к гипотенузе:</b> CH² = AH · HB</div><div><b>Катет:</b> AC² = AB · AH</div></div>
+  <h3>📚 Домашнее задание</h3>
+  <p class="muted">Ответы проверяются в начале занятия 7.</p>
+  <ol class="hw"><li>Средняя линия треугольника равна 11. Найдите параллельную ей сторону.<div class="sol"><span class="ansline">Ответ: 22.</span> </div></li><li>Медиана треугольника равна 15. Найдите расстояние от точки пересечения медиан до стороны по этой медиане (отрезок GM).<div class="sol"><span class="ansline">Ответ: 5.</span> GM = ⅓ · 15.</div></li><li>В △ABC AB = 6, BC = 9, AC = 10, BL — биссектриса. Найдите AL.<div class="sol"><span class="ansline">Ответ: 4.</span> AL = 10 · 6/15.</div></li><li>∠C = 90°, CH — высота, AH = 4, HB = 16. Найдите CH.<div class="sol"><span class="ansline">Ответ: 8.</span> </div></li><li>(ОГЭ №19) 1) Средняя линия треугольника равна половине стороны, которой она параллельна. 2) Высота прямоугольного треугольника, проведённая к гипотенузе, равна произведению отрезков гипотенузы. 3) Медианы треугольника пересекаются в одной точке.<div class="sol"><span class="ansline">Ответ: 13.</span> 2 — неверно: квадрат высоты равен произведению отрезков.</div></li></ol>
+  <h3>⭐ Бонусное ДЗ</h3>
+  <ol class="hw"><li>Докажите, что середины сторон любого четырёхугольника являются вершинами параллелограмма.<div class="sol">Диагональ AC делит четырёхугольник на два треугольника; отрезки, соединяющие середины сторон по обе стороны от AC, — средние линии, оба параллельны AC и равны AC/2. Противоположные стороны четырёхугольника параллельны и равны — это параллелограмм.</div></li><li>Катет прямоугольного треугольника 12, гипотенуза 20. Найдите проекцию этого катета на гипотенузу.<div class="sol"><span class="ansline">Ответ: 7,2.</span> 144 = 20 · x.</div></li></ol>
+  <p style="margin-top:18px"><button class="btn small ghost" type="button" onclick="GeoResetLesson()">Сбросить прогресс занятия</button></p>
+</section>
+
+<section class="card bonus" id="bonus" data-nav="★ Бонус">
+  <h2><span class="step">★</span> Бонусная практика</h2>
+  <div class="tasks"><div class="task" data-id="b1"><div class="task-head"><span class="tnum">Б1</span><span class="pill lvl3">сложнее</span></div>
+<p>Медианы треугольника ABC пересекаются в точке G. Площадь ABC равна 36. Найдите площадь треугольника AGB.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="12"></label></div>
+<div class="sol">Медианы делят треугольник на 6 равных частей, AGB — две из них.</div>
+</div>
+<div class="task" data-id="b2"><div class="task-head"><span class="tnum">Б2</span><span class="pill lvl3">сложнее</span></div>
+<p>В △ABC AB = 12, BC = 18, AC = 25, BL — биссектриса. Найдите LC.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="15"></label></div>
+<div class="sol">AL : LC = 2 : 3, LC = 25 · 3/5 = 15.</div>
+</div>
+<div class="task" data-id="b3"><div class="task-head"><span class="tnum">Б3</span><span class="pill oge">ОГЭ №24</span></div>
+<p>Докажите, что высота прямоугольного треугольника, проведённая к гипотенузе, делит его на два треугольника, подобных данному.</p>
+<div class="sol">△ACH и △ABC: ∠A общий, ∠AHC = ∠ACB = 90° — подобны по двум углам. Аналогично △CBH ∼ △ABC.</div>
+</div>
+</div>
+</section>
+
+</div>
+
+<script src="../assets/core.js"></script>
+<script>
+
+(function(){
+  var G = GeoSVG, svg = document.getElementById('labM'), P = {A:{x:80,y:290}, B:{x:240,y:60}, C:{x:530,y:290}}, mode = 'mid', U = 40;
+  function f(v){ return (Math.round(v * 100) / 100).toString().replace('.', ','); }
+  function draw(){
+    G.clear(svg); var A = P.A, B = P.B, C = P.C;
+    G.el('path', {d:'M'+A.x+' '+A.y+' L'+B.x+' '+B.y+' L'+C.x+' '+C.y+' Z', 'class':'st fl'}, svg);
+    var r = document.getElementById('mRead');
+    if(mode === 'mid'){
+      var M1 = G.mid(A, B), M2 = G.mid(B, C), M3 = G.mid(A, C);
+      G.el('path', {d:'M'+M1.x+' '+M1.y+' L'+M2.x+' '+M2.y+' L'+M3.x+' '+M3.y+' Z', fill:'#8b5cf6', 'fill-opacity':'.25', stroke:'#8b5cf6', 'stroke-width':2.5}, svg);
+      r.innerHTML = '<span>AC = ' + f(G.dist(A, C) / U) + '</span><span style="color:#8b5cf6">средняя линия = ' + f(G.dist(M1, M2) / U) + ' = AC : 2</span><span>площадь внутреннего △ = ¼ площади</span>';
+    } else if(mode === 'med'){
+      var Ma = G.mid(B, C), Mb = G.mid(A, C), Mc = G.mid(A, B), g = {x:(A.x + B.x + C.x) / 3, y:(A.y + B.y + C.y) / 3};
+      [[A, Ma], [B, Mb], [C, Mc]].forEach(function(s){ G.el('line', {x1:s[0].x, y1:s[0].y, x2:s[1].x, y2:s[1].y, stroke:'#16a34a', 'stroke-width':2.5}, svg); });
+      G.el('circle', {cx:g.x, cy:g.y, r:5, fill:'#e5484d'}, svg); G.text(svg, g.x + 14, g.y - 8, 'G');
+      r.innerHTML = '<span>AG = ' + f(G.dist(A, g) / U) + '</span><span>GM = ' + f(G.dist(g, Ma) / U) + '</span><span style="color:#16a34a">AG : GM = 2 : 1</span>';
+    } else {
+      var ab = G.dist(A, B), bc = G.dist(B, C), t = ab / (ab + bc), Lp = {x:A.x + (C.x - A.x) * t, y:A.y + (C.y - A.y) * t};
+      G.el('line', {x1:B.x, y1:B.y, x2:Lp.x, y2:Lp.y, stroke:'#8b5cf6', 'stroke-width':3}, svg);
+      G.arc(svg, B, A, Lp, 30, '#8b5cf6', 2.5); G.arc(svg, B, Lp, C, 36, '#8b5cf6', 2.5); G.text(svg, Lp.x, Lp.y + 24, 'L');
+      r.innerHTML = '<span>AB : BC = ' + f(ab / bc) + '</span><span>AL : LC = ' + f(G.dist(A, Lp) / G.dist(Lp, C)) + '</span><span style="color:#8b5cf6">отношения равны</span>';
+    }
+    ['A','B','C'].forEach(function(n){ G.handle(svg, P[n], n); G.text(svg, P[n].x, P[n].y + (n === 'B' ? -18 : 30), n); });
+  }
+  G.draggable(svg, function(n, p){ p = {x:Math.max(15, Math.min(585, p.x)), y:Math.max(30, Math.min(315, p.y))}; var o = {A:P.A, B:P.B, C:P.C}; o[n] = p; if(G.triArea(o.A, o.B, o.C) < 2500) return; P[n] = p; draw(); });
+  document.querySelectorAll('[data-mode]').forEach(function(b){ b.addEventListener('click', function(){ mode = b.getAttribute('data-mode'); document.querySelectorAll('[data-mode]').forEach(function(x){ x.classList.toggle('ghost', x !== b); }); draw(); }); });
+  draw();
+})();
+document.addEventListener('geo:ready', function(){
+  GeoTrainer(document.getElementById('trainerBox'), {rounds:6, id:'trainer', gen:function(){
+    var q = GeoRand(1, 4), p = GeoRand(1, 3), m = GeoRand(1, 3), n = m + GeoRand(1, 3);
+    if(q === 1){ var ah = p * m * m, hb = p * n * n; return {q:'∠C = 90°, CH — высота, AH = ' + ah + ', HB = ' + hb + '. Найдите CH.', a:String(p * m * n), why:'CH² = ' + ah + ' · ' + hb + ' = ' + ah * hb + '.'}; }
+    if(q === 2){ var ah2 = p * m * m, ab = p * n * n; return {q:'∠C = 90°, CH — высота, AB = ' + ab + ', AH = ' + ah2 + '. Найдите AC.', a:String(p * m * n), why:'AC² = AB · AH = ' + ab * ah2 + '.'}; }
+    if(q === 3){ var a = GeoRand(2, 6), b = a + GeoRand(1, 2); if(GeoRand(0, 1)){ var t = a; a = b; b = t; } var ac = 2 * (a + b); return {q:'В △ABC AB = ' + 3 * a + ', BC = ' + 3 * b + ', AC = ' + ac + ', BL — биссектриса. Найдите AL.', a:String(2 * a), why:'AL : LC = AB : BC = ' + a + ' : ' + b + ', AL = ' + ac + ' · ' + a + '/' + (a + b) + ' = ' + 2 * a + '.'}; }
+    var med = 3 * GeoRand(2, 12); return {q:'Медиана треугольника равна ' + med + '. Найдите отрезок медианы от вершины до точки пересечения медиан.', a:String(med * 2 / 3), why:'⅔ · ' + med + ' = ' + med * 2 / 3 + '.'};
+  }});
+});
+
+</script>
+</body>
+</html>

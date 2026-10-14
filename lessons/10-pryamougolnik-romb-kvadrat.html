@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Занятие 10 · Прямоугольник, ромб, квадрат</title>
+<link rel="stylesheet" href="../assets/core.css">
+</head>
+<body data-lesson="L10">
+
+<nav class="topnav"><div class="in">
+  <a class="home" href="../geometry.html">📐 <span>Геометрия · ОГЭ</span></a>
+  <div class="links"></div>
+  <a class="home" href="../spravochnik.html" title="Справочник">📖</a>
+  <div class="progress-pill">Решено <b>0 / 0</b><div class="progress-bar"><i></i></div></div>
+</div></nav>
+
+<div class="container">
+
+<header class="hero">
+  <span class="tag">Раздел 3 · Четырёхугольники</span><span class="tag">Занятие 10 из 23</span><span class="tag">Учебник: гл. VI §3</span>
+  <h1>Прямоугольник, ромб, квадрат. Симметрия</h1>
+  <p>Особые параллелограммы: их свойства и признаки. Центральная и осевая симметрия четырёхугольников.</p>
+  <div class="timeline">
+    <a href="#warmup">① Проверка ДЗ <small>0–10′</small></a>
+    <a href="#theory">② Теория <small>10–25′</small></a>
+    <a href="#practice">③ Практика <small>25–45′</small></a>
+    <a href="#oge">④ ОГЭ <small>45–55′</small></a>
+    <a href="#hw">⑤ Итог и ДЗ <small>55–60′</small></a>
+    <a href="#bonus">★ Бонус</a>
+  </div>
+</header>
+
+<div class="teacher-panel teacher-only">
+  <h3>План занятия (60 минут)</h3>
+  <ol><li><b>0–10′</b> Проверка ДЗ занятия 9.</li><li><b>10–25′</b> Теория. Схема «параллелограмм → прямоугольник / ромб → квадрат». Лаборатория: тянуть B и D, поймать прямоугольник, ромб, квадрат; следить за диагоналями и осями симметрии.</li><li><b>25–45′</b> Тренажёр, затем П1–П10. Диагонали ромба делят его на 4 прямоугольных треугольника — главный приём.</li><li><b>45–55′</b> ОГЭ №17 и №19.</li><li><b>55–60′</b> Шпаргалка, ДЗ.</li></ol>
+  <p class="muted" style="margin:0">Типичные ошибки: считают, что диагонали ромба равны, а диагонали прямоугольника перпендикулярны; любой четырёхугольник с перпендикулярными диагоналями называют ромбом; в ромбе берут целые диагонали вместо половин при поиске стороны.</p>
+</div>
+
+<section class="card" id="warmup" data-nav="Проверка ДЗ">
+  <h2><span class="step">1</span> Проверка ДЗ <span class="mins">0–10 мин</span></h2>
+  <div class="tasks"><div class="task" data-id="h1"><div class="task-head"><span class="tnum">ДЗ 1</span></div>
+<p>Найдите сумму углов выпуклого девятиугольника.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="1260"></label></div>
+</div>
+<div class="task" data-id="h2"><div class="task-head"><span class="tnum">ДЗ 2</span></div>
+<p>Один угол параллелограмма на 50° больше другого. Найдите больший угол.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="115"></label></div>
+</div>
+<div class="task" data-id="h3"><div class="task-head"><span class="tnum">ДЗ 3</span></div>
+<p>Диагонали параллелограмма равны 14 и 22, одна из сторон 9. Найдите периметр треугольника, образованного этой стороной и половинами диагоналей.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="27"></label></div>
+</div>
+<div class="task" data-id="h4"><div class="task-head"><span class="tnum">ДЗ 4</span></div>
+<p>Биссектриса угла A параллелограмма ABCD пересекает сторону BC в точке K, BK = 8, KC = 5. Найдите периметр параллелограмма.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="42"></label></div>
+</div>
+<div class="task" data-id="h5" data-mode="digits"><div class="task-head"><span class="tnum">ДЗ 5</span><span class="pill oge">ОГЭ №19</span></div>
+<p>1) Диагонали параллелограмма точкой пересечения делятся пополам. 2) Сумма углов выпуклого шестиугольника равна 1080°. 3) В параллелограмме сумма углов, прилежащих к одной стороне, равна 180°.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="13"></label></div>
+</div>
+</div>
+</section>
+
+<section class="card" id="theory" data-nav="Теория">
+  <h2><span class="step">2</span> Теория <span class="mins">10–25 мин</span></h2>
+
+  <div class="grid3">
+    <div class="box def"><span class="title">Прямоугольник</span>
+      Параллелограмм, у которого <b>все углы прямые</b>.
+      <ul class="rules"><li>Все свойства параллелограмма.</li><li>Диагонали <b>равны</b>: AC = BD.</li></ul>
+      <div class="eg">Стороны 6 и 8 → диагональ √(36 + 64) = 10, AO = BO = 5.</div></div>
+    <div class="box def"><span class="title">Ромб</span>
+      Параллелограмм, у которого <b>все стороны равны</b>.
+      <ul class="rules"><li>Все свойства параллелограмма.</li><li>Диагонали <b>взаимно перпендикулярны</b> и <b>делят углы пополам</b>.</li></ul>
+      <div class="eg">Диагонали 12 и 16 → половины 6 и 8 → сторона 10.</div>
+      <div class="eg">∠A = 70° → ∠BAC = 35°.</div></div>
+    <div class="box def"><span class="title">Квадрат</span>
+      Прямоугольник, у которого <b>все стороны равны</b>. Квадрат — и прямоугольник, и ромб.
+      <ul class="rules"><li>Диагонали равны, перпендикулярны, делятся пополам, делят углы по 45°.</li></ul>
+      <div class="formula">d = a√2</div>
+      <div class="eg">a = 5 → d = 5√2. d = 8 → a = 8 / √2 = 4√2.</div></div>
+  </div>
+  <div class="grid2" style="margin-top:14px">
+    <div class="box rule"><span class="title">Признаки</span>
+      <ul class="rules">
+        <li>Параллелограмм с <b>равными диагоналями</b> — прямоугольник.</li>
+        <li>Параллелограмм с <b>прямым углом</b> — прямоугольник.</li>
+        <li>Параллелограмм с <b>перпендикулярными диагоналями</b> — ромб.</li>
+        <li>Параллелограмм, у которого диагональ — <b>биссектриса угла</b>, — ромб.</li>
+      </ul>
+      <div class="eg">ABCD — параллелограмм, AC = BD = 10 → прямоугольник.</div>
+      <div class="eg trap">Сначала нужен <b>параллелограмм</b>. Четырёхугольник с перпендикулярными диагоналями может не быть ромбом, с равными диагоналями — не быть прямоугольником (равнобедренная трапеция).</div></div>
+    <div class="box rule"><span class="title">Симметрия</span>
+      Точки A и A₁ <b>симметричны относительно точки O</b>, если O — середина AA₁.
+      <ul class="rules">
+        <li><b>Центр симметрии</b> параллелограмма (и прямоугольника, ромба, квадрата) — точка пересечения диагоналей.</li>
+        <li><b>Оси симметрии</b> (осевая симметрия, 7 класс): прямоугольник — 2 (через середины противоположных сторон), ромб — 2 (диагонали), квадрат — 4. Параллелограмм общего вида осей не имеет.</li>
+      </ul>
+      <div class="eg">Квадрат: 4 оси и центр симметрии. Треугольник центра симметрии не имеет.</div>
+      <div class="eg trap">Диагональ прямоугольника (не квадрата) — не ось симметрии.</div></div>
+  </div>
+  <h3>Лаборатория: какой это параллелограмм?</h3>
+  <div class="lab">
+    <svg id="labR" viewBox="0 0 600 330"></svg>
+    <div class="readout" id="rRead"></div>
+    <div class="controls">
+      <button class="btn small ghost" type="button" data-rp="par">Параллелограмм</button>
+      <button class="btn small ghost" type="button" data-rp="rect">Прямоугольник</button>
+      <button class="btn small ghost" type="button" data-rp="romb">Ромб</button>
+      <button class="btn small ghost" type="button" data-rp="sq">Квадрат</button>
+    </div>
+    <p class="muted" style="margin:8px 0 0;font-size:14px">Перетаскивайте вершины B и D. Около прямого угла и равных сторон фигура «примагничивается». Пунктир — оси симметрии.</p>
+  </div>
+
+</section>
+
+<section class="card" id="examples" data-nav="Примеры">
+  <h2><span class="step">↳</span> Разбор примеров</h2>
+  <div class="grid3"><div class="box example"><span class="title">Пример 1. Прямоугольник</span><p>Диагонали прямоугольника ABCD пересекаются в точке O, ∠CAD = 30°, AC = 12. Найдите периметр треугольника AOB.</p><details class="reveal"><summary>Показать решение</summary><p><b>Решение.</b> ∠BAO = 90° − 30° = 60°, AO = BO = 6 (диагонали равны и делятся пополам). Равнобедренный треугольник с углом 60° — равносторонний: AB = 6. P = 18.</p><p><b>Ответ:</b> 18.</p></details></div><div class="box example"><span class="title">Пример 2. Ромб</span><p>Диагонали ромба равны 10 и 24. Найдите сторону ромба.</p><details class="reveal"><summary>Показать решение</summary><p><b>Решение.</b> Диагонали перпендикулярны и делятся пополам: катеты 5 и 12. Сторона √(25 + 144) = 13.</p><p><b>Ответ:</b> 13.</p></details></div><div class="box example"><span class="title">Пример 3. Углы ромба</span><p>В ромбе ABCD ∠BAD = 64°. Найдите ∠ABD.</p><details class="reveal"><summary>Показать решение</summary><p><b>Решение.</b> ∠ABC = 180° − 64° = 116°. Диагональ BD — биссектриса: ∠ABD = 58°.</p><p><b>Ответ:</b> 58°.</p></details></div></div>
+</section>
+
+<section class="card" id="practice" data-nav="Практика">
+  <h2><span class="step">3</span> Интерактивная практика <span class="mins">25–45 мин</span></h2>
+  <h3>🎯 Тренажёр «Прямоугольник, ромб, квадрат»</h3>
+  <div class="lab task" id="trainer" data-id="trainer" data-noauto><div id="trainerBox"></div>
+    <div class="sol">Корни вводите как 5√2 или 5sqrt(2). Засчитывается при 5 верных из 6.</div></div>
+
+  <h3>Блок А. База</h3>
+  <div class="tasks"><div class="task" data-id="p1"><div class="task-head"><span class="tnum">П1</span><span class="pill lvl1">база</span></div>
+<p>В прямоугольнике ABCD AB = 9, BC = 12. Найдите диагональ AC.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="15"></label></div>
+</div>
+<div class="task" data-id="p2"><div class="task-head"><span class="tnum">П2</span><span class="pill lvl1">база</span></div>
+<p>Диагонали прямоугольника ABCD пересекаются в точке O, BD = 18. Найдите AO.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="9"></label></div>
+<div class="sol">Диагонали равны и делятся пополам: AO = AC / 2 = BD / 2.</div>
+</div>
+<div class="task" data-id="p3"><div class="task-head"><span class="tnum">П3</span><span class="pill lvl1">база</span></div>
+<p>Диагонали ромба равны 12 и 16. Найдите сторону ромба.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="10"></label></div>
+</div>
+<div class="task" data-id="p4"><div class="task-head"><span class="tnum">П4</span><span class="pill lvl1">база</span></div>
+<p>Угол A ромба ABCD равен 50°. Найдите угол между диагональю AC и стороной AB.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="25"></label></div>
+</div>
+<div class="task" data-id="p5"><div class="task-head"><span class="tnum">П5</span><span class="pill lvl1">база</span></div>
+<p>Сторона квадрата равна 6. Найдите его диагональ.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="6√2"></label></div>
+</div>
+<div class="task" data-id="p6"><div class="task-head"><span class="tnum">П6</span><span class="pill lvl1">база</span></div>
+<p>Сколько осей симметрии имеет ромб, не являющийся квадратом?</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="2"></label></div>
+</div>
+</div>
+  <h3>Блок Б. Посложнее</h3>
+  <div class="tasks"><div class="task" data-id="p7"><div class="task-head"><span class="tnum">П7</span><span class="pill lvl2">средний</span></div>
+<p>Сторона ромба равна 10, одна из диагоналей — 12. Найдите другую диагональ.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="16"></label></div>
+<div class="sol">Половина диагонали 6, вторая половина √(100 − 36) = 8, диагональ 16.</div>
+</div>
+<div class="task" data-id="p8"><div class="task-head"><span class="tnum">П8</span><span class="pill lvl2">средний</span></div>
+<p>Диагонали прямоугольника пересекаются под углом 60°, меньшая сторона равна 7. Найдите диагональ.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="14"></label></div>
+<div class="sol">△AOB равнобедренный с углом 60° — равносторонний: AO = AB = 7, AC = 14.</div>
+</div>
+<div class="task" data-id="p9"><div class="task-head"><span class="tnum">П9</span><span class="pill lvl2">средний</span></div>
+<p>Периметр ромба равен 40, один из его углов 60°. Найдите меньшую диагональ.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="10"></label></div>
+<div class="sol">Сторона 10. Меньшая диагональ отсекает равносторонний треугольник: она равна 10.</div>
+</div>
+<div class="task" data-id="p10"><div class="task-head"><span class="tnum">П10</span><span class="pill lvl3">сложнее</span></div>
+<p>Высота ромба, проведённая из вершины тупого угла, делит сторону пополам. Найдите углы ромба.</p>
+<div class="ans-row"><label>острый = <input class="ans" data-a="60" data-label="острый"></label><label>тупой = <input class="ans" data-a="120" data-label="тупой"></label></div>
+<div class="hint">Соедините эту вершину с противоположной вершиной стороны — получится диагональ.</div>
+<div class="sol">Высота BH — медиана в △ABD, значит, BD = AB = AD: △ABD равносторонний, ∠A = 60°, ∠B = 120°.</div>
+</div>
+</div>
+</section>
+
+<section class="card oge" id="oge" data-nav="ОГЭ">
+  <h2><span class="step">4</span> Задачи в формате ОГЭ <span class="mins">45–55 мин</span></h2>
+  <div class="tasks"><div class="task" data-id="o1"><div class="task-head"><span class="tnum">О1</span><span class="pill oge">ОГЭ №17</span></div>
+<p>Диагонали AC и BD прямоугольника ABCD пересекаются в точке O, BO = 18, AB = 23. Найдите AC.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="36"></label></div>
+</div>
+<div class="task" data-id="o2"><div class="task-head"><span class="tnum">О2</span><span class="pill oge">ОГЭ №17</span></div>
+<p>В ромбе ABCD угол ABC равен 122°. Найдите угол ACD. Ответ дайте в градусах.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="29"></label></div>
+<div class="sol">∠BCD = 180° − 122° = 58°, AC — биссектриса: ∠ACD = 29°.</div>
+</div>
+<div class="task" data-id="o3"><div class="task-head"><span class="tnum">О3</span><span class="pill oge">ОГЭ №17</span></div>
+<p>Диагональ ромба образует с одной из его сторон угол 27°. Найдите больший угол ромба. Ответ дайте в градусах.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="126"></label></div>
+<div class="sol">Угол ромба 2 · 27° = 54°, больший 180° − 54° = 126°.</div>
+</div>
+<div class="task" data-id="o4"><div class="task-head"><span class="tnum">О4</span><span class="pill oge">ОГЭ №17</span></div>
+<p>Сторона ромба равна 26, а одна из его диагоналей равна 48. Найдите другую диагональ ромба.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="20"></label></div>
+<div class="sol">Половина 24, вторая половина √(676 − 576) = 10.</div>
+</div>
+<div class="task" data-id="o5" data-mode="digits"><div class="task-head"><span class="tnum">О5</span><span class="pill oge">ОГЭ №19</span></div>
+<p>Какие из следующих утверждений верны?</p><ol style="margin:6px 0"><li>Диагонали ромба равны.</li><li>Диагонали прямоугольника равны.</li><li>Любой квадрат является ромбом.</li></ol>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="23"></label></div>
+<div class="sol">1 — неверно: диагонали ромба перпендикулярны, но не обязательно равны.</div>
+</div>
+</div>
+</section>
+
+<section class="card" id="hw" data-nav="Итог и ДЗ">
+  <h2><span class="step">5</span> Итог и домашнее задание <span class="mins">55–60 мин</span></h2>
+  <h3>Шпаргалка</h3>
+  <div class="cheat"><div><b>Прямоугольник:</b> диагонали равны</div><div><b>Ромб:</b> диагонали ⊥ и делят углы пополам</div><div><b>Квадрат:</b> d = a√2</div><div><b>Признаки:</b> сначала параллелограмм!</div><div><b>Центр симметрии:</b> точка пересечения диагоналей</div><div><b>Оси:</b> 2 · 2 · 4</div></div>
+  <h3>📚 Домашнее задание</h3>
+  <p class="muted">Ответы проверяются в начале занятия 11.</p>
+  <ol class="hw"><li>Стороны прямоугольника 8 и 15. Найдите его диагональ.<div class="sol"><span class="ansline">Ответ: 17.</span> </div></li><li>Диагонали ромба 10 и 24. Найдите периметр ромба.<div class="sol"><span class="ansline">Ответ: 52.</span> Сторона 13.</div></li><li>В ромбе ABCD ∠ABC = 140°. Найдите угол ACD.<div class="sol"><span class="ansline">Ответ: 20.</span> ∠BCD = 40°, AC — биссектриса.</div></li><li>Диагонали прямоугольника пересекаются под углом 60°, меньшая сторона 9. Найдите диагональ.<div class="sol"><span class="ansline">Ответ: 18.</span> </div></li><li>(ОГЭ №19) 1) Диагонали квадрата взаимно перпендикулярны. 2) Если в параллелограмме диагонали равны, то этот параллелограмм — ромб. 3) Точка пересечения диагоналей параллелограмма является его центром симметрии.<div class="sol"><span class="ansline">Ответ: 13.</span> 2 — неверно: прямоугольник.</div></li></ol>
+  <h3>⭐ Бонусное ДЗ</h3>
+  <ol class="hw"><li>Докажите, что параллелограмм, диагонали которого перпендикулярны, является ромбом.<div class="sol">O — точка пересечения диагоналей, AO = OC. Треугольники ABO и CBO: AO = OC, BO общая, ∠AOB = ∠COB = 90° → равны по двум катетам, AB = BC. Соседние стороны равны, противоположные равны как в параллелограмме → все стороны равны.</div></li><li>Высота ромба равна 6, острый угол 30°. Найдите сторону ромба.<div class="sol"><span class="ansline">Ответ: 12.</span> Высота — катет против угла 30°, сторона — гипотенуза: 2 · 6.</div></li></ol>
+  <p style="margin-top:18px"><button class="btn small ghost" type="button" onclick="GeoResetLesson()">Сбросить прогресс занятия</button></p>
+</section>
+
+<section class="card bonus" id="bonus" data-nav="★ Бонус">
+  <h2><span class="step">★</span> Бонусная практика</h2>
+  <div class="tasks"><div class="task" data-id="b1"><div class="task-head"><span class="tnum">Б1</span><span class="pill lvl3">сложнее</span></div>
+<p>Биссектриса угла A прямоугольника ABCD пересекает сторону BC в точке K, BK = 5, KC = 7. Найдите периметр прямоугольника и его диагональ.</p>
+<div class="ans-row"><label>P = <input class="ans" data-a="34" data-label="P"></label><label>AC = <input class="ans" data-a="13" data-label="AC"></label></div>
+<div class="sol">△ABK прямоугольный равнобедренный: AB = BK = 5, BC = 12. P = 34, AC = √(25 + 144) = 13.</div>
+</div>
+<div class="task" data-id="b2"><div class="task-head"><span class="tnum">Б2</span><span class="pill lvl3">сложнее</span></div>
+<p>Диагонали ромба равны 30 и 40. Найдите расстояние от точки пересечения диагоналей до стороны ромба.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="12"></label></div>
+<div class="sol">Сторона 25. В прямоугольном △AOB с катетами 15 и 20 высота к гипотенузе 15 · 20 / 25 = 12.</div>
+</div>
+<div class="task" data-id="b3"><div class="task-head"><span class="tnum">Б3</span><span class="pill oge">ОГЭ №24</span></div>
+<p>Докажите, что если в параллелограмме ABCD биссектриса угла A проходит через вершину C, то ABCD — ромб.</p>
+<div class="sol">∠BAC = ∠CAD (биссектриса), ∠CAD = ∠BCA (накрест лежащие при AD ∥ BC). Значит, ∠BAC = ∠BCA, △ABC равнобедренный: AB = BC. В параллелограмме с равными соседними сторонами все стороны равны — это ромб.</div>
+</div>
+</div>
+</section>
+
+</div>
+
+<script src="../assets/core.js"></script>
+<script>
+
+(function(){
+  var G = GeoSVG, svg = document.getElementById('labR'), A = {x:150, y:285}, P = {B:{x:240, y:85}, D:{x:420, y:285}}, U = 40;
+  var PRE = {par:{B:{x:240, y:85}, D:{x:420, y:285}}, rect:{B:{x:150, y:85}, D:{x:450, y:285}}, romb:{B:{x:150 + 120, y:285 - 240 * Math.sin(Math.PI / 3)}, D:{x:390, y:285}}, sq:{B:{x:150, y:85}, D:{x:350, y:285}}};
+  var D1 = '#8b5cf6', D2 = '#0ea5a4', SA = '#2f7de1', SB = '#f08c00', AX = '#e5484d';
+  function f(v){ return (Math.round(v * 10) / 10).toString().replace('.', ','); }
+  function seg(p, q, col, w, dash){ return G.el('line', {x1:p.x, y1:p.y, x2:q.x, y2:q.y, stroke:col, 'stroke-width':w || 3, 'stroke-dasharray':dash || '', 'stroke-linecap':'round'}, svg); }
+  function axis(p, q){ var u = G.unit(p, q), e = 45; seg({x:p.x - e * u.x, y:p.y - e * u.y}, {x:q.x + e * u.x, y:q.y + e * u.y}, AX, 1.8, '7 6'); }
+  function kind(){
+    var v = {x:P.B.x - A.x, y:P.B.y - A.y}, w = {x:P.D.x - A.x, y:P.D.y - A.y}, lv = Math.hypot(v.x, v.y), lw = Math.hypot(w.x, w.y);
+    var right = Math.abs(v.x * w.x + v.y * w.y) < 1e-6 * lv * lw, eq = Math.abs(lv - lw) < 1e-6;
+    return {right:right, eq:eq};
+  }
+  function draw(){
+    G.clear(svg); var B = P.B, D = P.D, C = {x:B.x + D.x - A.x, y:B.y + D.y - A.y}, O = G.mid(A, C), k = kind();
+    var name = k.right && k.eq ? 'квадрат' : k.right ? 'прямоугольник' : k.eq ? 'ромб' : 'параллелограмм';
+    G.el('path', {d:'M'+A.x+' '+A.y+' L'+B.x+' '+B.y+' L'+C.x+' '+C.y+' L'+D.x+' '+D.y+' Z', 'class':'st fl'}, svg);
+    if(k.right){ axis(G.mid(A, B), G.mid(D, C)); axis(G.mid(A, D), G.mid(B, C)); }
+    if(k.eq){ axis(A, C); axis(B, D); }
+    var dEq = Math.abs(G.dist(A, C) - G.dist(B, D)) < 1e-6, dPerp = k.eq;
+    seg(A, C, D1, 2.5); seg(B, D, dEq ? D1 : D2, 2.5);
+    G.tick(svg, A, O, 1, D1); G.tick(svg, O, C, 1, D1); G.tick(svg, B, O, dEq ? 1 : 2, dEq ? D1 : D2); G.tick(svg, O, D, dEq ? 1 : 2, dEq ? D1 : D2);
+    if(dPerp) G.rightMark(svg, O, C, B, 11);
+    seg(A, B, SA); seg(D, C, SA); seg(B, C, k.eq ? SA : SB); seg(A, D, k.eq ? SA : SB);
+    if(k.right) G.rightMark(svg, A, B, D, 14); else G.arc(svg, A, B, D, 26, '#e5484d');
+    G.el('circle', {cx:O.x, cy:O.y, r:4.5, fill:'currentColor'}, svg); G.text(svg, O.x + 16, O.y + 18, 'O');
+    var nAx = (k.right ? 2 : 0) + (k.eq ? 2 : 0);
+    document.getElementById('rRead').innerHTML = '<span style="color:#2f5bea">Это ' + name + '</span>' +
+      '<span>AB = ' + f(G.dist(A, B) / U) + ', AD = ' + f(G.dist(A, D) / U) + '</span><span>∠A = ' + Math.round(G.angle(A, B, D)) + '°</span>' +
+      '<span style="color:' + D1 + '">AC = ' + f(G.dist(A, C) / U) + '</span><span style="color:' + (dEq ? D1 : D2) + '">BD = ' + f(G.dist(B, D) / U) + '</span>' +
+      '<span>угол между диагоналями ' + Math.round(G.angle(O, C, B)) + '°</span><span style="color:' + AX + '">осей симметрии: ' + nAx + '</span><span>центр симметрии — O</span>';
+    ['B','D'].forEach(function(n){ G.handle(svg, P[n], n); });
+    [[A,'A'],[B,'B'],[C,'C'],[D,'D']].forEach(function(t){ var u = G.unit(O, t[0]); G.text(svg, t[0].x + (u.x < 0 ? -24 : 24), t[0].y + (u.y < 0 ? -6 : 16), t[1]); });
+  }
+  G.draggable(svg, function(n, p){
+    var o = {B:P.B, D:P.D}, q = {x:p.x - A.x, y:p.y - A.y}, other = o[n === 'B' ? 'D' : 'B'], w = {x:other.x - A.x, y:other.y - A.y};
+    var lq = Math.hypot(q.x, q.y), lw = Math.hypot(w.x, w.y);
+    if(lq < 70) return;
+    var ang = Math.acos((q.x * w.x + q.y * w.y) / (lq * lw)) * 180 / Math.PI;
+    if(Math.abs(ang - 90) < 4){ var nx = -w.y / lw, ny = w.x / lw; if(nx * q.x + ny * q.y < 0){ nx = -nx; ny = -ny; } q = {x:nx * lq, y:ny * lq}; }
+    if(Math.abs(lq - lw) < 9){ q = {x:q.x * lw / lq, y:q.y * lw / lq}; }
+    var np = {x:A.x + q.x, y:A.y + q.y}; o[n] = np;
+    var C = {x:o.B.x + o.D.x - A.x, y:o.B.y + o.D.y - A.y}, pts = [o.B, o.D, C];
+    for(var i = 0; i < 3; i++) if(pts[i].x < 25 || pts[i].x > 575 || pts[i].y < 28 || pts[i].y > 305) return;
+    var cr = (o.B.x - A.x) * (o.D.y - A.y) - (o.B.y - A.y) * (o.D.x - A.x);
+    if(cr < 12000) return;
+    P[n] = np; draw();
+  });
+  document.querySelectorAll('[data-rp]').forEach(function(b){ b.addEventListener('click', function(){ var s = PRE[b.getAttribute('data-rp')]; P.B = {x:s.B.x, y:s.B.y}; P.D = {x:s.D.x, y:s.D.y}; draw(); }); });
+  draw();
+})();
+document.addEventListener('geo:ready', function(){
+  var TR = [[3,4,5],[5,12,13],[8,15,17],[6,8,10],[9,12,15],[7,24,25],[12,16,20]];
+  GeoTrainer(document.getElementById('trainerBox'), {rounds:6, id:'trainer', gen:function(){
+    var q = GeoRand(1, 5), t = GeoPick(TR);
+    if(q === 1){ return GeoRand(0, 1) ? {q:'Диагонали ромба равны ' + 2 * t[0] + ' и ' + 2 * t[1] + '. Найдите сторону ромба.', a:String(t[2]), why:'Половины ' + t[0] + ' и ' + t[1] + ': √(' + t[0] * t[0] + ' + ' + t[1] * t[1] + ') = ' + t[2] + '.'}
+      : {q:'Сторона ромба ' + t[2] + ', одна из диагоналей ' + 2 * t[0] + '. Найдите другую диагональ.', a:String(2 * t[1]), why:'Половина ' + t[0] + ', вторая половина √(' + t[2] * t[2] + ' − ' + t[0] * t[0] + ') = ' + t[1] + ', диагональ ' + 2 * t[1] + '.'}; }
+    if(q === 2){ return {q:'Стороны прямоугольника ' + t[0] + ' и ' + t[1] + '. Найдите его диагональ.', a:String(t[2]), why:'√(' + t[0] * t[0] + ' + ' + t[1] * t[1] + ') = ' + t[2] + '.'}; }
+    if(q === 3){ var a = 2 * GeoRand(15, 80); if(a === 90) a = 80; var b = 180 - a;
+      return GeoRand(0, 1) ? {q:'Угол A ромба ABCD равен ' + a + '°. Найдите угол ABD.', a:String(b / 2), why:'∠B = ' + b + '°, BD — биссектриса: ' + b / 2 + '°.'}
+        : {q:'Угол A ромба ABCD равен ' + a + '°. Найдите угол между диагональю AC и стороной AD.', a:String(a / 2), why:'AC — биссектриса угла A: ' + a / 2 + '°.'}; }
+    if(q === 4){ var s = GeoRand(2, 12); return GeoRand(0, 1) ? {q:'Сторона квадрата ' + s + '. Найдите диагональ.', a:s + '√2', why:'d = a√2 = ' + s + '√2.'}
+      : {q:'Диагональ квадрата ' + s + '√2. Найдите сторону.', a:String(s), why:'a = d / √2 = ' + s + '.'}; }
+    var m = GeoRand(3, 15); return {q:'Диагонали прямоугольника пересекаются под углом 60°, меньшая сторона ' + m + '. Найдите диагональ.', a:String(2 * m), why:'△AOB равносторонний: AO = ' + m + ', диагональ ' + 2 * m + '.'};
+  }});
+});
+
+</script>
+</body>
+</html>

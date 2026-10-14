@@ -1,0 +1,348 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Алгебра · занятие 14 · Метод интервалов</title>
+<link rel="stylesheet" href="../assets/core.css">
+</head>
+<body data-lesson="A14">
+
+<nav class="topnav"><div class="in">
+  <a class="home" href="../algebra.html">🧮 <span>Алгебра · ОГЭ</span></a>
+  <div class="links"></div>
+  <a class="home" href="../spravochnik-algebra.html" title="Справочник">📖</a>
+  <div class="progress-pill">Решено <b>0 / 0</b><div class="progress-bar"><i></i></div></div>
+</div></nav>
+
+<div class="container">
+
+<header class="hero">
+  <span class="tag">Раздел 3 · Уравнения и неравенства с одной переменной</span><span class="tag">Алгебра · занятие 14 из 23</span><span class="tag">Учебник: гл. III §6, п. 17</span>
+  <h1>Метод интервалов</h1>
+  <p>Рациональные неравенства: нули множителей, чередование знаков, кратные корни, дробные неравенства и выколотые точки. ОГЭ №13 и №20.</p>
+  <div class="timeline">
+    <a href="#warmup">① Проверка ДЗ <small>0–10′</small></a>
+    <a href="#theory">② Теория <small>10–25′</small></a>
+    <a href="#practice">③ Практика <small>25–45′</small></a>
+    <a href="#oge">④ ОГЭ <small>45–55′</small></a>
+    <a href="#hw">⑤ Итог и ДЗ <small>55–60′</small></a>
+    <a href="#bonus">★ Бонус</a>
+  </div>
+</header>
+
+<div class="teacher-panel teacher-only">
+  <h3>План занятия (60 минут)</h3>
+  <ol><li><b>0–10′</b> Проверка ДЗ занятия 13.</li><li><b>10–25′</b> Теория: алгоритм метода интервалов. В лаборатории сделать два одинаковых корня (a = b) — знак не меняется; перенести множитель в знаменатель — точка всегда выколота.</li><li><b>25–45′</b> Тренажёр, затем П1–П10.</li><li><b>45–55′</b> ОГЭ №13 и №20 (полное оформление).</li><li><b>55–60′</b> Шпаргалка, ДЗ. Раздел 3 завершён.</li></ol>
+  <p class="muted" style="margin:0">Типичные ошибки: не меняют знак неравенства, переписывая (2 − x) как (x − 2); чередуют знаки через корень чётной кратности; включают нули знаменателя в ответ нестрогого неравенства; умножают дробное неравенство на знаменатель; теряют изолированную точку в ответе.</p>
+</div>
+
+<section class="card" id="warmup" data-nav="Проверка ДЗ">
+  <h2><span class="step">1</span> Проверка ДЗ <span class="mins">0–10 мин</span></h2>
+  <div class="tasks"><div class="task" data-id="h1"><div class="task-head"><span class="tnum">ДЗ 1</span></div>
+<p>Сколько целых решений имеет неравенство x² − 36 ≤ 0?</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="13"></label></div>
+</div>
+<div class="task" data-id="h2"><div class="task-head"><span class="tnum">ДЗ 2</span></div>
+<p>Сколько целых решений имеет неравенство x² − 7x + 10 &lt; 0?</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="2"></label></div>
+</div>
+<div class="task" data-id="h3"><div class="task-head"><span class="tnum">ДЗ 3</span></div>
+<p>Найдите наибольшее целое отрицательное решение неравенства x² + 5x ≥ 0.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="-5"></label></div>
+</div>
+<div class="task" data-id="h4"><div class="task-head"><span class="tnum">ДЗ 4</span></div>
+<p>Найдите наименьшее целое c, при котором неравенство x² − 4x + c &gt; 0 верно при всех x.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="5"></label></div>
+</div>
+<div class="task" data-id="h5" data-mode="digits"><div class="task-head"><span class="tnum">ДЗ 5</span><span class="pill oge">ОГЭ №19</span></div>
+<p>1) Неравенство x² + 1 &gt; 0 верно при всех x. 2) Решением неравенства x² &lt; 4 является x &lt; 2. 3) Неравенство (x − 1)² &lt; 0 не имеет решений.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="13"></label></div>
+</div>
+</div>
+</section>
+
+<section class="card" id="theory" data-nav="Теория">
+  <h2><span class="step">2</span> Теория <span class="mins">10–25 мин</span></h2>
+
+  <div class="grid2">
+    <div class="box rule"><span class="title">Алгоритм метода интервалов</span>
+      <ol class="rules"><li>Перенести всё в левую часть, справа 0. Разложить на множители вида (x − a).</li><li>Отметить нули на прямой.</li><li>В крайнем правом промежутке знак «+» (все множители положительны), дальше знаки чередуются.</li><li>Выбрать промежутки с нужным знаком.</li></ol>
+      <div class="eg">(x + 3)(x − 1)(x − 4) &gt; 0. Нули −3, 1, 4.<div data-nl='{"p": [["−3", false], ["1", false], ["4", false]], "r": [false, true, false, true], "s": ["−", "+", "−", "+"]}'></div>Ответ: (−3; 1) ∪ (4; +∞).</div>
+      <div class="eg trap">(x + 1)(3 − x) ≥ 0. Сначала (3 − x) = −(x − 3): (x + 1)(x − 3) ≤ 0 → [−1; 3]. Знак неравенства поменялся!</div></div>
+    <div class="box def"><span class="title">Кратные корни</span>
+      <ul class="rules"><li>Множитель в <b>чётной</b> степени (x − a)²: при переходе через a знак <b>не меняется</b>.</li><li>В нечётной степени — меняется, как обычно.</li></ul>
+      <div class="eg">(x − 2)²(x + 1) &gt; 0. Нули −1 и 2 (кратности 2).<div data-nl='{"p": [["−1", false], ["2", false]], "r": [false, true, true], "s": ["−", "+", "+"]}'></div>Ответ: (−1; 2) ∪ (2; +∞).</div>
+      <div class="eg trap">(x − 2)²(x + 1) ≤ 0 → (−∞; −1] ∪ {2}. Изолированную точку x = 2 не терять!</div></div>
+  </div>
+  <div class="grid2" style="margin-top:14px">
+    <div class="box rule"><span class="title">Дробные неравенства</span>
+      <div class="formula">знак P(x)/Q(x) = знак P(x)·Q(x)</div>
+      <ul class="rules"><li>Нули знаменателя <b>всегда выколоты</b>, даже в нестрогом неравенстве.</li><li>Умножать на знаменатель нельзя — его знак неизвестен.</li></ul>
+      <div class="eg">(x − 3)/(x + 2) ≤ 0. Нули 3 (числитель) и −2 (знаменатель).<div data-nl='{"p": [["−2", false], ["3", true]], "r": [false, true, false], "s": ["+", "−", "+"]}'></div>Ответ: (−2; 3].</div></div>
+    <div class="box tip"><span class="title">Как оформлять №20 <span class="pill oge">№20</span></span>
+      <ol class="rules"><li>Привести к виду «произведение (частное) сравнивается с 0».</li><li>Нарисовать прямую с нулями и знаками.</li><li>Записать ответ промежутками, проверить концы.</li></ol>
+      <div class="eg">x²(−x² − 64) ≤ 64(−x² − 64) → (x² − 64)(−x² − 64) ≤ 0 → −(x² + 64)(x² − 64) ≤ 0 → x² − 64 ≥ 0, так как x² + 64 &gt; 0.<br>Ответ: (−∞; −8] ∪ [8; +∞).</div></div>
+  </div>
+  <h3>Лаборатория: знаки и интервалы</h3>
+  <div class="lab">
+    <svg id="labI" class="plot"></svg>
+    <div id="iNL" style="margin:6px auto 0;max-width:300px"></div>
+    <div class="readout" id="iRead"></div>
+    <div class="controls">
+      <button class="btn small" type="button" data-m="0">(x − a)(x − b)(x − c)</button><button class="btn small ghost" type="button" data-m="1">(x − a)(x − b)/(x − c)</button><button class="btn small ghost" type="button" data-m="2">(x − a)²(x − c)</button>
+    </div>
+    <div class="controls">
+      <label>a: <input type="range" id="iA" min="-5" max="5" step="1" value="-3"></label><span class="pill" id="iAv">−3</span>
+      <label>b: <input type="range" id="iB" min="-5" max="5" step="1" value="1"></label><span class="pill" id="iBv">1</span>
+      <label>c: <input type="range" id="iC" min="-5" max="5" step="1" value="4"></label><span class="pill" id="iCv">4</span>
+    </div>
+    <div class="controls">
+      <button class="btn small" type="button" data-op="&gt;">&gt; 0</button><button class="btn small ghost" type="button" data-op="&gt;=">≥ 0</button>
+      <button class="btn small ghost" type="button" data-op="&lt;">&lt; 0</button><button class="btn small ghost" type="button" data-op="&lt;=">≤ 0</button>
+    </div>
+    <p class="muted" style="margin:8px 0 0;font-size:14px">Кривая показывает только знак выражения (масштаб сжат). Зелёным на оси — решения.</p>
+  </div>
+
+</section>
+
+<section class="card" id="examples" data-nav="Примеры">
+  <h2><span class="step">↳</span> Разбор примеров</h2>
+  <div class="grid3"><div class="box example"><span class="title">Пример 1. Три множителя</span><p>Решите неравенство (x + 3)(x − 1)(x − 4) ≥ 0.</p><details class="reveal"><summary>Показать решение</summary><p><b>Решение.</b> Нули −3, 1, 4. Знаки справа налево: +, −, +, −. Точки закрашены.</p><p><b>Ответ:</b> [−3; 1] ∪ [4; +∞).</p></details></div><div class="box example"><span class="title">Пример 2. Кратный корень</span><p>Решите неравенство (x − 2)²(x + 1) ≤ 0.</p><details class="reveal"><summary>Показать решение</summary><p><b>Решение.</b> Знаки: (−∞; −1) «−», (−1; 2) «+», (2; +∞) «+» — через 2 знак не меняется. Нужен «−» и нули.</p><p><b>Ответ:</b> (−∞; −1] ∪ {2}.</p></details></div><div class="box example"><span class="title">Пример 3. Дробь</span><p>Решите неравенство (x + 2)/(x − 3) ≤ 0.</p><details class="reveal"><summary>Показать решение</summary><p><b>Решение.</b> Нули −2 (числитель, закрашен) и 3 (знаменатель, выколот). «−» между ними.</p><p><b>Ответ:</b> [−2; 3).</p></details></div></div>
+</section>
+
+<section class="card" id="practice" data-nav="Практика">
+  <h2><span class="step">3</span> Интерактивная практика <span class="mins">25–45 мин</span></h2>
+  <h3>🎯 Тренажёр «Метод интервалов»</h3>
+  <div class="lab task" id="trainer" data-id="trainer" data-noauto><div id="trainerBox"></div>
+    <div class="sol">Задачи генерируются случайно. Засчитывается при 5 верных из 6.</div></div>
+
+  <h3>Блок А. База</h3>
+  <div class="tasks"><div class="task" data-id="p1"><div class="task-head"><span class="tnum">П1</span><span class="pill lvl1">база</span></div>
+<p>Найдите наибольшее целое решение неравенства (x + 3)(x − 1)(x − 5) &lt; 0.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="4"></label></div>
+<div class="sol">(−∞; −3) ∪ (1; 5).</div>
+</div>
+<div class="task" data-id="p2"><div class="task-head"><span class="tnum">П2</span><span class="pill lvl1">база</span></div>
+<p>Найдите наименьшее целое решение неравенства (x + 2)(x − 3)(x − 6) ≥ 0.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="-2"></label></div>
+<div class="sol">[−2; 3] ∪ [6; +∞).</div>
+</div>
+<div class="task" data-id="p3"><div class="task-head"><span class="tnum">П3</span><span class="pill lvl1">база</span></div>
+<p>Сколько целых решений имеет неравенство (x − 4)/(x + 1) ≤ 0?</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="5"></label></div>
+<div class="sol">(−1; 4]: 0, 1, 2, 3, 4.</div>
+</div>
+<div class="task" data-id="p4"><div class="task-head"><span class="tnum">П4</span><span class="pill lvl1">база</span></div>
+<p>Найдите наибольшее целое решение неравенства (x − 3)²(x + 2) &lt; 0.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="-3"></label></div>
+<div class="sol">x &lt; −2 (через 3 знак не меняется, а x = 3 не подходит: 0 &lt; 0 — неверно).</div>
+</div>
+<div class="task" data-id="p5"><div class="task-head"><span class="tnum">П5</span><span class="pill lvl1">база</span></div>
+<p>Сколько целых решений имеет неравенство (x + 5)(2 − x) &gt; 0?</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="6"></label></div>
+<div class="sol">(x + 5)(x − 2) &lt; 0 → (−5; 2).</div>
+</div>
+<div class="task" data-id="p6"><div class="task-head"><span class="tnum">П6</span><span class="pill lvl1">база</span></div>
+<p>Найдите наименьшее натуральное решение неравенства (x + 1)/(x − 2) &gt; 0.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="3"></label></div>
+<div class="sol">(−∞; −1) ∪ (2; +∞).</div>
+</div>
+</div>
+  <h3>Блок Б. Посложнее</h3>
+  <div class="tasks"><div class="task" data-id="p7"><div class="task-head"><span class="tnum">П7</span><span class="pill lvl2">средний</span></div>
+<p>Найдите наибольшее целое решение неравенства (x − 1)(x − 3)² ≤ 0.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="3"></label></div>
+<div class="hint">Не потеряйте изолированную точку.</div>
+<div class="sol">(−∞; 1] ∪ {3}.</div>
+</div>
+<div class="task" data-id="p8"><div class="task-head"><span class="tnum">П8</span><span class="pill lvl2">средний</span></div>
+<p>Сколько целых решений неравенства (x² − 9)/(x − 1) ≥ 0 принадлежат отрезку [−5; 5]?</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="7"></label></div>
+<div class="sol">[−3; 1) ∪ [3; +∞): −3, −2, −1, 0, 3, 4, 5.</div>
+</div>
+<div class="task" data-id="p9"><div class="task-head"><span class="tnum">П9</span><span class="pill lvl2">средний</span></div>
+<p>Сколько целых решений имеет неравенство x⁴ − 10x² + 9 ≤ 0?</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="6"></label></div>
+<div class="sol">(x² − 1)(x² − 9) ≤ 0 → 1 ≤ x² ≤ 9 → [−3; −1] ∪ [1; 3].</div>
+</div>
+<div class="task" data-id="p10"><div class="task-head"><span class="tnum">П10</span><span class="pill lvl3">сложнее</span></div>
+<p>Сколько целых решений имеет неравенство (x² − 4x + 3)/(x² − 4) ≤ 0?</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="4"></label></div>
+<div class="sol">(x − 1)(x − 3)/((x − 2)(x + 2)) ≤ 0 → (−2; 1] ∪ (2; 3]: −1, 0, 1, 3.</div>
+</div>
+</div>
+</section>
+
+<section class="card oge" id="oge" data-nav="ОГЭ">
+  <h2><span class="step">4</span> Задачи в формате ОГЭ <span class="mins">45–55 мин</span></h2>
+  <div class="tasks"><div class="task" data-id="o1"><div class="task-head"><span class="tnum">О1</span><span class="pill oge">ОГЭ №13</span></div>
+<p>Укажите решение неравенства (x + 4)(x − 8) &gt; 0.</p><div class="grid2" style="margin:8px 0;gap:10px"><figure style="margin:0"><figcaption style="text-align:left"><b>1)</b></figcaption><div data-nl='{"p": [["−4", false], ["8", false]], "r": [false, true, false]}'></div></figure><figure style="margin:0"><figcaption style="text-align:left"><b>2)</b></figcaption><div data-nl='{"p": [["−4", true], ["8", true]], "r": [true, false, true]}'></div></figure><figure style="margin:0"><figcaption style="text-align:left"><b>3)</b></figcaption><div data-nl='{"p": [["−8", false], ["4", false]], "r": [true, false, true]}'></div></figure><figure style="margin:0"><figcaption style="text-align:left"><b>4)</b></figcaption><div data-nl='{"p": [["−4", false], ["8", false]], "r": [true, false, true]}'></div></figure></div>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="4"></label></div>
+<div class="sol">Нули −4 и 8, «&gt; 0» — крайние промежутки, точки выколоты.</div>
+</div>
+<div class="task" data-id="o2"><div class="task-head"><span class="tnum">О2</span><span class="pill oge">ОГЭ №13</span></div>
+<p>Укажите неравенство, решение которого изображено на рисунке.</p><div data-nl='{"p": [["−3", true], ["2", true]], "r": [false, true, false]}'></div><ol style="margin:6px 0"><li>(x + 3)(x − 2) ≥ 0</li><li>(x + 3)(x − 2) ≤ 0</li><li>(x − 3)(x + 2) ≤ 0</li><li>(x + 3)(x − 2) &lt; 0</li></ol>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="2"></label></div>
+</div>
+<div class="task" data-id="o3"><div class="task-head"><span class="tnum">О3</span><span class="pill oge">ОГЭ №20</span></div>
+<p>Решите неравенство (x − 7)² &lt; √11 · (x − 7). Ответ — промежуток (a; b). Найдите a и b.</p>
+<div class="ans-row"><label>a = <input class="ans" data-a="7" data-label="a"></label><label>b = <input class="ans" data-a="7+√11" data-label="b"></label></div>
+<div class="sol">(x − 7)(x − 7 − √11) &lt; 0 → 7 &lt; x &lt; 7 + √11.</div>
+</div>
+<div class="task" data-id="o4"><div class="task-head"><span class="tnum">О4</span><span class="pill oge">ОГЭ №20</span></div>
+<p>Решите неравенство x²(−x² − 64) ≤ 64(−x² − 64). Сколько целых чисел <b>не являются</b> его решениями?</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="15"></label></div>
+<div class="sol">−(x² + 64)(x² − 64) ≤ 0 → x² ≥ 64 → (−∞; −8] ∪ [8; +∞). Не решения: от −7 до 7 — 15 чисел.</div>
+</div>
+<div class="task" data-id="o5" data-mode="digits"><div class="task-head"><span class="tnum">О5</span><span class="pill oge">ОГЭ №19</span></div>
+<p>Какие утверждения верны?</p><ol style="margin:6px 0"><li>Если в разложении есть множитель (x − a)², то при переходе через a знак выражения не меняется.</li><li>В нестрогом дробном неравенстве нули знаменателя включаются в ответ.</li><li>Неравенство (x − 1)/(x + 2) &gt; 0 равносильно неравенству (x − 1)(x + 2) &gt; 0.</li></ol>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="13"></label></div>
+<div class="sol">2 — неверно: нули знаменателя всегда выколоты.</div>
+</div>
+</div>
+</section>
+
+<section class="card" id="hw" data-nav="Итог и ДЗ">
+  <h2><span class="step">5</span> Итог и домашнее задание <span class="mins">55–60 мин</span></h2>
+  <h3>Шпаргалка</h3>
+  <div class="cheat"><div><b>Множители (x − a)</b>, справа «+», знаки чередуются</div><div><b>(2 − x)</b> → −(x − 2), знак неравенства меняется</div><div><b>Чётная кратность</b> — знак не меняется; изолированная точка в ответе</div><div><b>Нули знаменателя</b> — всегда выколоты</div><div><b>Дробь</b> не умножать на знаменатель</div></div>
+  <h3>📚 Домашнее задание</h3>
+  <p class="muted">Ответы проверяются в начале занятия 15.</p>
+  <ol class="hw"><li>Найдите наибольшее целое решение неравенства (x + 4)(x − 2)(x − 6) &lt; 0.<div class="sol"><span class="ansline">Ответ: 5.</span> (−∞; −4) ∪ (2; 6).</div></li><li>Сколько целых решений имеет неравенство (x − 5)/(x + 3) ≤ 0?<div class="sol"><span class="ansline">Ответ: 8.</span> (−3; 5]: от −2 до 5.</div></li><li>Найдите наибольшее целое решение неравенства (x + 1)²(x − 4) &lt; 0.<div class="sol"><span class="ansline">Ответ: 3.</span> (−∞; −1) ∪ (−1; 4).</div></li><li>Найдите наименьшее целое решение неравенства (x² − 16)/(x + 1) ≥ 0.<div class="sol"><span class="ansline">Ответ: −4.</span> [−4; −1) ∪ [4; +∞).</div></li><li>(ОГЭ №19) 1) При переходе через корень чётной кратности знак выражения не меняется. 2) Нули знаменателя в нестрогом неравенстве включаются в ответ. 3) Неравенство (x − 1)/(x + 2) &gt; 0 равносильно неравенству (x − 1)(x + 2) &gt; 0.<div class="sol"><span class="ansline">Ответ: 13.</span> </div></li></ol>
+  <h3>⭐ Бонусное ДЗ</h3>
+  <ol class="hw"><li>Сколько целых решений имеет неравенство x⁴ − 13x² + 36 ≤ 0?<div class="sol"><span class="ansline">Ответ: 4.</span> (x² − 4)(x² − 9) ≤ 0 → 4 ≤ x² ≤ 9 → [−3; −2] ∪ [2; 3].</div></li><li>Найдите наибольшее целое решение неравенства (x² − x − 6)/(x − 1) &lt; 0.<div class="sol"><span class="ansline">Ответ: 2.</span> (x − 3)(x + 2)/(x − 1) &lt; 0 → (−∞; −2) ∪ (1; 3).</div></li></ol>
+  <p style="margin-top:18px"><button class="btn small ghost" type="button" onclick="GeoResetLesson()">Сбросить прогресс занятия</button></p>
+</section>
+
+<section class="card bonus" id="bonus" data-nav="★ Бонус">
+  <h2><span class="step">★</span> Бонусная практика</h2>
+  <div class="tasks"><div class="task" data-id="b1"><div class="task-head"><span class="tnum">Б1</span><span class="pill lvl3">сложнее</span></div>
+<p>Сколько целых решений имеет неравенство (x − 2)(x + 1)²(x − 5)³ ≤ 0?</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="5"></label></div>
+<div class="sol">Через −1 знак не меняется, через 5 (нечётная степень) — меняется. Решение {−1} ∪ [2; 5]: −1, 2, 3, 4, 5.</div>
+</div>
+<div class="task" data-id="b2"><div class="task-head"><span class="tnum">Б2</span><span class="pill lvl3">сложнее</span></div>
+<p>Сколько целых чисел не являются решениями неравенства x(x − 3)/(x + 2)² ≥ 0?</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="3"></label></div>
+<div class="sol">(−∞; −2) ∪ (−2; 0] ∪ [3; +∞). Не решения: −2, 1, 2.</div>
+</div>
+<div class="task" data-id="b3"><div class="task-head"><span class="tnum">Б3</span><span class="pill lvl3">сложнее</span></div>
+<p>Сколько целых решений имеет неравенство (x² − 4)(x² − 25) &lt; 0?</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="4"></label></div>
+<div class="sol">4 &lt; x² &lt; 25 → ±3, ±4.</div>
+</div>
+</div>
+</section>
+
+</div>
+
+<script src="../assets/core.js"></script>
+<script>
+
+function fN(v){
+  var r = Math.round(v * 1000) / 1000, s;
+  if(Math.abs(r - Math.round(r)) < 1e-9) s = String(Math.round(r));
+  else if(Math.abs(r * 4 - Math.round(r * 4)) < 1e-9) s = String(r);
+  else s = '≈' + (Math.round(v * 100) / 100);
+  return s.replace('.', ',').replace('-', '−');
+}
+function poly(cs, vs){
+  var s = '';
+  for(var i = 0; i < cs.length; i++){ var c = cs[i]; if(!c) continue; var a = Math.abs(c), body = (a === 1 && vs[i] ? '' : String(a).replace('.', ',')) + vs[i];
+    s += s === '' ? (c < 0 ? '−' : '') + body : (c < 0 ? ' − ' : ' + ') + body; }
+  return s || '0';
+}
+function fct(a){ return a === 0 ? 'x' : '(x ' + (a > 0 ? '− ' + a : '+ ' + (-a)) + ')'; }
+function ineqSolve(num, den, lead, op){
+  var all = num.concat(den).slice().sort(function(a, b){ return a - b; }), pts = [];
+  all.forEach(function(p){ if(!pts.length || Math.abs(p - pts[pts.length - 1]) > 1e-9) pts.push(p); });
+  function sg(x){ var s = lead; num.concat(den).forEach(function(r){ s *= (x > r ? 1 : -1); }); return s; }
+  var n = pts.length, regs = [], signs = [], closed = [], strict = op.length === 1, i;
+  for(i = 0; i <= n; i++){ var t = n === 0 ? 0 : (i === 0 ? pts[0] - 1 : (i === n ? pts[n - 1] + 1 : (pts[i - 1] + pts[i]) / 2)), s = sg(t); signs.push(s > 0 ? '+' : '−'); regs.push(op[0] === '>' ? s > 0 : s < 0); }
+  pts.forEach(function(p){ var d = den.some(function(r){ return Math.abs(r - p) < 1e-9; }); closed.push(!strict && !d); });
+  var el = [], parts = [], cur = null, prev = null;
+  for(i = 0; i <= n; i++){ el.push({inc:regs[i], reg:i}); if(i < n) el.push({inc:closed[i], pt:i}); }
+  function close(rt, rc){ parts.push(cur.single != null ? '{' + cur.l + '}' : (cur.lc ? '[' : '(') + cur.l + '; ' + rt + (rc ? ']' : ')')); cur = null; }
+  el.forEach(function(e){
+    if(e.inc && !cur) cur = e.pt != null ? {l:fN(pts[e.pt]), lc:true, single:e.pt} : {l:e.reg === 0 ? '−∞' : fN(pts[e.reg - 1]), lc:false, single:null};
+    else if(e.inc && cur) cur.single = null;
+    else if(!e.inc && cur){ if(prev.pt != null) close(fN(pts[prev.pt]), true); else close(fN(pts[prev.reg]), false); }
+    prev = e;
+  });
+  if(cur) close('+∞', false);
+  return {pts:pts, regs:regs, closed:closed, signs:signs, str:parts.join(' ∪ ') || 'нет решений'};
+}
+function nlSVG(pts, regs, signs){
+  var W = 260, H = signs ? 62 : 46, y = H - 18, n = pts.length, L = 12, R = W - 16, xs = [], s, i, x;
+  for(i = 0; i < n; i++) xs.push(L + (R - L) * (i + 1) / (n + 1));
+  s = '<svg viewBox="0 0 ' + W + ' ' + H + '" style="width:100%;max-width:300px;display:block">';
+  for(i = 0; i <= n; i++){
+    var a = i ? xs[i - 1] : 4, b = i < n ? xs[i] : W - 10;
+    if(regs[i]) for(x = a + 2; x < b; x += 7){ var x2 = Math.min(x + 9, b); s += '<line x1="' + x + '" y1="' + y + '" x2="' + x2 + '" y2="' + (y - 13 * (x2 - x) / 9) + '" stroke="var(--primary)" stroke-width="1.6"/>'; }
+    if(signs) s += '<text x="' + (a + b) / 2 + '" y="14" text-anchor="middle" style="font-size:16px;font-weight:700;fill:' + (signs[i] === '+' ? 'var(--res)' : 'var(--a)') + '">' + signs[i] + '</text>';
+  }
+  s += '<line x1="2" y1="' + y + '" x2="' + (W - 2) + '" y2="' + y + '" stroke="var(--ink)" stroke-width="1.6"/><path d="M' + (W - 10) + ' ' + (y - 5) + ' L' + (W - 2) + ' ' + y + ' L' + (W - 10) + ' ' + (y + 5) + '" fill="none" stroke="var(--ink)" stroke-width="1.6"/>';
+  s += '<text x="' + (W - 8) + '" y="' + (H - 2) + '" text-anchor="middle" style="font-size:13px;fill:var(--muted)">x</text>';
+  for(i = 0; i < n; i++){
+    s += '<circle cx="' + xs[i] + '" cy="' + y + '" r="4.5" fill="' + (pts[i][1] ? 'var(--ink)' : 'var(--card)') + '" stroke="var(--ink)" stroke-width="1.6"/>';
+    s += '<text x="' + xs[i] + '" y="' + (H - 2) + '" text-anchor="middle" style="font-size:13px;fill:var(--ink)">' + pts[i][0] + '</text>';
+  }
+  return s + '</svg>';
+}
+document.querySelectorAll('[data-nl]').forEach(function(d){ var o = JSON.parse(d.getAttribute('data-nl')); d.innerHTML = nlSVG(o.p, o.r, o.s); });
+
+var OPS = {'>':'&gt;', '>=':'≥', '<':'&lt;', '<=':'≤'};
+function intSol(f, op){ var s = []; for(var x = -60; x <= 60; x++){ var v = f(x); if(v === null) continue; if(op === '>' ? v > 0 : (op === '>=' ? v >= 0 : (op === '<' ? v < 0 : v <= 0))) s.push(x); } return s; }
+function askInt(s, txt, why){
+  var Q = function(w, a){ return {q:w + ' неравенства ' + txt + '.', a:String(a), why:why}; };
+  if(!s.length) return {q:'Сколько целых решений имеет неравенство ' + txt + '?', a:'0', why:why};
+  var lo = s[0] === -60, hi = s[s.length - 1] === 60;
+  if(!lo && !hi) return GeoRand(0, 1) ? {q:'Сколько целых решений имеет неравенство ' + txt + '?', a:String(s.length), why:why} : Q('Найдите наименьшее целое решение', s[0]);
+  if(!lo) return Q('Найдите наименьшее целое решение', s[0]);
+  if(!hi) return Q('Найдите наибольшее целое решение', s[s.length - 1]);
+  return {q:'Сколько существует целых чисел, которые <b>не являются</b> решениями неравенства ' + txt + '?', a:String(121 - s.length), why:why};
+}
+
+(function(){
+  var svg = document.getElementById('labI'), A = document.getElementById('iA'), B = document.getElementById('iB'), C = document.getElementById('iC'), op = '>', md = 0;
+  function draw(){
+    var a = +A.value, b = +B.value, c = +C.value, num, den = [], txt;
+    if(md === 0){ num = [a, b, c]; txt = fct(a) + fct(b) + fct(c); }
+    else if(md === 1){ num = [a, b]; den = [c]; txt = fct(a) + fct(b) + '/' + fct(c); }
+    else { num = [a, a, c]; txt = fct(a) + '²' + fct(c); }
+    B.parentNode.style.opacity = md === 2 ? 0.4 : 1;
+    var S = ineqSolve(num, den, 1, op), all = num.concat(den);
+    function f(x){ if(den.some(function(r){ return Math.abs(x - r) < 0.03; })) return NaN; var v = 1; num.forEach(function(r){ v *= x - r; }); den.forEach(function(r){ v /= x - r; }); return 4 * v / (6 + Math.abs(v)); }
+    var P = GeoPlot(svg, {xmin:-7, xmax:7, ymin:-5, ymax:5, w:600, h:300}); P.clear(); P.grid();
+    var e = [-7].concat(S.pts).concat([7]), i;
+    for(i = 0; i < S.regs.length; i++) if(S.regs[i]) P.seg(e[i], 0, e[i + 1], 0, '#16a34a', 7);
+    P.curve(f, '#2f5bea');
+    S.pts.forEach(function(p, k){ P.point(p, 0, '#16a34a', '', !S.closed[k]); });
+    document.getElementById('iAv').textContent = fN(a); document.getElementById('iBv').textContent = fN(b); document.getElementById('iCv').textContent = fN(c);
+    document.getElementById('iNL').innerHTML = nlSVG(S.pts.map(function(p, k){ return [fN(p), S.closed[k]]; }), S.regs, S.signs);
+    document.getElementById('iRead').innerHTML = '<span>' + txt + ' ' + OPS[op] + ' 0</span><span>нули: ' + S.pts.map(fN).join('; ') + '</span><span><b>ответ: ' + S.str + '</b></span>';
+  }
+  [A, B, C].forEach(function(el){ el.addEventListener('input', draw); });
+  document.querySelectorAll('[data-op]').forEach(function(bt){ bt.addEventListener('click', function(){ op = bt.getAttribute('data-op'); document.querySelectorAll('[data-op]').forEach(function(x){ x.classList.toggle('ghost', x !== bt); }); draw(); }); });
+  document.querySelectorAll('[data-m]').forEach(function(bt){ bt.addEventListener('click', function(){ md = +bt.getAttribute('data-m'); document.querySelectorAll('[data-m]').forEach(function(x){ x.classList.toggle('ghost', x !== bt); }); draw(); }); });
+  draw();
+})();
+document.addEventListener('geo:ready', function(){
+  function distinct(n){ var s = []; while(s.length < n){ var v = GeoRand(-6, 6); if(s.indexOf(v) < 0) s.push(v); } return s; }
+  function prod(rs){ rs = rs.slice().sort(function(p, q){ return (p === 0 ? -99 : p) - (q === 0 ? -99 : q); }); return rs.map(fct).join(''); }
+  GeoTrainer(document.getElementById('trainerBox'), {rounds:6, id:'trainer', gen:function(){
+    var t = GeoRand(1, 5), op = GeoPick(['>', '>=', '<', '<=']), r, num, den = [], lead = 1, txt;
+    if(t === 1){ r = distinct(3); num = r; txt = prod(r); }
+    else if(t === 2){ r = distinct(2); num = [r[0]]; den = [r[1]]; txt = fct(r[0]) + '/' + fct(r[1]); }
+    else if(t === 3){ r = distinct(2); num = [r[0], r[0], r[1]]; txt = (r[0] === 0 ? 'x²' : fct(r[0]) + '²') + fct(r[1]); }
+    else if(t === 4){ r = distinct(3); num = [r[0], r[1]]; den = [r[2]]; txt = prod([r[0], r[1]]) + '/' + fct(r[2]); }
+    else { r = distinct(2); if(r[1] === 0) r[1] = 7; num = r; lead = -1; txt = fct(r[0]) + '(' + r[1] + ' − x)'; }
+    function f(x){ var v = lead; for(var i = 0; i < den.length; i++){ if(x === den[i]) return null; v /= (x - den[i]); } num.forEach(function(q){ v *= (x - q); }); return v; }
+    return askInt(intSol(f, op), txt.replace('(' + '-', '(−') + ' ' + OPS[op] + ' 0', 'Решение: ' + ineqSolve(num, den, lead, op).str + '.');
+  }});
+});
+
+</script>
+</body>
+</html>

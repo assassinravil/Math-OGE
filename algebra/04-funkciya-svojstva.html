@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Алгебра · занятие 4 · Функция и её свойства</title>
+<link rel="stylesheet" href="../assets/core.css">
+</head>
+<body data-lesson="A04">
+
+<nav class="topnav"><div class="in">
+  <a class="home" href="../algebra.html">🧮 <span>Алгебра · ОГЭ</span></a>
+  <div class="links"></div>
+  <a class="home" href="../spravochnik-algebra.html" title="Справочник">📖</a>
+  <div class="progress-pill">Решено <b>0 / 0</b><div class="progress-bar"><i></i></div></div>
+</div></nav>
+
+<div class="container">
+
+<header class="hero">
+  <span class="tag">Раздел 2 · Функции и графики</span><span class="tag">Алгебра · занятие 4 из 23</span><span class="tag">Учебник: гл. II §3, п. 7</span>
+  <h1>Функция и её свойства</h1>
+  <p>Область определения и значений, нули, промежутки знакопостоянства, возрастание и убывание, чётность.</p>
+  <div class="timeline">
+    <a href="#theory">① Теория <small>0–20′</small></a>
+    <a href="#practice">② Практика <small>20–45′</small></a>
+    <a href="#oge">③ ОГЭ <small>45–55′</small></a>
+    <a href="#hw">④ Итог и ДЗ <small>55–60′</small></a>
+    <a href="#bonus">★ Бонус</a>
+  </div>
+</header>
+
+<div class="teacher-panel teacher-only">
+  <h3>План занятия (60 минут)</h3>
+  <ol><li><b>0–20′</b> Теория. В лаборатории двигать x и называть: значение, знак, возрастает или убывает. Включить подсветку f &gt; 0 и f &lt; 0.</li><li><b>20–45′</b> Тренажёр, затем П1–П10.</li><li><b>45–55′</b> Чтение графика — базовый навык для №11 и №22 ОГЭ.</li><li><b>55–60′</b> Шпаргалка, ДЗ.</li></ol>
+  <p class="muted" style="margin:0">Типичные ошибки: путают значение функции и значение аргумента; забывают про знаменатель и корень при поиске области определения; называют промежуток возрастания по значениям y, а не x.</p>
+</div>
+
+
+<section class="card" id="theory" data-nav="Теория">
+  <h2><span class="step">1</span> Теория <span class="mins">0–20 мин</span></h2>
+
+  <div class="grid2">
+    <div class="box def"><span class="title">Функция</span>
+      Зависимость y от x, при которой <b>каждому x соответствует ровно одно y</b>. Запись: y = f(x).<br>
+      <ul class="rules"><li><b>D(f)</b> — область определения: все допустимые x.</li><li><b>E(f)</b> — множество значений: все получающиеся y.</li></ul>
+      <div class="eg">f(x) = 2x − 1. Тогда f(3) = 2 · 3 − 1 = 5.</div></div>
+    <div class="box rule"><span class="title">Область определения по формуле</span>
+      <ul class="rules"><li>Знаменатель не равен нулю.</li><li>Выражение под корнем ≥ 0.</li><li>Многочлен — x любое.</li></ul>
+      <div class="eg">y = 7/(x + 3): x + 3 ≠ 0 → <b>x ≠ −3</b>.</div>
+      <div class="eg">y = √(x − 4): x − 4 ≥ 0 → <b>x ≥ 4</b>.</div>
+      <div class="eg">y = x² − 5x: ограничений нет → <b>x — любое</b>.</div></div>
+  </div>
+  <div class="grid3" style="margin-top:14px">
+    <div class="box rule"><span class="title">Нули</span>Значения x, при которых f(x) = 0 — точки пересечения графика с осью Ox.<div class="eg">y = 2x − 6: 2x − 6 = 0 → x = 3.</div></div>
+    <div class="box rule"><span class="title">Знаки</span>f(x) &gt; 0 — график выше оси Ox,<br>f(x) &lt; 0 — ниже.<div class="eg">y = 2x − 6: y &gt; 0 при x &gt; 3, y &lt; 0 при x &lt; 3.</div></div>
+    <div class="box rule"><span class="title">Монотонность</span>Возрастает: больше x → больше y (график идёт вверх слева направо). Убывает — наоборот.<div class="eg">y = x² убывает на (−∞; 0], возрастает на [0; +∞).</div></div>
+  </div>
+  <div class="grid2" style="margin-top:14px">
+    <div class="box def"><span class="title">Чётная функция</span>1) D(f) симметрична относительно нуля; 2) f(−x) = f(x). График симметричен относительно оси Oy.<div class="eg">f(x) = x²: f(−x) = (−x)² = x² = f(x) → чётная.</div></div>
+    <div class="box def"><span class="title">Нечётная функция</span>1) D(f) симметрична относительно нуля; 2) f(−x) = −f(x). График симметричен относительно начала координат.<div class="eg">f(x) = x³: f(−x) = −x³ = −f(x) → нечётная.</div><div class="eg trap">y = √x — ни чётная, ни нечётная: D = [0; +∞) не симметрична.</div></div>
+  </div>
+  <h3>Лаборатория: читаем график</h3>
+  <div class="lab">
+    <svg id="labF" class="plot"></svg>
+    <div class="readout" id="fRead"></div>
+    <div class="controls">
+      <label>x: <input type="range" id="fSl" min="-6" max="6" step="0.5" value="-3"></label><span class="pill" id="fVal">−3</span>
+      <label><input type="checkbox" id="fSign"> знаки функции</label>
+      <label><input type="checkbox" id="fZero"> нули</label>
+    </div>
+  </div>
+
+</section>
+
+<section class="card" id="examples" data-nav="Примеры">
+  <h2><span class="step">↳</span> Разбор примеров</h2>
+  <div class="grid3"><div class="box example"><span class="title">Пример 1. Значение</span><p>f(x) = 3x² − 2x. Найдите f(−2).</p><details class="reveal"><summary>Показать решение</summary><p><b>Решение.</b> 3 · 4 − 2 · (−2) = 12 + 4 = 16.</p><p><b>Ответ:</b> 16.</p></details></div><div class="box example"><span class="title">Пример 2. Область определения</span><p>Найдите D(y), если y = √(6 − 2x).</p><details class="reveal"><summary>Показать решение</summary><p><b>Решение.</b> 6 − 2x ≥ 0 → x ≤ 3.</p><p><b>Ответ:</b> x ≤ 3.</p></details></div><div class="box example"><span class="title">Пример 3. Чётность</span><p>f(x) = x⁴ − 3x². Чётная ли она?</p><details class="reveal"><summary>Показать решение</summary><p><b>Решение.</b> f(−x) = x⁴ − 3x² = f(x) — чётная.</p><p><b>Ответ:</b> чётная.</p></details></div></div>
+</section>
+
+<section class="card" id="practice" data-nav="Практика">
+  <h2><span class="step">2</span> Интерактивная практика <span class="mins">20–45 мин</span></h2>
+  <h3>🎯 Тренажёр «Значения и нули»</h3>
+  <div class="lab task" id="trainer" data-id="trainer" data-noauto><div id="trainerBox"></div>
+    <div class="sol">Задачи генерируются случайно. Засчитывается при 5 верных из 6.</div></div>
+
+  <h3>Блок А. База</h3>
+  <div class="tasks"><div class="task" data-id="p1"><div class="task-head"><span class="tnum">П1</span><span class="pill lvl1">база</span></div>
+<p>f(x) = 3x² − 2x. Найдите f(−2).</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="16"></label></div>
+</div>
+<div class="task" data-id="p2"><div class="task-head"><span class="tnum">П2</span><span class="pill lvl1">база</span></div>
+<p>f(x) = (x + 1)/(x − 2). Найдите f(4).</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="2,5"></label></div>
+</div>
+<div class="task" data-id="p3"><div class="task-head"><span class="tnum">П3</span><span class="pill lvl1">база</span></div>
+<p>Какое число не входит в область определения функции y = 7/(x + 3)?</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="-3"></label></div>
+</div>
+<div class="task" data-id="p4"><div class="task-head"><span class="tnum">П4</span><span class="pill lvl1">база</span></div>
+<p>Найдите наименьшее значение x из области определения функции y = √(x − 4).</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="4"></label></div>
+</div>
+<div class="task" data-id="p5"><div class="task-head"><span class="tnum">П5</span><span class="pill lvl1">база</span></div>
+<p>Найдите нули функции y = x² − 5x + 6.</p>
+<div class="ans-row"><label>меньший = <input class="ans" data-a="2" data-label="меньший"></label><label>больший = <input class="ans" data-a="3" data-label="больший"></label></div>
+</div>
+<div class="task" data-id="p6"><div class="task-head"><span class="tnum">П6</span><span class="pill lvl1">база</span></div>
+<p>При каком x функция y = 4x − 12 принимает значение 0?</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="3"></label></div>
+</div>
+</div>
+  <h3>Блок Б. Посложнее</h3>
+  <div class="tasks"><div class="task" data-id="p7"><div class="task-head"><span class="tnum">П7</span><span class="pill lvl2">средний</span></div>
+<p>Найдите наибольшее x из области определения функции y = √(6 − 2x).</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="3"></label></div>
+</div>
+<div class="task" data-id="p8" data-mode="text"><div class="task-head"><span class="tnum">П8</span><span class="pill lvl2">средний</span></div>
+<p>Является ли функция f(x) = x⁴ − 3x² чётной? Впишите «да» или «нет».</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="да"></label></div>
+</div>
+<div class="task" data-id="p9"><div class="task-head"><span class="tnum">П9</span><span class="pill lvl2">средний</span></div>
+<p>f(x) = x³ + x. Найдите f(2) + f(−2).</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="0"></label></div>
+<div class="sol">Функция нечётная: f(−2) = −f(2), сумма 0.</div>
+</div>
+<div class="task" data-id="p10"><div class="task-head"><span class="tnum">П10</span><span class="pill lvl3">сложнее</span></div>
+<p>f — нечётная функция, f(3) = 7. Найдите f(−3).</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="-7"></label></div>
+</div>
+</div>
+</section>
+
+<section class="card oge" id="oge" data-nav="ОГЭ">
+  <h2><span class="step">3</span> Задачи в формате ОГЭ <span class="mins">45–55 мин</span></h2>
+  <div class="tasks"><div class="task" data-id="o1"><div class="task-head"><span class="tnum">О1</span><span class="pill oge">ОГЭ №11/22</span></div>
+<p>По графику функции y = f(x) (рисунок ниже) найдите f(0).</p><figure><svg id="ogeF" class="mini" style="max-width:340px"></svg></figure>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="1"></label></div>
+</div>
+<div class="task" data-id="o2"><div class="task-head"><span class="tnum">О2</span><span class="pill oge">ОГЭ №11/22</span></div>
+<p>Сколько нулей у функции, изображённой на рисунке?</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="3"></label></div>
+</div>
+<div class="task" data-id="o3"><div class="task-head"><span class="tnum">О3</span><span class="pill oge">ОГЭ №11/22</span></div>
+<p>Найдите наибольшее значение функции на отрезке [−6; 6].</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="4"></label></div>
+</div>
+<div class="task" data-id="o4"><div class="task-head"><span class="tnum">О4</span><span class="pill oge">ОГЭ №11/22</span></div>
+<p>Найдите длину промежутка убывания функции.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="5"></label></div>
+<div class="sol">Убывает на [−3; 2], длина 5.</div>
+</div>
+<div class="task" data-id="o5"><div class="task-head"><span class="tnum">О5</span><span class="pill oge">ОГЭ №11/22</span></div>
+<p>При каком x функция принимает наименьшее значение?</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="2"></label></div>
+</div>
+<div class="task" data-id="o6" data-mode="digits"><div class="task-head"><span class="tnum">О6</span><span class="pill oge">ОГЭ №11/22</span></div>
+<p>Какие утверждения о функции на рисунке верны?</p><ol style="margin:6px 0"><li>Функция возрастает на промежутке [−6; −3].</li><li>f(−4) &gt; 0.</li><li>Наименьшее значение функции равно −2.</li></ol>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="12"></label></div>
+<div class="sol">3 — неверно: наименьшее значение −3.</div>
+</div>
+</div>
+</section>
+
+<section class="card" id="hw" data-nav="Итог и ДЗ">
+  <h2><span class="step">4</span> Итог и домашнее задание <span class="mins">55–60 мин</span></h2>
+  <h3>Шпаргалка</h3>
+  <div class="cheat"><div><b>D(f)</b>: знаменатель ≠ 0, под корнем ≥ 0</div><div><b>Нули</b>: f(x) = 0</div><div><b>Чётная</b>: D(f) симметрична и f(−x) = f(x)</div><div><b>Нечётная</b>: f(−x) = −f(x), симметрия O</div><div><b>Возрастание</b> читается по x слева направо</div></div>
+  <h3>📚 Домашнее задание</h3>
+  <p class="muted">Ответы проверяются в начале занятия 5.</p>
+  <ol class="hw"><li>f(x) = 2x² − x. Найдите f(−3).<div class="sol"><span class="ansline">Ответ: 21.</span> </div></li><li>Какое число не входит в область определения функции y = 9/(x − 4)?<div class="sol"><span class="ansline">Ответ: 4.</span> </div></li><li>Найдите нули функции y = x² − 7x + 10 (меньший, затем больший).<div class="sol"><span class="ansline">Ответ: 2; 5.</span> </div></li><li>f — нечётная, f(5) = −4. Найдите f(−5).<div class="sol"><span class="ansline">Ответ: 4.</span> </div></li><li>Найдите наименьшее x из области определения функции y = √(x + 2).<div class="sol"><span class="ansline">Ответ: −2.</span> </div></li></ol>
+  <h3>⭐ Бонусное ДЗ</h3>
+  <ol class="hw"><li>Сколько целых чисел из отрезка [0; 5] входит в область определения функции y = √x + 1/(x − 3)?<div class="sol"><span class="ansline">Ответ: 5.</span> 0, 1, 2, 4, 5.</div></li><li>Докажите, что функция f(x) = x³ − 5x нечётная.<div class="sol">f(−x) = −x³ + 5x = −(x³ − 5x) = −f(x), область определения симметрична.</div></li></ol>
+  <p style="margin-top:18px"><button class="btn small ghost" type="button" onclick="GeoResetLesson()">Сбросить прогресс занятия</button></p>
+</section>
+
+<section class="card bonus" id="bonus" data-nav="★ Бонус">
+  <h2><span class="step">★</span> Бонусная практика</h2>
+  <div class="tasks"><div class="task" data-id="b1"><div class="task-head"><span class="tnum">Б1</span><span class="pill lvl3">сложнее</span></div>
+<p>f(x) = x² + bx, f(2) = 10. Найдите b.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="3"></label></div>
+</div>
+<div class="task" data-id="b2"><div class="task-head"><span class="tnum">Б2</span><span class="pill lvl3">сложнее</span></div>
+<p>f — чётная функция, f(4) = 6. Найдите f(−4).</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="6"></label></div>
+</div>
+<div class="task" data-id="b3"><div class="task-head"><span class="tnum">Б3</span><span class="pill lvl3">сложнее</span></div>
+<p>Найдите нуль функции y = |x − 3|.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="3"></label></div>
+</div>
+</div>
+</section>
+
+</div>
+
+<script src="../assets/core.js"></script>
+<script>
+
+function miniPlot(id, f, o){
+  o = o || {}; var svg = document.getElementById(id); if(!svg) return;
+  var P = GeoPlot(svg, {xmin:o.xmin || -5, xmax:o.xmax || 5, ymin:o.ymin || -5, ymax:o.ymax || 5, w:300, h:300});
+  P.grid(); P.curve(f, o.color || '#2f5bea', {width:3}); if(o.after) o.after(P); return P;
+}
+
+var PTS = [[-6,-2],[-5,0],[-3,4],[-1,2],[1,0],[2,-3],[4,-1],[5,0],[6,2]];
+function fpl(x){ for(var i = 0; i < PTS.length - 1; i++){ var a = PTS[i], b = PTS[i + 1]; if(x >= a[0] && x <= b[0]) return a[1] + (b[1] - a[1]) * (x - a[0]) / (b[0] - a[0]); } return NaN; }
+miniPlot('ogeF', fpl, {xmin:-7, xmax:7, ymin:-5, ymax:6});
+(function(){
+  var svg = document.getElementById('labF'), sl = document.getElementById('fSl');
+  function f1(v){ return (Math.round(v * 100) / 100).toString().replace('.', ',').replace('-', '−'); }
+  function draw(){
+    var P = GeoPlot(svg, {xmin:-7, xmax:7, ymin:-5, ymax:6, w:600, h:400}); P.clear(); P.grid();
+    if(document.getElementById('fSign').checked){
+      for(var x = -6; x < 6; x += 0.05){ var y = fpl(x + 0.025); P.seg(x, 0, x + 0.05, 0, y > 0 ? '#16a34a' : '#e5484d', 7); }
+    }
+    P.curve(fpl, '#2f5bea', {from:-6, to:6});
+    P.point(-6, -2, '#2f5bea'); P.point(6, 2, '#2f5bea');
+    if(document.getElementById('fZero').checked) [-5, 1, 5].forEach(function(z){ P.point(z, 0, '#8b5cf6'); });
+    var x0 = +sl.value, y0 = fpl(x0), d = fpl(Math.min(6, x0 + 0.01)) - fpl(Math.max(-6, x0 - 0.01));
+    P.seg(x0, 0, x0, y0, '#e5484d', 2, '5 4'); P.seg(0, y0, x0, y0, '#e5484d', 2, '5 4'); P.point(x0, y0, '#e5484d');
+    document.getElementById('fVal').textContent = f1(x0);
+    var mono = [-3, -1, 1, 2].indexOf(x0) >= 0 && false ? '' : (Math.abs(d) < 1e-9 ? 'экстремум' : (d > 0 ? 'возрастает' : 'убывает'));
+    if(x0 === -3 || x0 === 2) mono = x0 === -3 ? 'точка максимума' : 'точка минимума';
+    document.getElementById('fRead').innerHTML = '<span>f(' + f1(x0) + ') = ' + f1(y0) + '</span><span style="color:' + (y0 > 0 ? '#16a34a' : (y0 < 0 ? '#e5484d' : '#8b5cf6')) + '">' + (y0 > 0 ? 'f &gt; 0' : (y0 < 0 ? 'f &lt; 0' : 'нуль функции')) + '</span><span>' + mono + '</span><span>D(f) = [−6; 6], E(f) = [−3; 4]</span>';
+  }
+  [sl, document.getElementById('fSign'), document.getElementById('fZero')].forEach(function(e){ e.addEventListener('input', draw); e.addEventListener('change', draw); });
+  draw();
+})();
+document.addEventListener('geo:ready', function(){
+  GeoTrainer(document.getElementById('trainerBox'), {rounds:6, id:'trainer', gen:function(){
+    var q = GeoRand(1, 4), a = GeoRand(-4, 5) || 2, b = GeoRand(-9, 9), k = GeoRand(-4, 4);
+    if(q === 1) return {q:'f(x) = ' + (a === 1 ? '' : (a === -1 ? '−' : String(a).replace('-', '−'))) + 'x ' + (b < 0 ? '− ' + (-b) : '+ ' + b) + '. Найдите f(' + String(k).replace('-', '−') + ').', a:String(a * k + b), why:String(a).replace('-', '−') + ' · (' + String(k).replace('-', '−') + ') ' + (b < 0 ? '− ' + (-b) : '+ ' + b) + ' = ' + (a * k + b) + '.'};
+    if(q === 2){ var c = GeoRand(1, 9); return {q:'f(x) = x² − ' + c + '. Найдите f(' + String(k).replace('-', '−') + ').', a:String(k * k - c), why:k * k + ' − ' + c + ' = ' + (k * k - c) + '.'}; }
+    if(q === 3){ var m = GeoRand(-9, 9) || 5; return {q:'При каком x не имеет смысла выражение 5/(x ' + (m < 0 ? '+ ' + (-m) : '− ' + m) + ')?', a:String(m), why:'Знаменатель равен нулю при x = ' + m + '.'}; }
+    var r = GeoRand(1, 9); return {q:'Найдите положительный нуль функции y = x² − ' + r * r + '.', a:String(r), why:'x² = ' + r * r + ', x = ±' + r + '.'};
+  }});
+});
+
+</script>
+</body>
+</html>

@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Занятие 9 · Многоугольники, параллелограмм</title>
+<link rel="stylesheet" href="../assets/core.css">
+</head>
+<body data-lesson="L09">
+
+<nav class="topnav"><div class="in">
+  <a class="home" href="../geometry.html">📐 <span>Геометрия · ОГЭ</span></a>
+  <div class="links"></div>
+  <a class="home" href="../spravochnik.html" title="Справочник">📖</a>
+  <div class="progress-pill">Решено <b>0 / 0</b><div class="progress-bar"><i></i></div></div>
+</div></nav>
+
+<div class="container">
+
+<header class="hero">
+  <span class="tag">Раздел 3 · Четырёхугольники</span><span class="tag">Занятие 9 из 23</span><span class="tag">Учебник: гл. VI §1–2</span>
+  <h1>Многоугольники. Параллелограмм</h1>
+  <p>Сумма углов выпуклого многоугольника, параллелограмм: определение, свойства, признаки. Биссектриса угла параллелограмма.</p>
+  <div class="timeline">
+    <a href="#warmup">① Проверка ДЗ <small>0–10′</small></a>
+    <a href="#theory">② Теория <small>10–25′</small></a>
+    <a href="#practice">③ Практика <small>25–45′</small></a>
+    <a href="#oge">④ ОГЭ <small>45–55′</small></a>
+    <a href="#hw">⑤ Итог и ДЗ <small>55–60′</small></a>
+    <a href="#bonus">★ Бонус</a>
+  </div>
+</header>
+
+<div class="teacher-panel teacher-only">
+  <h3>План занятия (60 минут)</h3>
+  <ol><li><b>0–10′</b> Проверка ДЗ занятия 8.</li><li><b>10–25′</b> Теория. Многоугольник → сумма углов (n − 2) · 180°. Лаборатория: тянуть вершины — противоположные стороны и углы остаются равными, AO = OC, BO = OD. Включить «Биссектрису ∠A»: AB = BK всегда.</li><li><b>25–45′</b> Тренажёр, затем П1–П10.</li><li><b>45–55′</b> ОГЭ №17 и №19. Биссектриса в параллелограмме — один из самых частых сюжетов №17.</li><li><b>55–60′</b> Шпаргалка, ДЗ. Начинаем раздел «Четырёхугольники».</li></ol>
+  <p class="muted" style="margin:0">Типичные ошибки: путают сумму углов (n − 2) · 180° с n · 180°; считают, что диагонали параллелограмма равны; в задаче с биссектрисой приравнивают AB к KC вместо BK; соседние углы считают равными.</p>
+</div>
+
+<section class="card" id="warmup" data-nav="Проверка ДЗ">
+  <h2><span class="step">1</span> Проверка ДЗ <span class="mins">0–10 мин</span></h2>
+  <div class="tasks"><div class="task" data-id="h1"><div class="task-head"><span class="tnum">ДЗ 1</span></div>
+<p>Стороны треугольника 10 и 7, угол между ними 30°. Найдите площадь.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="17,5"></label></div>
+</div>
+<div class="task" data-id="h2"><div class="task-head"><span class="tnum">ДЗ 2</span></div>
+<p>Две стороны треугольника 5 и 8, угол между ними 60°. Найдите третью сторону.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="7"></label></div>
+</div>
+<div class="task" data-id="h3"><div class="task-head"><span class="tnum">ДЗ 3</span></div>
+<p>В △ABC BC = 14, ∠A = 30°. Найдите радиус описанной окружности.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="14"></label></div>
+</div>
+<div class="task" data-id="h4"><div class="task-head"><span class="tnum">ДЗ 4</span></div>
+<p>sin α = 0,8, угол α тупой. Найдите cos α.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="-0,6"></label></div>
+</div>
+<div class="task" data-id="h5" data-mode="digits"><div class="task-head"><span class="tnum">ДЗ 5</span><span class="pill oge">ОГЭ №19</span></div>
+<p>1) sin(180° − α) = sin α. 2) c² = a² + b² + 2ab · cos C. 3) a / sin A = 2R.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="13"></label></div>
+</div>
+</div>
+</section>
+
+<section class="card" id="theory" data-nav="Теория">
+  <h2><span class="step">2</span> Теория <span class="mins">10–25 мин</span></h2>
+
+  <div class="grid2">
+    <div class="box def"><span class="title">Выпуклый многоугольник</span>
+      n-угольник имеет n вершин и n сторон. <b>Диагональ</b> соединяет две несоседние вершины. <b>Выпуклый</b> — лежит по одну сторону от каждой прямой, содержащей его сторону.
+      <ul class="rules">
+        <li>Сумма углов выпуклого n-угольника: <b>(n − 2) · 180°</b>.</li>
+        <li>Сумма внешних углов (по одному при каждой вершине): <b>360°</b>.</li>
+        <li>Число диагоналей: <b>n(n − 3) / 2</b>.</li>
+      </ul>
+      <div class="eg">Шестиугольник: (6 − 2) · 180° = 720°. Если он правильный, каждый угол 720° : 6 = 120°.</div>
+      <div class="eg">Угол правильного многоугольника 140° → внешний 40° → n = 360° : 40° = 9.</div>
+      <div class="eg trap">Сумма углов четырёхугольника 360°, а не 180° · 4.</div></div>
+    <div class="box def"><span class="title">Параллелограмм</span>
+      Четырёхугольник, у которого <b>противоположные стороны попарно параллельны</b>: AB ∥ CD, AD ∥ BC.
+      <ul class="rules">
+        <li>Противоположные стороны равны, противоположные углы равны.</li>
+        <li>Диагонали точкой пересечения <b>делятся пополам</b>: AO = OC, BO = OD.</li>
+        <li>Углы, прилежащие к одной стороне, в сумме <b>180°</b> (односторонние).</li>
+      </ul>
+      <div class="eg">∠A = 70° → ∠C = 70°, ∠B = ∠D = 110°.</div>
+      <div class="eg">AC = 10, BD = 16 → AO = 5, BO = 8.</div>
+      <div class="eg trap">Диагонали параллелограмма в общем случае <b>не равны</b> и не перпендикулярны.</div></div>
+  </div>
+  <div class="grid2" style="margin-top:14px">
+    <div class="box rule"><span class="title">Признаки параллелограмма</span>
+      Четырёхугольник — параллелограмм, если:
+      <ol class="rules">
+        <li>две его стороны <b>равны и параллельны</b>;</li>
+        <li>противоположные стороны <b>попарно равны</b>;</li>
+        <li>диагонали пересекаются и точкой пересечения <b>делятся пополам</b>.</li>
+      </ol>
+      <div class="eg">AO = OC и BO = OD → ABCD — параллелограмм (признак 3).</div>
+      <div class="eg trap">«Одна пара сторон параллельна, другая — равна» — это не признак: так бывает у равнобедренной трапеции.</div></div>
+    <div class="box tip"><span class="title">Биссектриса угла параллелограмма</span>
+      Биссектриса AK угла A (K ∈ BC) отсекает <b>равнобедренный треугольник</b> ABK:
+      <div class="formula">∠BAK = ∠KAD = ∠BKA &nbsp;⇒&nbsp; AB = BK</div>
+      ∠KAD = ∠BKA — накрест лежащие при AD ∥ BC.
+      <div class="eg">BK = 15, KC = 9 → AB = 15, BC = 24, P = 2 · (15 + 24) = 78.</div>
+      <div class="eg trap">AB равна отрезку <b>BK</b>, прилежащему к вершине B, а не KC.</div>
+      Биссектрисы соседних углов перпендикулярны: ½ · 180° = 90°.</div>
+  </div>
+  <h3>Лаборатория: параллелограмм</h3>
+  <div class="lab">
+    <svg id="labP" viewBox="0 0 600 330"></svg>
+    <div class="readout" id="pRead"></div>
+    <div class="controls">
+      <button class="btn small" type="button" data-pm="0">Свойства</button>
+      <button class="btn small ghost" type="button" data-pm="1">Биссектриса ∠A</button>
+    </div>
+    <p class="muted" style="margin:8px 0 0;font-size:14px">Перетаскивайте вершины A, B, D — вершина C строится так, что ABCD остаётся параллелограммом. Одинаковым цветом отмечены равные элементы.</p>
+  </div>
+
+</section>
+
+<section class="card" id="examples" data-nav="Примеры">
+  <h2><span class="step">↳</span> Разбор примеров</h2>
+  <div class="grid3"><div class="box example"><span class="title">Пример 1. Сумма углов</span><p>Найдите сумму углов выпуклого восьмиугольника.</p><details class="reveal"><summary>Показать решение</summary><p><b>Решение.</b> (8 − 2) · 180° = 6 · 180° = 1080°.</p><p><b>Ответ:</b> 1080°.</p></details></div><div class="box example"><span class="title">Пример 2. Углы параллелограмма</span><p>В параллелограмме ABCD ∠A + ∠C = 140°. Найдите ∠B.</p><details class="reveal"><summary>Показать решение</summary><p><b>Решение.</b> ∠A = ∠C = 70° (противоположные). ∠B = 180° − 70° = 110° (соседний).</p><p><b>Ответ:</b> 110°.</p></details></div><div class="box example"><span class="title">Пример 3. Биссектриса</span><p>Биссектриса угла A параллелограмма ABCD пересекает сторону BC в точке K, BK = 15, KC = 9. Найдите периметр.</p><details class="reveal"><summary>Показать решение</summary><p><b>Решение.</b> △ABK равнобедренный: AB = BK = 15. BC = 15 + 9 = 24. P = 2 · (15 + 24) = 78.</p><p><b>Ответ:</b> 78.</p></details></div></div>
+</section>
+
+<section class="card" id="practice" data-nav="Практика">
+  <h2><span class="step">3</span> Интерактивная практика <span class="mins">25–45 мин</span></h2>
+  <h3>🎯 Тренажёр «Многоугольники и параллелограмм»</h3>
+  <div class="lab task" id="trainer" data-id="trainer" data-noauto><div id="trainerBox"></div>
+    <div class="sol">Задачи генерируются случайно. Засчитывается при 5 верных из 6.</div></div>
+
+  <h3>Блок А. База</h3>
+  <div class="tasks"><div class="task" data-id="p1"><div class="task-head"><span class="tnum">П1</span><span class="pill lvl1">база</span></div>
+<p>Найдите сумму углов выпуклого двенадцатиугольника.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="1800"></label></div>
+<div class="sol">(12 − 2) · 180° = 1800°.</div>
+</div>
+<div class="task" data-id="p2"><div class="task-head"><span class="tnum">П2</span><span class="pill lvl1">база</span></div>
+<p>Каждый угол правильного многоугольника равен 140°. Сколько у него сторон?</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="9"></label></div>
+<div class="hint">Найдите внешний угол.</div>
+<div class="sol">Внешний угол 40°, n = 360° : 40° = 9.</div>
+</div>
+<div class="task" data-id="p3"><div class="task-head"><span class="tnum">П3</span><span class="pill lvl1">база</span></div>
+<p>Один из углов параллелограмма равен 47°. Найдите больший угол параллелограмма.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="133"></label></div>
+</div>
+<div class="task" data-id="p4"><div class="task-head"><span class="tnum">П4</span><span class="pill lvl1">база</span></div>
+<p>Периметр параллелограмма равен 48, одна сторона на 3 больше другой. Найдите стороны.</p>
+<div class="ans-row"><label>меньшая = <input class="ans" data-a="10,5" data-label="меньшая"></label><label>большая = <input class="ans" data-a="13,5" data-label="большая"></label></div>
+<div class="sol">a + b = 24, b = a + 3 → 2a = 21, a = 10,5, b = 13,5.</div>
+</div>
+<div class="task" data-id="p5"><div class="task-head"><span class="tnum">П5</span><span class="pill lvl1">база</span></div>
+<p>Диагонали параллелограмма ABCD пересекаются в точке O, AC = 16, BD = 10, CD = 7. Найдите периметр треугольника COD.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="20"></label></div>
+<div class="sol">CO = 8, OD = 5, CD = 7: 8 + 5 + 7 = 20.</div>
+</div>
+<div class="task" data-id="p6"><div class="task-head"><span class="tnum">П6</span><span class="pill lvl1">база</span></div>
+<p>Разность двух углов параллелограмма равна 40°. Найдите больший угол.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="110"></label></div>
+<div class="sol">x + y = 180°, x − y = 40° → x = 110°.</div>
+</div>
+</div>
+  <h3>Блок Б. Посложнее</h3>
+  <div class="tasks"><div class="task" data-id="p7"><div class="task-head"><span class="tnum">П7</span><span class="pill lvl2">средний</span></div>
+<p>Биссектриса угла A параллелограмма ABCD делит сторону BC на отрезки BK = 7 и KC = 14. Найдите периметр параллелограмма.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="56"></label></div>
+<div class="sol">AB = BK = 7, BC = 21, P = 2 · 28 = 56.</div>
+</div>
+<div class="task" data-id="p8"><div class="task-head"><span class="tnum">П8</span><span class="pill lvl2">средний</span></div>
+<p>Диагональ параллелограмма образует с двумя его сторонами углы 25° и 35°. Найдите углы параллелограмма.</p>
+<div class="ans-row"><label>меньший = <input class="ans" data-a="60" data-label="меньший"></label><label>больший = <input class="ans" data-a="120" data-label="больший"></label></div>
+<div class="sol">Угол при вершине, из которой выходит диагональ: 25° + 35° = 60°, соседний 120°.</div>
+</div>
+<div class="task" data-id="p9"><div class="task-head"><span class="tnum">П9</span><span class="pill lvl2">средний</span></div>
+<p>Биссектрисы углов A и B параллелограмма ABCD пересекаются в точке M. Найдите угол AMB.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="90"></label></div>
+<div class="sol">∠A + ∠B = 180°, половины в сумме 90°, тогда ∠AMB = 180° − 90° = 90°.</div>
+</div>
+<div class="task" data-id="p10"><div class="task-head"><span class="tnum">П10</span><span class="pill lvl3">сложнее</span></div>
+<p>Биссектриса тупого угла B параллелограмма ABCD делит сторону AD на отрезки AK : KD = 3 : 4. Периметр параллелограмма 60. Найдите большую сторону.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="21"></label></div>
+<div class="hint">∠ABK = ∠KBC = ∠AKB.</div>
+<div class="sol">△ABK равнобедренный: AB = AK = 3x, AD = 7x. P = 2 · 10x = 60 → x = 3, AD = 21.</div>
+</div>
+</div>
+</section>
+
+<section class="card oge" id="oge" data-nav="ОГЭ">
+  <h2><span class="step">4</span> Задачи в формате ОГЭ <span class="mins">45–55 мин</span></h2>
+  <div class="tasks"><div class="task" data-id="o1"><div class="task-head"><span class="tnum">О1</span><span class="pill oge">ОГЭ №17</span></div>
+<p>Найдите больший угол параллелограмма, если два его угла относятся как 3 : 7. Ответ дайте в градусах.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="126"></label></div>
+<div class="sol">3x + 7x = 180°, x = 18°, 7x = 126°.</div>
+</div>
+<div class="task" data-id="o2"><div class="task-head"><span class="tnum">О2</span><span class="pill oge">ОГЭ №17</span></div>
+<p>Диагональ AC параллелограмма ABCD образует с его сторонами углы, равные 30° и 45°. Найдите больший угол параллелограмма. Ответ дайте в градусах.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="105"></label></div>
+<div class="sol">∠A = 30° + 45° = 75°, ∠B = 105°.</div>
+</div>
+<div class="task" data-id="o3"><div class="task-head"><span class="tnum">О3</span><span class="pill oge">ОГЭ №17</span></div>
+<p>Биссектриса угла A параллелограмма ABCD пересекает его сторону BC в точке E. Найдите периметр параллелограмма ABCD, если BE = 7, EC = 12.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="52"></label></div>
+<div class="sol">AB = BE = 7, BC = 19, P = 2 · 26 = 52.</div>
+</div>
+<div class="task" data-id="o4"><div class="task-head"><span class="tnum">О4</span><span class="pill oge">ОГЭ №17</span></div>
+<p>Диагонали AC и BD параллелограмма ABCD пересекаются в точке O, AC = 12, BD = 20, AB = 7. Найдите DO.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="10"></label></div>
+</div>
+<div class="task" data-id="o5" data-mode="digits"><div class="task-head"><span class="tnum">О5</span><span class="pill oge">ОГЭ №19</span></div>
+<p>Какие из следующих утверждений верны?</p><ol style="margin:6px 0"><li>Диагонали параллелограмма равны.</li><li>Сумма углов выпуклого четырёхугольника равна 360°.</li><li>Если в четырёхугольнике две стороны равны и параллельны, то этот четырёхугольник — параллелограмм.</li></ol>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="23"></label></div>
+<div class="sol">1 — неверно: диагонали делятся пополам, но в общем случае не равны.</div>
+</div>
+</div>
+</section>
+
+<section class="card" id="hw" data-nav="Итог и ДЗ">
+  <h2><span class="step">5</span> Итог и домашнее задание <span class="mins">55–60 мин</span></h2>
+  <h3>Шпаргалка</h3>
+  <div class="cheat"><div><b>Сумма углов:</b> (n − 2) · 180°</div><div><b>Внешние углы:</b> 360°</div><div><b>Параллелограмм:</b> противоп. стороны и углы равны</div><div><b>Диагонали</b> делятся пополам</div><div><b>Соседние углы:</b> 180°</div><div><b>Биссектриса ∠A:</b> AB = BK</div></div>
+  <h3>📚 Домашнее задание</h3>
+  <p class="muted">Ответы проверяются в начале занятия 10.</p>
+  <ol class="hw"><li>Найдите сумму углов выпуклого девятиугольника.<div class="sol"><span class="ansline">Ответ: 1260.</span> 7 · 180°.</div></li><li>Один угол параллелограмма на 50° больше другого. Найдите больший угол.<div class="sol"><span class="ansline">Ответ: 115.</span> </div></li><li>Диагонали параллелограмма равны 14 и 22, одна из сторон 9. Найдите периметр треугольника, образованного этой стороной и половинами диагоналей.<div class="sol"><span class="ansline">Ответ: 27.</span> 7 + 11 + 9.</div></li><li>Биссектриса угла A параллелограмма ABCD пересекает сторону BC в точке K, BK = 8, KC = 5. Найдите периметр параллелограмма.<div class="sol"><span class="ansline">Ответ: 42.</span> AB = 8, BC = 13.</div></li><li>(ОГЭ №19) 1) Диагонали параллелограмма точкой пересечения делятся пополам. 2) Сумма углов выпуклого шестиугольника равна 1080°. 3) В параллелограмме сумма углов, прилежащих к одной стороне, равна 180°.<div class="sol"><span class="ansline">Ответ: 13.</span> 2 — неверно: 720°.</div></li></ol>
+  <h3>⭐ Бонусное ДЗ</h3>
+  <ol class="hw"><li>Докажите, что биссектрисы двух соседних углов параллелограмма перпендикулярны.<div class="sol">∠A + ∠B = 180° (односторонние). В треугольнике, образованном биссектрисами и стороной AB, два угла равны ½∠A и ½∠B, их сумма 90°, значит, третий угол 90°.</div></li><li>Внешний угол правильного многоугольника равен 24°. Сколько у него сторон?<div class="sol"><span class="ansline">Ответ: 15.</span> 360° : 24° = 15.</div></li></ol>
+  <p style="margin-top:18px"><button class="btn small ghost" type="button" onclick="GeoResetLesson()">Сбросить прогресс занятия</button></p>
+</section>
+
+<section class="card bonus" id="bonus" data-nav="★ Бонус">
+  <h2><span class="step">★</span> Бонусная практика</h2>
+  <div class="tasks"><div class="task" data-id="b1"><div class="task-head"><span class="tnum">Б1</span><span class="pill lvl3">сложнее</span></div>
+<p>Сумма углов выпуклого многоугольника равна 1440°. Сколько у него диагоналей?</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="35"></label></div>
+<div class="sol">(n − 2) · 180° = 1440° → n = 10. Диагоналей 10 · 7 / 2 = 35.</div>
+</div>
+<div class="task" data-id="b2"><div class="task-head"><span class="tnum">Б2</span><span class="pill oge">ОГЭ №23</span></div>
+<p>Биссектрисы углов A и D параллелограмма ABCD пересекаются в точке, лежащей на стороне BC. Найдите BC, если AB = 34.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="68"></label></div>
+<div class="sol">Пусть биссектрисы пересекаются в точке K ∈ BC. △ABK равнобедренный (∠BAK = ∠KAD = ∠BKA): BK = AB = 34. Аналогично △DCK: CK = CD = AB = 34. BC = 34 + 34 = 68.</div>
+</div>
+<div class="task" data-id="b3"><div class="task-head"><span class="tnum">Б3</span><span class="pill oge">ОГЭ №24</span></div>
+<p>В параллелограмме ABCD точка E — середина стороны AB. Известно, что EC = ED. Докажите, что данный параллелограмм — прямоугольник.</p>
+<div class="sol">△EBC = △EAD по трём сторонам: EB = EA, BC = AD, EC = ED. Значит, ∠B = ∠A. Но ∠A + ∠B = 180°, поэтому ∠A = ∠B = 90°, и параллелограмм с прямым углом — прямоугольник.</div>
+</div>
+</div>
+</section>
+
+</div>
+
+<script src="../assets/core.js"></script>
+<script>
+
+(function(){
+  var G = GeoSVG, svg = document.getElementById('labP'), P = {A:{x:90, y:280}, B:{x:200, y:70}, D:{x:400, y:280}}, U = 40, mode = 0;
+  var S1 = '#2f7de1', S2 = '#f08c00', A1 = '#e5484d', A2 = '#16a34a', H1 = '#8b5cf6', H2 = '#0ea5a4';
+  function f(v){ return (Math.round(v * 10) / 10).toString().replace('.', ','); }
+  function Cof(o){ return {x:o.B.x + o.D.x - o.A.x, y:o.B.y + o.D.y - o.A.y}; }
+  function seg(p, q, col, w, dash){ return G.el('line', {x1:p.x, y1:p.y, x2:q.x, y2:q.y, stroke:col, 'stroke-width':w || 3, 'stroke-dasharray':dash || '', 'stroke-linecap':'round'}, svg); }
+  function lab(p, O, t){ var u = G.unit(O, p); G.text(svg, p.x + 24 * u.x, p.y + 24 * u.y + 5, t); }
+  function draw(){
+    G.clear(svg); var A = P.A, B = P.B, D = P.D, C = Cof(P), O = G.mid(A, C), r = document.getElementById('pRead');
+    G.el('path', {d:'M'+A.x+' '+A.y+' L'+B.x+' '+B.y+' L'+C.x+' '+C.y+' L'+D.x+' '+D.y+' Z', 'class':'st fl'}, svg);
+    var ab = G.dist(A, B) / U, ad = G.dist(A, D) / U, aA = G.angle(A, B, D), aB = 180 - aA;
+    if(mode === 0){
+      seg(A, O, H1, 2.5); seg(O, C, H1, 2.5); seg(B, O, H2, 2.5); seg(O, D, H2, 2.5);
+      G.tick(svg, A, O, 1, H1); G.tick(svg, O, C, 1, H1); G.tick(svg, B, O, 2, H2); G.tick(svg, O, D, 2, H2);
+      G.el('circle', {cx:O.x, cy:O.y, r:4.5, fill:'currentColor'}, svg); G.text(svg, O.x, O.y + 22, 'O');
+      seg(A, B, S1); seg(D, C, S1); seg(B, C, S2); seg(A, D, S2);
+      G.arc(svg, A, B, D, 26, A1); G.arc(svg, C, B, D, 26, A1); G.arc(svg, B, A, C, 22, A2); G.arc(svg, D, A, C, 22, A2);
+      r.innerHTML = '<span style="color:' + S1 + '">AB = CD = ' + f(ab) + '</span><span style="color:' + S2 + '">BC = AD = ' + f(ad) + '</span>' +
+        '<span style="color:' + A1 + '">∠A = ∠C = ' + Math.round(aA) + '°</span><span style="color:' + A2 + '">∠B = ∠D = ' + Math.round(aB) + '°</span>' +
+        '<span>∠A + ∠B = 180°</span><span style="color:' + H1 + '">AO = OC = ' + f(G.dist(A, O) / U) + '</span><span style="color:' + H2 + '">BO = OD = ' + f(G.dist(B, O) / U) + '</span>';
+    } else {
+      var K, top = ab <= ad;
+      if(top){ var u = G.unit(B, C); K = {x:B.x + G.dist(A, B) * u.x, y:B.y + G.dist(A, B) * u.y}; }
+      else { var v = G.unit(D, C); K = {x:D.x + G.dist(A, D) * v.x, y:D.y + G.dist(A, D) * v.y}; }
+      var V = top ? B : D;
+      G.el('path', {d:'M'+A.x+' '+A.y+' L'+V.x+' '+V.y+' L'+K.x+' '+K.y+' Z', fill:H1, 'fill-opacity':'.2', stroke:'none'}, svg);
+      seg(A, K, H1, 3); seg(A, V, S1, 3.5); seg(V, K, S1, 3.5); G.tick(svg, A, V, 1, S1); G.tick(svg, V, K, 1, S1);
+      G.arc(svg, A, V, K, 30, A1); G.arc(svg, A, K, top ? D : B, 36, A1); G.arc(svg, K, A, V, 30, A1);
+      G.el('circle', {cx:K.x, cy:K.y, r:4.5, fill:H1}, svg); G.text(svg, K.x + (top ? 0 : 18), K.y + (top ? -14 : 6), 'K');
+      r.innerHTML = '<span style="color:' + A1 + '">∠' + (top ? 'BAK' : 'DAK') + ' = ∠' + (top ? 'KAD' : 'KAB') + ' = ∠' + (top ? 'BKA' : 'DKA') + ' = ' + f(Math.round(aA) / 2) + '°</span>' +
+        '<span style="color:' + S1 + '">' + (top ? 'AB = BK = ' : 'AD = DK = ') + f(top ? ab : ad) + '</span>' +
+        '<span>' + (top ? 'KC = BC − AB = ' + f(ad - ab) : 'K на стороне CD: AD &lt; AB') + '</span>';
+    }
+    ['A','B','D'].forEach(function(n){ G.handle(svg, P[n], n); lab(P[n], O, n); }); lab(C, O, 'C');
+  }
+  G.draggable(svg, function(n, p){
+    var o = {A:P.A, B:P.B, D:P.D}; o[n] = {x:p.x, y:p.y}; var C = Cof(o);
+    var pts = [o.A, o.B, o.D, C];
+    for(var i = 0; i < 4; i++) if(pts[i].x < 25 || pts[i].x > 575 || pts[i].y < 28 || pts[i].y > 305) return;
+    var cr = (o.B.x - o.A.x) * (o.D.y - o.A.y) - (o.B.y - o.A.y) * (o.D.x - o.A.x);
+    if(cr < 9000 || G.dist(o.A, o.B) < 60 || G.dist(o.A, o.D) < 60) return;
+    P[n] = o[n]; draw();
+  });
+  document.querySelectorAll('[data-pm]').forEach(function(b){ b.addEventListener('click', function(){ mode = +b.getAttribute('data-pm'); document.querySelectorAll('[data-pm]').forEach(function(x){ x.classList.toggle('ghost', x !== b); }); draw(); }); });
+  draw();
+})();
+document.addEventListener('geo:ready', function(){
+  GeoTrainer(document.getElementById('trainerBox'), {rounds:6, id:'trainer', gen:function(){
+    var q = GeoRand(1, 5);
+    if(q === 1){ var n = GeoRand(5, 12); return {q:'Найдите сумму углов выпуклого ' + n + '-угольника (в градусах).', a:String((n - 2) * 180), why:'(' + n + ' − 2) · 180° = ' + (n - 2) * 180 + '°.'}; }
+    if(q === 2){ var m = GeoPick([5, 6, 8, 9, 10, 12, 15, 18, 20]), ang = 180 - 360 / m;
+      return GeoRand(0, 1) ? {q:'Найдите угол правильного ' + m + '-угольника (в градусах).', a:String(ang), why:'Внешний угол 360° : ' + m + ' = ' + 360 / m + '°, угол 180° − ' + 360 / m + '° = ' + ang + '°.'}
+        : {q:'Угол правильного многоугольника равен ' + ang + '°. Сколько у него сторон?', a:String(m), why:'Внешний угол ' + 360 / m + '°, n = 360 : ' + 360 / m + ' = ' + m + '.'}; }
+    if(q === 3){ var x = 5 * GeoRand(4, 17); return {q:'Сумма двух углов параллелограмма равна ' + 2 * x + '°. Найдите один из двух других углов.', a:String(180 - x), why:'Это противоположные углы: по ' + x + '°. Соседний: 180° − ' + x + '° = ' + (180 - x) + '°.'}; }
+    if(q === 4){ var bk = GeoRand(3, 15), kc = GeoRand(2, 12); return {q:'Биссектриса угла A параллелограмма ABCD пересекает сторону BC в точке K, BK = ' + bk + ', KC = ' + kc + '. Найдите периметр параллелограмма.', a:String(2 * (2 * bk + kc)), why:'AB = BK = ' + bk + ', BC = ' + (bk + kc) + ', P = 2 · ' + (2 * bk + kc) + ' = ' + 2 * (2 * bk + kc) + '.'}; }
+    var p = GeoRand(3, 12), r = GeoRand(3, 12), lo = Math.abs(p - r) + 1, hi = p + r - 1, s = GeoRand(lo, hi);
+    return {q:'Диагонали параллелограмма ABCD равны ' + 2 * p + ' и ' + 2 * r + ' (AC = ' + 2 * p + ', BD = ' + 2 * r + '), AB = ' + s + '. Найдите периметр треугольника AOB, где O — точка пересечения диагоналей.', a:String(p + r + s), why:'AO = ' + p + ', BO = ' + r + ': ' + p + ' + ' + r + ' + ' + s + ' = ' + (p + r + s) + '.'};
+  }});
+});
+
+</script>
+</body>
+</html>

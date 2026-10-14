@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Геометрия 7–9 · ОГЭ</title>
+<link rel="stylesheet" href="assets/core.css">
+</head>
+<body>
+
+<nav class="topnav"><div class="in">
+  <a class="home" href="index.html">🏠 <span>Математика 9</span></a>
+  <a class="home" href="algebra.html">🧮 <span>Алгебра</span></a>
+  <div class="links"></div>
+  <a class="home" href="spravochnik.html" title="Справочник">📖 <span>Справочник</span></a>
+  <div class="progress-pill">Курс: <b id="totalProg">0%</b><div class="progress-bar"><i id="totalBar"></i></div></div>
+</div></nav>
+
+<div class="container">
+  <header class="hero">
+    <span class="tag">📐 Геометрия</span><span class="tag">7–9 класс · Атанасян</span><span class="tag">23 занятия + 7 ОГЭ</span>
+    <h1>Геометрия: весь курс и подготовка к ОГЭ</h1>
+    <p id="heroSub"></p>
+    <div class="timeline" id="jump"></div>
+  </header>
+  <div id="parts"></div>
+</div>
+
+<script src="assets/courses.js"></script>
+<script>
+(function(){
+  var S = 'geometry', C = COURSES[S];
+  function get(k){ try{ return localStorage.getItem(k); }catch(e){ return null; } }
+  var root = document.getElementById('parts'), num = 0, sum = 0, all = 0, j = document.getElementById('jump');
+  document.getElementById('heroSub').textContent = C.sub;
+  C.parts.forEach(function(p){
+    var part = document.createElement('div'); part.className = 'part'; part.id = p.id;
+    part.innerHTML = '<h2><span class="n">' + p.n + '</span>' + (p.oge || p.rep ? '' : 'Раздел ' + p.n + '. ') + p.title + '</h2>';
+    var grid = document.createElement('div'); grid.className = 'lessons';
+    p.lessons.forEach(function(l){
+      if(!p.oge && !p.rep) num++; all++;
+      var prog = null; try{ prog = JSON.parse(get('geo:progress:' + l.id) || 'null'); }catch(e){}
+      var pct = prog && prog.total ? Math.round(100 * prog.solved / prog.total) : 0;
+      var a = document.createElement(l.f ? 'a' : 'div');
+      a.className = 'lesson' + (l.f ? '' : ' soon') + (p.oge ? ' oge-l' : '');
+      if(l.f) a.href = l.f;
+      var lab = p.oge ? 'ОГЭ · ' + l.id : (p.rep ? 'Повторение · ' + l.id.slice(1) : 'Занятие ' + num);
+      a.innerHTML = '<div class="num">' + lab + '</div><div class="ttl">' + l.t + '</div>' +
+        '<div class="meta">' + l.b + (l.f ? (prog ? ' · решено ' + prog.solved + ' / ' + prog.total : '') : ' · скоро') + '</div>' +
+        (l.f ? '<div class="bar"><i style="width:' + pct + '%"></i></div>' : '');
+      grid.appendChild(a); if(l.f) sum += pct;
+    });
+    part.appendChild(grid); root.appendChild(part);
+    var ja = document.createElement('a'); ja.href = '#' + p.id; ja.textContent = p.n + ' · ' + p.title; j.appendChild(ja);
+  });
+  var js = document.createElement('a'); js.href = C.sprav; js.textContent = '📖 Справочник'; j.appendChild(js);
+  var total = all ? Math.round(sum / all) : 0;
+  document.getElementById('totalProg').textContent = total + '%'; document.getElementById('totalBar').style.width = total + '%';
+})();
+</script>
+<script src="assets/core.js"></script>
+</body>
+</html>

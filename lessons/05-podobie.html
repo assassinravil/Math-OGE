@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Занятие 5 · Подобие треугольников</title>
+<link rel="stylesheet" href="../assets/core.css">
+</head>
+<body data-lesson="L05">
+
+<nav class="topnav"><div class="in">
+  <a class="home" href="../geometry.html">📐 <span>Геометрия · ОГЭ</span></a>
+  <div class="links"></div>
+  <a class="home" href="../spravochnik.html" title="Справочник">📖</a>
+  <div class="progress-pill">Решено <b>0 / 0</b><div class="progress-bar"><i></i></div></div>
+</div></nav>
+
+<div class="container">
+
+<header class="hero">
+  <span class="tag">Раздел 2 · Подобие и тригонометрия</span><span class="tag">Занятие 5 из 23</span><span class="tag">Учебник: гл. VIII §1–2</span>
+  <h1>Подобие треугольников</h1>
+  <p>Подобные треугольники, коэффициент подобия, три признака подобия, отношение периметров и площадей.</p>
+  <div class="timeline">
+    <a href="#warmup">① Проверка ДЗ <small>0–10′</small></a>
+    <a href="#theory">② Теория <small>10–25′</small></a>
+    <a href="#practice">③ Практика <small>25–45′</small></a>
+    <a href="#oge">④ ОГЭ <small>45–55′</small></a>
+    <a href="#hw">⑤ Итог и ДЗ <small>55–60′</small></a>
+    <a href="#bonus">★ Бонус</a>
+  </div>
+</header>
+
+<div class="teacher-panel teacher-only">
+  <h3>План занятия (60 минут)</h3>
+  <ol><li><b>0–10′</b> Проверка ДЗ занятия 4.</li><li><b>10–25′</b> Теория. В лаборатории двигать точку M: k меняется, а отношение площадей всегда k². Спросить: «Во сколько раз уменьшится площадь, если стороны уменьшить в 3 раза?»</li><li><b>25–45′</b> Тренажёр (6 раундов), затем П1–П8; П9–П10 по времени.</li><li><b>45–55′</b> ОГЭ: задачи про тень и фонарь — частый сюжет банка ФИПИ.</li><li><b>55–60′</b> Шпаргалка, ДЗ.</li></ol>
+  <p class="muted" style="margin:0">Типичные ошибки: умножают площадь на k вместо k²; неправильно сопоставляют соответственные стороны; в задаче MN ∥ AC берут k = BM : MA вместо BM : BA.</p>
+</div>
+
+<section class="card" id="warmup" data-nav="Проверка ДЗ">
+  <h2><span class="step">1</span> Проверка ДЗ <span class="mins">0–10 мин</span></h2>
+  <div class="tasks"><div class="task" data-id="h1"><div class="task-head"><span class="tnum">ДЗ 1</span></div>
+<p>Катеты прямоугольного треугольника равны 9 и 40. Найдите гипотенузу.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="41"></label></div>
+</div>
+<div class="task" data-id="h2"><div class="task-head"><span class="tnum">ДЗ 2</span></div>
+<p>Гипотенуза равна 25, один из катетов — 24. Найдите другой катет.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="7"></label></div>
+</div>
+<div class="task" data-id="h3"><div class="task-head"><span class="tnum">ДЗ 3</span></div>
+<p>Сторона треугольника равна 18, высота к ней — 7. Найдите площадь.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="63"></label></div>
+</div>
+<div class="task" data-id="h4"><div class="task-head"><span class="tnum">ДЗ 4</span></div>
+<p>Боковая сторона равнобедренного треугольника 13, основание 10. Найдите площадь.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="60"></label></div>
+<div class="sol">h = √(169 − 25) = 12, S = ½ · 10 · 12 = 60.</div>
+</div>
+<div class="task" data-id="h5" data-mode="digits"><div class="task-head"><span class="tnum">ДЗ 5</span><span class="pill oge">ОГЭ №19</span></div>
+<p>1) c² = a² + b² ⇒ треугольник прямоугольный. 2) Площадь прямоугольного треугольника равна произведению катетов. 3) Гипотенуза больше каждого из катетов.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="13"></label></div>
+</div>
+</div>
+</section>
+
+<section class="card" id="theory" data-nav="Теория">
+  <h2><span class="step">2</span> Теория <span class="mins">10–25 мин</span></h2>
+
+  <div class="grid2">
+    <div class="box def">
+      <span class="title">Подобные треугольники</span>
+      △ABC ∼ △A₁B₁C₁, если углы соответственно равны, а стороны пропорциональны:
+      <div class="formula">A₁B₁ / AB = B₁C₁ / BC = A₁C₁ / AC = k</div>
+      k — <b>коэффициент подобия</b>. Порядок букв в записи показывает соответствие вершин.
+      <div class="eg">AB = 4, A₁B₁ = 12 → k = 3. Если BC = 5, то B₁C₁ = 15.</div>
+    </div>
+    <figure><svg viewBox="0 0 340 190" width="320">
+      <path class="st fl" d="M20 160 L80 70 L150 160 Z"/>
+      <path class="st fl" d="M170 175 L260 40 L365 175 Z" transform="scale(.93) translate(10,0)"/>
+      <text class="tx" x="8" y="178">A</text><text class="tx" x="74" y="62">B</text><text class="tx" x="148" y="178">C</text>
+      <text class="tx" x="160" y="182">A₁</text><text class="tx" x="246" y="32">B₁</text><text class="tx" x="330" y="182">C₁</text>
+    </svg></figure>
+  </div>
+  <div class="grid3" style="margin-top:14px">
+    <div class="box rule"><span class="title">I признак</span>Два угла одного треугольника равны двум углам другого.<div class="eg">∠A = ∠A₁ = 40°, ∠B = ∠B₁ = 75° → подобны.</div></div>
+    <div class="box rule"><span class="title">II признак</span>Две стороны пропорциональны, а углы между ними равны.<div class="eg">AB = 3, AC = 4; A₁B₁ = 6, A₁C₁ = 8; ∠A = ∠A₁ → подобны, k = 2.</div></div>
+    <div class="box rule"><span class="title">III признак</span>Три стороны одного треугольника пропорциональны трём сторонам другого.<div class="eg">3, 4, 5 и 9, 12, 15: каждое отношение равно 3.</div></div>
+  </div>
+  <div class="grid2" style="margin-top:14px">
+    <div class="box tip"><span class="title">Что происходит при подобии</span>Стороны, высоты, медианы, биссектрисы и <b>периметры</b> — в k раз.<br><b>Площади — в k² раз.</b><div class="eg">k = 3, S = 10 → S₁ = 9 · 10 = 90.</div><div class="eg trap">Площадь <b>не</b> в k раз: при k = 3 она больше в 9 раз.</div></div>
+    <div class="box tip"><span class="title">Прямая, параллельная стороне</span>Если MN ∥ AC (M ∈ AB, N ∈ BC), то △MBN ∼ △ABC с коэффициентом <b>k = BM / BA</b> (по двум углам).<div class="eg">BM = 2, MA = 4, AC = 9 → k = 2/6 = 1/3, MN = 3.</div><div class="eg trap">k = BM / <b>BA</b>, а не BM / MA.</div></div>
+  </div>
+
+  <h3>Лаборатория: k и k²</h3>
+  <div class="lab">
+    <svg id="labS" viewBox="0 0 600 330"></svg>
+    <div class="readout" id="sRead"></div>
+    <p class="muted" style="margin:8px 0 0;font-size:14px">Двигайте точку M по стороне AB. Прямая MN всегда параллельна AC.</p>
+  </div>
+
+</section>
+
+<section class="card" id="examples" data-nav="Примеры">
+  <h2><span class="step">↳</span> Разбор примеров</h2>
+  <div class="grid3"><div class="box example"><span class="title">Пример 1. Стороны</span><p>△ABC ∼ △KLM, AB = 4, BC = 6, KL = 10. Найдите LM.</p><details class="reveal"><summary>Показать решение</summary><p><b>Решение.</b> k = KL / AB = 2,5; LM = 6 · 2,5 = 15.</p><p><b>Ответ:</b> 15.</p></details></div><div class="box example"><span class="title">Пример 2. Площади</span><p>Треугольники подобны с k = 3, площадь меньшего 12. Найдите площадь большего.</p><details class="reveal"><summary>Показать решение</summary><p><b>Решение.</b> Площади относятся как k² = 9: 12 · 9 = 108.</p><p><b>Ответ:</b> 108.</p></details></div><div class="box example"><span class="title">Пример 3. Тень</span><p>Человек ростом 1,8 м стоит в 6 м от фонаря на высоте 5,4 м. Найдите длину тени.</p><details class="reveal"><summary>Показать решение</summary><p><b>Решение.</b> Треугольники подобны: 1,8 / 5,4 = x / (x + 6) → 3x = x + 6 → x = 3.</p><p><b>Ответ:</b> 3.</p></details></div></div>
+</section>
+
+<section class="card" id="practice" data-nav="Практика">
+  <h2><span class="step">3</span> Интерактивная практика <span class="mins">25–45 мин</span></h2>
+  <h3>🎯 Тренажёр «Коэффициент подобия»</h3>
+  <div class="lab task" id="trainer" data-id="trainer" data-noauto><div id="trainerBox"></div>
+    <div class="sol">Задачи генерируются случайно. Засчитывается при 5 верных из 6.</div></div>
+
+  <h3>Блок А. База</h3>
+  <div class="tasks"><div class="task" data-id="p1"><div class="task-head"><span class="tnum">П1</span><span class="pill lvl1">база</span></div>
+<p>△ABC ∼ △A₁B₁C₁, AB = 4, BC = 6, A₁B₁ = 10. Найдите B₁C₁.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="15"></label></div>
+<div class="sol">k = 10 : 4 = 2,5; B₁C₁ = 6 · 2,5 = 15.</div>
+</div>
+<div class="task" data-id="p2"><div class="task-head"><span class="tnum">П2</span><span class="pill lvl1">база</span></div>
+<p>Треугольники подобны с коэффициентом 3. Периметр меньшего равен 14. Найдите периметр большего.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="42"></label></div>
+</div>
+<div class="task" data-id="p3"><div class="task-head"><span class="tnum">П3</span><span class="pill lvl1">база</span></div>
+<p>Площади двух подобных треугольников относятся как 4 : 9. Сторона меньшего треугольника равна 6. Найдите соответствующую сторону большего.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="9"></label></div>
+<div class="hint">Отношение площадей — это k². Найдите k.</div>
+<div class="sol">k² = 9/4, k = 3/2. 6 · 3/2 = 9.</div>
+</div>
+<div class="task" data-id="p4"><div class="task-head"><span class="tnum">П4</span><span class="pill lvl1">база</span></div>
+<p>Прямая MN параллельна стороне AC треугольника ABC (M ∈ AB, N ∈ BC). BM = 3, MA = 5, AC = 24. Найдите MN.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="9"></label></div>
+<div class="hint">k = BM / BA, а BA = BM + MA.</div>
+<div class="sol">BA = 8, k = 3/8, MN = 24 · 3/8 = 9.</div>
+</div>
+<div class="task" data-id="p5"><div class="task-head"><span class="tnum">П5</span><span class="pill lvl1">база</span></div>
+<p>MN ∥ AC, BM : MA = 1 : 2, площадь треугольника ABC равна 45. Найдите площадь треугольника MBN.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="5"></label></div>
+<div class="sol">k = BM / BA = 1/3, S(MBN) = 45 · 1/9 = 5.</div>
+</div>
+<div class="task" data-id="p6" data-mode="text"><div class="task-head"><span class="tnum">П6</span><span class="pill lvl1">база</span></div>
+<p>В △ABC ∠A = 50°, ∠B = 70°. В △DEF ∠D = 50°, ∠F = 60°. Подобны ли эти треугольники? Впишите «да» или «нет».</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="да"></label></div>
+<div class="sol">∠C = 60°, ∠E = 70° — углы равны, треугольники подобны по I признаку.</div>
+</div>
+</div>
+  <h3>Блок Б. Посложнее</h3>
+  <div class="tasks"><div class="task" data-id="p7"><div class="task-head"><span class="tnum">П7</span><span class="pill lvl2">средний</span></div>
+<p>Человек ростом 1,7 м стоит на расстоянии 8 м от столба, на котором на высоте 5,1 м висит фонарь. Найдите длину тени человека в метрах.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="4"></label></div>
+<div class="sol">1,7 / 5,1 = 1/3 = x / (x + 8) → x = 4.</div>
+</div>
+<div class="task" data-id="p8"><div class="task-head"><span class="tnum">П8</span><span class="pill lvl2">средний</span></div>
+<p>Основания трапеции ABCD равны BC = 6 и AD = 15, диагонали пересекаются в точке O, AC = 21. Найдите AO.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="15"></label></div>
+<div class="hint">Треугольники BOC и DOA подобны.</div>
+<div class="sol">k = 6/15 = 2/5, CO : OA = 2 : 5. AO = 21 · 5/7 = 15.</div>
+</div>
+<div class="task" data-id="p9"><div class="task-head"><span class="tnum">П9</span><span class="pill lvl2">средний</span></div>
+<p>MN ∥ AC, площадь треугольника MBN равна 8, площадь треугольника ABC — 50, AB = 15. Найдите BM.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="6"></label></div>
+<div class="sol">k² = 8/50 = 4/25, k = 2/5, BM = 15 · 2/5 = 6.</div>
+</div>
+<div class="task" data-id="p10"><div class="task-head"><span class="tnum">П10</span><span class="pill lvl3">сложнее</span></div>
+<p>Площадь треугольника ABC равна 72. MN ∥ AC, BM : MA = 2 : 1. Найдите площадь трапеции AMNC.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="40"></label></div>
+<div class="sol">k = 2/3, S(MBN) = 72 · 4/9 = 32, S(AMNC) = 72 − 32 = 40.</div>
+</div>
+</div>
+</section>
+
+<section class="card oge" id="oge" data-nav="ОГЭ">
+  <h2><span class="step">4</span> Задачи в формате ОГЭ <span class="mins">45–55 мин</span></h2>
+  <div class="tasks"><div class="task" data-id="o1"><div class="task-head"><span class="tnum">О1</span><span class="pill oge">ОГЭ №15</span></div>
+<p>Прямая, параллельная стороне AC треугольника ABC, пересекает стороны AB и BC в точках M и N соответственно. AB = 48, AC = 40, MN = 25. Найдите AM.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="18"></label></div>
+<div class="sol">BM / BA = MN / AC → BM = 48 · 25/40 = 30, AM = 18.</div>
+</div>
+<div class="task" data-id="o2"><div class="task-head"><span class="tnum">О2</span><span class="pill oge">ОГЭ №15</span></div>
+<p>Человек ростом 1,8 м стоит на расстоянии 12 м от столба, на котором висит фонарь на высоте 5,4 м. Найдите длину тени человека в метрах.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="6"></label></div>
+</div>
+<div class="task" data-id="o3"><div class="task-head"><span class="tnum">О3</span><span class="pill oge">ОГЭ №15</span></div>
+<p>Палка длиной 2 м отбрасывает тень 1,5 м. В то же время тень дерева равна 12 м. Найдите высоту дерева в метрах.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="16"></label></div>
+<div class="sol">2 / 1,5 = h / 12 → h = 16.</div>
+</div>
+<div class="task" data-id="o4"><div class="task-head"><span class="tnum">О4</span><span class="pill oge">ОГЭ №17</span></div>
+<p>Основания трапеции равны 4 и 10, диагональ трапеции равна 21. Найдите больший из отрезков, на которые делит эту диагональ точка пересечения диагоналей.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="15"></label></div>
+<div class="sol">Отрезки относятся как 4 : 10, больший 21 · 10/14 = 15.</div>
+</div>
+<div class="task" data-id="o5" data-mode="digits"><div class="task-head"><span class="tnum">О5</span><span class="pill oge">ОГЭ №19</span></div>
+<p>Какие из следующих утверждений верны?</p><ol style="margin:6px 0"><li>Если два угла одного треугольника равны двум углам другого треугольника, то такие треугольники подобны.</li><li>Площади подобных треугольников относятся как коэффициент подобия.</li><li>Периметры подобных треугольников относятся как коэффициент подобия.</li></ol>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="13"></label></div>
+<div class="sol">2 — неверно: как k².</div>
+</div>
+</div>
+</section>
+
+<section class="card" id="hw" data-nav="Итог и ДЗ">
+  <h2><span class="step">5</span> Итог и домашнее задание <span class="mins">55–60 мин</span></h2>
+  <h3>Шпаргалка</h3>
+  <div class="cheat"><div><b>Подобие:</b> углы равны, стороны в k раз</div><div><b>Признаки:</b> 2 угла · 2 стороны и угол · 3 стороны</div><div><b>Периметры</b> — k, <b>площади</b> — k²</div><div><b>MN ∥ AC:</b> k = BM / BA</div></div>
+  <h3>📚 Домашнее задание</h3>
+  <p class="muted">Ответы проверяются в начале занятия 6.</p>
+  <ol class="hw"><li>△ABC ∼ △KLM, AB = 5, KL = 15, BC = 7. Найдите LM.<div class="sol"><span class="ansline">Ответ: 21.</span> </div></li><li>Треугольники подобны с коэффициентом 4. Площадь меньшего 3. Найдите площадь большего.<div class="sol"><span class="ansline">Ответ: 48.</span> </div></li><li>MN ∥ AC, BM = 2, MA = 3, AC = 20. Найдите MN.<div class="sol"><span class="ansline">Ответ: 8.</span> k = 2/5.</div></li><li>Человек ростом 1,6 м стоит на расстоянии 10 м от фонаря, висящего на высоте 4,8 м. Найдите длину тени (в метрах).<div class="sol"><span class="ansline">Ответ: 5.</span> </div></li><li>(ОГЭ №19) 1) Все равносторонние треугольники подобны. 2) Если стороны одного треугольника в 2 раза больше сторон другого, то его площадь в 2 раза больше. 3) Любые два прямоугольных треугольника подобны.<div class="sol"><span class="ansline">Ответ: 1.</span> </div></li></ol>
+  <h3>⭐ Бонусное ДЗ</h3>
+  <ol class="hw"><li>Отрезки AC и BD пересекаются в точке O, AO = 12, OC = 4, BO = 9, OD = 3. Докажите, что AB ∥ CD.<div class="sol">AO/OC = BO/OD = 3, ∠AOB = ∠COD (вертикальные) → △AOB ∼ △COD (II признак). Значит ∠BAO = ∠DCO — накрест лежащие при AB и CD, AB ∥ CD.</div></li><li>В трапеции ABCD основания AD = 12 и BC = 4, диагонали пересекаются в O, площадь треугольника BOC равна 3. Найдите площадь треугольника AOD.<div class="sol"><span class="ansline">Ответ: 27.</span> k = 3, S(AOD) = 3 · 9 = 27.</div></li></ol>
+  <p style="margin-top:18px"><button class="btn small ghost" type="button" onclick="GeoResetLesson()">Сбросить прогресс занятия</button></p>
+</section>
+
+<section class="card bonus" id="bonus" data-nav="★ Бонус">
+  <h2><span class="step">★</span> Бонусная практика</h2>
+  <div class="tasks"><div class="task" data-id="b1"><div class="task-head"><span class="tnum">Б1</span><span class="pill lvl3">сложнее</span></div>
+<p>Прямая MN ∥ AC делит треугольник ABC на две равновеликие части (M ∈ AB, N ∈ BC). AC = 10√2. Найдите MN.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="10"></label></div>
+<div class="sol">S(MBN) = ½ S(ABC), k² = ½, k = 1/√2. MN = 10√2 / √2 = 10.</div>
+</div>
+<div class="task" data-id="b2"><div class="task-head"><span class="tnum">Б2</span><span class="pill lvl3">сложнее</span><span class="pill oge">ОГЭ №24</span></div>
+<p>Докажите, что треугольник, образованный средними линиями треугольника, подобен данному треугольнику.</p>
+<div class="sol">Каждая средняя линия равна половине стороны: стороны нового треугольника пропорциональны сторонам данного с k = ½ — III признак.</div>
+</div>
+</div>
+</section>
+
+</div>
+
+<script src="../assets/core.js"></script>
+<script>
+
+(function(){
+  var G = GeoSVG, svg = document.getElementById('labS'), A = {x:70, y:300}, B = {x:250, y:50}, C = {x:540, y:300}, t = 0.55, U = 40;
+  function f(v){ return (Math.round(v * 100) / 100).toString().replace('.', ','); }
+  function draw(){
+    G.clear(svg);
+    var M = {x:B.x + (A.x - B.x) * t, y:B.y + (A.y - B.y) * t}, N = {x:B.x + (C.x - B.x) * t, y:B.y + (C.y - B.y) * t};
+    G.el('path', {d:'M'+A.x+' '+A.y+' L'+B.x+' '+B.y+' L'+C.x+' '+C.y+' Z', 'class':'st fl'}, svg);
+    G.el('path', {d:'M'+M.x+' '+M.y+' L'+B.x+' '+B.y+' L'+N.x+' '+N.y+' Z', fill:'#8b5cf6', 'fill-opacity':'.25', stroke:'#8b5cf6', 'stroke-width':2.5}, svg);
+    G.text(svg, A.x - 14, A.y + 20, 'A'); G.text(svg, B.x, B.y - 12, 'B'); G.text(svg, C.x + 14, C.y + 20, 'C'); G.text(svg, N.x + 16, N.y + 4, 'N');
+    G.handle(svg, M, 'M'); G.text(svg, M.x - 20, M.y + 4, 'M');
+    var k = t, ac = G.dist(A, C) / U;
+    document.getElementById('sRead').innerHTML = '<span>k = BM / BA = ' + f(k) + '</span><span>MN = k · AC = ' + f(k * ac) + '</span>' +
+      '<span>P(MBN) : P(ABC) = ' + f(k) + '</span><span style="color:#8b5cf6">S(MBN) : S(ABC) = k² = ' + f(k * k) + '</span>';
+  }
+  G.draggable(svg, function(n, p){ var d = G.foot(p, B, A); t = Math.max(0.1, Math.min(0.95, d.t)); draw(); });
+  draw();
+})();
+document.addEventListener('geo:ready', function(){
+  GeoTrainer(document.getElementById('trainerBox'), {rounds:6, id:'trainer', gen:function(){
+    var q = GeoRand(1, 4), k = GeoRand(2, 5), a = GeoRand(2, 12), s = GeoRand(2, 9);
+    if(q === 1) return {q:'Треугольники подобны, k = ' + k + '. Сторона меньшего треугольника ' + a + '. Найдите соответствующую сторону большего.', a:String(a * k), why:a + ' · ' + k + ' = ' + a * k + '.'};
+    if(q === 2) return {q:'Площади подобных треугольников равны ' + s + ' и ' + s * k * k + '. Найдите коэффициент подобия (больший к меньшему).', a:String(k), why:'k² = ' + k * k + ', k = ' + k + '.'};
+    if(q === 3) return {q:'Треугольники подобны, k = ' + k + ', площадь меньшего ' + s + '. Найдите площадь большего.', a:String(s * k * k), why:'Площадь в k² = ' + k * k + ' раз больше.'};
+    var m = GeoRand(1, 5), n = GeoRand(1, 5), c = (m + n) * GeoRand(1, 4);
+    return {q:'MN ∥ AC (M ∈ AB, N ∈ BC), BM = ' + m + ', MA = ' + n + ', AC = ' + c + '. Найдите MN.', a:String(c * m / (m + n)), why:'k = ' + m + '/' + (m + n) + ', MN = ' + c * m / (m + n) + '.'};
+  }});
+});
+
+</script>
+</body>
+</html>

@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Алгебра · занятие 3 · Математика в жизни</title>
+<link rel="stylesheet" href="../assets/core.css">
+</head>
+<body data-lesson="A03">
+
+<nav class="topnav"><div class="in">
+  <a class="home" href="../algebra.html">🧮 <span>Алгебра · ОГЭ</span></a>
+  <div class="links"></div>
+  <a class="home" href="../spravochnik-algebra.html" title="Справочник">📖</a>
+  <div class="progress-pill">Решено <b>0 / 0</b><div class="progress-bar"><i></i></div></div>
+</div></nav>
+
+<div class="container">
+
+<header class="hero">
+  <span class="tag">Раздел 1 · Числа и вычисления</span><span class="tag">Алгебра · занятие 3 из 23</span><span class="tag">Учебник: гл. I §2, п. 4–5</span>
+  <h1>Математика в жизни: проценты, размеры, расчёты по формулам</h1>
+  <p>Стандартный вид числа и приставки нано-, микро-, кило-, проценты, практические задачи и вычисления по формулам — задания №1–5 и №12 ОГЭ.</p>
+  <div class="timeline">
+    <a href="#warmup">① Проверка ДЗ <small>0–10′</small></a>
+    <a href="#theory">② Теория <small>10–25′</small></a>
+    <a href="#practice">③ Практика <small>25–45′</small></a>
+    <a href="#oge">④ ОГЭ <small>45–55′</small></a>
+    <a href="#hw">⑤ Итог и ДЗ <small>55–60′</small></a>
+    <a href="#bonus">★ Бонус</a>
+  </div>
+</header>
+
+<div class="teacher-panel teacher-only">
+  <h3>План занятия (60 минут)</h3>
+  <ol><li><b>0–10′</b> Проверка ДЗ занятия 2.</li><li><b>10–25′</b> Теория. В лаборатории «Проценты» показать, что +20% и −20% не возвращают исходную цену.</li><li><b>25–45′</b> Тренажёр, затем П1–П10.</li><li><b>45–55′</b> ОГЭ №1–5 (практические) и №12.</li><li><b>55–60′</b> Шпаргалка, ДЗ.</li></ol>
+  <p class="muted" style="margin:0">Типичные ошибки: путают «на 20%» и «до 20%»; считают проценты от новой величины вместо старой; округляют количество рулонов или упаковок вниз; не переводят единицы (см и м, нм и м).</p>
+</div>
+
+<section class="card" id="warmup" data-nav="Проверка ДЗ">
+  <h2><span class="step">1</span> Проверка ДЗ <span class="mins">0–10 мин</span></h2>
+  <div class="tasks"><div class="task" data-id="h1"><div class="task-head"><span class="tnum">ДЗ 1</span></div>
+<p>Укажите номер наименьшего числа.</p><ol style="margin:6px 0"><li>−3/4</li><li>−0,7</li><li>−0,(7)</li><li>−0,77</li></ol>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="3"></label></div>
+</div>
+<div class="task" data-id="h2"><div class="task-head"><span class="tnum">ДЗ 2</span></div>
+<p>Между какими соседними целыми числами лежит √90?</p>
+<div class="ans-row"><label>от <input class="ans" data-a="9" data-label="от"></label><label>до <input class="ans" data-a="10" data-label="до"></label></div>
+</div>
+<div class="task" data-id="h3"><div class="task-head"><span class="tnum">ДЗ 3</span></div>
+<p>Сколько целых чисел расположено между −√20 и √8?</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="7"></label></div>
+</div>
+<div class="task" data-id="h4"><div class="task-head"><span class="tnum">ДЗ 4</span></div>
+<p>Число 7,862 округлили до десятых. Найдите абсолютную погрешность.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="0,038"></label></div>
+</div>
+<div class="task" data-id="h5" data-mode="digits"><div class="task-head"><span class="tnum">ДЗ 5</span><span class="pill oge">ОГЭ №19</span></div>
+<p>Укажите номера верных утверждений.</p><ol style="margin:6px 0"><li>Из двух отрицательных чисел больше то, модуль которого меньше.</li><li>√50 &gt; 7,1.</li><li>Если x = 5 ± 0,2, то 4,8 ≤ x ≤ 5,2.</li></ol>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="13"></label></div>
+</div>
+</div>
+</section>
+
+<section class="card" id="theory" data-nav="Теория">
+  <h2><span class="step">2</span> Теория <span class="mins">10–25 мин</span></h2>
+
+  <div class="grid2">
+    <div class="box def"><span class="title">Стандартный вид числа</span>
+      <div class="formula">a · 10ⁿ, &nbsp; 1 ≤ a &lt; 10</div>
+      <ul class="rules"><li>Запятую ставим после первой ненулевой цифры.</li><li>n — на сколько разрядов сдвинули запятую: влево — n &gt; 0, вправо — n &lt; 0.</li></ul>
+      <div class="eg">Радиус Юпитера 71 400 км = 7,14 · 10⁴ км.</div>
+      <div class="eg">0,000 36 = 3,6 · 10⁻⁴.</div>
+      <div class="eg trap">0,5 · 10³ и 25 · 10² — не стандартный вид: нужно 5 · 10² и 2,5 · 10³.</div>
+    </div>
+    <div class="box def"><span class="title">Приставки</span>
+      <table style="border-collapse:collapse;margin:4px 0 6px;font-size:15px">
+        <tr><td style="padding:2px 10px 2px 0"><b>гига</b> (Г)</td><td>10⁹</td><td style="padding:2px 10px 2px 22px"><b>милли</b> (м)</td><td>10⁻³</td></tr>
+        <tr><td style="padding:2px 10px 2px 0"><b>мега</b> (М)</td><td>10⁶</td><td style="padding:2px 10px 2px 22px"><b>микро</b> (мк)</td><td>10⁻⁶</td></tr>
+        <tr><td style="padding:2px 10px 2px 0"><b>кило</b> (к)</td><td>10³</td><td style="padding:2px 10px 2px 22px"><b>нано</b> (н)</td><td>10⁻⁹</td></tr>
+      </table>
+      <div class="eg">Частица 120 нм = 120 · 10⁻⁹ м = 1,2 · 10⁻⁷ м.</div>
+      <div class="eg">Свет (3 · 10⁸ м/с) за 1 нс проходит 3 · 10⁸ · 10⁻⁹ = 0,3 м.</div>
+    </div>
+  </div>
+  <div class="grid2" style="margin-top:14px">
+    <div class="box rule"><span class="title">Проценты</span>
+      <ul class="rules">
+        <li>1% = 0,01. &nbsp; p% от a = a · p / 100.</li>
+        <li>Увеличить на p% — умножить на (1 + p/100).</li>
+        <li>Уменьшить на p% — умножить на (1 − p/100).</li>
+        <li>Сколько процентов a составляет от b: a / b · 100%.</li>
+      </ul>
+      <div class="eg">Цена 1200 р., скидка 15%: 1200 · 0,85 = 1020 р.</div>
+      <div class="eg">18 задач из 24 — это 18 / 24 · 100% = 75%.</div>
+      <div class="eg trap">+20%, затем −20%: 100 → 120 → 96. Исходная цена не вернулась.</div>
+    </div>
+    <div class="box rule"><span class="title">Расчёты по формулам (№12)</span>
+      <ol class="rules"><li>Выписать формулу.</li><li>Подставить известные величины.</li><li>Решить получившееся уравнение.</li></ol>
+      <div class="eg">P = I²R, I = 2, R = 15: P = 4 · 15 = 60.</div>
+      <div class="eg">P = I²R, P = 147, I = 3,5: 147 = 12,25 · R → R = 12.</div>
+    </div>
+  </div>
+  <div class="box tip" style="margin-top:14px"><span class="title">Практические задачи (№1–5)</span>
+    <ul class="rules"><li>Переводите всё в одни единицы (см → м, мм → м).</li><li>Если спрашивают «сколько купить, чтобы хватило» — округляем <b>вверх</b>.</li><li>Таблицы и планы читаем внимательно: какая строка, какой столбец.</li></ul>
+    <div class="eg">Стены 53,54 м², рулон обоев 10,5 × 1,06 м = 11,13 м². 53,54 : 11,13 ≈ 4,8 → нужно <b>5</b> рулонов.</div>
+  </div>
+  <h3>Лаборатория: проценты</h3>
+  <div class="lab">
+    <div class="controls">
+      <label>Цена: <input type="range" id="cA" min="100" max="5000" step="100" value="1000"></label><span class="pill" id="cAv">1000</span>
+      <label>p: <input type="range" id="cP" min="5" max="50" step="5" value="20"></label><span class="pill" id="cPv">20%</span>
+    </div>
+    <div class="readout" id="cRead"></div>
+  </div>
+
+</section>
+
+<section class="card" id="examples" data-nav="Примеры">
+  <h2><span class="step">↳</span> Разбор примеров</h2>
+  <div class="grid3"><div class="box example"><span class="title">Пример 1. Обои</span><p>Площадь стен 48,6 м². Рулон обоев 0,53 × 10 м. Сколько рулонов нужно купить?</p><details class="reveal"><summary>Показать решение</summary><p><b>Решение.</b> Площадь рулона 0,53 · 10 = 5,3 м². 48,6 : 5,3 ≈ 9,2. Девяти рулонов не хватит (47,7 м²), значит 10.</p><p><b>Ответ:</b> 10.</p></details></div><div class="box example"><span class="title">Пример 2. Проценты</span><p>Футболка стоила 800 р., после снижения цены — 680 р. На сколько процентов снижена цена?</p><details class="reveal"><summary>Показать решение</summary><p><b>Решение.</b> Снижение 800 − 680 = 120 р. 120 / 800 · 100% = 15%.</p><p><b>Ответ:</b> 15.</p></details></div><div class="box example"><span class="title">Пример 3. №12</span><p>Мощность P = I²R. Найдите R (Ом), если P = 147 Вт, I = 3,5 А.</p><details class="reveal"><summary>Показать решение</summary><p><b>Решение.</b> 147 = 3,5² · R = 12,25R, R = 147 : 12,25 = 12.</p><p><b>Ответ:</b> 12.</p></details></div></div>
+</section>
+
+<section class="card" id="practice" data-nav="Практика">
+  <h2><span class="step">3</span> Интерактивная практика <span class="mins">25–45 мин</span></h2>
+  <h3>🎯 Тренажёр «Проценты, формулы, стандартный вид»</h3>
+  <div class="lab task" id="trainer" data-id="trainer" data-noauto><div id="trainerBox"></div>
+    <div class="sol">Задачи генерируются случайно. Засчитывается при 5 верных из 6.</div></div>
+
+  <h3>Блок А. База</h3>
+  <div class="tasks"><div class="task" data-id="p1"><div class="task-head"><span class="tnum">П1</span><span class="pill lvl1">база</span></div>
+<p>Найдите 35% от 240.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="84"></label></div>
+</div>
+<div class="task" data-id="p2"><div class="task-head"><span class="tnum">П2</span><span class="pill lvl1">база</span></div>
+<p>Цена товара 1500 р. снизилась на 12%. Найдите новую цену (р.).</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="1320"></label></div>
+</div>
+<div class="task" data-id="p3"><div class="task-head"><span class="tnum">П3</span><span class="pill lvl1">база</span></div>
+<p>В классе 25 учеников, 9 из них занимаются спортом. Сколько процентов учеников занимаются спортом?</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="36"></label></div>
+</div>
+<div class="task" data-id="p4"><div class="task-head"><span class="tnum">П4</span><span class="pill lvl1">база</span></div>
+<p>Запишите число 0,000 36 в стандартном виде a · 10ⁿ. Найдите n.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="-4"></label></div>
+</div>
+<div class="task" data-id="p5"><div class="task-head"><span class="tnum">П5</span><span class="pill lvl1">база</span></div>
+<p>Запишите 71 400 в стандартном виде a · 10ⁿ. Найдите n.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="4"></label></div>
+</div>
+<div class="task" data-id="p6"><div class="task-head"><span class="tnum">П6</span><span class="pill lvl1">база</span></div>
+<p>По формуле s = vt найдите t (ч), если s = 270 км, v = 60 км/ч.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="4,5"></label></div>
+</div>
+</div>
+  <h3>Блок Б. Посложнее</h3>
+  <div class="tasks"><div class="task" data-id="p7"><div class="task-head"><span class="tnum">П7</span><span class="pill lvl2">средний</span></div>
+<p>Цену повысили на 20%, а затем снизили на 20%. Получилось 960 р. Найдите исходную цену (р.).</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="1000"></label></div>
+<div class="sol">x · 1,2 · 0,8 = 0,96x = 960.</div>
+</div>
+<div class="task" data-id="p8"><div class="task-head"><span class="tnum">П8</span><span class="pill lvl2">средний</span></div>
+<p>Размер частицы вируса 120 нм. Запишите его в метрах в стандартном виде 1,2 · 10ⁿ. Найдите n.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="-7"></label></div>
+</div>
+<div class="task" data-id="p9"><div class="task-head"><span class="tnum">П9</span><span class="pill lvl2">средний</span></div>
+<p>Скорость света 3 · 10⁸ м/с. Какое расстояние (в мм) проходит свет за 1 нс?</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="300"></label></div>
+<div class="sol">3 · 10⁸ · 10⁻⁹ = 0,3 м = 300 мм.</div>
+</div>
+<div class="task" data-id="p10"><div class="task-head"><span class="tnum">П10</span><span class="pill lvl3">сложнее</span></div>
+<p>Площадь четырёхугольника S = d₁d₂ · sin α / 2. Найдите d₂, если d₁ = 7, sin α = 2/7, S = 4.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="4"></label></div>
+<div class="sol">4 = 7 · d₂ · 2/7 / 2 = d₂.</div>
+</div>
+</div>
+</section>
+
+<section class="card oge" id="oge" data-nav="ОГЭ">
+  <h2><span class="step">4</span> Задачи в формате ОГЭ <span class="mins">45–55 мин</span></h2>
+  <div class="tasks"><div class="task" data-id="o1"><div class="task-head"><span class="tnum">О1</span><span class="pill oge">ОГЭ №12</span></div>
+<p>Перевести температуру из шкалы Цельсия в шкалу Фаренгейта позволяет формула t<sub>F</sub> = 1,8t<sub>C</sub> + 32. Сколько градусов по Фаренгейту соответствует −25 °C?</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="-13"></label></div>
+<div class="sol">1,8 · (−25) + 32 = −45 + 32.</div>
+</div>
+<div class="task" data-id="o2"><div class="task-head"><span class="tnum">О2</span><span class="pill oge">ОГЭ №12</span></div>
+<p>Центростремительное ускорение a = ω²R. Найдите R (м), если ω = 4 с⁻¹, a = 64 м/с².</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="4"></label></div>
+<div class="sol">64 = 16R.</div>
+</div>
+<div class="task" data-id="o3"><div class="task-head"><span class="tnum">О3</span><span class="pill oge">ОГЭ №5</span></div>
+<p>Абонентская плата по тарифу — 350 р. в месяц, в неё входит 300 минут разговоров. Каждая минута сверх пакета стоит 2,5 р. Абонент проговорил за месяц 380 минут. Сколько рублей он заплатит?</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="550"></label></div>
+<div class="sol">350 + 80 · 2,5.</div>
+</div>
+<div class="task" data-id="o4"><div class="task-head"><span class="tnum">О4</span><span class="pill oge">ОГЭ №5</span></div>
+<p>Билет на электричку стоит 198 р. Школьникам скидка 50%. Сколько рублей стоят билеты для 4 взрослых и 12 школьников?</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="1980"></label></div>
+<div class="sol">4 · 198 + 12 · 99 = 792 + 1188.</div>
+</div>
+<div class="task" data-id="o5"><div class="task-head"><span class="tnum">О5</span><span class="pill oge">ОГЭ №4</span></div>
+<p>Пол комнаты 3,2 × 2,4 м покрывают плиткой 20 × 20 см. Плитка продаётся упаковками по 15 штук. Сколько упаковок нужно купить?</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="13"></label></div>
+<div class="sol">16 · 12 = 192 плитки; 192 : 15 = 12,8 → 13.</div>
+</div>
+</div>
+</section>
+
+<section class="card" id="hw" data-nav="Итог и ДЗ">
+  <h2><span class="step">5</span> Итог и домашнее задание <span class="mins">55–60 мин</span></h2>
+  <h3>Шпаргалка</h3>
+  <div class="cheat"><div><b>a · 10ⁿ</b>, 1 ≤ a &lt; 10</div><div>кило 10³ · мега 10⁶ · милли 10⁻³ · микро 10⁻⁶ · нано 10⁻⁹</div><div>+p% → <b>· (1 + p/100)</b>, −p% → <b>· (1 − p/100)</b></div><div>«чтобы хватило» — округляем <b>вверх</b></div></div>
+  <h3>📚 Домашнее задание</h3>
+  <p class="muted">Ответы проверяются в начале занятия 4.</p>
+  <ol class="hw"><li>Найдите 15% от 360.<div class="sol"><span class="ansline">Ответ: 54.</span> </div></li><li>Товар стоил 2400 р. и подешевел на 25%. Найдите новую цену (р.).<div class="sol"><span class="ansline">Ответ: 1800.</span> </div></li><li>Запишите 0,000 052 в стандартном виде a · 10ⁿ. Найдите n.<div class="sol"><span class="ansline">Ответ: −5.</span> 5,2 · 10⁻⁵.</div></li><li>(ОГЭ №12) По формуле t<sub>F</sub> = 1,8t<sub>C</sub> + 32 найдите t<sub>C</sub>, если t<sub>F</sub> = 59.<div class="sol"><span class="ansline">Ответ: 15.</span> 1,8t = 27.</div></li><li>(ОГЭ №19) 1) Увеличить число на 10% — значит умножить его на 1,1. 2) 1 нм = 10⁻⁶ м. 3) Число 4,5 · 10³ записано в стандартном виде.<div class="sol"><span class="ansline">Ответ: 13.</span> 1 нм = 10⁻⁹ м.</div></li></ol>
+  <h3>⭐ Бонусное ДЗ</h3>
+  <ol class="hw"><li>Вклад 50 000 р. положили под 8% годовых (проценты раз в год начисляются на всю сумму). Сколько рублей будет на счёте через 2 года?<div class="sol"><span class="ansline">Ответ: 58 320.</span> 50 000 · 1,08².</div></li><li>Рулон обоев 0,5 × 10 м. Нужно оклеить 52 м² стен. Сколько рулонов купить?<div class="sol"><span class="ansline">Ответ: 11.</span> 52 : 5 = 10,4.</div></li></ol>
+  <p style="margin-top:18px"><button class="btn small ghost" type="button" onclick="GeoResetLesson()">Сбросить прогресс занятия</button></p>
+</section>
+
+<section class="card bonus" id="bonus" data-nav="★ Бонус">
+  <h2><span class="step">★</span> Бонусная практика</h2>
+  <div class="tasks"><div class="task" data-id="b1"><div class="task-head"><span class="tnum">Б1</span><span class="pill lvl3">сложнее</span></div>
+<p>Цену повысили на 25%. На сколько процентов её нужно снизить, чтобы вернуться к исходной?</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="20"></label></div>
+<div class="sol">1,25x → x: снижение 0,25x от 1,25x = 20%.</div>
+</div>
+<div class="task" data-id="b2"><div class="task-head"><span class="tnum">Б2</span><span class="pill lvl3">сложнее</span></div>
+<p>Расстояние от Земли до Солнца 1,5 · 10⁸ км, скорость света 3 · 10⁵ км/с. Сколько секунд идёт свет от Солнца до Земли?</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="500"></label></div>
+</div>
+<div class="task" data-id="b3"><div class="task-head"><span class="tnum">Б3</span><span class="pill lvl3">сложнее</span></div>
+<p>Число увеличили на 30%, затем ещё на 10%. На сколько процентов оно увеличилось всего?</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="43"></label></div>
+<div class="sol">1,3 · 1,1 = 1,43.</div>
+</div>
+</div>
+</section>
+
+</div>
+
+<script src="../assets/core.js"></script>
+<script>
+
+(function(){
+  var A = document.getElementById('cA'), P = document.getElementById('cP');
+  function f(v){ return (Math.round(v * 100) / 100).toLocaleString('ru-RU'); }
+  function draw(){
+    var a = +A.value, p = +P.value, up = a * (1 + p / 100), dn = a * (1 - p / 100), ud = up * (1 - p / 100);
+    document.getElementById('cAv').textContent = a; document.getElementById('cPv').textContent = p + '%';
+    document.getElementById('cRead').innerHTML = '<span>' + p + '% от ' + a + ' = ' + f(a * p / 100) + '</span><span style="color:var(--res)">+' + p + '%: ' + f(up) + '</span><span style="color:var(--a)">−' + p + '%: ' + f(dn) + '</span><span>+' + p + '%, затем −' + p + '%: <b>' + f(ud) + '</b> (' + (ud < a ? 'меньше исходной на ' + f(a - ud) : '') + ')</span>';
+  }
+  [A, P].forEach(function(e){ e.addEventListener('input', draw); }); draw();
+})();
+document.addEventListener('geo:ready', function(){
+  function sN(v){ return String(Math.round(v * 1000) / 1000).replace('.', ',').replace('-', '−'); }
+  GeoTrainer(document.getElementById('trainerBox'), {rounds:6, id:'trainer', gen:function(){
+    var q = GeoRand(1, 5);
+    if(q === 1){ var p = GeoPick([5, 10, 15, 20, 25, 30, 40, 45, 60, 75]), a = GeoRand(2, 40) * 20; return {q:'Найдите ' + p + '% от ' + a + '.', a:String(a * p / 100), why:a + ' · ' + sN(p / 100) + ' = ' + sN(a * p / 100) + '.'}; }
+    if(q === 2){ var p2 = GeoPick([5, 10, 15, 20, 25, 30, 40]), c = GeoRand(5, 60) * 100, sg = GeoPick([1, -1]);
+      return {q:'Цена ' + c + ' р. ' + (sg > 0 ? 'повысилась' : 'снизилась') + ' на ' + p2 + '%. Найдите новую цену (р.).', a:String(c * (100 + sg * p2) / 100), why:c + ' · ' + sN(1 + sg * p2 / 100) + '.'}; }
+    if(q === 3){ var b = GeoPick([20, 25, 40, 50, 80, 200]), part = GeoRand(1, b - 1); while((part * 100) % b) part = GeoRand(1, b - 1);
+      return {q:'Сколько процентов составляет ' + part + ' от ' + b + '?', a:String(part * 100 / b), why:part + ' / ' + b + ' · 100%.'}; }
+    if(q === 4){ var d = GeoRand(1, 9), e = GeoRand(0, 9), n = GeoPick([-7, -6, -5, -4, -3, 3, 4, 5, 6]), v = d + e / 10, s;
+      if(n > 0){ s = String(d) + String(e); while(s.length < n + 1) s += '0'; }
+      else { s = '0,' + '0'.repeat(-n - 1) + d + (e ? String(e) : ''); }
+      var SUP = '⁰¹²³⁴⁵⁶⁷⁸⁹', shown = n > 0 ? s.replace(/\B(?=(\d{3})+(?!\d))/g, ' ') : s;
+      return {q:'Запишите число ' + shown + ' в стандартном виде a · 10ⁿ. Найдите n.', a:String(n), why:shown + ' = ' + sN(v) + ' · 10' + (n < 0 ? '⁻' : '') + SUP[Math.abs(n)] + '.'}; }
+    var I = GeoRand(2, 9), R = GeoRand(2, 20), t = GeoRand(1, 2);
+    if(t === 1) return {q:'Мощность P = I²R. Найдите P (Вт), если I = ' + I + ' А, R = ' + R + ' Ом.', a:String(I * I * R), why:I * I + ' · ' + R + '.'};
+    return {q:'Мощность P = I²R. Найдите R (Ом), если P = ' + I * I * R + ' Вт, I = ' + I + ' А.', a:String(R), why:I * I * R + ' : ' + I * I + '.'};
+  }});
+});
+
+</script>
+</body>
+</html>

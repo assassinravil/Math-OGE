@@ -1,0 +1,655 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Занятие 1 · Углы и сумма углов треугольника</title>
+<link rel="stylesheet" href="../assets/core.css">
+</head>
+<body data-lesson="L01">
+
+<nav class="topnav"><div class="in">
+  <a class="home" href="../geometry.html">📐 <span>Геометрия · ОГЭ</span></a>
+  <div class="links"></div>
+  <a class="home" href="../spravochnik.html" title="Справочник">📖</a>
+  <div class="progress-pill">Решено <b>0 / 0</b><div class="progress-bar"><i></i></div></div>
+</div></nav>
+
+<div class="container">
+
+<header class="hero">
+  <span class="tag">Раздел 1 · Треугольники</span><span class="tag">Занятие 1 из 23</span><span class="tag">Учебник: гл. I, III, IV §1</span>
+  <h1>Углы, параллельные прямые и сумма углов треугольника</h1>
+  <p>Смежные и вертикальные углы, углы при параллельных прямых, сумма углов треугольника и внешний угол — фундамент для заданий №15 и №19 ОГЭ.</p>
+  <div class="timeline">
+    <a href="#warmup">① Проверка ДЗ <small>0–10′</small></a>
+    <a href="#theory">② Теория <small>10–25′</small></a>
+    <a href="#practice">③ Практика <small>25–45′</small></a>
+    <a href="#oge">④ ОГЭ <small>45–55′</small></a>
+    <a href="#hw">⑤ Итог и ДЗ <small>55–60′</small></a>
+    <a href="#bonus">★ Бонус</a>
+  </div>
+  <svg class="deco" width="220" height="160" viewBox="0 0 220 160"><path d="M20 150 L120 20 L210 150 Z" fill="none" stroke="#fff" stroke-width="3"/><path d="M48 150 A28 28 0 0 0 37 128" fill="none" stroke="#fff" stroke-width="3"/><path d="M182 150 A28 28 0 0 1 195 128" fill="none" stroke="#fff" stroke-width="3"/></svg>
+</header>
+
+<!-- ============ ПАНЕЛЬ УЧИТЕЛЯ ============ -->
+<div class="teacher-panel teacher-only">
+  <h3>План занятия для учителя (60 минут)</h3>
+  <ol>
+    <li><b>0–10′ Разминка.</b> Первое занятие — вместо проверки ДЗ входная разминка из 5 вопросов. Цель: понять, что ученик помнит из 7 класса. Если 4–5 верно, теорию проходим быстро.</li>
+    <li><b>10–25′ Теория + лаборатории.</b> В лаборатории треугольника попросите сделать треугольник с тупым углом и с прямым — сумма всегда 180°. Во второй лаборатории ученик сам называет пары углов.</li>
+    <li><b>25–45′ Практика.</b> Игра «Какая это пара?» (≈5 мин), затем задачи П1–П8. П9–П10 — если идёт быстро.</li>
+    <li><b>45–55′ ОГЭ.</b> Задачи №15 устно-письменно, два задания №19 — обсудить каждое утверждение.</li>
+    <li><b>55–60′ Итог.</b> Пройтись по шпаргалке, выдать ДЗ (5 задач) и бонусное ДЗ.</li>
+  </ol>
+  <p class="muted" style="margin:0">Типичные ошибки: путают накрест лежащие и односторонние углы; считают, что внешний угол равен 180° минус сумма двух других; в задачах на отношение углов забывают, что сумма частей — это 180°.</p>
+</div>
+
+<!-- ============ 1. ПРОВЕРКА ДЗ / РАЗМИНКА ============ -->
+<section class="card" id="warmup" data-nav="Разминка">
+  <h2><span class="step">1</span> Разминка <span class="mins">0–10 мин</span></h2>
+  <div class="tasks">
+    <div class="task" data-id="w1">
+      <div class="task-head"><span class="tnum">Р1</span><span class="pill lvl1">база</span></div>
+      <p>Чему равна сумма смежных углов (в градусах)?</p>
+      <div class="ans-row"><label>Ответ: <input class="ans" data-a="180"></label></div>
+    </div>
+    <div class="task" data-id="w2">
+      <div class="task-head"><span class="tnum">Р2</span><span class="pill lvl1">база</span></div>
+      <p>Один из вертикальных углов равен 47°. Чему равен другой?</p>
+      <div class="ans-row"><label>Ответ: <input class="ans" data-a="47"></label></div>
+    </div>
+    <div class="task" data-id="w3">
+      <div class="task-head"><span class="tnum">Р3</span><span class="pill lvl1">база</span></div>
+      <p>Один из смежных углов равен 65°. Найдите другой.</p>
+      <div class="ans-row"><label>Ответ: <input class="ans" data-a="115"></label></div>
+      <div class="sol">180° − 65° = 115°.</div>
+    </div>
+    <div class="task" data-id="w4">
+      <div class="task-head"><span class="tnum">Р4</span><span class="pill lvl1">база</span></div>
+      <p>Два угла треугольника равны 50° и 60°. Найдите третий угол.</p>
+      <div class="ans-row"><label>Ответ: <input class="ans" data-a="70"></label></div>
+      <div class="sol">180° − 50° − 60° = 70°.</div>
+    </div>
+    <div class="task" data-id="w5">
+      <div class="task-head"><span class="tnum">Р5</span><span class="pill lvl1">база</span></div>
+      <p>Может ли в треугольнике быть два тупых угла? Впишите «да» или «нет».</p>
+      <div class="ans-row"><label>Ответ: <input class="ans" data-a="нет" data-mode="text"></label></div>
+      <div class="sol">Нет: два тупых угла уже дают больше 180°.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 2. ТЕОРИЯ ============ -->
+<section class="card" id="theory" data-nav="Теория">
+  <h2><span class="step">2</span> Теория <span class="mins">10–25 мин</span></h2>
+  <p class="lead">Пять фактов, на которых держатся почти все задачи на углы.</p>
+
+  <h3>2.1. Смежные и вертикальные углы</h3>
+  <div class="grid2">
+    <div class="box def">
+      <span class="title">Смежные углы</span>
+      <p>Одна сторона общая, а две другие продолжают друг друга (образуют прямую).</p>
+      <div class="formula">∠1 + ∠2 = 180°</div>
+      <span class="title">Вертикальные углы</span>
+      <p>Стороны одного угла — продолжения сторон другого.</p>
+      <div class="formula">∠1 = ∠3, &nbsp; ∠2 = ∠4</div>
+      <div class="eg">∠1 = 65°. Тогда смежный ∠2 = 180° − 65° = 115°, вертикальный ∠3 = 65°.</div>
+    </div>
+    <figure>
+      <svg viewBox="0 0 320 200" width="320">
+        <line class="st" x1="20" y1="150" x2="300" y2="50"/>
+        <line class="st" x1="40" y1="40" x2="280" y2="160"/>
+        <path d="M190 100 A30 30 0 0 0 178.3 75.9" fill="none" stroke="#e5484d" stroke-width="3"/>
+        <path d="M131.7 124.1 A30 30 0 0 0 130 100" fill="none" stroke="#e5484d" stroke-width="3"/>
+        <circle class="pt" cx="160" cy="100" r="3.5"/>
+        <text class="tx" x="200" y="88">1</text><text class="tx" x="150" y="68">2</text>
+        <text class="tx" x="112" y="122">3</text><text class="tx" x="162" y="140">4</text>
+        <text class="txs" x="160" y="192" text-anchor="middle">∠1 и ∠3 вертикальные, ∠1 и ∠2 смежные</text>
+      </svg>
+    </figure>
+  </div>
+
+  <h3>2.2. Параллельные прямые и секущая</h3>
+  <div class="grid2">
+    <div class="box rule">
+      <span class="title">Если a ∥ b, то:</span>
+      <ul style="margin:6px 0 0;padding-left:20px">
+        <li><b>накрест лежащие</b> углы равны: ∠3 = ∠5, ∠4 = ∠6;</li>
+        <li><b>соответственные</b> углы равны: ∠1 = ∠5, ∠2 = ∠6 …;</li>
+        <li><b>односторонние</b> углы в сумме дают 180°: ∠4 + ∠5 = 180°.</li>
+      </ul>
+      <p style="margin-top:10px"><b>Признаки параллельности</b> — обратные утверждения: если накрест лежащие (или соответственные) углы равны или односторонние в сумме 180°, то прямые параллельны.</p>
+      <div class="eg">a ∥ b, ∠3 = 48°. Тогда ∠5 = 48° (накрест лежащие), ∠6 = 180° − 48° = 132° (односторонние).</div>
+    </div>
+    <figure><svg id="figParallel" viewBox="0 0 600 300" width="420"></svg>
+      <figcaption>Нумерация углов, как в учебнике Атанасяна</figcaption></figure>
+  </div>
+
+  <h3>2.3. Сумма углов треугольника</h3>
+  <div class="grid2">
+    <div class="box rule">
+      <div class="formula">∠A + ∠B + ∠C = 180°</div>
+      <p><b>Следствия:</b></p>
+      <ul style="margin:0;padding-left:20px">
+        <li>в треугольнике может быть <b>не больше одного</b> тупого или прямого угла;</li>
+        <li>острые углы прямоугольного треугольника в сумме дают <b>90°</b>;</li>
+        <li>каждый угол равностороннего треугольника равен <b>60°</b>.</li>
+      </ul>
+      <div class="eg">∠A = 50°, ∠B = 60° → ∠C = 180° − 50° − 60° = 70°.</div>
+    </div>
+    <div class="box def">
+      <span class="title">Внешний угол треугольника</span>
+      <p>Угол, смежный с углом треугольника. Он равен <b>сумме двух углов треугольника, не смежных с ним</b>:</p>
+      <div class="formula">∠BCD = ∠A + ∠B</div>
+      <div class="eg">∠A = 45°, ∠B = 70° → внешний угол при C равен 45° + 70° = 115°.</div>
+      <div class="eg trap">Внешний угол — это <b>не</b> «180° минус сумма двух других». 180° − (∠A + ∠B) — это сам угол C.</div>
+      <svg viewBox="0 0 320 150" width="300" style="display:block;margin:0 auto">
+        <path class="st fl" d="M30 130 L120 25 L220 130 Z"/>
+        <line class="st" x1="220" y1="130" x2="300" y2="130" stroke-dasharray="6 5"/>
+        <path d="M250 130 A30 30 0 0 0 200.5 107.1" fill="none" stroke="#8b5cf6" stroke-width="3"/>
+        <text class="tx" x="14" y="142">A</text><text class="tx" x="114" y="18">B</text><text class="tx" x="214" y="146">C</text><text class="tx" x="296" y="146">D</text>
+        <text class="txs" x="262" y="104" style="fill:#8b5cf6">внешний</text>
+      </svg>
+    </div>
+  </div>
+
+  <div class="box tip" style="margin-top:16px">
+    <span class="title">💡 Соотношения сторон и углов</span>
+    Против большей стороны лежит больший угол, против большего угла — большая сторона. Это часто встречается в задании №19.
+    <div class="eg">В △ABC AB = 5, BC = 7, AC = 9. Наибольший угол — против AC, то есть ∠B.</div>
+  </div>
+
+  <!-- лаборатории -->
+  <h3 id="lab">2.4. Лаборатория: сумма углов треугольника</h3>
+  <div class="lab">
+    <svg id="labTri" viewBox="0 0 600 340"></svg>
+    <div class="readout" id="triRead"></div>
+    <div class="controls">
+      <label><input type="checkbox" id="showExt" checked> Показать внешний угол при C</label>
+      <button class="btn small ghost" type="button" id="triRight">Сделать прямой угол C</button>
+      <button class="btn small ghost" type="button" id="triReset">Сбросить</button>
+    </div>
+    <p class="muted" style="margin:8px 0 0;font-size:14px">Перетаскивайте вершины A, B, C. Какой бы треугольник ни получился, сумма углов останется 180°, а внешний угол при C будет равен ∠A + ∠B.</p>
+  </div>
+
+  <h3>2.5. Лаборатория: углы при параллельных прямых</h3>
+  <div class="lab">
+    <svg id="labPar" viewBox="0 0 600 300"></svg>
+    <div class="controls">
+      <label>Наклон секущей: <input type="range" id="parSlider" min="25" max="155" value="60"></label>
+      <span class="pill" id="parVal">60°</span>
+    </div>
+    <div class="controls">
+      <button class="btn small ghost" type="button" data-pair="vert">Вертикальные</button>
+      <button class="btn small ghost" type="button" data-pair="adj">Смежные</button>
+      <button class="btn small ghost" type="button" data-pair="cross">Накрест лежащие</button>
+      <button class="btn small ghost" type="button" data-pair="corr">Соответственные</button>
+      <button class="btn small ghost" type="button" data-pair="one">Односторонние</button>
+    </div>
+    <p id="parExplain" style="margin:10px 0 0;font-weight:600">Выберите тип пары. Равные углы — одного цвета, неравные — разного.</p>
+  </div>
+</section>
+
+<!-- ============ ПРИМЕРЫ ============ -->
+<section class="card" id="examples" data-nav="Примеры">
+  <h2><span class="step">↳</span> Разбор примеров</h2>
+  <p class="lead">Три типа задач, которые встретятся в практике и на ОГЭ.</p>
+  <div class="grid3">
+    <div class="box example">
+      <span class="title">Пример 1. Параллельные прямые</span>
+      <p>a ∥ b, ∠4 = 68°. Найдите ∠5.</p>
+      <details class="reveal"><summary>Показать решение</summary><p><b>Решение.</b> ∠4 и ∠5 — односторонние, их сумма 180°: ∠5 = 180° − 68° = 112°.</p>
+      <p><b>Ответ:</b> 112.</p></details>
+    </div>
+    <div class="box example">
+      <span class="title">Пример 2. Внешний угол</span>
+      <p>В △ABC ∠A = 40°, внешний угол при вершине B равен 115°. Найдите ∠C.</p>
+      <details class="reveal"><summary>Показать решение</summary><p><b>Решение.</b> Внешний угол при B = ∠A + ∠C, значит ∠C = 115° − 40° = 75°.</p>
+      <p><b>Ответ:</b> 75.</p></details>
+    </div>
+    <div class="box example">
+      <span class="title">Пример 3. Отношение углов</span>
+      <p>Углы треугольника относятся как 2 : 3 : 4. Найдите больший угол.</p>
+      <details class="reveal"><summary>Показать решение</summary><p><b>Решение.</b> Всего 2 + 3 + 4 = 9 частей, одна часть = 180° : 9 = 20°. Больший угол = 4 · 20° = 80°.</p>
+      <p><b>Ответ:</b> 80.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 3. ПРАКТИКА ============ -->
+<section class="card" id="practice" data-nav="Практика">
+  <h2><span class="step">3</span> Интерактивная практика <span class="mins">25–45 мин</span></h2>
+  <p class="lead">Сначала игра на распознавание пар углов, затем задачи. Вводите ответ числом, без знака градуса.</p>
+
+  <h3>🎯 Игра «Какая это пара?»</h3>
+  <div class="lab task" id="game" data-id="game" data-noauto>
+    <svg id="gameSvg" viewBox="0 0 600 300"></svg>
+    <div class="controls" style="justify-content:space-between">
+      <b id="gameRound">Раунд 1 / 8</b><span class="pill" id="gameScore">Верно: 0</span>
+    </div>
+    <p style="margin:8px 0 0">Как называются подсвеченные углы <b id="gameQ"></b>?</p>
+    <div class="choice-btns" id="gameBtns">
+      <button type="button" data-t="vert">Вертикальные</button>
+      <button type="button" data-t="adj">Смежные</button>
+      <button type="button" data-t="cross">Накрест лежащие</button>
+      <button type="button" data-t="corr">Соответственные</button>
+      <button type="button" data-t="one">Односторонние</button>
+    </div>
+    <div class="controls"><span class="feedback" id="gameFb"></span><button class="btn small" type="button" id="gameNext" style="display:none">Следующий раунд →</button></div>
+    <div class="sol">Игра засчитывается при 6 и более верных ответах из 8. Ответ в каждом раунде показывается после выбора.</div>
+  </div>
+
+  <h3>Блок А. База</h3>
+  <div class="tasks">
+    <div class="task" data-id="p1">
+      <div class="task-head"><span class="tnum">П1</span><span class="pill lvl1">база</span></div>
+      <p>Один из смежных углов на 30° больше другого. Найдите больший угол.</p>
+      <div class="ans-row"><label>Ответ: <input class="ans" data-a="105"></label></div>
+      <div class="hint">Обозначьте меньший угол x, тогда больший x + 30. Их сумма 180°.</div>
+      <div class="sol">x + (x + 30) = 180 → 2x = 150 → x = 75. Больший угол 75° + 30° = 105°.</div>
+    </div>
+    <div class="task" data-id="p2">
+      <div class="task-head"><span class="tnum">П2</span><span class="pill lvl1">база</span></div>
+      <p>Сумма двух вертикальных углов равна 140°. Найдите каждый из этих углов.</p>
+      <div class="ans-row"><label>Ответ: <input class="ans" data-a="70"></label></div>
+      <div class="hint">Вертикальные углы равны.</div>
+      <div class="sol">Углы равны, поэтому каждый 140° : 2 = 70°.</div>
+    </div>
+    <div class="task" data-id="p3">
+      <div class="task-head"><span class="tnum">П3</span><span class="pill lvl1">база</span></div>
+      <p>Параллельные прямые a и b пересечены секущей. ∠3 = 48° (нумерация как на рисунке в теории). Найдите ∠5 и ∠6.</p>
+      <div class="ans-row">
+        <label>∠5 = <input class="ans" data-a="48" data-label="∠5"></label>
+        <label>∠6 = <input class="ans" data-a="132" data-label="∠6"></label>
+      </div>
+      <div class="hint">∠3 и ∠5 — накрест лежащие, ∠3 и ∠6 — односторонние.</div>
+      <div class="sol">∠5 = ∠3 = 48° (накрест лежащие). ∠6 = 180° − 48° = 132° (односторонние с ∠3).</div>
+    </div>
+    <div class="task" data-id="p4">
+      <div class="task-head"><span class="tnum">П4</span><span class="pill lvl1">база</span></div>
+      <p>При пересечении двух параллельных прямых секущей образовались углы, один из которых на 40° больше другого. Найдите больший из этих углов.</p>
+      <div class="ans-row"><label>Ответ: <input class="ans" data-a="110"></label></div>
+      <div class="hint">Из восьми углов есть только два разных значения, и они в сумме дают 180°.</div>
+      <div class="sol">x + (x + 40) = 180 → x = 70. Больший угол 110°.</div>
+    </div>
+    <div class="task" data-id="p5">
+      <div class="task-head"><span class="tnum">П5</span><span class="pill lvl1">база</span></div>
+      <p>В треугольнике ABC ∠A = 37°, ∠B = 94°. Найдите ∠C.</p>
+      <div class="ans-row"><label>Ответ: <input class="ans" data-a="49"></label></div>
+      <div class="sol">180° − 37° − 94° = 49°.</div>
+    </div>
+    <div class="task" data-id="p6">
+      <div class="task-head"><span class="tnum">П6</span><span class="pill lvl1">база</span></div>
+      <p>Внешний угол при вершине B треугольника ABC равен 132°, ∠A = 57°. Найдите ∠C.</p>
+      <div class="ans-row"><label>Ответ: <input class="ans" data-a="75"></label></div>
+      <div class="hint">Внешний угол при B равен сумме ∠A и ∠C.</div>
+      <div class="sol">∠A + ∠C = 132°, значит ∠C = 132° − 57° = 75°.</div>
+    </div>
+  </div>
+
+  <h3>Блок Б. Посложнее</h3>
+  <div class="tasks">
+    <div class="task" data-id="p7">
+      <div class="task-head"><span class="tnum">П7</span><span class="pill lvl2">средний</span></div>
+      <p>Углы треугольника относятся как 3 : 5 : 7. Найдите наименьший угол.</p>
+      <div class="ans-row"><label>Ответ: <input class="ans" data-a="36"></label></div>
+      <div class="hint">Всего 3 + 5 + 7 = 15 частей.</div>
+      <div class="sol">180° : 15 = 12°, наименьший угол 3 · 12° = 36°.</div>
+    </div>
+    <div class="task" data-id="p8">
+      <div class="task-head"><span class="tnum">П8</span><span class="pill lvl2">средний</span></div>
+      <p>В прямоугольном треугольнике один острый угол в 2 раза больше другого. Найдите больший острый угол.</p>
+      <div class="ans-row"><label>Ответ: <input class="ans" data-a="60"></label></div>
+      <div class="hint">Острые углы прямоугольного треугольника в сумме дают 90°.</div>
+      <div class="sol">x + 2x = 90 → x = 30, больший угол 60°.</div>
+    </div>
+    <div class="task" data-id="p9">
+      <div class="task-head"><span class="tnum">П9</span><span class="pill lvl2">средний</span></div>
+      <p>Один из углов треугольника равен 48°, а два других относятся как 5 : 7. Найдите больший из них.</p>
+      <div class="ans-row"><label>Ответ: <input class="ans" data-a="77"></label></div>
+      <div class="hint">Сначала найдите сумму двух других углов: 180° − 48°.</div>
+      <div class="sol">Два угла в сумме 132°. 132° : 12 = 11°, больший 7 · 11° = 77°.</div>
+    </div>
+    <div class="task" data-id="p10">
+      <div class="task-head"><span class="tnum">П10</span><span class="pill lvl3">сложнее</span></div>
+      <p>В треугольнике ABC ∠A = 50°, ∠B = 70°. Биссектрисы углов A и B пересекаются в точке O. Найдите угол AOB.</p>
+      <div class="ans-row"><label>Ответ: <input class="ans" data-a="120"></label></div>
+      <div class="hint">Рассмотрите треугольник AOB: его углы при A и B — половины углов треугольника ABC.</div>
+      <div class="sol">∠OAB = 25°, ∠OBA = 35°, ∠AOB = 180° − 25° − 35° = 120°.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 4. ОГЭ ============ -->
+<section class="card oge" id="oge" data-nav="ОГЭ">
+  <h2><span class="step">4</span> Задачи в формате ОГЭ <span class="mins">45–55 мин</span></h2>
+  <p class="lead">Формулировки как в Открытом банке ФИПИ. В бланк ответов записывается только число.</p>
+  <div class="tasks">
+    <div class="task" data-id="o1">
+      <div class="task-head"><span class="tnum">О1</span><span class="pill oge">ОГЭ №15</span></div>
+      <p>В треугольнике ABC известно, что ∠BAC = 82°, AD — биссектриса. Найдите угол BAD. Ответ дайте в градусах.</p>
+      <div class="ans-row"><label>Ответ: <input class="ans" data-a="41"></label></div>
+      <div class="sol">Биссектриса делит угол пополам: 82° : 2 = 41°.</div>
+    </div>
+    <div class="task" data-id="o2">
+      <div class="task-head"><span class="tnum">О2</span><span class="pill oge">ОГЭ №15</span></div>
+      <p>В треугольнике ABC угол A равен 45°, угол B равен 70°. Найдите внешний угол при вершине C. Ответ дайте в градусах.</p>
+      <div class="ans-row"><label>Ответ: <input class="ans" data-a="115"></label></div>
+      <div class="sol">Внешний угол при C = ∠A + ∠B = 45° + 70° = 115°.</div>
+    </div>
+    <div class="task" data-id="o3">
+      <div class="task-head"><span class="tnum">О3</span><span class="pill oge">ОГЭ №15</span></div>
+      <p>В треугольнике ABC угол C равен 90°, угол A равен 34°. Найдите угол B. Ответ дайте в градусах.</p>
+      <div class="ans-row"><label>Ответ: <input class="ans" data-a="56"></label></div>
+      <div class="sol">90° − 34° = 56°.</div>
+    </div>
+    <div class="task" data-id="o4">
+      <div class="task-head"><span class="tnum">О4</span><span class="pill oge">ОГЭ №15</span></div>
+      <p>Сумма двух углов треугольника и внешнего угла к третьему равна 140°. Найдите третий угол треугольника. Ответ дайте в градусах.</p>
+      <div class="ans-row"><label>Ответ: <input class="ans" data-a="110"></label></div>
+      <div class="hint">Внешний угол к третьему углу равен сумме двух первых.</div>
+      <div class="sol">Пусть два угла дают в сумме S. Внешний угол к третьему тоже равен S, поэтому 2S = 140°, S = 70°. Третий угол 180° − 70° = 110°.</div>
+    </div>
+    <div class="task" data-id="o5">
+      <div class="task-head"><span class="tnum">О5</span><span class="pill oge">ОГЭ №15</span></div>
+      <p>Один из углов, образованных при пересечении двух параллельных прямых секущей, равен 54°. Найдите наибольший из восьми получившихся углов. Ответ дайте в градусах.</p>
+      <div class="ans-row"><label>Ответ: <input class="ans" data-a="126"></label></div>
+      <div class="sol">Все восемь углов равны либо 54°, либо 180° − 54° = 126°.</div>
+    </div>
+    <div class="task" data-id="o6" data-mode="digits">
+      <div class="task-head"><span class="tnum">О6</span><span class="pill oge">ОГЭ №19</span></div>
+      <p>Какие из следующих утверждений верны? В ответ запишите номера выбранных утверждений без пробелов и запятых.</p>
+      <ol style="margin:6px 0">
+        <li>Сумма углов любого треугольника равна 360°.</li>
+        <li>Вертикальные углы равны.</li>
+        <li>В тупоугольном треугольнике все углы тупые.</li>
+      </ol>
+      <div class="ans-row"><label>Ответ: <input class="ans" data-a="2"></label></div>
+      <div class="sol">1 — неверно (180°). 2 — верно. 3 — неверно: тупой угол только один, два других острые.</div>
+    </div>
+    <div class="task" data-id="o7" data-mode="digits">
+      <div class="task-head"><span class="tnum">О7</span><span class="pill oge">ОГЭ №19</span></div>
+      <p>Какие из следующих утверждений верны? В ответ запишите номера выбранных утверждений без пробелов и запятых.</p>
+      <ol style="margin:6px 0">
+        <li>Через точку, не лежащую на данной прямой, можно провести прямую, параллельную этой прямой.</li>
+        <li>Внешний угол треугольника равен сумме двух углов треугольника, не смежных с ним.</li>
+        <li>Если угол острый, то смежный с ним угол также является острым.</li>
+      </ol>
+      <div class="ans-row"><label>Ответ: <input class="ans" data-a="12"></label></div>
+      <div class="sol">1 — верно (аксиома параллельных). 2 — верно. 3 — неверно: смежный с острым углом — тупой.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 5. ИТОГ И ДЗ ============ -->
+<section class="card" id="hw" data-nav="Итог и ДЗ">
+  <h2><span class="step">5</span> Итог и домашнее задание <span class="mins">55–60 мин</span></h2>
+  <h3>Шпаргалка занятия</h3>
+  <div class="cheat">
+    <div><b>Смежные:</b> ∠1 + ∠2 = 180°</div>
+    <div><b>Вертикальные:</b> равны</div>
+    <div><b>a ∥ b:</b> накрест лежащие и соответственные равны, односторонние = 180°</div>
+    <div><b>Треугольник:</b> ∠A + ∠B + ∠C = 180°</div>
+    <div><b>Внешний угол</b> = сумма двух несмежных</div>
+    <div><b>Прямоугольный △:</b> острые углы в сумме 90°</div>
+  </div>
+
+  <h3>📚 Домашнее задание</h3>
+  <p class="muted">Ответы проверяются в начале занятия 2.</p>
+  <ol class="hw">
+    <li>Один из смежных углов в 4 раза меньше другого. Найдите меньший угол.
+      <div class="sol"><span class="ansline">Ответ: 36.</span> x + 4x = 180 → x = 36°.</div></li>
+    <li>Параллельные прямые пересечены секущей. Сумма двух накрест лежащих углов равна 150°. Найдите каждый из них.
+      <div class="sol"><span class="ansline">Ответ: 75.</span> Накрест лежащие углы равны: 150° : 2 = 75°.</div></li>
+    <li>В треугольнике ABC ∠A = 38°, внешний угол при вершине C равен 104°. Найдите ∠B.
+      <div class="sol"><span class="ansline">Ответ: 66.</span> ∠A + ∠B = 104°, ∠B = 104° − 38° = 66°.</div></li>
+    <li>Углы треугольника относятся как 1 : 2 : 3. Найдите больший угол.
+      <div class="sol"><span class="ansline">Ответ: 90.</span> 180° : 6 = 30°, больший 3 · 30° = 90°.</div></li>
+    <li>(ОГЭ №19) Какие утверждения верны? 1) Сумма острых углов прямоугольного треугольника равна 90°. 2) Если две параллельные прямые пересечены секущей, то односторонние углы равны. 3) Треугольник может иметь два прямых угла.
+      <div class="sol"><span class="ansline">Ответ: 1.</span> 2 — неверно (их сумма 180°), 3 — неверно (сумма уже 180° без третьего угла).</div></li>
+  </ol>
+
+  <h3>⭐ Бонусное ДЗ</h3>
+  <ol class="hw">
+    <li>Найдите угол между биссектрисами двух смежных углов.
+      <div class="sol"><span class="ansline">Ответ: 90.</span> Половины смежных углов в сумме дают 180° : 2 = 90°.</div></li>
+    <li>В треугольнике ABC ∠A = 60°, ∠B = 80°, CL — биссектриса. Найдите угол ALC.
+      <div class="sol"><span class="ansline">Ответ: 100.</span> ∠C = 40°, ∠ACL = 20°. В △ALC: ∠ALC = 180° − 60° − 20° = 100°.</div></li>
+    <li>Докажите, что сумма углов любого выпуклого четырёхугольника равна 360°.
+      <div class="sol">Диагональ делит четырёхугольник на два треугольника. Углы четырёхугольника складываются из углов этих треугольников: 180° + 180° = 360°.</div></li>
+  </ol>
+  <p style="margin-top:18px"><button class="btn small ghost" type="button" onclick="GeoResetLesson()">Сбросить прогресс занятия</button></p>
+</section>
+
+<!-- ============ БОНУСНАЯ ПРАКТИКА ============ -->
+<section class="card bonus" id="bonus" data-nav="★ Бонус">
+  <h2><span class="step">★</span> Бонусная практика</h2>
+  <p class="lead">Для тех, кто справился быстрее. Задачи не обязательны, но очень полезны для второй части ОГЭ.</p>
+  <div class="tasks">
+    <div class="task" data-id="b1">
+      <div class="task-head"><span class="tnum">Б1</span><span class="pill lvl3">сложнее</span></div>
+      <p>Внешние углы треугольника при двух его вершинах равны 120° и 150°. Найдите третий угол треугольника.</p>
+      <div class="ans-row"><label>Ответ: <input class="ans" data-a="90"></label></div>
+      <div class="sol">Внутренние углы при этих вершинах: 60° и 30°. Третий угол 180° − 60° − 30° = 90°.</div>
+    </div>
+    <div class="task" data-id="b2">
+      <div class="task-head"><span class="tnum">Б2</span><span class="pill lvl3">сложнее</span></div>
+      <p>В треугольнике ABC ∠C = 64°. Найдите тупой угол, под которым пересекаются биссектрисы углов A и B.</p>
+      <div class="ans-row"><label>Ответ: <input class="ans" data-a="122"></label></div>
+      <div class="hint">∠A + ∠B = 116°. Чему равна сумма их половин?</div>
+      <div class="sol">Половины ∠A и ∠B в сумме 58°, поэтому угол между биссектрисами 180° − 58° = 122°. Общая формула: 90° + ∠C/2.</div>
+    </div>
+    <div class="task" data-id="b3">
+      <div class="task-head"><span class="tnum">Б3</span><span class="pill lvl3">сложнее</span></div>
+      <p>Найдите сумму внешних углов треугольника, взятых по одному при каждой вершине.</p>
+      <div class="ans-row"><label>Ответ: <input class="ans" data-a="360"></label></div>
+      <div class="sol">Каждый внешний угол = 180° − внутренний. Сумма: 3 · 180° − 180° = 360°.</div>
+    </div>
+    <div class="task" data-id="b4">
+      <div class="task-head"><span class="tnum">Б4</span><span class="pill lvl3">сложнее</span></div>
+      <p>Прямые a и b параллельны. Точка M лежит между ними, отрезки MA и MB соединяют её с точками A ∈ a и B ∈ b (см. рисунок). Угол между прямой a и отрезком AM равен 35°, угол между прямой b и отрезком BM равен 45°. Найдите угол AMB.</p>
+      <figure><svg viewBox="0 0 360 200" width="340">
+        <line class="st" x1="20" y1="40" x2="340" y2="40"/><line class="st" x1="20" y1="160" x2="340" y2="160"/>
+        <polyline class="st" points="90,40 230,100 110,160"/>
+        <circle class="pt" cx="90" cy="40" r="3.5"/><circle class="pt" cx="230" cy="100" r="3.5"/><circle class="pt" cx="110" cy="160" r="3.5"/>
+        <text class="tx" x="80" y="30">A</text><text class="tx" x="100" y="182">B</text><text class="tx" x="240" y="104">M</text>
+        <text class="tx" x="326" y="32">a</text><text class="tx" x="326" y="152">b</text>
+        <text class="txs" x="128" y="58">35°</text><text class="txs" x="146" y="152">45°</text><text class="txs" x="198" y="104">?</text>
+      </svg></figure>
+      <div class="ans-row"><label>Ответ: <input class="ans" data-a="80"></label></div>
+      <div class="hint">Проведите через M прямую, параллельную a и b, и найдите накрест лежащие углы.</div>
+      <div class="sol">Прямая через M параллельно a делит ∠AMB на два угла: 35° и 45° (накрест лежащие). ∠AMB = 35° + 45° = 80°.</div>
+    </div>
+  </div>
+</section>
+
+</div>
+
+<script src="../assets/core.js"></script>
+<script>
+/* ================== Лаборатория: треугольник ================== */
+(function(){
+  var svg = document.getElementById('labTri'), NS = 'http://www.w3.org/2000/svg';
+  var P = {A:{x:110,y:290}, B:{x:250,y:70}, C:{x:430,y:290}};
+  var START = JSON.parse(JSON.stringify(P));
+  var showExt = document.getElementById('showExt');
+  function el(t, a){ var e = document.createElementNS(NS, t); for(var k in a) e.setAttribute(k, a[k]); return e; }
+  function ang(p, q, r){ // угол при вершине p
+    var a1 = Math.atan2(q.y-p.y, q.x-p.x), a2 = Math.atan2(r.y-p.y, r.x-p.x);
+    var d = Math.abs(a1 - a2); if(d > Math.PI) d = 2*Math.PI - d; return d * 180 / Math.PI;
+  }
+  function arc(p, q, r, rad, color, w){
+    var u1 = {x:q.x-p.x, y:q.y-p.y}, u2 = {x:r.x-p.x, y:r.y-p.y};
+    var l1 = Math.hypot(u1.x,u1.y), l2 = Math.hypot(u2.x,u2.y);
+    u1 = {x:u1.x/l1, y:u1.y/l1}; u2 = {x:u2.x/l2, y:u2.y/l2};
+    var cross = u1.x*u2.y - u1.y*u2.x;
+    var s = {x:p.x+rad*u1.x, y:p.y+rad*u1.y}, e = {x:p.x+rad*u2.x, y:p.y+rad*u2.y};
+    return el('path', {d:'M'+s.x+' '+s.y+' A'+rad+' '+rad+' 0 0 '+(cross>0?1:0)+' '+e.x+' '+e.y, fill:'none', stroke:color, 'stroke-width':w||3});
+  }
+  function lab(p, q, r, dist, text, color){
+    var u1 = {x:q.x-p.x, y:q.y-p.y}, u2 = {x:r.x-p.x, y:r.y-p.y};
+    var l1 = Math.hypot(u1.x,u1.y), l2 = Math.hypot(u2.x,u2.y);
+    var m = {x:u1.x/l1+u2.x/l2, y:u1.y/l1+u2.y/l2}, lm = Math.hypot(m.x,m.y) || 1;
+    var t = el('text', {x:p.x+dist*m.x/lm, y:p.y+dist*m.y/lm+5, 'text-anchor':'middle', 'class':'tx'});
+    t.setAttribute('style','fill:'+color+';font-size:14px'); t.textContent = text; return t;
+  }
+  function draw(){
+    while(svg.firstChild) svg.removeChild(svg.firstChild);
+    var A = P.A, B = P.B, C = P.C;
+    var a = Math.round(ang(A,B,C)), b = Math.round(ang(B,A,C)), c = 180 - a - b;
+    svg.appendChild(el('path', {d:'M'+A.x+' '+A.y+' L'+B.x+' '+B.y+' L'+C.x+' '+C.y+' Z', 'class':'st fl'}));
+    svg.appendChild(arc(A,B,C,30,'#e5484d')); svg.appendChild(arc(B,A,C,30,'#2f7de1')); svg.appendChild(arc(C,A,B,30,'#16a34a'));
+    svg.appendChild(lab(A,B,C,52,a+'°','#e5484d')); svg.appendChild(lab(B,A,C,52,b+'°','#2f7de1')); svg.appendChild(lab(C,A,B,52,c+'°','#16a34a'));
+    if(showExt.checked){
+      var dx = C.x-A.x, dy = C.y-A.y, L = Math.hypot(dx,dy), D = {x:C.x+90*dx/L, y:C.y+90*dy/L};
+      svg.appendChild(el('line', {x1:C.x, y1:C.y, x2:D.x, y2:D.y, 'class':'st', 'stroke-dasharray':'6 5'}));
+      svg.appendChild(arc(C,D,B,44,'#8b5cf6',3));
+      svg.appendChild(lab(C,D,B,66,(180-c)+'°','#8b5cf6'));
+    }
+    [['A',A],['B',B],['C',C]].forEach(function(n){
+      var h = el('circle', {cx:n[1].x, cy:n[1].y, r:11, fill:'#2f5bea', 'fill-opacity':'.18', stroke:'#2f5bea', 'stroke-width':2, 'class':'handle', 'data-v':n[0]});
+      svg.appendChild(h);
+      var t = el('text', {x:n[1].x, y:n[1].y - 18, 'text-anchor':'middle', 'class':'tx'}); t.textContent = n[0]; svg.appendChild(t);
+    });
+    var r = document.getElementById('triRead');
+    r.innerHTML = '<span style="color:#e5484d">∠A = '+a+'°</span><span style="color:#2f7de1">∠B = '+b+'°</span><span style="color:#16a34a">∠C = '+c+'°</span><span>Сумма = '+(a+b+c)+'°</span>' +
+      (showExt.checked ? '<span style="color:#8b5cf6">Внешний при C = '+(180-c)+'° = ∠A + ∠B</span>' : '');
+  }
+  var drag = null;
+  function pos(e){ var pt = svg.createSVGPoint(); var s = e.touches ? e.touches[0] : e; pt.x = s.clientX; pt.y = s.clientY; var p = pt.matrixTransform(svg.getScreenCTM().inverse()); return {x:Math.max(15,Math.min(585,p.x)), y:Math.max(25,Math.min(325,p.y))}; }
+  svg.addEventListener('pointerdown', function(e){ var v = e.target.getAttribute && e.target.getAttribute('data-v'); if(v){ drag = v; svg.setPointerCapture(e.pointerId); } });
+  svg.addEventListener('pointermove', function(e){ if(!drag) return; var p = pos(e), o = {A:P.A,B:P.B,C:P.C}; o[drag] = p;
+    var area = Math.abs((o.B.x-o.A.x)*(o.C.y-o.A.y) - (o.C.x-o.A.x)*(o.B.y-o.A.y)); if(area < 2500) return; P[drag] = p; draw(); });
+  svg.addEventListener('pointerup', function(){ drag = null; });
+  showExt.addEventListener('change', draw);
+  document.getElementById('triReset').addEventListener('click', function(){ P = JSON.parse(JSON.stringify(START)); draw(); });
+  document.getElementById('triRight').addEventListener('click', function(){ P = {A:{x:110,y:290}, B:{x:430,y:80}, C:{x:430,y:290}}; draw(); });
+  draw();
+})();
+
+/* ================== Параллельные прямые: общий рисовальщик ================== */
+var Parallel = (function(){
+  var NS = 'http://www.w3.org/2000/svg';
+  var YA = 100, YB = 210, XB = 300;
+  // позиции: 0 UL, 1 UR, 2 LR, 3 LL; верхнее пересечение — углы 1..4, нижнее — 5..8
+  function el(t, a){ var e = document.createElementNS(NS, t); for(var k in a) e.setAttribute(k, a[k]); return e; }
+  function region(pos, th){ // границы в математических градусах
+    return [[th,180],[0,th],[180+th,360],[180,180+th]][pos];
+  }
+  function value(pos, th){ return (pos === 1 || pos === 3) ? th : 180 - th; }
+  function pt(c, deg, r){ var a = deg*Math.PI/180; return {x:c.x + r*Math.cos(a), y:c.y - r*Math.sin(a)}; }
+  function wedge(c, from, to, r){
+    var s = pt(c, from, r), e = pt(c, to, r), large = (to - from) > 180 ? 1 : 0;
+    return 'M'+c.x+' '+c.y+' L'+s.x+' '+s.y+' A'+r+' '+r+' 0 '+large+' 0 '+e.x+' '+e.y+' Z';
+  }
+  function draw(svg, th, hl, opts){
+    opts = opts || {};
+    while(svg.firstChild) svg.removeChild(svg.firstChild);
+    var t = th*Math.PI/180, dx = (YB-YA)/Math.tan(t);
+    var cB = {x:XB, y:YB}, cA = {x:XB+dx, y:YA};
+    var ext = 75, ux = Math.cos(t), uy = -Math.sin(t);
+    var L = Math.hypot(cA.x-cB.x, cA.y-cB.y);
+    svg.appendChild(el('line', {x1:30, y1:YA, x2:570, y2:YA, 'class':'st'}));
+    svg.appendChild(el('line', {x1:30, y1:YB, x2:570, y2:YB, 'class':'st'}));
+    svg.appendChild(el('line', {x1:cB.x - ext*ux, y1:cB.y - ext*uy, x2:cB.x + (L+ext)*ux, y2:cB.y + (L+ext)*uy, 'class':'st'}));
+    var lt = el('text', {x:555, y:YA-8, 'class':'tx'}); lt.textContent = 'a'; svg.appendChild(lt);
+    var lb = el('text', {x:555, y:YB-8, 'class':'tx'}); lb.textContent = 'b'; svg.appendChild(lb);
+    (hl || []).forEach(function(n, i){
+      var c = n <= 4 ? cA : cB, pos = (n-1) % 4, r = region(pos, th);
+      // равные углы — одним цветом, неравные — разными (в игре цвет нейтральный, чтобы не подсказывать)
+      var col = opts.neutral ? '#8b5cf6' : ((pos === 1 || pos === 3) ? '#2f7de1' : '#e5484d');
+      svg.appendChild(el('path', {d:wedge(c, r[0], r[1], 36), fill:col, 'fill-opacity':'.35', stroke:col, 'stroke-width':2}));
+    });
+    for(var n = 1; n <= 8; n++){
+      var c = n <= 4 ? cA : cB, pos = (n-1) % 4, r = region(pos, th), mid = (r[0]+r[1])/2;
+      var p = pt(c, mid, 22);
+      var tx = el('text', {x:p.x, y:p.y+5, 'text-anchor':'middle', 'class':'txs'});
+      var on = (hl || []).indexOf(n) >= 0;
+      tx.setAttribute('style', 'font-weight:700;font-size:'+(on?16:(opts.big?17:13))+'px;' + (on ? 'fill:var(--ink)' : ''));
+      tx.textContent = opts.values ? value(pos, th) + '°' : n;
+      if(opts.values && !on) continue;
+      svg.appendChild(tx);
+    }
+    svg.appendChild(el('circle', {cx:cA.x, cy:cA.y, r:3.5, 'class':'pt'}));
+    svg.appendChild(el('circle', {cx:cB.x, cy:cB.y, r:3.5, 'class':'pt'}));
+  }
+  var PAIRS = {
+    vert: [[1,3],[2,4],[5,7],[6,8]],
+    adj:  [[1,2],[2,3],[3,4],[4,1],[5,6],[6,7],[7,8],[8,5]],
+    cross:[[3,5],[4,6]],
+    corr: [[1,5],[2,6],[3,7],[4,8]],
+    one:  [[4,5],[3,6]]
+  };
+  var NAMES = {vert:'вертикальные', adj:'смежные', cross:'накрест лежащие', corr:'соответственные', one:'односторонние'};
+  var RULE = {vert:'они равны', adj:'их сумма 180°', cross:'при a ∥ b они равны', corr:'при a ∥ b они равны', one:'при a ∥ b их сумма 180°'};
+  return {draw:draw, value:value, PAIRS:PAIRS, NAMES:NAMES, RULE:RULE};
+})();
+
+/* статичный рисунок в теории */
+Parallel.draw(document.getElementById('figParallel'), 60, [], {big:true});
+
+/* ================== Лаборатория: параллельные прямые ================== */
+(function(){
+  var svg = document.getElementById('labPar'), sl = document.getElementById('parSlider');
+  var hl = [], type = null, idx = {};
+  function upd(){
+    var th = +sl.value; document.getElementById('parVal').textContent = th + '°';
+    Parallel.draw(svg, th, hl);
+    if(type){
+      var v1 = Parallel.value((hl[0]-1)%4, th), v2 = Parallel.value((hl[1]-1)%4, th);
+      document.getElementById('parExplain').innerHTML = '∠' + hl[0] + ' и ∠' + hl[1] + ' — ' + Parallel.NAMES[type] + ': ' + Parallel.RULE[type] +
+        '. Сейчас ∠' + hl[0] + ' = ' + v1 + '°, ∠' + hl[1] + ' = ' + v2 + '°.';
+    }
+  }
+  sl.addEventListener('input', upd);
+  document.querySelectorAll('[data-pair]').forEach(function(b){
+    b.addEventListener('click', function(){
+      type = b.getAttribute('data-pair'); var list = Parallel.PAIRS[type];
+      idx[type] = ((idx[type] == null ? -1 : idx[type]) + 1) % list.length; hl = list[idx[type]]; upd();
+    });
+  });
+  upd();
+})();
+
+/* ================== Игра «Какая это пара?» ================== */
+document.addEventListener('geo:ready', function(){
+  var svg = document.getElementById('gameSvg'), types = ['vert','adj','cross','corr','one'];
+  var round = 0, score = 0, cur = null, answered = false, ROUNDS = 8;
+  var fb = document.getElementById('gameFb'), next = document.getElementById('gameNext');
+  var btns = document.querySelectorAll('#gameBtns button');
+  function newRound(){
+    answered = false; round++;
+    var t = types[Math.floor(Math.random()*types.length)], list = Parallel.PAIRS[t], pair = list[Math.floor(Math.random()*list.length)];
+    var th = 35 + Math.floor(Math.random()*110); if(th > 82 && th < 98) th += 20;
+    cur = {t:t, pair:pair};
+    Parallel.draw(svg, th, pair, {neutral:true});
+    document.getElementById('gameRound').textContent = 'Раунд ' + round + ' / ' + ROUNDS;
+    document.getElementById('gameQ').textContent = '∠' + pair[0] + ' и ∠' + pair[1];
+    fb.textContent = ''; fb.className = 'feedback'; next.style.display = 'none';
+    btns.forEach(function(b){ b.classList.remove('good','wrong'); b.disabled = false; });
+  }
+  btns.forEach(function(b){
+    b.addEventListener('click', function(){
+      if(answered) return; answered = true;
+      var ok = b.getAttribute('data-t') === cur.t;
+      if(ok){ score++; b.classList.add('good'); fb.className = 'feedback ok'; fb.textContent = '✓ Верно: ' + Parallel.NAMES[cur.t] + ' — ' + Parallel.RULE[cur.t] + '.'; }
+      else { b.classList.add('wrong'); btns.forEach(function(x){ if(x.getAttribute('data-t') === cur.t) x.classList.add('good'); });
+        fb.className = 'feedback bad'; fb.textContent = '✗ Это ' + Parallel.NAMES[cur.t] + ' углы — ' + Parallel.RULE[cur.t] + '.'; }
+      document.getElementById('gameScore').textContent = 'Верно: ' + score;
+      if(round < ROUNDS){ next.textContent = 'Следующий раунд →'; next.style.display = ''; }
+      else {
+        var pass = score >= 6;
+        fb.textContent += pass ? '  Игра пройдена: ' + score + ' из ' + ROUNDS + ' 🎉' : '  Итог: ' + score + ' из ' + ROUNDS + '. Нужно 6 — сыграйте ещё раз.';
+        if(pass){ GeoMarkSolved('game'); document.getElementById('game').classList.add('ok'); }
+        next.textContent = 'Сыграть ещё раз ↻'; next.style.display = '';
+      }
+    });
+  });
+  next.addEventListener('click', function(){ if(round >= ROUNDS){ round = 0; score = 0; document.getElementById('gameScore').textContent = 'Верно: 0'; } newRound(); });
+  if(GeoIsSolved('game')) document.getElementById('game').classList.add('ok');
+  newRound();
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Алгебра · занятие 10 · Дробные рациональные уравнения</title>
+<link rel="stylesheet" href="../assets/core.css">
+</head>
+<body data-lesson="A10">
+
+<nav class="topnav"><div class="in">
+  <a class="home" href="../algebra.html">🧮 <span>Алгебра · ОГЭ</span></a>
+  <div class="links"></div>
+  <a class="home" href="../spravochnik-algebra.html" title="Справочник">📖</a>
+  <div class="progress-pill">Решено <b>0 / 0</b><div class="progress-bar"><i></i></div></div>
+</div></nav>
+
+<div class="container">
+
+<header class="hero">
+  <span class="tag">Раздел 3 · Уравнения и неравенства с одной переменной</span><span class="tag">Алгебра · занятие 10 из 23</span><span class="tag">Учебник: гл. III §5, п. 14</span>
+  <h1>Дробные рациональные уравнения</h1>
+  <p>Допустимые значения переменной, умножение на общий знаменатель, отбор корней. Главная ловушка — корень, обращающий знаменатель в нуль.</p>
+  <div class="timeline">
+    <a href="#warmup">① Проверка ДЗ <small>0–10′</small></a>
+    <a href="#theory">② Теория <small>10–25′</small></a>
+    <a href="#practice">③ Практика <small>25–45′</small></a>
+    <a href="#oge">④ ОГЭ <small>45–55′</small></a>
+    <a href="#hw">⑤ Итог и ДЗ <small>55–60′</small></a>
+    <a href="#bonus">★ Бонус</a>
+  </div>
+</header>
+
+<div class="teacher-panel teacher-only">
+  <h3>План занятия (60 минут)</h3>
+  <ol><li><b>0–10′</b> Проверка ДЗ занятия 9.</li><li><b>10–25′</b> Теория: алгоритм из 4 шагов. Каждый пример заканчивать проверкой «знаменатель ≠ 0».</li><li><b>25–45′</b> Тренажёр, затем П1–П10.</li><li><b>45–55′</b> ОГЭ №9 и №20: оформить №20 с записью ОДЗ.</li><li><b>55–60′</b> Шпаргалка, ДЗ.</li></ol>
+  <p class="muted" style="margin:0">Типичные ошибки: не исключают корень, при котором знаменатель равен нулю; при умножении на общий знаменатель забывают домножить слагаемое без дроби; путают x² − 4 и (x − 2)².</p>
+</div>
+
+<section class="card" id="warmup" data-nav="Проверка ДЗ">
+  <h2><span class="step">1</span> Проверка ДЗ <span class="mins">0–10 мин</span></h2>
+  <div class="tasks"><div class="task" data-id="h1"><div class="task-head"><span class="tnum">ДЗ 1</span></div>
+<p>Решите уравнение x³ − 36x = 0. В ответе укажите наибольший корень.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="6"></label></div>
+</div>
+<div class="task" data-id="h2"><div class="task-head"><span class="tnum">ДЗ 2</span></div>
+<p>Решите уравнение x⁴ − 17x² + 16 = 0. В ответе укажите наибольший корень.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="4"></label></div>
+</div>
+<div class="task" data-id="h3"><div class="task-head"><span class="tnum">ДЗ 3</span></div>
+<p>Решите уравнение x⁴ − 3x² − 4 = 0.</p>
+<div class="ans-row"><label>меньший = <input class="ans" data-a="-2" data-label="меньший"></label><label>больший = <input class="ans" data-a="2" data-label="больший"></label></div>
+</div>
+<div class="task" data-id="h4"><div class="task-head"><span class="tnum">ДЗ 4</span></div>
+<p>Найдите сумму корней уравнения x³ − 3x² − 4x + 12 = 0.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="3"></label></div>
+</div>
+<div class="task" data-id="h5" data-mode="digits"><div class="task-head"><span class="tnum">ДЗ 5</span><span class="pill oge">ОГЭ №19</span></div>
+<p>1) Уравнение x⁴ + 1 = 0 не имеет корней. 2) Уравнение третьей степени всегда имеет ровно три корня. 3) Произведение равно нулю, если хотя бы один из множителей равен нулю, а остальные имеют смысл.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="13"></label></div>
+</div>
+</div>
+</section>
+
+<section class="card" id="theory" data-nav="Теория">
+  <h2><span class="step">2</span> Теория <span class="mins">10–25 мин</span></h2>
+
+  <div class="grid2">
+    <div class="box def"><span class="title">Дробное рациональное уравнение</span>
+      <ul class="rules"><li>Есть деление на выражение с переменной.</li><li>Допустимые значения: <b>все знаменатели ≠ 0</b>. Их выписывают до решения.</li></ul>
+      <div class="eg">3/(x − 2) + 1/x = 1 → x ≠ 2, x ≠ 0.</div>
+      <div class="eg">5/(x² − 9) = 1 → x² ≠ 9 → x ≠ ±3.</div></div>
+    <div class="box rule"><span class="title">Дробь равна нулю</span>
+      <div class="formula">A / B = 0 ⇔ A = 0 и B ≠ 0</div>
+      <div class="eg">(x² − 5x + 6)/(x − 3) = 0 → x² − 5x + 6 = 0 → x = 2 или x = 3. При x = 3 знаменатель 0 → ответ: 2.</div>
+      <div class="eg trap">(x² − 4)/(x − 2) = 0 → x = ±2, но x = 2 <b>посторонний</b>. Ответ: −2 (один корень, а не два).</div></div>
+  </div>
+  <div class="grid2" style="margin-top:14px">
+    <div class="box rule"><span class="title">Алгоритм решения</span>
+      <ol class="rules"><li>Найти общий знаменатель, записать условие «≠ 0».</li><li>Умножить обе части на общий знаменатель (<b>каждое</b> слагаемое).</li><li>Решить получившееся целое уравнение.</li><li>Исключить корни, обращающие знаменатель в нуль.</li></ol>
+      <div class="eg">x/(x + 2) = 4/(x + 6). Общий знаменатель (x + 2)(x + 6), x ≠ −2, x ≠ −6.<br>x(x + 6) = 4(x + 2) → x² + 2x − 8 = 0 → x = 2; −4. Оба допустимы.</div>
+      <div class="eg trap">x/(x − 2) − 1/(x + 2) = 8/(x² − 4). Умножаем на x² − 4: x(x + 2) − (x − 2) = 8 → x² + x − 6 = 0 → x = 2; −3. x = 2 обращает знаменатель в 0. Ответ: −3.</div></div>
+    <div class="box tip"><span class="title">Замена в дробных уравнениях</span>
+      Выражение 1/x (или x + 1/x) повторяется → вводим t.
+      <div class="eg">1/x² + 3/x − 10 = 0. t = 1/x: t² + 3t − 10 = 0 → t = 2 или t = −5 → x = 0,5 или x = −0,2.</div>
+      <div class="eg">Пропорция: A/B = C/D → A·D = B·C (при B ≠ 0, D ≠ 0).<br>(x + 3)/(x − 1) = 2 → x + 3 = 2x − 2 → x = 5.</div></div>
+  </div>
+
+</section>
+
+<section class="card" id="examples" data-nav="Примеры">
+  <h2><span class="step">↳</span> Разбор примеров</h2>
+  <div class="grid3"><div class="box example"><span class="title">Пример 1. Дробь = 0</span><p>Решите уравнение (x² + 2x)/(x + 2) = 0.</p><details class="reveal"><summary>Показать решение</summary><p><b>Решение.</b> x(x + 2) = 0 → x = 0 или x = −2. При x = −2 знаменатель равен 0.</p><p><b>Ответ:</b> 0.</p></details></div><div class="box example"><span class="title">Пример 2. Общий знаменатель</span><p>Решите уравнение (x + 3)/(x − 3) + (x − 3)/(x + 3) = 10/3.</p><details class="reveal"><summary>Показать решение</summary><p><b>Решение.</b> x ≠ ±3. Умножим на 3(x² − 9): 3(x + 3)² + 3(x − 3)² = 10(x² − 9) → 6x² + 54 = 10x² − 90 → x² = 36 → x = ±6.</p><p><b>Ответ:</b> −6; 6.</p></details></div><div class="box example"><span class="title">Пример 3. Посторонний корень</span><p>Решите уравнение 2/(x − 1) = (x + 1)/(x − 1).</p><details class="reveal"><summary>Показать решение</summary><p><b>Решение.</b> x ≠ 1. 2 = x + 1 → x = 1 — обращает знаменатель в 0.</p><p><b>Ответ:</b> корней нет.</p></details></div></div>
+</section>
+
+<section class="card" id="practice" data-nav="Практика">
+  <h2><span class="step">3</span> Интерактивная практика <span class="mins">25–45 мин</span></h2>
+  <h3>🎯 Тренажёр «Дробные уравнения»</h3>
+  <div class="lab task" id="trainer" data-id="trainer" data-noauto><div id="trainerBox"></div>
+    <div class="sol">Задачи генерируются случайно. Засчитывается при 5 верных из 6.</div></div>
+
+  <h3>Блок А. База</h3>
+  <div class="tasks"><div class="task" data-id="p1"><div class="task-head"><span class="tnum">П1</span><span class="pill lvl1">база</span></div>
+<p>Решите уравнение 6/(x − 2) = 3.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="4"></label></div>
+</div>
+<div class="task" data-id="p2"><div class="task-head"><span class="tnum">П2</span><span class="pill lvl1">база</span></div>
+<p>Решите уравнение (x² − 9)/(x + 3) = 0.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="3"></label></div>
+</div>
+<div class="task" data-id="p3"><div class="task-head"><span class="tnum">П3</span><span class="pill lvl1">база</span></div>
+<p>Решите уравнение (x² − 5x + 6)/(x − 2) = 0.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="3"></label></div>
+<div class="sol">x = 2 — посторонний.</div>
+</div>
+<div class="task" data-id="p4"><div class="task-head"><span class="tnum">П4</span><span class="pill lvl1">база</span></div>
+<p>Решите уравнение x/(x + 2) = 4/(x + 6).</p>
+<div class="ans-row"><label>меньший = <input class="ans" data-a="-4" data-label="меньший"></label><label>больший = <input class="ans" data-a="2" data-label="больший"></label></div>
+</div>
+<div class="task" data-id="p5"><div class="task-head"><span class="tnum">П5</span><span class="pill lvl1">база</span></div>
+<p>Решите уравнение (x + 3)/(x − 1) = 2.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="5"></label></div>
+</div>
+<div class="task" data-id="p6"><div class="task-head"><span class="tnum">П6</span><span class="pill lvl1">база</span></div>
+<p>Решите уравнение (x² + 2x)/(x + 2) = 0.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="0"></label></div>
+</div>
+</div>
+  <h3>Блок Б. Посложнее</h3>
+  <div class="tasks"><div class="task" data-id="p7"><div class="task-head"><span class="tnum">П7</span><span class="pill lvl2">средний</span></div>
+<p>Решите уравнение 1/x² + 3/x − 10 = 0.</p>
+<div class="ans-row"><label>меньший = <input class="ans" data-a="-0,2" data-label="меньший"></label><label>больший = <input class="ans" data-a="0,5" data-label="больший"></label></div>
+<div class="sol">t = 1/x: t = 2 или t = −5.</div>
+</div>
+<div class="task" data-id="p8"><div class="task-head"><span class="tnum">П8</span><span class="pill lvl2">средний</span></div>
+<p>Сколько корней имеет уравнение x/(x − 2) − 8/(x² − 4) = 1?</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="0"></label></div>
+<div class="sol">x ≠ ±2. x(x + 2) − 8 = x² − 4 → 2x = 4 → x = 2 — посторонний. Корней нет.</div>
+</div>
+<div class="task" data-id="p9"><div class="task-head"><span class="tnum">П9</span><span class="pill lvl2">средний</span></div>
+<p>Решите уравнение x²/(x − 3) = 9/(x − 3).</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="-3"></label></div>
+<div class="sol">x² = 9, x ≠ 3 → x = −3.</div>
+</div>
+<div class="task" data-id="p10"><div class="task-head"><span class="tnum">П10</span><span class="pill lvl3">сложнее</span></div>
+<p>Решите уравнение 1/(x − 1) + 1/(x + 1) = 4/3.</p>
+<div class="ans-row"><label>меньший = <input class="ans" data-a="-0,5" data-label="меньший"></label><label>больший = <input class="ans" data-a="2" data-label="больший"></label></div>
+<div class="sol">2x/(x² − 1) = 4/3 → 6x = 4x² − 4 → 2x² − 3x − 2 = 0 → x = 2; −0,5.</div>
+</div>
+</div>
+</section>
+
+<section class="card oge" id="oge" data-nav="ОГЭ">
+  <h2><span class="step">4</span> Задачи в формате ОГЭ <span class="mins">45–55 мин</span></h2>
+  <div class="tasks"><div class="task" data-id="o1"><div class="task-head"><span class="tnum">О1</span><span class="pill oge">ОГЭ №9</span></div>
+<p>Найдите корень уравнения 4/(x − 7) = −2.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="5"></label></div>
+</div>
+<div class="task" data-id="o2"><div class="task-head"><span class="tnum">О2</span><span class="pill oge">ОГЭ №20</span></div>
+<p>Решите уравнение x/(x − 2) − 1/(x + 2) = 8/(x² − 4).</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="-3"></label></div>
+<div class="sol">x ≠ ±2. x(x + 2) − (x − 2) = 8 → x² + x − 6 = 0 → x = 2 (посторонний) или x = −3.</div>
+</div>
+<div class="task" data-id="o3"><div class="task-head"><span class="tnum">О3</span><span class="pill oge">ОГЭ №20</span></div>
+<p>Решите уравнение x² − 2x + √(3 − x) = √(3 − x) + 8.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="-2"></label></div>
+<div class="sol">Условие 3 − x ≥ 0, то есть x ≤ 3. x² − 2x − 8 = 0 → x = 4 (не подходит) или x = −2.</div>
+</div>
+<div class="task" data-id="o4"><div class="task-head"><span class="tnum">О4</span><span class="pill oge">ОГЭ №20</span></div>
+<p>Решите уравнение 2/x² − 1/x − 1 = 0.</p>
+<div class="ans-row"><label>меньший = <input class="ans" data-a="-2" data-label="меньший"></label><label>больший = <input class="ans" data-a="1" data-label="больший"></label></div>
+<div class="sol">t = 1/x: 2t² − t − 1 = 0 → t = 1 или t = −0,5 → x = 1 или x = −2.</div>
+</div>
+<div class="task" data-id="o5" data-mode="digits"><div class="task-head"><span class="tnum">О5</span><span class="pill oge">ОГЭ №19</span></div>
+<p>Какие утверждения верны?</p><ol style="margin:6px 0"><li>Дробь равна нулю, если её числитель равен нулю, а знаменатель не равен нулю.</li><li>Уравнение (x² − 1)/(x − 1) = 0 имеет два корня.</li><li>При умножении обеих частей дробного уравнения на общий знаменатель могут появиться посторонние корни.</li></ol>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="13"></label></div>
+<div class="sol">2 — неверно: x = 1 посторонний, корень один.</div>
+</div>
+</div>
+</section>
+
+<section class="card" id="hw" data-nav="Итог и ДЗ">
+  <h2><span class="step">5</span> Итог и домашнее задание <span class="mins">55–60 мин</span></h2>
+  <h3>Шпаргалка</h3>
+  <div class="cheat"><div><b>Сначала:</b> знаменатели ≠ 0</div><div><b>A/B = 0</b> ⇔ A = 0 и B ≠ 0</div><div><b>Умножить на общий знаменатель</b> каждое слагаемое</div><div><b>В конце:</b> вычеркнуть посторонние корни</div><div><b>Повторяется 1/x</b> → замена t</div></div>
+  <h3>📚 Домашнее задание</h3>
+  <p class="muted">Ответы проверяются в начале занятия 11.</p>
+  <ol class="hw"><li>Решите уравнение 8/(x − 3) = 2.<div class="sol"><span class="ansline">Ответ: 7.</span> </div></li><li>Решите уравнение (x² − 16)/(x − 4) = 0.<div class="sol"><span class="ansline">Ответ: −4.</span> x = 4 — посторонний.</div></li><li>Решите уравнение (x² − 7x + 10)/(x − 5) = 0.<div class="sol"><span class="ansline">Ответ: 2.</span> x = 5 — посторонний.</div></li><li>Решите уравнение x − 6/x = 1.<div class="sol"><span class="ansline">Ответ: −2; 3.</span> x² − x − 6 = 0, x ≠ 0.</div></li><li>(ОГЭ №19) 1) Дробь равна нулю, если числитель равен нулю, а знаменатель не равен нулю. 2) Уравнение (x² − 1)/(x − 1) = 0 имеет два корня. 3) При умножении дробного уравнения на общий знаменатель могут появиться посторонние корни.<div class="sol"><span class="ansline">Ответ: 13.</span> </div></li></ol>
+  <h3>⭐ Бонусное ДЗ</h3>
+  <ol class="hw"><li>Решите уравнение 3/(x − 2) + 2/x = 2.<div class="sol"><span class="ansline">Ответ: 0,5; 4.</span> x ≠ 0, 2. 3x + 2(x − 2) = 2x(x − 2) → 2x² − 9x + 4 = 0 → x = 4 или x = 0,5.</div></li><li>Решите уравнение (x² − x)/(x + 3) = 12/(x + 3).<div class="sol"><span class="ansline">Ответ: 4.</span> x² − x − 12 = 0 → 4; −3 (посторонний).</div></li></ol>
+  <p style="margin-top:18px"><button class="btn small ghost" type="button" onclick="GeoResetLesson()">Сбросить прогресс занятия</button></p>
+</section>
+
+<section class="card bonus" id="bonus" data-nav="★ Бонус">
+  <h2><span class="step">★</span> Бонусная практика</h2>
+  <div class="tasks"><div class="task" data-id="b1"><div class="task-head"><span class="tnum">Б1</span><span class="pill lvl3">сложнее</span></div>
+<p>Решите уравнение (x² + 1/x²) − 3(x + 1/x) + 4 = 0. Сколько корней?</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="1"></label></div>
+<div class="sol">t = x + 1/x, x² + 1/x² = t² − 2: t² − 3t + 2 = 0 → t = 1 (x + 1/x = 1 — корней нет) или t = 2 → x = 1.</div>
+</div>
+<div class="task" data-id="b2"><div class="task-head"><span class="tnum">Б2</span><span class="pill lvl3">сложнее</span></div>
+<p>Сколько корней имеет уравнение 1/(x − 2) + 1/(x − 3) = 1/((x − 2)(x − 3))?</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="0"></label></div>
+<div class="sol">x ≠ 2, 3. (x − 3) + (x − 2) = 1 → x = 3 — посторонний.</div>
+</div>
+<div class="task" data-id="b3"><div class="task-head"><span class="tnum">Б3</span><span class="pill lvl3">сложнее</span></div>
+<p>При каком a уравнение (x − a)/(x − 3) = 0 не имеет корней?</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="3"></label></div>
+<div class="sol">Единственный кандидат x = a; он посторонний при a = 3.</div>
+</div>
+</div>
+</section>
+
+</div>
+
+<script src="../assets/core.js"></script>
+<script>
+
+function fN(v){
+  var r = Math.round(v * 1000) / 1000, s;
+  if(Math.abs(r - Math.round(r)) < 1e-9) s = String(Math.round(r));
+  else if(Math.abs(r * 4 - Math.round(r * 4)) < 1e-9) s = String(r);
+  else s = '≈' + (Math.round(v * 100) / 100);
+  return s.replace('.', ',').replace('-', '−');
+}
+function poly(cs, vs){
+  var s = '';
+  for(var i = 0; i < cs.length; i++){ var c = cs[i]; if(!c) continue; var a = Math.abs(c), body = (a === 1 && vs[i] ? '' : String(a).replace('.', ',')) + vs[i];
+    s += s === '' ? (c < 0 ? '−' : '') + body : (c < 0 ? ' − ' : ' + ') + body; }
+  return s || '0';
+}
+function fct(a){ return a === 0 ? 'x' : '(x ' + (a > 0 ? '− ' + a : '+ ' + (-a)) + ')'; }
+function ineqSolve(num, den, lead, op){
+  var all = num.concat(den).slice().sort(function(a, b){ return a - b; }), pts = [];
+  all.forEach(function(p){ if(!pts.length || Math.abs(p - pts[pts.length - 1]) > 1e-9) pts.push(p); });
+  function sg(x){ var s = lead; num.concat(den).forEach(function(r){ s *= (x > r ? 1 : -1); }); return s; }
+  var n = pts.length, regs = [], signs = [], closed = [], strict = op.length === 1, i;
+  for(i = 0; i <= n; i++){ var t = n === 0 ? 0 : (i === 0 ? pts[0] - 1 : (i === n ? pts[n - 1] + 1 : (pts[i - 1] + pts[i]) / 2)), s = sg(t); signs.push(s > 0 ? '+' : '−'); regs.push(op[0] === '>' ? s > 0 : s < 0); }
+  pts.forEach(function(p){ var d = den.some(function(r){ return Math.abs(r - p) < 1e-9; }); closed.push(!strict && !d); });
+  var el = [], parts = [], cur = null, prev = null;
+  for(i = 0; i <= n; i++){ el.push({inc:regs[i], reg:i}); if(i < n) el.push({inc:closed[i], pt:i}); }
+  function close(rt, rc){ parts.push(cur.single != null ? '{' + cur.l + '}' : (cur.lc ? '[' : '(') + cur.l + '; ' + rt + (rc ? ']' : ')')); cur = null; }
+  el.forEach(function(e){
+    if(e.inc && !cur) cur = e.pt != null ? {l:fN(pts[e.pt]), lc:true, single:e.pt} : {l:e.reg === 0 ? '−∞' : fN(pts[e.reg - 1]), lc:false, single:null};
+    else if(e.inc && cur) cur.single = null;
+    else if(!e.inc && cur){ if(prev.pt != null) close(fN(pts[prev.pt]), true); else close(fN(pts[prev.reg]), false); }
+    prev = e;
+  });
+  if(cur) close('+∞', false);
+  return {pts:pts, regs:regs, closed:closed, signs:signs, str:parts.join(' ∪ ') || 'нет решений'};
+}
+function nlSVG(pts, regs, signs){
+  var W = 260, H = signs ? 62 : 46, y = H - 18, n = pts.length, L = 12, R = W - 16, xs = [], s, i, x;
+  for(i = 0; i < n; i++) xs.push(L + (R - L) * (i + 1) / (n + 1));
+  s = '<svg viewBox="0 0 ' + W + ' ' + H + '" style="width:100%;max-width:300px;display:block">';
+  for(i = 0; i <= n; i++){
+    var a = i ? xs[i - 1] : 4, b = i < n ? xs[i] : W - 10;
+    if(regs[i]) for(x = a + 2; x < b; x += 7){ var x2 = Math.min(x + 9, b); s += '<line x1="' + x + '" y1="' + y + '" x2="' + x2 + '" y2="' + (y - 13 * (x2 - x) / 9) + '" stroke="var(--primary)" stroke-width="1.6"/>'; }
+    if(signs) s += '<text x="' + (a + b) / 2 + '" y="14" text-anchor="middle" style="font-size:16px;font-weight:700;fill:' + (signs[i] === '+' ? 'var(--res)' : 'var(--a)') + '">' + signs[i] + '</text>';
+  }
+  s += '<line x1="2" y1="' + y + '" x2="' + (W - 2) + '" y2="' + y + '" stroke="var(--ink)" stroke-width="1.6"/><path d="M' + (W - 10) + ' ' + (y - 5) + ' L' + (W - 2) + ' ' + y + ' L' + (W - 10) + ' ' + (y + 5) + '" fill="none" stroke="var(--ink)" stroke-width="1.6"/>';
+  s += '<text x="' + (W - 8) + '" y="' + (H - 2) + '" text-anchor="middle" style="font-size:13px;fill:var(--muted)">x</text>';
+  for(i = 0; i < n; i++){
+    s += '<circle cx="' + xs[i] + '" cy="' + y + '" r="4.5" fill="' + (pts[i][1] ? 'var(--ink)' : 'var(--card)') + '" stroke="var(--ink)" stroke-width="1.6"/>';
+    s += '<text x="' + xs[i] + '" y="' + (H - 2) + '" text-anchor="middle" style="font-size:13px;fill:var(--ink)">' + pts[i][0] + '</text>';
+  }
+  return s + '</svg>';
+}
+document.querySelectorAll('[data-nl]').forEach(function(d){ var o = JSON.parse(d.getAttribute('data-nl')); d.innerHTML = nlSVG(o.p, o.r, o.s); });
+
+document.addEventListener('geo:ready', function(){
+  GeoTrainer(document.getElementById('trainerBox'), {rounds:6, id:'trainer', gen:function(){
+    var q = GeoRand(1, 4), a, p, r;
+    if(q === 1){ a = GeoPick([-9, -8, -7, -6, -5, -4, -3, -2, 2, 3, 4, 5, 6, 7, 8, 9]);
+      return {q:'Решите уравнение (x² − ' + a * a + ')/' + fct(a) + ' = 0.', a:String(-a), why:'x = ±' + Math.abs(a) + ', но x = ' + fN(a) + ' обращает знаменатель в 0.'}; }
+    if(q === 2){ p = GeoRand(-6, 6); do { r = GeoRand(-6, 6); } while(r === p);
+      return {q:'Решите уравнение (' + poly([1, -(p + r), p * r], ['x²', 'x', '']) + ')/' + fct(p) + ' = 0.', a:String(r), why:'Корни числителя ' + fN(p) + ' и ' + fN(r) + '; x = ' + fN(p) + ' — посторонний.'}; }
+    if(q === 3){ var m = GeoPick([-5, -4, -3, -2, 2, 3, 4, 5]), d = GeoPick([-6, -4, -3, -2, -1, 1, 2, 3, 4, 6]); a = GeoRand(-6, 6);
+      return {q:'Решите уравнение ' + fN(m * d) + '/' + fct(a) + ' = ' + fN(m) + '.', a:String(a + d), why:poly([1, -a], ['x', '']) + ' = ' + fN(m * d) + ' : ' + (m < 0 ? '(' + fN(m) + ')' : fN(m)) + ' = ' + fN(d) + ' → x = ' + fN(a + d) + '.'}; }
+    var r1, r2; do { r1 = GeoPick([-6, -5, -4, -3, -2, -1, 1, 2, 3, 4, 5, 6]); r2 = GeoPick([-6, -5, -4, -3, -2, -1, 1, 2, 3, 4, 5, 6]); } while(r1 === r2 || r1 + r2 === 0);
+    var dd = r1 + r2, c = -r1 * r2;
+    return {q:'Решите уравнение ' + poly([1, -dd], ['x', '']) + ' = ' + fN(c) + '/x. В ответе укажите больший корень.', a:String(Math.max(r1, r2)), why:'x ≠ 0. ' + poly([1, -dd, -c], ['x²', 'x', '']) + ' = 0 → x = ' + fN(Math.min(r1, r2)) + '; ' + fN(Math.max(r1, r2)) + '.'};
+  }});
+});
+
+</script>
+</body>
+</html>

@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Справочник · Геометрия 7–9 · ОГЭ</title>
+<link rel="stylesheet" href="assets/core.css">
+<style>
+.ref{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px}
+.ref .c{background:var(--soft);border:1px solid var(--line);border-radius:12px;padding:12px 14px;font-size:15px;line-height:1.55}
+.ref .c h4{margin:0 0 6px;font-size:15px;color:var(--primary)}
+.ref .c ul{margin:0;padding-left:18px}
+.ref .c .f{font-weight:650;font-size:16px;margin:4px 0}
+.ref .c.hide{display:none}
+section.card.hide{display:none}
+.search{width:100%;padding:11px 14px;border:1.5px solid var(--line);border-radius:12px;font:inherit;background:var(--card);color:var(--ink);margin-bottom:20px}
+.search:focus{outline:none;border-color:var(--primary)}
+table.tr{border-collapse:collapse;margin:6px 0;font-size:15px}
+table.tr td,table.tr th{border:1px solid var(--line);padding:4px 10px;text-align:center}
+.lnk{font-size:12px;font-weight:600;color:var(--muted);margin-left:auto}
+@media print{
+  .topnav,.hero,.search,.tlock,.noprint{display:none!important}
+  body{background:#fff;font-size:12px}
+  section.card{box-shadow:none;border:0;padding:0 0 8px;break-inside:avoid-page}
+  .ref{gap:6px}.ref .c{padding:6px 8px;font-size:11.5px;break-inside:avoid}
+  section.card > h2{font-size:16px}
+}
+</style>
+</head>
+<body>
+
+<nav class="topnav"><div class="in">
+  <a class="home" href="geometry.html">📐 <span>Геометрия · ОГЭ</span></a>
+  <div class="links"></div>
+  <button class="btn small ghost noprint" type="button" onclick="window.print()">🖨 Печать</button>
+</div></nav>
+
+<div class="container">
+<header class="hero">
+  <span class="tag">7–9 класс</span><span class="tag">Всё для ОГЭ</span>
+  <h1>📖 Справочник</h1>
+  <p>Определения, свойства и формулы курса — коротко.</p>
+</header>
+
+<input class="search" id="q" type="search" placeholder="Поиск: медиана, трапеция, синус…">
+
+<!-- ====== 1. Углы ====== -->
+<section class="card" id="s1" data-nav="Углы">
+  <h2><span class="step">1</span> Углы и параллельные прямые <span class="lnk">занятие 1</span></h2>
+  <div class="ref">
+    <div class="c"><h4>Смежные и вертикальные</h4>Смежные: сумма <b>180°</b>.<br>Вертикальные: <b>равны</b>.</div>
+    <div class="c"><h4>Параллельные прямые и секущая</h4>Накрест лежащие — равны.<br>Соответственные — равны.<br>Односторонние — сумма 180°.<br><span class="muted">Обратно — признаки параллельности.</span></div>
+    <div class="c"><h4>Аксиома параллельных</h4>Через точку вне прямой проходит <b>только одна</b> прямая, параллельная данной.</div>
+  </div>
+</section>
+
+<!-- ====== 2. Треугольник ====== -->
+<section class="card" id="s2" data-nav="Треугольник">
+  <h2><span class="step">2</span> Треугольник <span class="lnk">занятия 1–2</span></h2>
+  <div class="ref">
+    <div class="c"><h4>Сумма углов</h4><div class="f">∠A + ∠B + ∠C = 180°</div>Тупой или прямой угол — не больше одного.</div>
+    <div class="c"><h4>Внешний угол</h4>Равен сумме двух углов треугольника, не смежных с ним.</div>
+    <div class="c"><h4>Неравенство треугольника</h4><div class="f">a &lt; b + c</div>Против большей стороны — больший угол.</div>
+    <div class="c"><h4>Медиана, биссектриса, высота</h4><b>Медиана</b> — в середину стороны.<br><b>Биссектриса</b> — делит угол пополам.<br><b>Высота</b> — перпендикуляр к стороне.<br>Три медианы пересекаются в одной точке и делятся ею 2 : 1 от вершины.</div>
+    <div class="c"><h4>Признаки равенства</h4>I — две стороны и угол между ними.<br>II — сторона и два прилежащих угла.<br>III — три стороны.</div>
+    <div class="c"><h4>Средняя линия</h4>Соединяет середины двух сторон. Параллельна третьей стороне и равна её <b>половине</b>.</div>
+  </div>
+</section>
+
+<!-- ====== 3. Равнобедренный ====== -->
+<section class="card" id="s3" data-nav="Равнобедренный">
+  <h2><span class="step">3</span> Равнобедренный и равносторонний <span class="lnk">занятие 2</span></h2>
+  <div class="ref">
+    <div class="c"><h4>Равнобедренный (AB = BC)</h4>Углы при основании равны: <b>∠A = ∠C = (180° − ∠B) : 2</b>.<br>Медиана, биссектриса и высота к основанию <b>совпадают</b>.<br>Признак: два равных угла → равнобедренный.</div>
+    <div class="c"><h4>Равносторонний</h4>Все углы <b>60°</b>.<div class="f">h = a√3 / 2 &nbsp;·&nbsp; S = a²√3 / 4</div>R = a√3 / 3, r = a√3 / 6, R = 2r.</div>
+  </div>
+</section>
+
+<!-- ====== 4. Прямоугольный ====== -->
+<section class="card" id="s4" data-nav="Прямоугольный">
+  <h2><span class="step">4</span> Прямоугольный треугольник <span class="lnk">занятия 3–4, 7</span></h2>
+  <div class="ref">
+    <div class="c"><h4>Углы</h4>Острые углы: <b>∠A + ∠B = 90°</b>.<br>Катет против <b>30°</b> = гипотенуза : 2.</div>
+    <div class="c"><h4>Медиана к гипотенузе</h4>Равна половине гипотенузы. Середина гипотенузы — центр описанной окружности: <b>R = c / 2</b>.</div>
+    <div class="c"><h4>Теорема Пифагора</h4><div class="f">c² = a² + b²</div>Обратная: если c² = a² + b², угол против c — прямой.<br>Тройки: 3-4-5, 5-12-13, 8-15-17, 7-24-25, 20-21-29, 9-40-41.</div>
+    <div class="c"><h4>Высота к гипотенузе</h4><div class="f">h = ab / c</div>h² = AH · HB, &nbsp;a² = c · (проекция a).<br>∠BCH = ∠A, ∠ACH = ∠B.</div>
+    <div class="c"><h4>Синус, косинус, тангенс, котангенс</h4>sin A = противолежащий / гипотенуза<br>cos A = прилежащий / гипотенуза<br>tg A = противолежащий / прилежащий<br>ctg A = прилежащий / противолежащий = cos A / sin A<div class="f">sin²A + cos²A = 1 &nbsp;·&nbsp; tg A = sin A / cos A</div></div>
+    <div class="c"><h4>Табличные значения</h4>
+      <table class="tr"><tr><th></th><th>30°</th><th>45°</th><th>60°</th></tr>
+      <tr><td>sin</td><td>1/2</td><td>√2/2</td><td>√3/2</td></tr>
+      <tr><td>cos</td><td>√3/2</td><td>√2/2</td><td>1/2</td></tr>
+      <tr><td>tg</td><td>√3/3</td><td>1</td><td>√3</td></tr></table>
+      sin(180° − α) = sin α, &nbsp;cos(180° − α) = −cos α.</div>
+  </div>
+</section>
+
+<!-- ====== 5. Подобие ====== -->
+<section class="card" id="s5" data-nav="Подобие">
+  <h2><span class="step">5</span> Подобие <span class="lnk">занятия 5–6</span></h2>
+  <div class="ref">
+    <div class="c"><h4>Признаки подобия</h4>I — два угла.<br>II — две стороны пропорциональны, углы между ними равны.<br>III — три стороны пропорциональны.</div>
+    <div class="c"><h4>Коэффициент подобия k</h4>Стороны, высоты, медианы, периметры — в <b>k</b> раз.<br>Площади — в <b>k²</b> раз.</div>
+    <div class="c"><h4>Прямая, параллельная стороне</h4>Отсекает треугольник, подобный данному.</div>
+    <div class="c"><h4>Свойство биссектрисы</h4>Делит сторону на отрезки, пропорциональные прилежащим сторонам: <b>AL : LC = AB : BC</b>.</div>
+  </div>
+</section>
+
+<!-- ====== 6. Площадь и теоремы ====== -->
+<section class="card" id="s6" data-nav="Площадь △">
+  <h2><span class="step">6</span> Площадь треугольника, теоремы синусов и косинусов <span class="lnk">занятия 4, 8</span></h2>
+  <div class="ref">
+    <div class="c"><h4>Формулы площади</h4>S = ½ · a · h<br>S = ½ · a · b · sin C<br>S = √(p(p − a)(p − b)(p − c)) — Герон<br>S = p · r &nbsp;·&nbsp; S = abc / (4R)<br><span class="muted">p — полупериметр.</span></div>
+    <div class="c"><h4>Соотношения площадей</h4>Медиана делит треугольник на два равновеликих.<br>Общая высота → площади относятся как основания.</div>
+    <div class="c"><h4>Теорема синусов</h4><div class="f">a / sin A = b / sin B = c / sin C = 2R</div></div>
+    <div class="c"><h4>Теорема косинусов</h4><div class="f">c² = a² + b² − 2ab · cos C</div>cos C &lt; 0 — угол C тупой.</div>
+  </div>
+</section>
+
+<!-- ====== 7. Четырёхугольники ====== -->
+<section class="card" id="s7" data-nav="Четырёхугольники">
+  <h2><span class="step">7</span> Многоугольники и четырёхугольники <span class="lnk">занятия 9–12</span></h2>
+  <div class="ref">
+    <div class="c"><h4>Многоугольник</h4>Сумма углов выпуклого n-угольника: <b>180° · (n − 2)</b>.<br>Угол правильного n-угольника: 180° · (n − 2) / n.<br>Сумма внешних углов — 360°.</div>
+    <div class="c"><h4>Параллелограмм</h4>Противоположные стороны и углы равны.<br>Диагонали делятся точкой пересечения пополам.<br>Сумма соседних углов 180°.<div class="f">S = a · h = a · b · sin α</div></div>
+    <div class="c"><h4>Прямоугольник</h4>Диагонали равны.<div class="f">S = a · b &nbsp;·&nbsp; d² = a² + b²</div></div>
+    <div class="c"><h4>Ромб</h4>Диагонали перпендикулярны и являются биссектрисами углов.<div class="f">S = ½ · d₁ · d₂ = a · h = a² · sin α</div></div>
+    <div class="c"><h4>Квадрат</h4>Все свойства прямоугольника и ромба.<div class="f">S = a² = d² / 2 &nbsp;·&nbsp; d = a√2</div></div>
+    <div class="c"><h4>Трапеция</h4>Средняя линия <b>(a + b) / 2</b>, параллельна основаниям.<br>Равнобедренная: углы при основании равны, диагонали равны.<div class="f">S = (a + b) / 2 · h</div></div>
+    <div class="c"><h4>Любой выпуклый четырёхугольник</h4><div class="f">S = ½ · d₁ · d₂ · sin φ</div></div>
+  </div>
+</section>
+
+<!-- ====== 8. Окружность ====== -->
+<section class="card" id="s8" data-nav="Окружность">
+  <h2><span class="step">8</span> Окружность <span class="lnk">занятия 13–16</span></h2>
+  <div class="ref">
+    <div class="c"><h4>Касательная</h4>Перпендикулярна радиусу в точке касания.<br>Отрезки касательных из одной точки <b>равны</b>.</div>
+    <div class="c"><h4>Хорды и секущие</h4>Диаметр ⊥ хорде делит её пополам.<br>Пересекающиеся хорды: <b>AE · EB = CE · ED</b>.<br>Касательная и секущая: <b>MA² = MB · MC</b>.</div>
+    <div class="c"><h4>Углы</h4>Центральный угол = дуга.<br>Вписанный угол = <b>половина</b> дуги.<br>Вписанный угол, опирающийся на диаметр, — <b>90°</b>.<br>Вписанные углы на одну дугу равны.<br>Угол между касательной и хордой = половина дуги.</div>
+    <div class="c"><h4>Описанная окружность △</h4>Центр — пересечение серединных перпендикуляров.<div class="f">R = a / (2 sin A) = abc / (4S)</div></div>
+    <div class="c"><h4>Вписанная окружность △</h4>Центр — пересечение биссектрис.<div class="f">r = S / p</div>Прямоугольный: r = (a + b − c) / 2.</div>
+    <div class="c"><h4>Четырёхугольники и окружность</h4>Вписанный: <b>∠A + ∠C = ∠B + ∠D = 180°</b>.<br>Описанный: <b>a + c = b + d</b>.</div>
+    <div class="c"><h4>Длина и площадь</h4><div class="f">C = 2πR &nbsp;·&nbsp; S = πR²</div>Дуга α°: l = πRα / 180.<br>Сектор α°: S = πR²α / 360.</div>
+  </div>
+</section>
+
+<!-- ====== 9. Векторы ====== -->
+<section class="card" id="s9" data-nav="Векторы">
+  <h2><span class="step">9</span> Векторы и координаты <span class="lnk">занятия 17–21</span></h2>
+  <div class="ref">
+    <div class="c"><h4>Действия</h4>Сложение: правило треугольника (AB + BC = AC) и параллелограмма.<br>a − b = a + (−b).<br>k · a: длина |k| · |a|, при k &lt; 0 направление меняется.</div>
+    <div class="c"><h4>Коллинеарность</h4>b = k · a. В координатах: <b>x₁ / x₂ = y₁ / y₂</b>.<br>k &gt; 0 — сонаправлены, k &lt; 0 — противоположно направлены.</div>
+    <div class="c"><h4>Координаты</h4>AB = (x₂ − x₁; y₂ − y₁)<div class="f">|a| = √(x² + y²)</div>Середина: ((x₁ + x₂) / 2; (y₁ + y₂) / 2)<br>Расстояние: √((x₂ − x₁)² + (y₂ − y₁)²)</div>
+    <div class="c"><h4>Уравнения</h4>Окружность: <b>(x − x₀)² + (y − y₀)² = R²</b><br>Прямая: <b>ax + by + c = 0</b></div>
+    <div class="c"><h4>Скалярное произведение</h4><div class="f">a · b = |a| · |b| · cos φ = x₁x₂ + y₁y₂</div>a · b = 0 ⇔ a ⊥ b.</div>
+  </div>
+</section>
+
+<!-- ====== 10. Движения ====== -->
+<section class="card" id="s10" data-nav="Движения">
+  <h2><span class="step">10</span> Движения и подобие фигур <span class="lnk">занятие 22</span></h2>
+  <div class="ref">
+    <div class="c"><h4>Движения</h4>Осевая и центральная симметрия, параллельный перенос, поворот. Сохраняют расстояния: фигура переходит в равную.</div>
+    <div class="c"><h4>Оси симметрии</h4>Равносторонний △ — 3, квадрат — 4, прямоугольник и ромб — 2, окружность — бесконечно много. Параллелограмм (общий) — 0, есть центр симметрии.</div>
+  </div>
+</section>
+
+<!-- ====== 11. ОГЭ ====== -->
+<section class="card oge" id="s11" data-nav="ОГЭ">
+  <h2><span class="step">★</span> Геометрия в ОГЭ</h2>
+  <div class="ref">
+    <div class="c"><h4>Часть 1 — только ответ</h4>№15 — треугольники<br>№16 — окружность<br>№17 — четырёхугольники<br>№18 — фигуры на клетках<br>№19 — верные утверждения</div>
+    <div class="c"><h4>Часть 2 — с решением</h4>№23 — задача на вычисление<br>№24 — доказательство<br>№25 — сложная задача</div>
+    <div class="c"><h4>Ловушки №19</h4>«любой», «всегда», «каждый» — проверь контрпример.<br>Площади подобных — k², а не k.<br>Медиана = биссектриса только в равнобедренном (к основанию).<br>Средняя линия — половина <b>параллельной</b> стороны.</div>
+  </div>
+</section>
+</div>
+
+<script src="assets/core.js"></script>
+<script>
+(function(){
+  var q = document.getElementById('q');
+  q.addEventListener('input', function(){
+    var t = q.value.trim().toLowerCase();
+    document.querySelectorAll('section.card').forEach(function(s){
+      var any = false;
+      s.querySelectorAll('.ref .c').forEach(function(c){ var ok = !t || c.textContent.toLowerCase().indexOf(t) >= 0 || s.querySelector('h2').textContent.toLowerCase().indexOf(t) >= 0; c.classList.toggle('hide', !ok); if(ok) any = true; });
+      s.classList.toggle('hide', !any);
+    });
+  });
+})();
+</script>
+</body>
+</html>

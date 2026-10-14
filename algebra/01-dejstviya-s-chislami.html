@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Алгебра · занятие 1 · Действия с действительными числами</title>
+<link rel="stylesheet" href="../assets/core.css">
+</head>
+<body data-lesson="A01">
+
+<nav class="topnav"><div class="in">
+  <a class="home" href="../algebra.html">🧮 <span>Алгебра · ОГЭ</span></a>
+  <div class="links"></div>
+  <a class="home" href="../spravochnik-algebra.html" title="Справочник">📖</a>
+  <div class="progress-pill">Решено <b>0 / 0</b><div class="progress-bar"><i></i></div></div>
+</div></nav>
+
+<div class="container">
+
+<header class="hero">
+  <span class="tag">Раздел 1 · Числа и вычисления</span><span class="tag">Алгебра · занятие 1 из 23</span><span class="tag">Учебник: гл. I §1, п. 1</span>
+  <h1>Действия с действительными числами</h1>
+  <p>Числовые множества N, Z, Q, R, рациональные и иррациональные числа, вычисления с дробями — задание №6 ОГЭ.</p>
+  <div class="timeline">
+    <a href="#theory">① Теория <small>0–20′</small></a>
+    <a href="#practice">② Практика <small>20–45′</small></a>
+    <a href="#oge">③ ОГЭ <small>45–55′</small></a>
+    <a href="#hw">④ Итог и ДЗ <small>55–60′</small></a>
+    <a href="#bonus">★ Бонус</a>
+  </div>
+</header>
+
+<div class="teacher-panel teacher-only">
+  <h3>План занятия (60 минут)</h3>
+  <ol><li><b>0–20′</b> Теория: множества чисел (схема), периодические дроби, порядок действий, дроби. Сразу проговаривать ловушку −3² и (−3)².</li><li><b>20–45′</b> Игра «Какое это число?», тренажёр №6, затем П1–П10.</li><li><b>45–55′</b> ОГЭ №6.</li><li><b>55–60′</b> Шпаргалка, ДЗ.</li></ol>
+  <p class="muted" style="margin:0">Типичные ошибки: −3² считают равным 9; при делении на десятичную дробь неверно переносят запятую; считают √9 иррациональным; складывают дроби «числитель с числителем, знаменатель со знаменателем».</p>
+</div>
+
+
+<section class="card" id="theory" data-nav="Теория">
+  <h2><span class="step">1</span> Теория <span class="mins">0–20 мин</span></h2>
+
+  <div class="grid2">
+    <div class="box def"><span class="title">Числовые множества</span>
+      <ul class="rules">
+        <li><b>N</b> — натуральные: 1, 2, 3, …</li>
+        <li><b>Z</b> — целые: натуральные, противоположные им и 0.</li>
+        <li><b>Q</b> — рациональные: числа вида m/n, m ∈ Z, n ∈ N.</li>
+        <li><b>R</b> — действительные: рациональные и иррациональные.</li>
+      </ul>
+      <div class="formula">N ⊂ Z ⊂ Q ⊂ R</div>
+      <div class="eg">−20 ∈ Z, но −20 ∉ N. &nbsp; 1,2 ∈ Q, но 1,2 ∉ Z.</div>
+    </div>
+    <figure style="margin:0"><svg viewBox="0 0 340 230" width="320" style="max-width:100%">
+  <rect x="4" y="4" width="332" height="222" rx="22" fill="#8b5cf6" fill-opacity=".08" stroke="#8b5cf6" stroke-width="2"/>
+  <rect x="18" y="34" width="210" height="182" rx="18" fill="#16a34a" fill-opacity=".08" stroke="#16a34a" stroke-width="2"/>
+  <rect x="32" y="74" width="150" height="132" rx="16" fill="#e5a50a" fill-opacity=".10" stroke="#e5a50a" stroke-width="2"/>
+  <rect x="46" y="120" width="90" height="76" rx="14" fill="#2f5bea" fill-opacity=".12" stroke="#2f5bea" stroke-width="2"/>
+  <text class="tx" x="20" y="26" style="fill:#8b5cf6">R</text><text class="tx" x="34" y="58" style="fill:#16a34a">Q</text>
+  <text class="tx" x="48" y="98" style="fill:#c48a00">Z</text><text class="tx" x="60" y="142" style="fill:#2f5bea">N</text>
+  <text class="txs" x="66" y="176">1; 2; 17</text><text class="txs" x="146" y="160">0; −8</text>
+  <text class="txs" x="150" y="118">½</text><text class="txs" x="190" y="96">−2,5</text><text class="txs" x="186" y="186">0,(3)</text>
+  <text class="txs" x="244" y="96">√2</text><text class="txs" x="252" y="140">π</text><text class="txs" x="242" y="186">−√5</text>
+</svg></figure>
+  </div>
+  <div class="grid2" style="margin-top:14px">
+    <div class="box rule"><span class="title">Рациональное или иррациональное</span>
+      <ul class="rules">
+        <li>Рациональное число — конечная или <b>бесконечная периодическая</b> десятичная дробь.</li>
+        <li>Иррациональное — бесконечная <b>непериодическая</b> дробь.</li>
+        <li>√n иррационален, если n — не квадрат натурального числа.</li>
+      </ul>
+      <div class="eg">1/3 = 0,333… = 0,(3); &nbsp; 5/6 = 0,8(3) — рациональные.</div>
+      <div class="eg">√3, √5, √10, π — иррациональные.</div>
+      <div class="eg trap">√16 = 4 и √0,25 = 0,5 — <b>рациональные</b>: корень извлекается.</div>
+    </div>
+    <div class="box rule"><span class="title">Порядок действий</span>
+      <ol class="rules"><li>Действия в скобках.</li><li>Степени.</li><li>Умножение и деление слева направо.</li><li>Сложение и вычитание слева направо.</li></ol>
+      <div class="eg">20 − 4 · 3² = 20 − 4 · 9 = 20 − 36 = −16.</div>
+      <div class="eg trap">−3² = −9 (в квадрат возводится только 3), а (−3)² = 9.</div>
+    </div>
+  </div>
+  <div class="grid3" style="margin-top:14px">
+    <div class="box rule"><span class="title">Обыкновенные дроби</span>
+      <ul class="rules"><li>Сложение и вычитание — через общий знаменатель.</li><li>Умножение — числитель на числитель, знаменатель на знаменатель.</li><li>Деление — умножение на обратную дробь.</li></ul>
+      <div class="eg">2/3 + 3/4 = 8/12 + 9/12 = 17/12.</div>
+      <div class="eg">3/4 : 9/8 = 3/4 · 8/9 = 2/3.</div>
+    </div>
+    <div class="box rule"><span class="title">Десятичные дроби</span>
+      <ul class="rules"><li>Делим на десятичную дробь: переносим запятую в обоих числах так, чтобы делитель стал целым.</li><li>Смешанное число → неправильная дробь: 1 2/3 = 5/3.</li></ul>
+      <div class="eg">2,4 : 0,06 = 240 : 6 = 40.</div>
+      <div class="eg">1 2/3 · 0,6 = 5/3 · 3/5 = 1.</div>
+    </div>
+    <div class="box tip"><span class="title">Законы — упрощают счёт</span>
+      <ul class="rules"><li>a + b = b + a, &nbsp; ab = ba;</li><li>(ab)c = a(bc);</li><li>a(b + c) = ab + ac.</li></ul>
+      <div class="eg">17 · 0,25 · 4 = 17 · 1 = 17.</div>
+      <div class="eg">3,7 · 45 + 3,7 · 55 = 3,7 · 100 = 370.</div>
+    </div>
+  </div>
+
+</section>
+
+<section class="card" id="examples" data-nav="Примеры">
+  <h2><span class="step">↳</span> Разбор примеров</h2>
+  <div class="grid3"><div class="box example"><span class="title">Пример 1. Дроби</span><p>Найдите значение выражения (7/12 − 1/8) · 4,8.</p><details class="reveal"><summary>Показать решение</summary><p><b>Решение.</b> 7/12 − 1/8 = 14/24 − 3/24 = 11/24. 11/24 · 4,8 = 11 · 0,2 = 2,2.</p><p><b>Ответ:</b> 2,2.</p></details></div><div class="box example"><span class="title">Пример 2. Десятичные</span><p>Найдите значение выражения 6,8 : (1,7 − 0,9).</p><details class="reveal"><summary>Показать решение</summary><p><b>Решение.</b> 1,7 − 0,9 = 0,8. 6,8 : 0,8 = 68 : 8 = 8,5.</p><p><b>Ответ:</b> 8,5.</p></details></div><div class="box example"><span class="title">Пример 3. Классификация</span><p>Какие из чисел рациональные: √16; √7; 0,(3); π; −5/9?</p><details class="reveal"><summary>Показать решение</summary><p><b>Решение.</b> √16 = 4 — целое; 0,(3) — периодическая дробь; −5/9 — дробь. √7 и π — иррациональные.</p><p><b>Ответ:</b> √16; 0,(3); −5/9.</p></details></div></div>
+</section>
+
+<section class="card" id="practice" data-nav="Практика">
+  <h2><span class="step">2</span> Интерактивная практика <span class="mins">20–45 мин</span></h2>
+  <h3>🎯 Игра «Какое это число?»</h3>
+  <div class="lab task" id="game" data-id="game" data-noauto>
+    <div class="controls" style="justify-content:space-between;margin:0"><b id="gRound"></b><span class="pill" id="gScore">Верно: 0</span></div>
+    <p style="margin:10px 0 0">Число: <b id="gQ" style="font-size:22px"></b></p>
+    <div class="choice-btns" id="gBtns">
+      <button type="button" data-k="N">натуральное</button><button type="button" data-k="Z">целое, но не натуральное</button>
+      <button type="button" data-k="Q">рациональное, но не целое</button><button type="button" data-k="I">иррациональное</button>
+    </div>
+    <div class="controls"><span class="feedback" id="gFb"></span><button class="btn small" type="button" id="gNext" style="display:none">Дальше →</button></div>
+    <div class="sol">Засчитывается при 6 верных из 8.</div>
+  </div>
+  <h3>🎯 Тренажёр «Вычисления» (№6)</h3>
+  <div class="lab task" id="trainer" data-id="trainer" data-noauto><div id="trainerBox"></div>
+    <div class="sol">Задачи генерируются случайно. Засчитывается при 5 верных из 6.</div></div>
+
+  <h3>Блок А. База</h3>
+  <div class="tasks"><div class="task" data-id="p1"><div class="task-head"><span class="tnum">П1</span><span class="pill lvl1">база</span></div>
+<p>Найдите значение выражения 3/4 + 7/20.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="1,1"></label></div>
+<div class="hint">Общий знаменатель 20.</div>
+</div>
+<div class="task" data-id="p2"><div class="task-head"><span class="tnum">П2</span><span class="pill lvl1">база</span></div>
+<p>Найдите значение выражения 2,7 · 3,4 − 1,18.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="8"></label></div>
+</div>
+<div class="task" data-id="p3"><div class="task-head"><span class="tnum">П3</span><span class="pill lvl1">база</span></div>
+<p>Найдите значение выражения (5/6 − 1/4) · 24.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="14"></label></div>
+<div class="hint">Можно раскрыть скобки: 5/6 · 24 − 1/4 · 24.</div>
+</div>
+<div class="task" data-id="p4"><div class="task-head"><span class="tnum">П4</span><span class="pill lvl1">база</span></div>
+<p>Найдите значение выражения 4,5 : 0,15.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="30"></label></div>
+</div>
+<div class="task" data-id="p5"><div class="task-head"><span class="tnum">П5</span><span class="pill lvl1">база</span></div>
+<p>Найдите значение выражения −2³ + (−3)².</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="1"></label></div>
+<div class="sol">−8 + 9 = 1.</div>
+</div>
+<div class="task" data-id="p6"><div class="task-head"><span class="tnum">П6</span><span class="pill lvl1">база</span></div>
+<p>Сколько целых чисел среди чисел −7; 0; 2,5; √25; √3; 1/7?</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="3"></label></div>
+<div class="sol">−7, 0 и √25 = 5.</div>
+</div>
+</div>
+  <h3>Блок Б. Посложнее</h3>
+  <div class="tasks"><div class="task" data-id="p7"><div class="task-head"><span class="tnum">П7</span><span class="pill lvl2">средний</span></div>
+<p>Найдите значение выражения 1 2/3 · 0,6 − 2,5.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="-1,5"></label></div>
+<div class="sol">5/3 · 3/5 = 1; 1 − 2,5 = −1,5.</div>
+</div>
+<div class="task" data-id="p8"><div class="task-head"><span class="tnum">П8</span><span class="pill lvl2">средний</span></div>
+<p>Найдите значение выражения (1/5 + 0,15) : 0,07.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="5"></label></div>
+<div class="sol">0,2 + 0,15 = 0,35; 0,35 : 0,07 = 5.</div>
+</div>
+<div class="task" data-id="p9"><div class="task-head"><span class="tnum">П9</span><span class="pill lvl2">средний</span></div>
+<p>Найдите значение выражения (2,4 · 10⁻³) · (5 · 10⁵).</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="1200"></label></div>
+<div class="sol">12 · 10² = 1200.</div>
+</div>
+<div class="task" data-id="p10"><div class="task-head"><span class="tnum">П10</span><span class="pill lvl3">сложнее</span></div>
+<p>Запишите 0,(36) в виде несократимой обыкновенной дроби. В ответ запишите знаменатель.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="11"></label></div>
+<div class="hint">x = 0,(36); 100x = 36,(36). Вычтите.</div>
+<div class="sol">99x = 36, x = 36/99 = 4/11.</div>
+</div>
+</div>
+</section>
+
+<section class="card oge" id="oge" data-nav="ОГЭ">
+  <h2><span class="step">3</span> Задачи в формате ОГЭ <span class="mins">45–55 мин</span></h2>
+  <div class="tasks"><div class="task" data-id="o1"><div class="task-head"><span class="tnum">О1</span><span class="pill oge">ОГЭ №6</span></div>
+<p>Найдите значение выражения 9/25 + 13/20.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="1,01"></label></div>
+<div class="sol">0,36 + 0,65 = 1,01.</div>
+</div>
+<div class="task" data-id="o2"><div class="task-head"><span class="tnum">О2</span><span class="pill oge">ОГЭ №6</span></div>
+<p>Найдите значение выражения (3,4 + 1,2) · 5,5.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="25,3"></label></div>
+</div>
+<div class="task" data-id="o3"><div class="task-head"><span class="tnum">О3</span><span class="pill oge">ОГЭ №6</span></div>
+<p>Найдите значение выражения 1 / (1/36 − 1/44).</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="198"></label></div>
+<div class="sol">1/36 − 1/44 = (44 − 36)/1584 = 1/198.</div>
+</div>
+<div class="task" data-id="o4"><div class="task-head"><span class="tnum">О4</span><span class="pill oge">ОГЭ №6</span></div>
+<p>Найдите значение выражения −0,8 · (−10)² + 54.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="-26"></label></div>
+<div class="sol">−0,8 · 100 + 54 = −80 + 54 = −26.</div>
+</div>
+<div class="task" data-id="o5"><div class="task-head"><span class="tnum">О5</span><span class="pill oge">ОГЭ №6</span></div>
+<p>Найдите значение выражения 6,8 / (2,8 − 1,1).</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="4"></label></div>
+</div>
+</div>
+</section>
+
+<section class="card" id="hw" data-nav="Итог и ДЗ">
+  <h2><span class="step">4</span> Итог и домашнее задание <span class="mins">55–60 мин</span></h2>
+  <h3>Шпаргалка</h3>
+  <div class="cheat"><div><b>N ⊂ Z ⊂ Q ⊂ R</b></div><div>рациональное = m/n = <b>периодическая</b> дробь</div><div><b>: a/b</b> → <b>· b/a</b></div><div><b>−3² = −9</b>, <b>(−3)² = 9</b></div><div>скобки → степени → · и : → + и −</div></div>
+  <h3>📚 Домашнее задание</h3>
+  <p class="muted">Ответы проверяются в начале занятия 2.</p>
+  <ol class="hw"><li>Найдите значение выражения (5/12 + 1/6) · 3,6.<div class="sol"><span class="ansline">Ответ: 2,1.</span> 7/12 · 3,6 = 7 · 0,3.</div></li><li>Найдите значение выражения 5,2 : 0,13.<div class="sol"><span class="ansline">Ответ: 40.</span> </div></li><li>Найдите значение выражения −3² + (−2)⁴.<div class="sol"><span class="ansline">Ответ: 7.</span> −9 + 16.</div></li><li>Сколько иррациональных чисел среди чисел 3/7; −4; √9; π; 0,(5); √12?<div class="sol"><span class="ansline">Ответ: 2.</span> π и √12.</div></li><li>(ОГЭ №19) 1) Любое целое число является рациональным. 2) Число √16 иррациональное. 3) Число 0,(3) рациональное.<div class="sol"><span class="ansline">Ответ: 13.</span> </div></li></ol>
+  <h3>⭐ Бонусное ДЗ</h3>
+  <ol class="hw"><li>Найдите значение выражения 1 / (1/20 − 1/30).<div class="sol"><span class="ansline">Ответ: 60.</span> 1/20 − 1/30 = 1/60.</div></li><li>Запишите 0,1(6) в виде несократимой обыкновенной дроби.<div class="sol"><span class="ansline">Ответ: 1/6.</span> 0,1(6) = 0,1 + 0,0(6) = 1/10 + 1/15 = 1/6.</div></li></ol>
+  <p style="margin-top:18px"><button class="btn small ghost" type="button" onclick="GeoResetLesson()">Сбросить прогресс занятия</button></p>
+</section>
+
+<section class="card bonus" id="bonus" data-nav="★ Бонус">
+  <h2><span class="step">★</span> Бонусная практика</h2>
+  <div class="tasks"><div class="task" data-id="b1"><div class="task-head"><span class="tnum">Б1</span><span class="pill lvl3">сложнее</span></div>
+<p>Найдите значение выражения (1 1/3 − 0,5) : 5/12.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="2"></label></div>
+<div class="sol">4/3 − 1/2 = 5/6; 5/6 · 12/5 = 2.</div>
+</div>
+<div class="task" data-id="b2"><div class="task-head"><span class="tnum">Б2</span><span class="pill lvl3">сложнее</span></div>
+<p>Найдите значение выражения (√7 − 3)(√7 + 3).</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="-2"></label></div>
+<div class="sol">7 − 9 = −2: произведение иррациональных чисел может быть рациональным.</div>
+</div>
+<div class="task" data-id="b3"><div class="task-head"><span class="tnum">Б3</span><span class="pill lvl3">сложнее</span></div>
+<p>Найдите значение выражения 0,(3) + 0,(6).</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="1"></label></div>
+<div class="sol">1/3 + 2/3 = 1.</div>
+</div>
+</div>
+</section>
+
+</div>
+
+<script src="../assets/core.js"></script>
+<script>
+
+function aN(v){ var r = Math.round(v * 10000) / 10000; return String(r); }
+function sN(v){ return aN(v).replace('.', ',').replace('-', '−'); }
+function gcd(a, b){ a = Math.abs(a); b = Math.abs(b); while(b){ var t = a % b; a = b; b = t; } return a; }
+function finite(n, d){ var g = gcd(n, d); d = Math.abs(d / g); while(d % 2 === 0) d /= 2; while(d % 5 === 0) d /= 5; return d === 1; }
+document.addEventListener('geo:ready', function(){
+  var POOL = [['17','N'],['√49','N'],['24/6','N'],['(√3)²','N'],['√8 · √2','N'],['0','Z'],['−8','Z'],['−√16','Z'],['−12/4','Z'],['−1','Z'],
+    ['2,5','Q'],['−3/7','Q'],['0,(3)','Q'],['√0,25','Q'],['1,(21)','Q'],['√3 / √12','Q'],['−0,04','Q'],
+    ['√5','I'],['π','I'],['−√12','I'],['√2 + 1','I'],['3π','I'],['√20','I']];
+  var NAME = {N:'натуральное', Z:'целое, но не натуральное', Q:'рациональное, но не целое', I:'иррациональное'};
+  var WHY = {'√49':'√49 = 7.', '24/6':'24/6 = 4.', '(√3)²':'(√3)² = 3.', '√8 · √2':'√16 = 4.', '−√16':'−√16 = −4.', '−12/4':'−12/4 = −3.', '√0,25':'√0,25 = 0,5.', '√3 / √12':'√(3/12) = √(1/4) = 1/2.', '0,(3)':'Периодическая дробь = 1/3.', '1,(21)':'Периодическая дробь.', '√20':'20 — не квадрат целого числа.', '√2 + 1':'Сумма иррационального и рационального — иррациональное.', '3π':'π — иррациональное.'};
+  var ROUNDS = 8, round = 0, score = 0, cur, answered, deck = [];
+  var box = document.getElementById('gBtns'), fb = document.getElementById('gFb'), nx = document.getElementById('gNext');
+  function newRound(){
+    if(!deck.length) deck = POOL.slice().sort(function(){ return Math.random() - 0.5; });
+    cur = deck.pop(); answered = false; round++;
+    document.getElementById('gQ').textContent = cur[0]; document.getElementById('gRound').textContent = 'Раунд ' + round + ' / ' + ROUNDS;
+    fb.textContent = ''; fb.className = 'feedback'; nx.style.display = 'none';
+    box.querySelectorAll('button').forEach(function(b){ b.classList.remove('good', 'wrong'); });
+  }
+  box.querySelectorAll('button').forEach(function(b){ b.addEventListener('click', function(){
+    if(answered) return; answered = true; var ok = b.getAttribute('data-k') === cur[1];
+    if(ok){ score++; b.classList.add('good'); } else { b.classList.add('wrong'); box.querySelector('[data-k="' + cur[1] + '"]').classList.add('good'); }
+    fb.className = 'feedback ' + (ok ? 'ok' : 'bad'); fb.textContent = (ok ? '✓ ' : '✗ Это ' + NAME[cur[1]] + '. ') + (WHY[cur[0]] || '');
+    document.getElementById('gScore').textContent = 'Верно: ' + score;
+    if(round >= ROUNDS){ var pass = score >= 6; fb.textContent += pass ? ' Пройдено: ' + score + ' из 8 🎉' : ' Итог ' + score + ' из 8, нужно 6.'; if(pass){ GeoMarkSolved('game'); document.getElementById('game').classList.add('ok'); } nx.textContent = 'Ещё раз ↻'; }
+    else nx.textContent = 'Дальше →';
+    nx.style.display = '';
+  }); });
+  nx.addEventListener('click', function(){ if(round >= ROUNDS){ round = 0; score = 0; document.getElementById('gScore').textContent = 'Верно: 0'; } newRound(); });
+  if(GeoIsSolved('game')) document.getElementById('game').classList.add('ok');
+  newRound();
+
+  var DEN = [2, 3, 4, 5, 6, 8, 10, 12];
+  GeoTrainer(document.getElementById('trainerBox'), {rounds:6, id:'trainer', gen:function(){
+    var q = GeoRand(1, 5), i;
+    if(q === 1){
+      for(i = 0; i < 200; i++){
+        var b = GeoPick(DEN), d = GeoPick(DEN), a = GeoRand(1, b - 1), c = GeoRand(1, d - 1), sg = GeoPick([1, -1]), K = GeoPick([6, 12, 24, 36, 48, 15, 18]);
+        if(gcd(a, b) !== 1 || gcd(c, d) !== 1 || b === d) continue;
+        var n = (a * d + sg * c * b) * K, den = b * d; if(n === 0 || !finite(n, den)) continue;
+        var K10 = GeoPick([1, 10]), shown = K10 === 10 ? sN(K / 10) : String(K), val = n / den / K10;
+        if(Math.abs(Math.round(val * 100) - val * 100) > 1e-9) continue;
+        return {q:'Найдите значение выражения (' + a + '/' + b + (sg > 0 ? ' + ' : ' − ') + c + '/' + d + ') · ' + shown + '.', a:aN(val), why:'В скобках ' + (a * d + sg * c * b) + '/' + den + ', умножаем на ' + shown + '.'};
+      }
+    }
+    if(q === 2){
+      var x = GeoRand(11, 79), y = GeoRand(11, 49), z = GeoRand(101, 999);
+      return {q:'Найдите значение выражения ' + sN(x / 10) + ' · ' + sN(y / 10) + ' − ' + sN(z / 100) + '.', a:aN((x * y - z) / 100), why:sN(x / 10) + ' · ' + sN(y / 10) + ' = ' + sN(x * y / 100) + '.'};
+    }
+    if(q === 3){
+      var dv = GeoRand(2, 35), ans = GeoRand(2, 24) / GeoPick([1, 1, 2]), z2 = GeoRand(1, 30), num = Math.round(ans * dv * 10) / 100;
+      return {q:'Найдите значение выражения ' + sN(num) + ' : (' + sN((dv + z2) / 10) + ' − ' + sN(z2 / 10) + ').', a:aN(ans), why:'В скобках ' + sN(dv / 10) + '; ' + sN(num) + ' : ' + sN(dv / 10) + ' = ' + sN(ans) + '.'};
+    }
+    if(q === 4){
+      for(i = 0; i < 200; i++){ var m = GeoRand(2, 40), k = GeoRand(1, 20), nn = m + k; if((m * nn) % k === 0) return {q:'Найдите значение выражения 1 / (1/' + m + ' − 1/' + nn + ').', a:String(m * nn / k), why:'1/' + m + ' − 1/' + nn + ' = ' + k + '/' + (m * nn) + ', переворачиваем: ' + (m * nn / k) + '.'}; }
+    }
+    var p = GeoRand(2, 6), r = GeoRand(2, 4), sgn = GeoPick([1, -1]);
+    return {q:'Найдите значение выражения −' + p + '² ' + (sgn > 0 ? '+' : '−') + ' (−' + r + ')³.', a:String(-p * p - sgn * r * r * r), why:'−' + p + '² = ' + (-p * p) + ', (−' + r + ')³ = ' + (-r * r * r) + '.'};
+  }});
+});
+
+</script>
+</body>
+</html>

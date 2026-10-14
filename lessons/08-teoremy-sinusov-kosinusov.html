@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Занятие 8 · Теоремы синусов и косинусов</title>
+<link rel="stylesheet" href="../assets/core.css">
+</head>
+<body data-lesson="L08">
+
+<nav class="topnav"><div class="in">
+  <a class="home" href="../geometry.html">📐 <span>Геометрия · ОГЭ</span></a>
+  <div class="links"></div>
+  <a class="home" href="../spravochnik.html" title="Справочник">📖</a>
+  <div class="progress-pill">Решено <b>0 / 0</b><div class="progress-bar"><i></i></div></div>
+</div></nav>
+
+<div class="container">
+
+<header class="hero">
+  <span class="tag">Раздел 2 · Подобие и тригонометрия</span><span class="tag">Занятие 8 из 23</span><span class="tag">Учебник: гл. XII §1–2</span>
+  <h1>Теоремы синусов и косинусов. Площадь через синус</h1>
+  <p>Синус и косинус углов от 0° до 180°, площадь треугольника через две стороны и угол, решение треугольников.</p>
+  <div class="timeline">
+    <a href="#warmup">① Проверка ДЗ <small>0–10′</small></a>
+    <a href="#theory">② Теория <small>10–25′</small></a>
+    <a href="#practice">③ Практика <small>25–45′</small></a>
+    <a href="#oge">④ ОГЭ <small>45–55′</small></a>
+    <a href="#hw">⑤ Итог и ДЗ <small>55–60′</small></a>
+    <a href="#bonus">★ Бонус</a>
+  </div>
+</header>
+
+<div class="teacher-panel teacher-only">
+  <h3>План занятия (60 минут)</h3>
+  <ol><li><b>0–10′</b> Проверка ДЗ занятия 7.</li><li><b>10–25′</b> Теория. Лаборатория «Единичная полуокружность»: cos — абсцисса, sin — ордината. Для тупого угла cos отрицательный, sin положительный.</li><li><b>25–45′</b> Тренажёр, затем П1–П8. Корни вводятся как √3/2.</li><li><b>45–55′</b> ОГЭ №15 и №19.</li><li><b>55–60′</b> Шпаргалка, ДЗ. Раздел «Подобие и тригонометрия» завершён.</li></ol>
+  <p class="muted" style="margin:0">Типичные ошибки: в теореме косинусов ставят «+» вместо «−»; забывают, что cos тупого угла отрицателен; в теореме синусов теряют двойку: a / sin A = 2R.</p>
+</div>
+
+<section class="card" id="warmup" data-nav="Проверка ДЗ">
+  <h2><span class="step">1</span> Проверка ДЗ <span class="mins">0–10 мин</span></h2>
+  <div class="tasks"><div class="task" data-id="h1"><div class="task-head"><span class="tnum">ДЗ 1</span></div>
+<p>∠C = 90°, BC = 5, AB = 13. Найдите sin A.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="5/13"></label></div>
+</div>
+<div class="task" data-id="h2"><div class="task-head"><span class="tnum">ДЗ 2</span></div>
+<p>∠C = 90°, AB = 25, cos A = 0,28. Найдите AC.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="7"></label></div>
+</div>
+<div class="task" data-id="h3"><div class="task-head"><span class="tnum">ДЗ 3</span></div>
+<p>∠C = 90°, AC = 8, tg A = 1,5. Найдите BC.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="12"></label></div>
+</div>
+<div class="task" data-id="h4"><div class="task-head"><span class="tnum">ДЗ 4</span></div>
+<p>Угол A острый, sin A = 0,8. Найдите cos A.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="0,6"></label></div>
+</div>
+<div class="task" data-id="h5" data-mode="digits"><div class="task-head"><span class="tnum">ДЗ 5</span><span class="pill oge">ОГЭ №19</span></div>
+<p>1) cos острого угла = прилежащий катет / гипотенуза. 2) sin 30° = √3/2. 3) tg 45° = 1.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="13"></label></div>
+</div>
+</div>
+</section>
+
+<section class="card" id="theory" data-nav="Теория">
+  <h2><span class="step">2</span> Теория <span class="mins">10–25 мин</span></h2>
+
+  <div class="grid2">
+    <div class="box def"><span class="title">Синус и косинус для 0° ≤ α ≤ 180°</span>
+      Точка на единичной полуокружности: <b>x = cos α</b>, <b>y = sin α</b>.
+      <div class="formula">sin(180° − α) = sin α</div><div class="formula">cos(180° − α) = −cos α</div>
+      Для тупого угла cos &lt; 0. sin 90° = 1, cos 90° = 0.<br><b>tg α = sin α / cos α</b> (α ≠ 90°), <b>ctg α = cos α / sin α</b> (α ≠ 0°, 180°).
+      <div class="eg">sin 150° = sin 30° = ½; cos 120° = −cos 60° = −½.</div></div>
+    <div class="box rule"><span class="title">Площадь через синус</span>
+      <div class="formula">S = ½ · a · b · sin C</div>Две стороны и угол <b>между ними</b>.<div class="eg">a = 6, b = 10, ∠C = 30° → S = ½ · 6 · 10 · ½ = 15.</div></div>
+  </div>
+  <div class="grid2" style="margin-top:14px">
+    <div class="box rule"><span class="title">Теорема синусов</span>
+      <div class="formula">a / sin A = b / sin B = c / sin C = 2R</div>R — радиус описанной окружности.<div class="eg">a = 10, ∠A = 30° → 2R = 10 : ½ = 20, R = 10.</div></div>
+    <div class="box rule"><span class="title">Теорема косинусов</span>
+      <div class="formula">c² = a² + b² − 2ab · cos C</div>При C = 90° — теорема Пифагора. Найти угол: cos C = (a² + b² − c²) / (2ab).<div class="eg">a = 5, b = 8, ∠C = 60° → c² = 25 + 64 − 2 · 5 · 8 · ½ = 49, c = 7.</div></div>
+  </div>
+  <div class="box tip" style="margin-top:14px"><span class="title">Какую теорему брать</span>
+    <ul class="rules"><li>Две стороны и угол между ними → <b>косинусов</b>.</li><li>Три стороны → угол по <b>косинусам</b>.</li><li>Сторона и противолежащий угол (или нужен R) → <b>синусов</b>.</li></ul></div>
+  <h3>Лаборатория: единичная полуокружность</h3>
+  <div class="lab">
+    <svg id="labU" viewBox="0 0 600 320"></svg>
+    <div class="readout" id="uRead"></div>
+    <div class="controls">
+      <label>α: <input type="range" id="uSl" min="0" max="180" value="120"></label><span class="pill" id="uVal">120°</span>
+      <button class="btn small ghost" type="button" data-u="30">30°</button><button class="btn small ghost" type="button" data-u="150">150°</button>
+      <button class="btn small ghost" type="button" data-u="60">60°</button><button class="btn small ghost" type="button" data-u="120">120°</button>
+      <button class="btn small ghost" type="button" data-u="135">135°</button>
+    </div>
+  </div>
+
+</section>
+
+<section class="card" id="examples" data-nav="Примеры">
+  <h2><span class="step">↳</span> Разбор примеров</h2>
+  <div class="grid3"><div class="box example"><span class="title">Пример 1. Площадь</span><p>Стороны 6 и 10, угол между ними 30°. Найдите площадь.</p><details class="reveal"><summary>Показать решение</summary><p><b>Решение.</b> S = ½ · 6 · 10 · ½ = 15.</p><p><b>Ответ:</b> 15.</p></details></div><div class="box example"><span class="title">Пример 2. Косинусы</span><p>a = 3, b = 8, ∠C = 60°. Найдите c.</p><details class="reveal"><summary>Показать решение</summary><p><b>Решение.</b> c² = 9 + 64 − 2 · 3 · 8 · ½ = 49, c = 7.</p><p><b>Ответ:</b> 7.</p></details></div><div class="box example"><span class="title">Пример 3. Синусы</span><p>a = 10, ∠A = 30°. Найдите радиус описанной окружности.</p><details class="reveal"><summary>Показать решение</summary><p><b>Решение.</b> 2R = 10 / sin 30° = 20, R = 10.</p><p><b>Ответ:</b> 10.</p></details></div></div>
+</section>
+
+<section class="card" id="practice" data-nav="Практика">
+  <h2><span class="step">3</span> Интерактивная практика <span class="mins">25–45 мин</span></h2>
+  <h3>🎯 Тренажёр «Решаем треугольники»</h3>
+  <div class="lab task" id="trainer" data-id="trainer" data-noauto><div id="trainerBox"></div>
+    <div class="sol">Корни вводите как √3/2 или sqrt(3)/2. Засчитывается при 5 верных из 6.</div></div>
+
+  <h3>Блок А. База</h3>
+  <div class="tasks"><div class="task" data-id="p1"><div class="task-head"><span class="tnum">П1</span><span class="pill lvl1">база</span></div>
+<p>Найдите площадь треугольника, две стороны которого равны 6 и 10, а угол между ними 30°.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="15"></label></div>
+</div>
+<div class="task" data-id="p2"><div class="task-head"><span class="tnum">П2</span><span class="pill lvl1">база</span></div>
+<p>Найдите площадь треугольника со сторонами 8 и 5 и углом 150° между ними.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="10"></label></div>
+<div class="sol">sin 150° = sin 30° = ½. S = ½ · 8 · 5 · ½ = 10.</div>
+</div>
+<div class="task" data-id="p3"><div class="task-head"><span class="tnum">П3</span><span class="pill lvl1">база</span></div>
+<p>Найдите sin 120° и cos 150°.</p>
+<div class="ans-row"><label>sin 120° = <input class="ans" data-a="√3/2" data-label="sin 120°"></label><label>cos 150° = <input class="ans" data-a="-√3/2" data-label="cos 150°"></label></div>
+<div class="sol">sin 120° = sin 60° = √3/2; cos 150° = −cos 30° = −√3/2.</div>
+</div>
+<div class="task" data-id="p4"><div class="task-head"><span class="tnum">П4</span><span class="pill lvl1">база</span></div>
+<p>В △ABC BC = 3, AC = 8, ∠C = 60°. Найдите AB.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="7"></label></div>
+</div>
+<div class="task" data-id="p5"><div class="task-head"><span class="tnum">П5</span><span class="pill lvl1">база</span></div>
+<p>В △ABC BC = 5, AC = 3, ∠C = 120°. Найдите AB.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="7"></label></div>
+<div class="sol">c² = 25 + 9 − 2 · 5 · 3 · (−½) = 49.</div>
+</div>
+<div class="task" data-id="p6"><div class="task-head"><span class="tnum">П6</span><span class="pill lvl1">база</span></div>
+<p>В △ABC BC = 10, ∠A = 30°. Найдите радиус описанной окружности.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="10"></label></div>
+</div>
+</div>
+  <h3>Блок Б. Посложнее</h3>
+  <div class="tasks"><div class="task" data-id="p7"><div class="task-head"><span class="tnum">П7</span><span class="pill lvl2">средний</span></div>
+<p>В △ABC AB = 12, ∠C = 150°. Найдите радиус описанной окружности.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="12"></label></div>
+<div class="sol">2R = 12 / sin 150° = 24.</div>
+</div>
+<div class="task" data-id="p8"><div class="task-head"><span class="tnum">П8</span><span class="pill lvl2">средний</span></div>
+<p>В △ABC AB = 6√2, ∠C = 45°. Найдите радиус описанной окружности.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="6"></label></div>
+<div class="sol">2R = 6√2 / (√2/2) = 12.</div>
+</div>
+<div class="task" data-id="p9"><div class="task-head"><span class="tnum">П9</span><span class="pill lvl2">средний</span></div>
+<p>Стороны треугольника равны 5, 8 и 7. Найдите угол, лежащий против стороны 7.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="60"></label></div>
+<div class="sol">cos C = (25 + 64 − 49) / 80 = ½ → C = 60°.</div>
+</div>
+<div class="task" data-id="p10"><div class="task-head"><span class="tnum">П10</span><span class="pill lvl3">сложнее</span></div>
+<p>Две стороны треугольника 7 и 8, угол между ними 120°. Найдите третью сторону.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="13"></label></div>
+<div class="sol">c² = 49 + 64 + 56 = 169.</div>
+</div>
+</div>
+</section>
+
+<section class="card oge" id="oge" data-nav="ОГЭ">
+  <h2><span class="step">4</span> Задачи в формате ОГЭ <span class="mins">45–55 мин</span></h2>
+  <div class="tasks"><div class="task" data-id="o1"><div class="task-head"><span class="tnum">О1</span><span class="pill oge">ОГЭ №15</span></div>
+<p>Найдите площадь треугольника, две стороны которого равны 8 и 12, а угол между ними равен 30°.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="24"></label></div>
+</div>
+<div class="task" data-id="o2"><div class="task-head"><span class="tnum">О2</span><span class="pill oge">ОГЭ №15</span></div>
+<p>В треугольнике ABC угол C равен 150°, AB = 14. Найдите радиус описанной около треугольника окружности.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="14"></label></div>
+</div>
+<div class="task" data-id="o3"><div class="task-head"><span class="tnum">О3</span><span class="pill oge">ОГЭ №15</span></div>
+<p>Две стороны треугольника равны 5 и 8, а угол между ними 60°. Найдите третью сторону.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="7"></label></div>
+</div>
+<div class="task" data-id="o4"><div class="task-head"><span class="tnum">О4</span><span class="pill oge">ОГЭ №15</span></div>
+<p>Найдите cos α, если sin α = 0,6 и 90° &lt; α &lt; 180°.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="-0,8"></label></div>
+<div class="sol">cos α = −√(1 − 0,36) = −0,8 (угол тупой).</div>
+</div>
+<div class="task" data-id="o5" data-mode="digits"><div class="task-head"><span class="tnum">О5</span><span class="pill oge">ОГЭ №19</span></div>
+<p>Какие из следующих утверждений верны?</p><ol style="margin:6px 0"><li>Площадь треугольника равна половине произведения двух его сторон на синус угла между ними.</li><li>cos(180° − α) = cos α.</li><li>Если косинус угла треугольника отрицателен, то этот угол тупой.</li></ol>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="13"></label></div>
+</div>
+</div>
+</section>
+
+<section class="card" id="hw" data-nav="Итог и ДЗ">
+  <h2><span class="step">5</span> Итог и домашнее задание <span class="mins">55–60 мин</span></h2>
+  <h3>Шпаргалка</h3>
+  <div class="cheat"><div><b>sin(180° − α) = sin α</b></div><div><b>ctg α = cos α / sin α</b></div><div><b>cos(180° − α) = −cos α</b></div><div><b>S = ½ ab sin C</b></div><div><b>a / sin A = 2R</b></div><div><b>c² = a² + b² − 2ab cos C</b></div></div>
+  <h3>📚 Домашнее задание</h3>
+  <p class="muted">Ответы проверяются в начале занятия 9.</p>
+  <ol class="hw"><li>Стороны треугольника 10 и 7, угол между ними 30°. Найдите площадь.<div class="sol"><span class="ansline">Ответ: 17,5.</span> </div></li><li>Две стороны треугольника 5 и 8, угол между ними 60°. Найдите третью сторону.<div class="sol"><span class="ansline">Ответ: 7.</span> </div></li><li>В △ABC BC = 14, ∠A = 30°. Найдите радиус описанной окружности.<div class="sol"><span class="ansline">Ответ: 14.</span> </div></li><li>sin α = 0,8, угол α тупой. Найдите cos α.<div class="sol"><span class="ansline">Ответ: −0,6.</span> </div></li><li>(ОГЭ №19) 1) sin(180° − α) = sin α. 2) c² = a² + b² + 2ab · cos C. 3) a / sin A = 2R.<div class="sol"><span class="ansline">Ответ: 13.</span> </div></li></ol>
+  <h3>⭐ Бонусное ДЗ</h3>
+  <ol class="hw"><li>Стороны параллелограмма 6 и 10, угол 150°. Найдите площадь.<div class="sol"><span class="ansline">Ответ: 30.</span> S = ab sin α = 60 · ½.</div></li><li>Стороны треугольника 7, 8 и 13. Найдите наибольший угол.<div class="sol"><span class="ansline">Ответ: 120.</span> cos = (49 + 64 − 169) / 112 = −½.</div></li></ol>
+  <p style="margin-top:18px"><button class="btn small ghost" type="button" onclick="GeoResetLesson()">Сбросить прогресс занятия</button></p>
+</section>
+
+<section class="card bonus" id="bonus" data-nav="★ Бонус">
+  <h2><span class="step">★</span> Бонусная практика</h2>
+  <div class="tasks"><div class="task" data-id="b1"><div class="task-head"><span class="tnum">Б1</span><span class="pill lvl3">сложнее</span></div>
+<p>Стороны треугольника 5, 7 и 8. Найдите угол против стороны 7.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="60"></label></div>
+<div class="sol">cos = (25 + 64 − 49) / 80 = ½.</div>
+</div>
+<div class="task" data-id="b2"><div class="task-head"><span class="tnum">Б2</span><span class="pill lvl3">сложнее</span></div>
+<p>Стороны треугольника 3, 5 и 7. Найдите его площадь.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="15√3/4"></label></div>
+<div class="sol">Угол против 7: cos = (9 + 25 − 49) / 30 = −½, угол 120°. S = ½ · 3 · 5 · √3/2 = 15√3/4.</div>
+</div>
+<div class="task" data-id="b3"><div class="task-head"><span class="tnum">Б3</span><span class="pill oge">ОГЭ №24</span></div>
+<p>Докажите формулу S = ½ · a · b · sin C.</p>
+<div class="sol">Высота к стороне a: h = b · sin C (из прямоугольного треугольника; для тупого C — sin(180° − C) = sin C). S = ½ · a · h = ½ · a · b · sin C.</div>
+</div>
+</div>
+</section>
+
+</div>
+
+<script src="../assets/core.js"></script>
+<script>
+
+(function(){
+  var G = GeoSVG, svg = document.getElementById('labU'), sl = document.getElementById('uSl'), O = {x:300, y:280}, R = 220;
+  function f(v){ var r = Math.round(v * 1000) / 1000; if(Math.abs(r) < 0.0005) r = 0; return r.toString().replace('.', ',').replace('-', '−'); }
+  function draw(){
+    var d = +sl.value, r = d * Math.PI / 180; document.getElementById('uVal').textContent = d + '°';
+    G.clear(svg);
+    G.el('line', {x1:40, y1:O.y, x2:560, y2:O.y, 'class':'st'}, svg); G.el('line', {x1:O.x, y1:O.y + 10, x2:O.x, y2:30, 'class':'st'}, svg);
+    G.el('path', {d:'M' + (O.x + R) + ' ' + O.y + ' A' + R + ' ' + R + ' 0 0 0 ' + (O.x - R) + ' ' + O.y, fill:'none', stroke:'#8b5cf6', 'stroke-width':2}, svg);
+    var P = {x:O.x + R * Math.cos(r), y:O.y - R * Math.sin(r)};
+    G.el('line', {x1:O.x, y1:O.y, x2:P.x, y2:P.y, 'class':'st'}, svg);
+    G.el('line', {x1:P.x, y1:P.y, x2:P.x, y2:O.y, stroke:'#e5484d', 'stroke-width':4}, svg);
+    G.el('line', {x1:O.x, y1:O.y, x2:P.x, y2:O.y, stroke:'#2f7de1', 'stroke-width':4}, svg);
+    if(d > 0) G.el('path', {d:'M' + (O.x + 36) + ' ' + O.y + ' A36 36 0 ' + (d > 180 ? 1 : 0) + ' 0 ' + (O.x + 36 * Math.cos(r)) + ' ' + (O.y - 36 * Math.sin(r)), fill:'none', stroke:'currentColor', 'stroke-width':2}, svg);
+    G.el('circle', {cx:P.x, cy:P.y, r:6, fill:'#8b5cf6'}, svg);
+    G.text(svg, O.x + R + 8, O.y + 20, '1', 'txs'); G.text(svg, O.x - R - 8, O.y + 20, '−1', 'txs'); G.text(svg, O.x - 12, O.y - R - 4, '1', 'txs');
+    document.getElementById('uRead').innerHTML = '<span style="color:#2f7de1">cos ' + d + '° = ' + f(Math.cos(r)) + '</span><span style="color:#e5484d">sin ' + d + '° = ' + f(Math.sin(r)) + '</span>' +
+      (d > 90 && d < 180 ? '<span>sin ' + d + '° = sin ' + (180 - d) + '°, cos ' + d + '° = −cos ' + (180 - d) + '°</span>' : '');
+  }
+  sl.addEventListener('input', draw);
+  document.querySelectorAll('[data-u]').forEach(function(b){ b.addEventListener('click', function(){ sl.value = b.getAttribute('data-u'); draw(); }); });
+  draw();
+})();
+document.addEventListener('geo:ready', function(){
+  var C60 = [[3,8,7],[5,8,7],[8,15,13],[5,21,19],[7,15,13]], C120 = [[3,5,7],[7,8,13],[5,16,19],[6,10,14]];
+  var VAL = [['sin 150°','1/2'],['cos 120°','-1/2'],['sin 120°','√3/2'],['cos 150°','-√3/2'],['sin 135°','√2/2'],['cos 135°','-√2/2'],['cos 60°','1/2'],['sin 90°','1'],['cos 90°','0']];
+  GeoTrainer(document.getElementById('trainerBox'), {rounds:6, id:'trainer', gen:function(){
+    var q = GeoRand(1, 4);
+    if(q === 1){ var a = 2 * GeoRand(2, 9), b = 2 * GeoRand(2, 9), ang = GeoPick([30, 150]); return {q:'Стороны треугольника ' + a + ' и ' + b + ', угол между ними ' + ang + '°. Найдите площадь.', a:String(a * b / 4), why:'S = ½ · ' + a + ' · ' + b + ' · ½ = ' + a * b / 4 + '.'}; }
+    if(q === 2){ var t = GeoRand(0, 1) ? GeoPick(C60).concat([60]) : GeoPick(C120).concat([120]); return {q:'Две стороны треугольника ' + t[0] + ' и ' + t[1] + ', угол между ними ' + t[3] + '°. Найдите третью сторону.', a:String(t[2]), why:'c² = ' + t[0] * t[0] + ' + ' + t[1] * t[1] + (t[3] === 60 ? ' − ' : ' + ') + t[0] * t[1] + ' = ' + t[2] * t[2] + '.'}; }
+    if(q === 3){ var s = GeoRand(3, 20), A = GeoPick([30, 150]); return {q:'В треугольнике сторона ' + s + ' лежит против угла ' + A + '°. Найдите радиус описанной окружности.', a:String(s), why:'2R = ' + s + ' / ½ = ' + 2 * s + ', R = ' + s + '.'}; }
+    var v = GeoPick(VAL); return {q:'Найдите ' + v[0] + '.', a:v[1], why:v[0] + ' = ' + v[1].replace('-', '−') + '.'};
+  }});
+});
+
+</script>
+</body>
+</html>

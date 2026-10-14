@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Алгебра · занятие 5 · Графики изученных функций</title>
+<link rel="stylesheet" href="../assets/core.css">
+</head>
+<body data-lesson="A05">
+
+<nav class="topnav"><div class="in">
+  <a class="home" href="../algebra.html">🧮 <span>Алгебра · ОГЭ</span></a>
+  <div class="links"></div>
+  <a class="home" href="../spravochnik-algebra.html" title="Справочник">📖</a>
+  <div class="progress-pill">Решено <b>0 / 0</b><div class="progress-bar"><i></i></div></div>
+</div></nav>
+
+<div class="container">
+
+<header class="hero">
+  <span class="tag">Раздел 2 · Функции и графики</span><span class="tag">Алгебра · занятие 5 из 23</span><span class="tag">Учебник: гл. II §3, п. 8</span>
+  <h1>Графики изученных функций</h1>
+  <p>Линейная функция, обратная пропорциональность, y = x², y = x³, y = √x, y = |x| — как выглядят и как узнавать.</p>
+  <div class="timeline">
+    <a href="#warmup">① Проверка ДЗ <small>0–10′</small></a>
+    <a href="#theory">② Теория <small>10–25′</small></a>
+    <a href="#practice">③ Практика <small>25–45′</small></a>
+    <a href="#oge">④ ОГЭ <small>45–55′</small></a>
+    <a href="#hw">⑤ Итог и ДЗ <small>55–60′</small></a>
+    <a href="#bonus">★ Бонус</a>
+  </div>
+</header>
+
+<div class="teacher-panel teacher-only">
+  <h3>План занятия (60 минут)</h3>
+  <ol><li><b>0–10′</b> Проверка ДЗ занятия 4.</li><li><b>10–25′</b> Теория — шесть графиков. В лаборатории менять k и b: как k влияет на наклон, b — на сдвиг; для гиперболы знак k — четверти.</li><li><b>25–45′</b> Игра «Узнай формулу» (это формат №11 ОГЭ), затем П1–П8.</li><li><b>45–55′</b> ОГЭ №11: соответствие графиков и формул, ответ — последовательность цифр.</li><li><b>55–60′</b> Шпаргалка, ДЗ.</li></ol>
+  <p class="muted" style="margin:0">Типичные ошибки: путают знак k у гиперболы (k &gt; 0 — I и III четверти); думают, что b — это точка пересечения с осью Ox; в №11 записывают ответ не в порядке А, Б, В.</p>
+</div>
+
+<section class="card" id="warmup" data-nav="Проверка ДЗ">
+  <h2><span class="step">1</span> Проверка ДЗ <span class="mins">0–10 мин</span></h2>
+  <div class="tasks"><div class="task" data-id="h1"><div class="task-head"><span class="tnum">ДЗ 1</span></div>
+<p>f(x) = 2x² − x. Найдите f(−3).</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="21"></label></div>
+</div>
+<div class="task" data-id="h2"><div class="task-head"><span class="tnum">ДЗ 2</span></div>
+<p>Какое число не входит в область определения y = 9/(x − 4)?</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="4"></label></div>
+</div>
+<div class="task" data-id="h3"><div class="task-head"><span class="tnum">ДЗ 3</span></div>
+<p>Нули функции y = x² − 7x + 10.</p>
+<div class="ans-row"><label>меньший = <input class="ans" data-a="2" data-label="меньший"></label><label>больший = <input class="ans" data-a="5" data-label="больший"></label></div>
+</div>
+<div class="task" data-id="h4"><div class="task-head"><span class="tnum">ДЗ 4</span></div>
+<p>f — нечётная, f(5) = −4. Найдите f(−5).</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="4"></label></div>
+</div>
+<div class="task" data-id="h5"><div class="task-head"><span class="tnum">ДЗ 5</span></div>
+<p>Наименьшее x из области определения y = √(x + 2).</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="-2"></label></div>
+</div>
+</div>
+</section>
+
+<section class="card" id="theory" data-nav="Теория">
+  <h2><span class="step">2</span> Теория <span class="mins">10–25 мин</span></h2>
+
+  <div class="grid3">
+    <div class="box def"><span class="title">y = kx + b — прямая</span>k &gt; 0 — возрастает, k &lt; 0 — убывает.<br>b — точка пересечения с Oy: (0; b).<br>Одинаковые k — прямые параллельны.<div class="eg">y = −2x + 3: убывает, пересекает Oy в (0; 3).</div><svg id="t1" class="mini" style="margin-top:8px"></svg></div>
+    <div class="box def"><span class="title">y = k/x — гипербола</span>k &gt; 0 — I и III четверти,<br>k &lt; 0 — II и IV четверти.<br>x ≠ 0, оси не пересекает.<div class="eg">y = −6/x: II и IV четверти; при x = 2 y = −3.</div><svg id="t2" class="mini" style="margin-top:8px"></svg></div>
+    <div class="box def"><span class="title">y = x² — парабола</span>Вершина (0; 0), ветви вверх.<br>Чётная, E(y) = [0; +∞).<div class="eg">x = −3 → y = 9.</div><svg id="t3" class="mini" style="margin-top:8px"></svg></div>
+    <div class="box def"><span class="title">y = x³ — кубическая парабола</span>Нечётная, возрастает на всей прямой.<div class="eg">x = −2 → y = −8.</div><svg id="t4" class="mini" style="margin-top:8px"></svg></div>
+    <div class="box def"><span class="title">y = √x</span>x ≥ 0, y ≥ 0. Половина параболы, «лежащей на боку».<div class="eg">x = 9 → y = 3; x = −4 — нельзя.</div><svg id="t5" class="mini" style="margin-top:8px"></svg></div>
+    <div class="box def"><span class="title">y = |x|</span>Галочка с вершиной (0; 0). Чётная.<div class="eg">|−5| = 5, |5| = 5.</div><svg id="t6" class="mini" style="margin-top:8px"></svg></div>
+  </div>
+  <div class="box tip" style="margin-top:14px"><span class="title">Схема описания свойств функции (как в учебнике)</span>
+    <ol class="rules"><li>область определения D(f);</li><li>множество значений E(f);</li><li>нули;</li><li>промежутки знакопостоянства;</li><li>промежутки монотонности;</li><li>наибольшее и наименьшее значения;</li><li>чётность или нечётность.</li></ol>
+    <div class="eg">y = x²: D = все x; E = [0; +∞); нуль x = 0; y &gt; 0 при x ≠ 0; убывает на (−∞; 0], возрастает на [0; +∞); наименьшее 0, наибольшего нет; чётная.</div></div>
+  <h3>Лаборатория: параметры k и b</h3>
+  <div class="lab">
+    <svg id="labG" class="plot"></svg>
+    <div class="readout" id="gRead"></div>
+    <div class="controls">
+      <button class="btn small" type="button" data-fam="lin">y = kx + b</button>
+      <button class="btn small ghost" type="button" data-fam="hyp">y = k/x</button>
+    </div>
+    <div class="controls">
+      <label>k: <input type="range" id="gK" min="-4" max="4" step="0.5" value="1"></label><span class="pill" id="gKv">1</span>
+      <label id="gBl">b: <input type="range" id="gB" min="-4" max="4" step="1" value="2"></label><span class="pill" id="gBv">2</span>
+    </div>
+  </div>
+
+</section>
+
+<section class="card" id="examples" data-nav="Примеры">
+  <h2><span class="step">↳</span> Разбор примеров</h2>
+  <div class="grid3"><div class="box example"><span class="title">Пример 1. Найти k</span><p>График y = kx проходит через A(3; −12). Найдите k.</p><details class="reveal"><summary>Показать решение</summary><p><b>Решение.</b> −12 = 3k → k = −4.</p><p><b>Ответ:</b> −4.</p></details></div><div class="box example"><span class="title">Пример 2. Гипербола</span><p>График y = k/x проходит через (2; −5). Найдите k.</p><details class="reveal"><summary>Показать решение</summary><p><b>Решение.</b> k = x · y = −10.</p><p><b>Ответ:</b> −10.</p></details></div><div class="box example"><span class="title">Пример 3. Пересечение</span><p>Найдите точку пересечения y = 2x + 3 и y = −x + 9.</p><details class="reveal"><summary>Показать решение</summary><p><b>Решение.</b> 2x + 3 = −x + 9 → x = 2, y = 7.</p><p><b>Ответ:</b> (2; 7).</p></details></div></div>
+</section>
+
+<section class="card" id="practice" data-nav="Практика">
+  <h2><span class="step">3</span> Интерактивная практика <span class="mins">25–45 мин</span></h2>
+  <h3>🎯 Игра «Узнай формулу»</h3>
+  <div class="lab task" id="game" data-id="game" data-noauto>
+    <svg id="gameSvg" class="plot"></svg>
+    <div class="controls" style="justify-content:space-between"><b id="gRound"></b><span class="pill" id="gScore">Верно: 0</span></div>
+    <p style="margin:8px 0 0">Какой формулой задан график?</p>
+    <div class="choice-btns" id="gBtns"></div>
+    <div class="controls"><span class="feedback" id="gFb"></span><button class="btn small" type="button" id="gNext" style="display:none">Дальше →</button></div>
+    <div class="sol">Засчитывается при 6 верных из 8.</div>
+  </div>
+
+  <h3>Блок А. База</h3>
+  <div class="tasks"><div class="task" data-id="p1"><div class="task-head"><span class="tnum">П1</span><span class="pill lvl1">база</span></div>
+<p>Найдите ординату точки графика y = 3x − 2 с абсциссой 2.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="4"></label></div>
+</div>
+<div class="task" data-id="p2"><div class="task-head"><span class="tnum">П2</span><span class="pill lvl1">база</span></div>
+<p>График y = kx проходит через точку A(3; −12). Найдите k.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="-4"></label></div>
+</div>
+<div class="task" data-id="p3"><div class="task-head"><span class="tnum">П3</span><span class="pill lvl1">база</span></div>
+<p>График y = k/x проходит через точку (2; −5). Найдите k.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="-10"></label></div>
+</div>
+<div class="task" data-id="p4"><div class="task-head"><span class="tnum">П4</span><span class="pill lvl1">база</span></div>
+<p>Найдите координаты точек пересечения прямой y = 2x − 1 с осями.</p>
+<div class="ans-row"><label>с Oy: y = <input class="ans" data-a="-1" data-label="с Oy: y"></label><label>с Ox: x = <input class="ans" data-a="0,5" data-label="с Ox: x"></label></div>
+</div>
+<div class="task" data-id="p5"><div class="task-head"><span class="tnum">П5</span><span class="pill lvl1">база</span></div>
+<p>Прямые y = 3x + 1 и y = kx − 4 параллельны. Найдите k.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="3"></label></div>
+</div>
+<div class="task" data-id="p6" data-mode="text"><div class="task-head"><span class="tnum">П6</span><span class="pill lvl1">база</span></div>
+<p>Принадлежит ли точка (−2; 4) графику y = x²? Впишите «да» или «нет».</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="да"></label></div>
+</div>
+</div>
+  <h3>Блок Б. Посложнее</h3>
+  <div class="tasks"><div class="task" data-id="p7"><div class="task-head"><span class="tnum">П7</span><span class="pill lvl2">средний</span></div>
+<p>Найдите координаты точки пересечения прямых y = 2x + 3 и y = −x + 9.</p>
+<div class="ans-row"><label>x = <input class="ans" data-a="2" data-label="x"></label><label>y = <input class="ans" data-a="7" data-label="y"></label></div>
+</div>
+<div class="task" data-id="p8"><div class="task-head"><span class="tnum">П8</span><span class="pill lvl2">средний</span></div>
+<p>При каком x функция y = √x принимает значение 7?</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="49"></label></div>
+</div>
+<div class="task" data-id="p9"><div class="task-head"><span class="tnum">П9</span><span class="pill lvl2">средний</span></div>
+<p>Прямая y = kx + b проходит через точки (0; 3) и (2; 7). Найдите k и b.</p>
+<div class="ans-row"><label>k = <input class="ans" data-a="2" data-label="k"></label><label>b = <input class="ans" data-a="3" data-label="b"></label></div>
+</div>
+<div class="task" data-id="p10"><div class="task-head"><span class="tnum">П10</span><span class="pill lvl3">сложнее</span></div>
+<p>Гипербола y = k/x и прямая y = 2x пересекаются в точке с абсциссой 3. Найдите k.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="18"></label></div>
+<div class="sol">y = 2 · 3 = 6, k = 3 · 6 = 18.</div>
+</div>
+</div>
+</section>
+
+<section class="card oge" id="oge" data-nav="ОГЭ">
+  <h2><span class="step">4</span> Задачи в формате ОГЭ <span class="mins">45–55 мин</span></h2>
+  <div class="tasks"><div class="task" data-id="o1" data-mode="text"><div class="task-head"><span class="tnum">О1</span><span class="pill oge">ОГЭ №11</span></div>
+<p>Установите соответствие между графиками и формулами. Ответ — цифры в порядке А, Б, В без пробелов.</p><div class="grid3" style="margin:8px 0"><figure style="margin:0"><svg id="o1a" class="mini"></svg><figcaption><b>А</b></figcaption></figure><figure style="margin:0"><svg id="o1b" class="mini"></svg><figcaption><b>Б</b></figcaption></figure><figure style="margin:0"><svg id="o1c" class="mini"></svg><figcaption><b>В</b></figcaption></figure></div><ol style="margin:6px 0"><li>y = 2/x</li><li>y = x²</li><li>y = √x</li></ol>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="312"></label></div>
+</div>
+<div class="task" data-id="o2" data-mode="text"><div class="task-head"><span class="tnum">О2</span><span class="pill oge">ОГЭ №11</span></div>
+<p>Установите соответствие между графиками линейных функций y = kx + b и знаками коэффициентов. Ответ — цифры в порядке А, Б, В.</p><div class="grid3" style="margin:8px 0"><figure style="margin:0"><svg id="o2a" class="mini"></svg><figcaption><b>А</b></figcaption></figure><figure style="margin:0"><svg id="o2b" class="mini"></svg><figcaption><b>Б</b></figcaption></figure><figure style="margin:0"><svg id="o2c" class="mini"></svg><figcaption><b>В</b></figcaption></figure></div><ol style="margin:6px 0"><li>k &gt; 0, b &gt; 0</li><li>k &lt; 0, b &gt; 0</li><li>k &gt; 0, b &lt; 0</li></ol>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="231"></label></div>
+</div>
+<div class="task" data-id="o3"><div class="task-head"><span class="tnum">О3</span><span class="pill oge">ОГЭ №11</span></div>
+<p>Найдите k, если прямая y = kx + 4 проходит через точку (−2; 0).</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="2"></label></div>
+</div>
+<div class="task" data-id="o4" data-mode="digits"><div class="task-head"><span class="tnum">О4</span><span class="pill oge">ОГЭ №19</span></div>
+<p>Какие утверждения верны?</p><ol style="margin:6px 0"><li>График функции y = kx + b при k &gt; 0 — возрастающая прямая.</li><li>График функции y = k/x при k &lt; 0 расположен в I и III четвертях.</li><li>Графики функций y = 2x + 1 и y = 2x − 3 параллельны.</li></ol>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="13"></label></div>
+</div>
+</div>
+</section>
+
+<section class="card" id="hw" data-nav="Итог и ДЗ">
+  <h2><span class="step">5</span> Итог и домашнее задание <span class="mins">55–60 мин</span></h2>
+  <h3>Шпаргалка</h3>
+  <div class="cheat"><div><b>y = kx + b:</b> k — наклон, b — пересечение с Oy</div><div><b>y = k/x:</b> k &gt; 0 — I, III; k &lt; 0 — II, IV</div><div><b>Параллельные прямые:</b> равные k</div><div><b>Точка на графике:</b> подставить координаты</div></div>
+  <h3>📚 Домашнее задание</h3>
+  <p class="muted">Ответы проверяются в начале занятия 6.</p>
+  <ol class="hw"><li>y = −2x + 5. Найдите y при x = −3.<div class="sol"><span class="ansline">Ответ: 11.</span> </div></li><li>График y = kx проходит через (−2; 8). Найдите k.<div class="sol"><span class="ansline">Ответ: −4.</span> </div></li><li>График y = k/x проходит через (4; 3). Найдите k.<div class="sol"><span class="ansline">Ответ: 12.</span> </div></li><li>Найдите абсциссу точки пересечения прямых y = 3x − 2 и y = x + 4.<div class="sol"><span class="ansline">Ответ: 3.</span> y = 7.</div></li><li>(ОГЭ №19) 1) Прямая y = 5 параллельна оси Ox. 2) График y = x² проходит через точку (−3; −9). 3) Функция y = √x определена при x ≥ 0.<div class="sol"><span class="ansline">Ответ: 13.</span> </div></li></ol>
+  <h3>⭐ Бонусное ДЗ</h3>
+  <ol class="hw"><li>Прямая параллельна прямой y = −3x + 2 и проходит через точку (1; 4). Найдите b в её уравнении y = −3x + b.<div class="sol"><span class="ansline">Ответ: 7.</span> </div></li><li>Найдите наименьшее целое k, при котором прямая y = kx пересекает гиперболу y = 4/x.<div class="sol"><span class="ansline">Ответ: 1.</span> kx = 4/x → x² = 4/k, нужно k &gt; 0.</div></li></ol>
+  <p style="margin-top:18px"><button class="btn small ghost" type="button" onclick="GeoResetLesson()">Сбросить прогресс занятия</button></p>
+</section>
+
+<section class="card bonus" id="bonus" data-nav="★ Бонус">
+  <h2><span class="step">★</span> Бонусная практика</h2>
+  <div class="tasks"><div class="task" data-id="b1"><div class="task-head"><span class="tnum">Б1</span><span class="pill lvl3">сложнее</span></div>
+<p>Найдите площадь треугольника, образованного прямой y = −2x + 6 и осями координат.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="9"></label></div>
+<div class="sol">Точки (3; 0) и (0; 6), S = ½ · 3 · 6 = 9.</div>
+</div>
+<div class="task" data-id="b2"><div class="task-head"><span class="tnum">Б2</span><span class="pill lvl3">сложнее</span></div>
+<p>Гипербола y = 6/x и прямая y = x + 1 пересекаются в двух точках. Найдите сумму их абсцисс.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="-1"></label></div>
+<div class="sol">x² + x − 6 = 0, x = 2 и x = −3.</div>
+</div>
+<div class="task" data-id="b3"><div class="task-head"><span class="tnum">Б3</span><span class="pill lvl3">сложнее</span></div>
+<p>При каком x функция y = |x − 2| принимает наименьшее значение?</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="2"></label></div>
+</div>
+</div>
+</section>
+
+</div>
+
+<script src="../assets/core.js"></script>
+<script>
+
+function miniPlot(id, f, o){
+  o = o || {}; var svg = document.getElementById(id); if(!svg) return;
+  var P = GeoPlot(svg, {xmin:o.xmin || -5, xmax:o.xmax || 5, ymin:o.ymin || -5, ymax:o.ymax || 5, w:300, h:300});
+  P.grid(); P.curve(f, o.color || '#2f5bea', {width:3}); if(o.after) o.after(P); return P;
+}
+
+miniPlot('t1', function(x){ return 0.5 * x + 1; }); miniPlot('t2', function(x){ return 4 / x; }); miniPlot('t3', function(x){ return x * x; });
+miniPlot('t4', function(x){ return x * x * x / 2; }); miniPlot('t5', function(x){ return Math.sqrt(x); }); miniPlot('t6', function(x){ return Math.abs(x); });
+miniPlot('o1a', function(x){ return Math.sqrt(x); }); miniPlot('o1b', function(x){ return 2 / x; }); miniPlot('o1c', function(x){ return x * x; });
+miniPlot('o2a', function(x){ return -x + 2; }); miniPlot('o2b', function(x){ return 2 * x - 1; }); miniPlot('o2c', function(x){ return x + 2; });
+(function(){
+  var svg = document.getElementById('labG'), fam = 'lin', K = document.getElementById('gK'), B = document.getElementById('gB');
+  function n(v){ return String(v).replace('.', ',').replace('-', '−'); }
+  function draw(){
+    var k = +K.value, b = +B.value, P = GeoPlot(svg, {xmin:-7, xmax:7, ymin:-6, ymax:6, w:600, h:420}); P.clear(); P.grid();
+    document.getElementById('gKv').textContent = n(k); document.getElementById('gBv').textContent = n(b);
+    document.getElementById('gBl').style.display = fam === 'lin' ? '' : 'none'; document.getElementById('gBv').style.display = fam === 'lin' ? '' : 'none';
+    if(fam === 'lin'){ P.curve(function(x){ return k * x + b; }, '#2f5bea'); P.point(0, b, '#e5484d', '(0; ' + n(b) + ')');
+      document.getElementById('gRead').innerHTML = '<span>y = ' + n(k) + 'x ' + (b < 0 ? '− ' + n(-b) : '+ ' + n(b)) + '</span><span>' + (k > 0 ? 'возрастает' : (k < 0 ? 'убывает' : 'постоянная')) + '</span>' + (k !== 0 ? '<span>пересекает Ox в x = ' + n(Math.round(-b / k * 100) / 100) + '</span>' : '');
+    } else { if(k === 0){ K.value = 1; k = 1; document.getElementById('gKv').textContent = '1'; }
+      P.curve(function(x){ return k / x; }, '#2f5bea');
+      document.getElementById('gRead').innerHTML = '<span>y = ' + n(k) + '/x</span><span>' + (k > 0 ? 'I и III четверти' : 'II и IV четверти') + '</span><span>x ≠ 0</span>';
+    }
+  }
+  [K, B].forEach(function(e){ e.addEventListener('input', draw); });
+  document.querySelectorAll('[data-fam]').forEach(function(b){ b.addEventListener('click', function(){ fam = b.getAttribute('data-fam'); document.querySelectorAll('[data-fam]').forEach(function(x){ x.classList.toggle('ghost', x !== b); }); draw(); }); });
+  draw();
+})();
+document.addEventListener('geo:ready', function(){
+  var svg = document.getElementById('gameSvg'), ROUNDS = 8, round = 0, score = 0, cur, answered;
+  var fb = document.getElementById('gFb'), nx = document.getElementById('gNext'), box = document.getElementById('gBtns');
+  function sgn(v){ return v < 0 ? '− ' + (-v) : '+ ' + v; }
+  function gen(){
+    var t = GeoRand(1, 6), k = GeoPick([-3, -2, -1, 1, 2, 3]), b = GeoPick([-3, -2, -1, 1, 2, 3]);
+    if(t === 1) return {s:'y = ' + (k === 1 ? '' : (k === -1 ? '−' : String(k).replace('-', '−'))) + 'x ' + sgn(b), f:function(x){ return k * x + b; }};
+    if(t === 2){ var c = GeoPick([-6, -4, -2, 2, 4, 6]); return {s:'y = ' + (c < 0 ? '−' : '') + Math.abs(c) + '/x', f:function(x){ return c / x; }}; }
+    if(t === 3) return {s:'y = ' + (k < 0 ? '−' : '') + 'x² ' + sgn(b), f:function(x){ return (k < 0 ? -1 : 1) * x * x + b; }};
+    if(t === 4) return {s:'y = √x ' + sgn(b), f:function(x){ return Math.sqrt(x) + b; }};
+    if(t === 5) return {s:'y = |x| ' + sgn(b), f:function(x){ return Math.abs(x) + b; }};
+    return {s:'y = ' + (k < 0 ? '−' : '') + 'x³', f:function(x){ return (k < 0 ? -1 : 1) * x * x * x; }};
+  }
+  function newRound(){
+    answered = false; round++; cur = gen(); var opts = [cur], tries = 0;
+    while(opts.length < 4 && tries < 100){ tries++; var o = gen(); if(opts.every(function(p){ return p.s !== o.s; })) opts.push(o); }
+    opts.sort(function(){ return Math.random() - 0.5; });
+    var P = GeoPlot(svg, {xmin:-6, xmax:6, ymin:-6, ymax:6, w:600, h:420}); P.clear(); P.grid(); P.curve(cur.f, '#2f5bea');
+    box.innerHTML = ''; opts.forEach(function(o){ var bt = document.createElement('button'); bt.type = 'button'; bt.textContent = o.s; bt.dataset.ok = o === cur ? '1' : ''; box.appendChild(bt); });
+    document.getElementById('gRound').textContent = 'Раунд ' + round + ' / ' + ROUNDS; fb.textContent = ''; nx.style.display = 'none';
+  }
+  box.addEventListener('click', function(e){
+    var b = e.target.closest('button'); if(!b || answered) return; answered = true; var ok = b.dataset.ok === '1';
+    if(ok){ score++; b.classList.add('good'); } else { b.classList.add('wrong'); box.querySelectorAll('button').forEach(function(x){ if(x.dataset.ok) x.classList.add('good'); }); }
+    fb.className = 'feedback ' + (ok ? 'ok' : 'bad'); fb.textContent = ok ? '✓ Верно!' : '✗ Правильно: ' + cur.s;
+    document.getElementById('gScore').textContent = 'Верно: ' + score;
+    if(round >= ROUNDS){ var pass = score >= 6; fb.textContent += pass ? ' Пройдено: ' + score + ' из 8 🎉' : ' Итог ' + score + ' из 8, нужно 6.'; if(pass){ GeoMarkSolved('game'); document.getElementById('game').classList.add('ok'); } nx.textContent = 'Ещё раз ↻'; }
+    else nx.textContent = 'Дальше →';
+    nx.style.display = '';
+  });
+  nx.addEventListener('click', function(){ if(round >= ROUNDS){ round = 0; score = 0; document.getElementById('gScore').textContent = 'Верно: 0'; } newRound(); });
+  if(GeoIsSolved('game')) document.getElementById('game').classList.add('ok');
+  newRound();
+});
+
+</script>
+</body>
+</html>

@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Алгебра · занятие 11 · Задачи на движение</title>
+<link rel="stylesheet" href="../assets/core.css">
+</head>
+<body data-lesson="A11">
+
+<nav class="topnav"><div class="in">
+  <a class="home" href="../algebra.html">🧮 <span>Алгебра · ОГЭ</span></a>
+  <div class="links"></div>
+  <a class="home" href="../spravochnik-algebra.html" title="Справочник">📖</a>
+  <div class="progress-pill">Решено <b>0 / 0</b><div class="progress-bar"><i></i></div></div>
+</div></nav>
+
+<div class="container">
+
+<header class="hero">
+  <span class="tag">Раздел 3 · Уравнения и неравенства с одной переменной</span><span class="tag">Алгебра · занятие 11 из 23</span><span class="tag">Учебник: гл. III §5, п. 15</span>
+  <h1>Текстовые задачи: движение</h1>
+  <p>Таблица «скорость — время — расстояние», движение навстречу и вдогонку, по реке, средняя скорость. ОГЭ №21.</p>
+  <div class="timeline">
+    <a href="#warmup">① Проверка ДЗ <small>0–10′</small></a>
+    <a href="#theory">② Теория <small>10–25′</small></a>
+    <a href="#practice">③ Практика <small>25–45′</small></a>
+    <a href="#oge">④ ОГЭ <small>45–55′</small></a>
+    <a href="#hw">⑤ Итог и ДЗ <small>55–60′</small></a>
+    <a href="#bonus">★ Бонус</a>
+  </div>
+</header>
+
+<div class="teacher-panel teacher-only">
+  <h3>План занятия (60 минут)</h3>
+  <ol><li><b>0–10′</b> Проверка ДЗ занятия 10.</li><li><b>10–25′</b> Теория: план решения и таблица v, t, s. Каждую задачу урока начинать с таблицы.</li><li><b>25–45′</b> Тренажёр, затем П1–П10 (Б1–Б2 — с таблицей в тетради).</li><li><b>45–55′</b> ОГЭ №21: полное оформление (обозначение, таблица, уравнение, отбор, ответ).</li><li><b>55–60′</b> Шпаргалка, ДЗ.</li></ol>
+  <p class="muted" style="margin:0">Типичные ошибки: среднюю скорость считают как среднее арифметическое; путают, на сколько больше время (из большего вычитают меньшее); не отбрасывают отрицательный корень и не проверяют условие (скорость лодки больше скорости течения); смешивают минуты и часы.</p>
+</div>
+
+<section class="card" id="warmup" data-nav="Проверка ДЗ">
+  <h2><span class="step">1</span> Проверка ДЗ <span class="mins">0–10 мин</span></h2>
+  <div class="tasks"><div class="task" data-id="h1"><div class="task-head"><span class="tnum">ДЗ 1</span></div>
+<p>Решите уравнение 8/(x − 3) = 2.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="7"></label></div>
+</div>
+<div class="task" data-id="h2"><div class="task-head"><span class="tnum">ДЗ 2</span></div>
+<p>Решите уравнение (x² − 16)/(x − 4) = 0.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="-4"></label></div>
+</div>
+<div class="task" data-id="h3"><div class="task-head"><span class="tnum">ДЗ 3</span></div>
+<p>Решите уравнение (x² − 7x + 10)/(x − 5) = 0.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="2"></label></div>
+</div>
+<div class="task" data-id="h4"><div class="task-head"><span class="tnum">ДЗ 4</span></div>
+<p>Решите уравнение x − 6/x = 1.</p>
+<div class="ans-row"><label>меньший = <input class="ans" data-a="-2" data-label="меньший"></label><label>больший = <input class="ans" data-a="3" data-label="больший"></label></div>
+</div>
+<div class="task" data-id="h5" data-mode="digits"><div class="task-head"><span class="tnum">ДЗ 5</span><span class="pill oge">ОГЭ №19</span></div>
+<p>1) Дробь равна нулю, если числитель равен нулю, а знаменатель не равен нулю. 2) Уравнение (x² − 1)/(x − 1) = 0 имеет два корня. 3) При умножении дробного уравнения на общий знаменатель могут появиться посторонние корни.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="13"></label></div>
+</div>
+</div>
+</section>
+
+<section class="card" id="theory" data-nav="Теория">
+  <h2><span class="step">2</span> Теория <span class="mins">10–25 мин</span></h2>
+
+  <div class="grid2">
+    <div class="box def"><span class="title">План решения задачи</span>
+      <ol class="rules"><li>Обозначить неизвестное буквой x (с единицами).</li><li>Заполнить таблицу: каждая строка — один участок движения.</li><li>Составить уравнение по условию, которое ещё не использовано.</li><li>Решить и <b>отобрать корни по смыслу</b> (скорость &gt; 0, лодка быстрее течения).</li><li>Ответить именно на вопрос задачи.</li></ol>
+      <div class="eg trap">Время «на 2 ч меньше» → из <b>большего</b> времени вычитаем меньшее: t₁ − t₂ = 2.</div></div>
+    <div class="box rule"><span class="title">Таблица-схема</span>
+      <div class="formula">s = v · t, &nbsp; t = s / v</div>
+      <div class="eg">Велосипедист проехал 40 км из A в B. Обратно ехал на 10 км/ч быстрее и затратил на 2 ч меньше. Пусть x км/ч — скорость из A в B.
+      <div style="overflow-x:auto"><table style="border-collapse:collapse;width:100%;margin:8px 0;font-size:15px"><tr><th style="border:1px solid var(--line);padding:5px 8px;text-align:center;background:var(--primary-soft)"></th><th style="border:1px solid var(--line);padding:5px 8px;text-align:center;background:var(--primary-soft)">v, км/ч</th><th style="border:1px solid var(--line);padding:5px 8px;text-align:center;background:var(--primary-soft)">t, ч</th><th style="border:1px solid var(--line);padding:5px 8px;text-align:center;background:var(--primary-soft)">s, км</th></tr><tr><td style="border:1px solid var(--line);padding:5px 8px;text-align:center">A → B</td><td style="border:1px solid var(--line);padding:5px 8px;text-align:center">x</td><td style="border:1px solid var(--line);padding:5px 8px;text-align:center">40/x</td><td style="border:1px solid var(--line);padding:5px 8px;text-align:center">40</td></tr><tr><td style="border:1px solid var(--line);padding:5px 8px;text-align:center">B → A</td><td style="border:1px solid var(--line);padding:5px 8px;text-align:center">x + 10</td><td style="border:1px solid var(--line);padding:5px 8px;text-align:center">40/(x + 10)</td><td style="border:1px solid var(--line);padding:5px 8px;text-align:center">40</td></tr></table></div>
+      Время туда больше: 40/x − 40/(x + 10) = 2 → x² + 10x − 200 = 0 → x = 10 (x = −20 не подходит).</div></div>
+  </div>
+  <div class="grid3" style="margin-top:14px">
+    <div class="box rule"><span class="title">Навстречу и вдогонку</span>
+      <ul class="rules"><li>Навстречу: v<sub>сбл</sub> = v₁ + v₂.</li><li>Вдогонку: v<sub>сбл</sub> = v₁ − v₂.</li><li>t = (расстояние между ними) / v<sub>сбл</sub>.</li></ul>
+      <div class="eg">300 км, 70 и 80 км/ч навстречу: t = 300/150 = 2 ч.</div>
+      <div class="eg">Круговая трасса: «обогнал на круг» — разница путей равна длине круга.</div></div>
+    <div class="box rule"><span class="title">Движение по реке</span>
+      <ul class="rules"><li>По течению: v + v<sub>т</sub>.</li><li>Против течения: v − v<sub>т</sub>.</li><li>Плот плывёт со скоростью течения.</li></ul>
+      <div class="eg">v = 12, v<sub>т</sub> = 3: по течению 15 км/ч, против — 9 км/ч. 45 км против течения — 5 ч.</div></div>
+    <div class="box tip"><span class="title">Средняя скорость</span>
+      <div class="formula">v<sub>ср</sub> = весь путь / всё время</div>
+      <div class="eg">Половину пути 60 км/ч, половину 40 км/ч. Пусть путь 240 км: t = 2 + 3 = 5 ч, v<sub>ср</sub> = 240/5 = 48 км/ч.</div>
+      <div class="eg trap">Не (60 + 40)/2 = 50!</div></div>
+  </div>
+
+</section>
+
+<section class="card" id="examples" data-nav="Примеры">
+  <h2><span class="step">↳</span> Разбор примеров</h2>
+  <div class="grid3"><div class="box example"><span class="title">Пример 1. Навстречу</span><p>Из A и B, расстояние между которыми 300 км, одновременно навстречу выехали автомобиль и мотоцикл и встретились через 2 ч. Скорость автомобиля на 10 км/ч больше. Найдите скорость мотоцикла.</p><details class="reveal"><summary>Показать решение</summary><p><b>Решение.</b> Пусть x км/ч — скорость мотоцикла, x + 10 — автомобиля. За 2 ч вместе проехали 300 км: 2(2x + 10) = 300 → x = 70.</p><p><b>Ответ:</b> 70 км/ч.</p></details></div><div class="box example"><span class="title">Пример 2. По реке</span><p>Лодка прошла 24 км по течению и 24 км против течения за 5 ч. Скорость течения 2 км/ч. Найдите скорость лодки в неподвижной воде.</p><details class="reveal"><summary>Показать решение</summary><p><b>Решение.</b> Таблица: по течению v = x + 2, t = 24/(x + 2); против — x − 2, 24/(x − 2). 24/(x + 2) + 24/(x − 2) = 5 → 5x² − 48x − 20 = 0 → x = 10 (x = −0,4 не подходит).</p><p><b>Ответ:</b> 10 км/ч.</p></details></div><div class="box example"><span class="title">Пример 3. Вдогонку</span><p>Из города выехал велосипедист со скоростью 12 км/ч, через 2 ч вслед за ним — мотоциклист со скоростью 36 км/ч. Через сколько часов после выезда мотоциклист догонит велосипедиста?</p><details class="reveal"><summary>Показать решение</summary><p><b>Решение.</b> За 2 ч велосипедист проехал 24 км. Скорость сближения 36 − 12 = 24 км/ч. t = 24/24 = 1.</p><p><b>Ответ:</b> 1 ч.</p></details></div></div>
+</section>
+
+<section class="card" id="practice" data-nav="Практика">
+  <h2><span class="step">3</span> Интерактивная практика <span class="mins">25–45 мин</span></h2>
+  <h3>🎯 Тренажёр «Задачи на движение»</h3>
+  <div class="lab task" id="trainer" data-id="trainer" data-noauto><div id="trainerBox"></div>
+    <div class="sol">Задачи генерируются случайно. Засчитывается при 5 верных из 6.</div></div>
+
+  <h3>Блок А. База</h3>
+  <div class="tasks"><div class="task" data-id="p1"><div class="task-head"><span class="tnum">П1</span><span class="pill lvl1">база</span></div>
+<p>Из двух городов, расстояние между которыми 360 км, одновременно навстречу друг другу выехали два автомобиля со скоростями 70 км/ч и 50 км/ч. Через сколько часов они встретятся?</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="3"></label></div>
+</div>
+<div class="task" data-id="p2"><div class="task-head"><span class="tnum">П2</span><span class="pill lvl1">база</span></div>
+<p>Пешеход вышел из посёлка со скоростью 5 км/ч. Через 2 ч вслед за ним выехал велосипедист со скоростью 15 км/ч. Через сколько часов после выезда велосипедист догонит пешехода?</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="1"></label></div>
+</div>
+<div class="task" data-id="p3"><div class="task-head"><span class="tnum">П3</span><span class="pill lvl1">база</span></div>
+<p>Скорость лодки в неподвижной воде 12 км/ч, скорость течения 3 км/ч. За сколько часов лодка пройдёт 45 км против течения?</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="5"></label></div>
+</div>
+<div class="task" data-id="p4"><div class="task-head"><span class="tnum">П4</span><span class="pill lvl1">база</span></div>
+<p>Первую половину пути автомобиль ехал со скоростью 30 км/ч, вторую — 60 км/ч. Найдите среднюю скорость (км/ч).</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="40"></label></div>
+</div>
+<div class="task" data-id="p5"><div class="task-head"><span class="tnum">П5</span><span class="pill lvl1">база</span></div>
+<p>Автомобиль ехал 2 ч со скоростью 60 км/ч, затем 3 ч со скоростью 80 км/ч. Найдите среднюю скорость (км/ч).</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="72"></label></div>
+</div>
+<div class="task" data-id="p6"><div class="task-head"><span class="tnum">П6</span><span class="pill lvl1">база</span></div>
+<p>Теплоход шёл 3 ч по течению и 2 ч против течения. Собственная скорость 20 км/ч, скорость течения 2 км/ч. Какой путь (км) прошёл теплоход?</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="102"></label></div>
+</div>
+</div>
+  <h3>Блок Б. Посложнее</h3>
+  <div class="tasks"><div class="task" data-id="p7"><div class="task-head"><span class="tnum">П7</span><span class="pill lvl2">средний</span></div>
+<p>Велосипедист проехал 40 км из A в B. Обратно он ехал со скоростью на 10 км/ч больше и затратил на 2 ч меньше. Найдите скорость велосипедиста на пути из A в B.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="10"></label></div>
+<div class="hint">Таблица из теории.</div>
+</div>
+<div class="task" data-id="p8"><div class="task-head"><span class="tnum">П8</span><span class="pill lvl2">средний</span></div>
+<p>Моторная лодка прошла против течения 91 км и вернулась обратно, затратив на обратный путь на 6 ч меньше. Скорость течения 3 км/ч. Найдите скорость лодки в неподвижной воде.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="10"></label></div>
+<div class="sol">91/(x − 3) − 91/(x + 3) = 6 → 546 = 6(x² − 9) → x² = 100.</div>
+</div>
+<div class="task" data-id="p9"><div class="task-head"><span class="tnum">П9</span><span class="pill lvl2">средний</span></div>
+<p>Из одной точки круговой трассы длиной 14 км одновременно в одном направлении стартовали два автомобиля. Скорость первого 80 км/ч, через 40 минут он опережал второго на один круг. Найдите скорость второго (км/ч).</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="59"></label></div>
+<div class="sol">(80 − x) · 2/3 = 14 → 80 − x = 21.</div>
+</div>
+<div class="task" data-id="p10"><div class="task-head"><span class="tnum">П10</span><span class="pill lvl3">сложнее</span></div>
+<p>Первые 190 км автомобиль ехал со скоростью 50 км/ч, следующие 180 км — со скоростью 90 км/ч, а затем 170 км — со скоростью 100 км/ч. Найдите среднюю скорость на всём пути.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="72"></label></div>
+<div class="sol">t = 3,8 + 2 + 1,7 = 7,5 ч; 540/7,5 = 72.</div>
+</div>
+</div>
+</section>
+
+<section class="card oge" id="oge" data-nav="ОГЭ">
+  <h2><span class="step">4</span> Задачи в формате ОГЭ <span class="mins">45–55 мин</span></h2>
+  <div class="tasks"><div class="task" data-id="o1"><div class="task-head"><span class="tnum">О1</span><span class="pill oge">ОГЭ №21</span></div>
+<p>Расстояние между пристанями A и B равно 80 км. Из A в B по течению реки отправился плот, а через 1 ч вслед за ним отправилась яхта, которая, прибыв в B, тотчас повернула обратно и возвратилась в A. К этому времени плот прошёл 20 км. Найдите скорость яхты в неподвижной воде, если скорость течения реки равна 2 км/ч.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="18"></label></div>
+<div class="sol">Плот плыл 20/2 = 10 ч, яхта — 9 ч. 80/(x + 2) + 80/(x − 2) = 9 → 9x² − 160x − 36 = 0 → x = 18.</div>
+</div>
+<div class="task" data-id="o2"><div class="task-head"><span class="tnum">О2</span><span class="pill oge">ОГЭ №21</span></div>
+<p>Два велосипедиста одновременно отправились в 240-километровый пробег. Первый ехал со скоростью на 1 км/ч большей, чем второй, и прибыл к финишу на 1 ч раньше второго. Найдите скорость велосипедиста, пришедшего к финишу вторым.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="15"></label></div>
+<div class="sol">240/x − 240/(x + 1) = 1 → x² + x − 240 = 0 → x = 15.</div>
+</div>
+<div class="task" data-id="o3"><div class="task-head"><span class="tnum">О3</span><span class="pill oge">ОГЭ №21</span></div>
+<p>Из A в B одновременно выехали два автомобиля. Первый проехал с постоянной скоростью весь путь. Второй проехал первую половину пути со скоростью 55 км/ч, а вторую половину — со скоростью, на 6 км/ч большей скорости первого, в результате чего прибыл в B одновременно с первым. Найдите скорость первого автомобиля, если она больше 50 км/ч.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="60"></label></div>
+<div class="sol">Путь 2 (условно): 2/x = 1/55 + 1/(x + 6) → x² − 49x − 660 = 0 → x = 60 (x = −11 не подходит).</div>
+</div>
+<div class="task" data-id="o4" data-mode="digits"><div class="task-head"><span class="tnum">О4</span><span class="pill oge">ОГЭ №19</span></div>
+<p>Какие утверждения верны?</p><ol style="margin:6px 0"><li>При движении навстречу скорость сближения равна сумме скоростей.</li><li>Средняя скорость на двух равных участках пути равна среднему арифметическому скоростей на этих участках.</li><li>Скорость по течению больше скорости против течения на удвоенную скорость течения.</li></ol>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="13"></label></div>
+<div class="sol">2 — неверно: v<sub>ср</sub> = весь путь / всё время.</div>
+</div>
+</div>
+</section>
+
+<section class="card" id="hw" data-nav="Итог и ДЗ">
+  <h2><span class="step">5</span> Итог и домашнее задание <span class="mins">55–60 мин</span></h2>
+  <h3>Шпаргалка</h3>
+  <div class="cheat"><div><b>s = v · t</b> — таблица: строка на каждый участок</div><div><b>Навстречу:</b> v₁ + v₂; <b>вдогонку:</b> v₁ − v₂</div><div><b>Река:</b> v ± v<sub>т</sub>; плот — скорость течения</div><div><b>v<sub>ср</sub></b> = весь путь / всё время</div><div><b>Отбор:</b> скорость &gt; 0; минуты → часы</div></div>
+  <h3>📚 Домашнее задание</h3>
+  <p class="muted">Ответы проверяются в начале занятия 12.</p>
+  <ol class="hw"><li>Два поезда вышли одновременно навстречу друг другу из городов, расстояние между которыми 450 км, со скоростями 80 км/ч и 70 км/ч. Через сколько часов они встретятся?<div class="sol"><span class="ansline">Ответ: 3.</span> </div></li><li>Собственная скорость лодки 10 км/ч, скорость течения 2 км/ч. За сколько часов лодка пройдёт 36 км по течению?<div class="sol"><span class="ansline">Ответ: 3.</span> </div></li><li>Первую половину пути автомобиль ехал со скоростью 20 км/ч, вторую — 30 км/ч. Найдите среднюю скорость (км/ч).<div class="sol"><span class="ansline">Ответ: 24.</span> Путь 120: t = 3 + 2 = 5 ч.</div></li><li>Автобус проехал 120 км из A в B. Обратно он ехал со скоростью на 20 км/ч больше и затратил на 1 ч меньше. Найдите скорость автобуса на пути из A в B.<div class="sol"><span class="ansline">Ответ: 40.</span> 120/x − 120/(x + 20) = 1 → x² + 20x − 2400 = 0.</div></li><li>(ОГЭ №19) 1) При движении навстречу скорость сближения равна сумме скоростей. 2) Скорость против течения равна сумме собственной скорости и скорости течения. 3) Средняя скорость равна отношению всего пути ко всему времени движения.<div class="sol"><span class="ansline">Ответ: 13.</span> </div></li></ol>
+  <h3>⭐ Бонусное ДЗ</h3>
+  <ol class="hw"><li>Теплоход проходит по течению 255 км и после стоянки возвращается в пункт отправления. Скорость течения 1 км/ч, стоянка длится 2 ч, в пункт отправления теплоход возвращается через 34 ч после отплытия. Найдите скорость теплохода в неподвижной воде.<div class="sol"><span class="ansline">Ответ: 16.</span> 255/(x + 1) + 255/(x − 1) = 32 → 16x² − 255x − 16 = 0 → x = 16.</div></li><li>Два автомобиля одновременно выехали навстречу друг другу из городов, расстояние между которыми 560 км, и встретились через 4 ч. Скорость одного на 10 км/ч больше. Найдите меньшую скорость.<div class="sol"><span class="ansline">Ответ: 65.</span> 4(2x + 10) = 560.</div></li></ol>
+  <p style="margin-top:18px"><button class="btn small ghost" type="button" onclick="GeoResetLesson()">Сбросить прогресс занятия</button></p>
+</section>
+
+<section class="card bonus" id="bonus" data-nav="★ Бонус">
+  <h2><span class="step">★</span> Бонусная практика</h2>
+  <div class="tasks"><div class="task" data-id="b1"><div class="task-head"><span class="tnum">Б1</span><span class="pill lvl3">сложнее</span></div>
+<p>Поезд, двигаясь равномерно со скоростью 80 км/ч, проезжает мимо придорожного столба за 36 секунд. Найдите длину поезда в метрах.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="800"></label></div>
+<div class="sol">80 км/ч = 80 000 м / 3600 с; за 36 с — 800 м.</div>
+</div>
+<div class="task" data-id="b2"><div class="task-head"><span class="tnum">Б2</span><span class="pill lvl3">сложнее</span></div>
+<p>Первую треть трассы автомобиль ехал со скоростью 60 км/ч, вторую — 120 км/ч, последнюю — 110 км/ч. Найдите среднюю скорость (км/ч).</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="88"></label></div>
+<div class="sol">Треть пути — 1320 км (условно): t = 22 + 11 + 12 = 45 ч, v = 3960/45 = 88.</div>
+</div>
+<div class="task" data-id="b3"><div class="task-head"><span class="tnum">Б3</span><span class="pill lvl3">сложнее</span></div>
+<p>Велосипедист и пешеход одновременно стартовали из одной точки круговой трассы длиной 3 км в одном направлении со скоростями 15 км/ч и 5 км/ч. Через сколько минут велосипедист впервые догонит пешехода?</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="18"></label></div>
+<div class="sol">t = 3/(15 − 5) = 0,3 ч = 18 мин.</div>
+</div>
+</div>
+</section>
+
+</div>
+
+<script src="../assets/core.js"></script>
+<script>
+
+document.addEventListener('geo:ready', function(){
+  var QL = [[70,4,2,10],[120,20,3,20],[60,15,2,15],[300,5,5,15],[240,20,1,60],[120,6,1,24],[210,5,1,30],[60,5,1,15],[120,10,2,20],[240,20,2,40],[240,4,5,12],[100,5,1,20],[120,3,2,12],[160,2,4,8],[200,15,3,25],[180,6,1,30],[120,4,1,20]];
+  var AV = [[60,40,48],[30,60,40],[20,30,24],[45,90,60],[60,90,72],[70,105,84],[12,6,8],[10,15,12],[36,45,40],[40,60,48]];
+  GeoTrainer(document.getElementById('trainerBox'), {rounds:6, id:'trainer', gen:function(){
+    var q = GeoRand(1, 5), v1, v2, t, d;
+    if(q === 1){ v1 = 5 * GeoRand(8, 18); v2 = 5 * GeoRand(8, 18); t = GeoRand(1, 5);
+      return {q:'Из двух городов, расстояние между которыми ' + (v1 + v2) * t + ' км, одновременно навстречу друг другу выехали два автомобиля со скоростями ' + v1 + ' км/ч и ' + v2 + ' км/ч. Через сколько часов они встретятся?', a:String(t), why:'t = ' + (v1 + v2) * t + ' / (' + v1 + ' + ' + v2 + ') = ' + t + '.'}; }
+    if(q === 2){ d = GeoPick([5, 10, 15]); v2 = GeoRand(3, 6); v1 = v2 + d; t = GeoRand(1, 4);
+      return {q:'Пешеход находится в ' + d * t + ' км впереди велосипедиста. Они одновременно двинулись в одном направлении: пешеход со скоростью ' + v2 + ' км/ч, велосипедист — ' + v1 + ' км/ч. Через сколько часов велосипедист догонит пешехода?', a:String(t), why:'v<sub>сбл</sub> = ' + v1 + ' − ' + v2 + ' = ' + d + '; t = ' + d * t + '/' + d + ' = ' + t + '.'}; }
+    if(q === 3){ var v = GeoRand(8, 20), u = GeoRand(1, 4), up = GeoRand(0, 1); t = GeoRand(2, 6); var w = up ? v - u : v + u;
+      return {q:'Собственная скорость лодки ' + v + ' км/ч, скорость течения ' + u + ' км/ч. За сколько часов лодка пройдёт ' + w * t + ' км ' + (up ? 'против течения' : 'по течению') + '?', a:String(t), why:'Скорость ' + (up ? v + ' − ' + u : v + ' + ' + u) + ' = ' + w + ' км/ч; ' + w * t + '/' + w + ' = ' + t + '.'}; }
+    if(q === 4){ var p = GeoPick(AV), sw = GeoRand(0, 1);
+      return {q:'Первую половину пути автомобиль ехал со скоростью ' + p[sw] + ' км/ч, а вторую — со скоростью ' + p[1 - sw] + ' км/ч. Найдите среднюю скорость на всём пути (км/ч).', a:String(p[2]), why:'v<sub>ср</sub> = 2·' + p[0] + '·' + p[1] + '/(' + p[0] + ' + ' + p[1] + ') = ' + p[2] + ', а не среднее арифметическое.'}; }
+    var z = GeoPick(QL);
+    return {q:'Из A в B, расстояние между которыми ' + z[0] + ' км, выехал ' + (z[3] >= 30 ? 'автомобиль' : 'велосипедист') + '. Обратно он ехал со скоростью на ' + z[1] + ' км/ч больше и затратил на ' + z[2] + ' ч меньше. Найдите его скорость на пути из A в B (км/ч).', a:String(z[3]), why:z[0] + '/x − ' + z[0] + '/(x + ' + z[1] + ') = ' + z[2] + ' → x = ' + z[3] + ' (' + z[0] / z[3] + ' ч и ' + z[0] / (z[3] + z[1]) + ' ч).'};
+  }});
+});
+
+</script>
+</body>
+</html>

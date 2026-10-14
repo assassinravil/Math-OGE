@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Занятие 7 · Синус, косинус, тангенс</title>
+<link rel="stylesheet" href="../assets/core.css">
+</head>
+<body data-lesson="L07">
+
+<nav class="topnav"><div class="in">
+  <a class="home" href="../geometry.html">📐 <span>Геометрия · ОГЭ</span></a>
+  <div class="links"></div>
+  <a class="home" href="../spravochnik.html" title="Справочник">📖</a>
+  <div class="progress-pill">Решено <b>0 / 0</b><div class="progress-bar"><i></i></div></div>
+</div></nav>
+
+<div class="container">
+
+<header class="hero">
+  <span class="tag">Раздел 2 · Подобие и тригонометрия</span><span class="tag">Занятие 7 из 23</span><span class="tag">Учебник: гл. VIII §4</span>
+  <h1>Синус, косинус и тангенс острого угла</h1>
+  <p>Определения в прямоугольном треугольнике, основное тригонометрическое тождество, значения для 30°, 45°, 60°.</p>
+  <div class="timeline">
+    <a href="#warmup">① Проверка ДЗ <small>0–10′</small></a>
+    <a href="#theory">② Теория <small>10–25′</small></a>
+    <a href="#practice">③ Практика <small>25–45′</small></a>
+    <a href="#oge">④ ОГЭ <small>45–55′</small></a>
+    <a href="#hw">⑤ Итог и ДЗ <small>55–60′</small></a>
+    <a href="#bonus">★ Бонус</a>
+  </div>
+</header>
+
+<div class="teacher-panel teacher-only">
+  <h3>План занятия (60 минут)</h3>
+  <ol><li><b>0–10′</b> Проверка ДЗ занятия 6.</li><li><b>10–25′</b> Теория. В лаборатории гипотенуза = 1, поэтому катеты буквально равны sin и cos. Показать 30°, 45°, 60° и сравнить с таблицей.</li><li><b>25–45′</b> Тренажёр, затем П1–П8. Ответы можно вводить дробью: 3/5 или 0,6.</li><li><b>45–55′</b> ОГЭ №15 — этот тип встречается очень часто.</li><li><b>55–60′</b> Шпаргалка, ДЗ. Таблицу значений выучить наизусть.</li></ol>
+  <p class="muted" style="margin:0">Типичные ошибки: путают противолежащий и прилежащий катеты; делят гипотенузу на катет (получая число больше 1); забывают, что sin и cos острого угла меньше 1.</p>
+</div>
+
+<section class="card" id="warmup" data-nav="Проверка ДЗ">
+  <h2><span class="step">1</span> Проверка ДЗ <span class="mins">0–10 мин</span></h2>
+  <div class="tasks"><div class="task" data-id="h1"><div class="task-head"><span class="tnum">ДЗ 1</span></div>
+<p>Средняя линия треугольника равна 11. Найдите параллельную ей сторону.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="22"></label></div>
+</div>
+<div class="task" data-id="h2"><div class="task-head"><span class="tnum">ДЗ 2</span></div>
+<p>Медиана равна 15. Найдите отрезок GM (от точки пересечения медиан до стороны).</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="5"></label></div>
+</div>
+<div class="task" data-id="h3"><div class="task-head"><span class="tnum">ДЗ 3</span></div>
+<p>AB = 6, BC = 9, AC = 10, BL — биссектриса. Найдите AL.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="4"></label></div>
+</div>
+<div class="task" data-id="h4"><div class="task-head"><span class="tnum">ДЗ 4</span></div>
+<p>∠C = 90°, CH — высота, AH = 4, HB = 16. Найдите CH.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="8"></label></div>
+</div>
+<div class="task" data-id="h5" data-mode="digits"><div class="task-head"><span class="tnum">ДЗ 5</span><span class="pill oge">ОГЭ №19</span></div>
+<p>1) Средняя линия равна половине параллельной стороны. 2) Высота к гипотенузе равна произведению отрезков гипотенузы. 3) Медианы пересекаются в одной точке.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="13"></label></div>
+</div>
+</div>
+</section>
+
+<section class="card" id="theory" data-nav="Теория">
+  <h2><span class="step">2</span> Теория <span class="mins">10–25 мин</span></h2>
+
+  <div class="grid2">
+    <div class="box def">
+      <span class="title">Для острого угла A прямоугольного треугольника (∠C = 90°)</span>
+      <div class="formula">sin A = BC / AB</div><p style="margin:0 0 6px;text-align:center" class="muted">противолежащий катет / гипотенуза</p>
+      <div class="formula">cos A = AC / AB</div><p style="margin:0 0 6px;text-align:center" class="muted">прилежащий катет / гипотенуза</p>
+      <div class="formula">tg A = BC / AC</div><p style="margin:0;text-align:center" class="muted">противолежащий / прилежащий</p>
+      <div class="eg">BC = 3, AC = 4, AB = 5 → sin A = 3/5 = 0,6; cos A = 0,8; tg A = 0,75.</div>
+    </div>
+    <figure><svg viewBox="0 0 320 210" width="300">
+      <path class="st fl" d="M40 180 L280 180 L280 40 Z"/>
+      <path d="M266 180 L266 166 L280 166" fill="none" stroke="currentColor" stroke-width="2"/>
+      <line x1="280" y1="180" x2="280" y2="40" stroke="#e5484d" stroke-width="4"/>
+      <line x1="40" y1="180" x2="280" y2="180" stroke="#2f7de1" stroke-width="4"/>
+      <path d="M80 180 A40 40 0 0 0 74.5 160" fill="none" stroke="currentColor" stroke-width="2"/>
+      <text class="tx" x="24" y="196">A</text><text class="tx" x="286" y="196">C</text><text class="tx" x="286" y="36">B</text>
+      <text class="txs" x="300" y="115" style="fill:#e5484d">противолежащий</text>
+      <text class="txs" x="120" y="200" style="fill:#2f7de1">прилежащий</text>
+      <text class="txs" x="110" y="100">гипотенуза</text>
+    </svg></figure>
+  </div>
+  <div class="grid2" style="margin-top:14px">
+    <div class="box rule"><span class="title">Главные формулы</span>
+      <div class="formula">sin²A + cos²A = 1</div><div class="formula">tg A = sin A / cos A</div>
+      sin A = cos B, &nbsp;cos A = sin B (A + B = 90°).<br>Катеты: <b>BC = AB · sin A</b>, <b>AC = AB · cos A</b>, <b>BC = AC · tg A</b>.<div class="eg">AB = 10, sin A = 0,6 → BC = 6; cos A = √(1 − 0,36) = 0,8.</div></div>
+    <div class="box tip"><span class="title">Таблица — выучить</span>
+      <table style="border-collapse:collapse;margin-top:6px">
+        <tr><th></th><th style="padding:4px 12px">30°</th><th style="padding:4px 12px">45°</th><th style="padding:4px 12px">60°</th></tr>
+        <tr><td><b>sin</b></td><td style="text-align:center">1/2</td><td style="text-align:center">√2/2</td><td style="text-align:center">√3/2</td></tr>
+        <tr><td><b>cos</b></td><td style="text-align:center">√3/2</td><td style="text-align:center">√2/2</td><td style="text-align:center">1/2</td></tr>
+        <tr><td><b>tg</b></td><td style="text-align:center">√3/3</td><td style="text-align:center">1</td><td style="text-align:center">√3</td></tr>
+      </table><div class="eg">AB = 12, ∠A = 30° → BC = 12 · ½ = 6.</div></div>
+  </div>
+  <h3>Лаборатория: гипотенуза = 1</h3>
+  <div class="lab">
+    <svg id="labT" viewBox="0 0 600 330"></svg>
+    <div class="readout" id="tRead"></div>
+    <div class="controls">
+      <label>∠A: <input type="range" id="tSl" min="5" max="85" value="30"></label><span class="pill" id="tVal">30°</span>
+      <button class="btn small ghost" type="button" data-a="30">30°</button><button class="btn small ghost" type="button" data-a="45">45°</button><button class="btn small ghost" type="button" data-a="60">60°</button>
+    </div>
+  </div>
+
+</section>
+
+<section class="card" id="examples" data-nav="Примеры">
+  <h2><span class="step">↳</span> Разбор примеров</h2>
+  <div class="grid3"><div class="box example"><span class="title">Пример 1. Найти синус</span><p>∠C = 90°, BC = 6, AB = 10. Найдите sin A.</p><details class="reveal"><summary>Показать решение</summary><p><b>Решение.</b> sin A = BC / AB = 6/10 = 0,6.</p><p><b>Ответ:</b> 0,6.</p></details></div><div class="box example"><span class="title">Пример 2. Найти сторону</span><p>∠C = 90°, AB = 35, sin A = 0,4. Найдите BC.</p><details class="reveal"><summary>Показать решение</summary><p><b>Решение.</b> BC = AB · sin A = 35 · 0,4 = 14.</p><p><b>Ответ:</b> 14.</p></details></div><div class="box example"><span class="title">Пример 3. Тождество</span><p>sin A = 0,6 (A — острый). Найдите cos A.</p><details class="reveal"><summary>Показать решение</summary><p><b>Решение.</b> cos A = √(1 − 0,36) = √0,64 = 0,8.</p><p><b>Ответ:</b> 0,8.</p></details></div></div>
+</section>
+
+<section class="card" id="practice" data-nav="Практика">
+  <h2><span class="step">3</span> Интерактивная практика <span class="mins">25–45 мин</span></h2>
+  <h3>🎯 Тренажёр «Синус, косинус, тангенс»</h3>
+  <div class="lab task" id="trainer" data-id="trainer" data-noauto><div id="trainerBox"></div>
+    <div class="sol">Ответ можно вводить дробью (3/5) или десятичной (0,6). Засчитывается при 5 верных из 6.</div></div>
+
+  <h3>Блок А. База</h3>
+  <div class="tasks"><div class="task" data-id="p1"><div class="task-head"><span class="tnum">П1</span><span class="pill lvl1">база</span></div>
+<p>В △ABC ∠C = 90°, BC = 6, AB = 10. Найдите sin A.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="0,6"></label></div>
+</div>
+<div class="task" data-id="p2"><div class="task-head"><span class="tnum">П2</span><span class="pill lvl1">база</span></div>
+<p>В △ABC ∠C = 90°, AC = 12, AB = 13. Найдите cos A. Ответ можно записать дробью.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="12/13"></label></div>
+</div>
+<div class="task" data-id="p3"><div class="task-head"><span class="tnum">П3</span><span class="pill lvl1">база</span></div>
+<p>В △ABC ∠C = 90°, AC = 8, BC = 6. Найдите tg A.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="0,75"></label></div>
+</div>
+<div class="task" data-id="p4"><div class="task-head"><span class="tnum">П4</span><span class="pill lvl1">база</span></div>
+<p>В △ABC ∠C = 90°, AB = 35, sin A = 0,4. Найдите BC.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="14"></label></div>
+</div>
+<div class="task" data-id="p5"><div class="task-head"><span class="tnum">П5</span><span class="pill lvl1">база</span></div>
+<p>В △ABC ∠C = 90°, AC = 7, tg A = 2. Найдите BC.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="14"></label></div>
+</div>
+<div class="task" data-id="p6"><div class="task-head"><span class="tnum">П6</span><span class="pill lvl1">база</span></div>
+<p>В △ABC ∠C = 90°, AB = 15, cos A = 0,8. Найдите AC.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="12"></label></div>
+</div>
+</div>
+  <h3>Блок Б. Посложнее</h3>
+  <div class="tasks"><div class="task" data-id="p7"><div class="task-head"><span class="tnum">П7</span><span class="pill lvl2">средний</span></div>
+<p>Угол A острый, sin A = 0,6. Найдите cos A и tg A.</p>
+<div class="ans-row"><label>cos A = <input class="ans" data-a="0,8" data-label="cos A"></label><label>tg A = <input class="ans" data-a="0,75" data-label="tg A"></label></div>
+<div class="sol">cos A = √(1 − 0,36) = 0,8; tg A = 0,6 / 0,8 = 0,75.</div>
+</div>
+<div class="task" data-id="p8"><div class="task-head"><span class="tnum">П8</span><span class="pill lvl2">средний</span></div>
+<p>Угол A острый, cos A = 5/13. Найдите tg A.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="2,4"></label></div>
+<div class="sol">sin A = 12/13, tg A = 12/5 = 2,4.</div>
+</div>
+<div class="task" data-id="p9"><div class="task-head"><span class="tnum">П9</span><span class="pill lvl2">средний</span></div>
+<p>В △ABC ∠C = 90°, ∠A = 30°, AC = 4√3. Найдите BC.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="4"></label></div>
+<div class="sol">BC = AC · tg 30° = 4√3 · √3/3 = 4.</div>
+</div>
+<div class="task" data-id="p10"><div class="task-head"><span class="tnum">П10</span><span class="pill lvl3">сложнее</span></div>
+<p>В △ABC ∠C = 90°, CH — высота, AC = 10, sin A = 0,8. Найдите CH.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="8"></label></div>
+<div class="hint">Рассмотрите прямоугольный треугольник ACH.</div>
+<div class="sol">В △ACH: CH = AC · sin A = 8.</div>
+</div>
+</div>
+</section>
+
+<section class="card oge" id="oge" data-nav="ОГЭ">
+  <h2><span class="step">4</span> Задачи в формате ОГЭ <span class="mins">45–55 мин</span></h2>
+  <div class="tasks"><div class="task" data-id="o1"><div class="task-head"><span class="tnum">О1</span><span class="pill oge">ОГЭ №15</span></div>
+<p>В треугольнике ABC угол C равен 90°, BC = 12, sin A = 0,6. Найдите AB.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="20"></label></div>
+<div class="sol">sin A = BC / AB → AB = 12 / 0,6 = 20.</div>
+</div>
+<div class="task" data-id="o2"><div class="task-head"><span class="tnum">О2</span><span class="pill oge">ОГЭ №15</span></div>
+<p>В треугольнике ABC угол C равен 90°, AC = 9, cos A = 0,6. Найдите AB.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="15"></label></div>
+</div>
+<div class="task" data-id="o3"><div class="task-head"><span class="tnum">О3</span><span class="pill oge">ОГЭ №15</span></div>
+<p>В треугольнике ABC угол C равен 90°, AC = 16, tg A = 0,75. Найдите BC.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="12"></label></div>
+</div>
+<div class="task" data-id="o4"><div class="task-head"><span class="tnum">О4</span><span class="pill oge">ОГЭ №15</span></div>
+<p>Найдите cos A, если sin A = √21/5 и угол A острый.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="0,4"></label></div>
+<div class="sol">cos A = √(1 − 21/25) = √(4/25) = 0,4.</div>
+</div>
+<div class="task" data-id="o5" data-mode="digits"><div class="task-head"><span class="tnum">О5</span><span class="pill oge">ОГЭ №19</span></div>
+<p>Какие из следующих утверждений верны?</p><ol style="margin:6px 0"><li>Синус острого угла прямоугольного треугольника равен отношению прилежащего катета к гипотенузе.</li><li>Тангенс острого угла прямоугольного треугольника равен отношению противолежащего катета к прилежащему.</li><li>Для любого острого угла sin²A + cos²A = 1.</li></ol>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="23"></label></div>
+<div class="sol">1 — неверно: это косинус.</div>
+</div>
+</div>
+</section>
+
+<section class="card" id="hw" data-nav="Итог и ДЗ">
+  <h2><span class="step">5</span> Итог и домашнее задание <span class="mins">55–60 мин</span></h2>
+  <h3>Шпаргалка</h3>
+  <div class="cheat"><div><b>sin</b> = противолежащий / гипотенуза</div><div><b>cos</b> = прилежащий / гипотенуза</div><div><b>tg</b> = противолежащий / прилежащий</div><div><b>sin² + cos² = 1</b></div><div><b>30°:</b> ½, √3/2, √3/3</div><div><b>45°:</b> √2/2, √2/2, 1 · <b>60°:</b> √3/2, ½, √3</div></div>
+  <h3>📚 Домашнее задание</h3>
+  <p class="muted">Ответы проверяются в начале занятия 8.</p>
+  <ol class="hw"><li>В △ABC ∠C = 90°, BC = 5, AB = 13. Найдите sin A (дробью).<div class="sol"><span class="ansline">Ответ: 5/13.</span> </div></li><li>В △ABC ∠C = 90°, AB = 25, cos A = 0,28. Найдите AC.<div class="sol"><span class="ansline">Ответ: 7.</span> </div></li><li>В △ABC ∠C = 90°, AC = 8, tg A = 1,5. Найдите BC.<div class="sol"><span class="ansline">Ответ: 12.</span> </div></li><li>Угол A острый, sin A = 0,8. Найдите cos A.<div class="sol"><span class="ansline">Ответ: 0,6.</span> </div></li><li>(ОГЭ №19) 1) Косинус острого угла прямоугольного треугольника равен отношению прилежащего катета к гипотенузе. 2) sin 30° = √3/2. 3) tg 45° = 1.<div class="sol"><span class="ansline">Ответ: 13.</span> </div></li></ol>
+  <h3>⭐ Бонусное ДЗ</h3>
+  <ol class="hw"><li>В △ABC ∠C = 90°, cos A = 0,6, BC = 8. Найдите AB.<div class="sol"><span class="ansline">Ответ: 10.</span> sin A = 0,8 = BC / AB → AB = 10.</div></li><li>В △ABC ∠C = 90°, tg A = 3/4, AB = 30. Найдите BC.<div class="sol"><span class="ansline">Ответ: 18.</span> Катеты 3x и 4x, гипотенуза 5x = 30 → x = 6, BC = 18.</div></li></ol>
+  <p style="margin-top:18px"><button class="btn small ghost" type="button" onclick="GeoResetLesson()">Сбросить прогресс занятия</button></p>
+</section>
+
+<section class="card bonus" id="bonus" data-nav="★ Бонус">
+  <h2><span class="step">★</span> Бонусная практика</h2>
+  <div class="tasks"><div class="task" data-id="b1"><div class="task-head"><span class="tnum">Б1</span><span class="pill lvl3">сложнее</span></div>
+<p>В △ABC ∠C = 90°, AB = 25, cos A = 0,6, CH — высота. Найдите AH.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="9"></label></div>
+<div class="sol">AC = 15, AH = AC · cos A = 9.</div>
+</div>
+<div class="task" data-id="b2"><div class="task-head"><span class="tnum">Б2</span><span class="pill lvl3">сложнее</span></div>
+<p>Угол A острый, sin A = 0,28. Найдите tg A (дробью).</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="7/24"></label></div>
+<div class="sol">cos A = 0,96, tg A = 0,28 / 0,96 = 7/24.</div>
+</div>
+<div class="task" data-id="b3"><div class="task-head"><span class="tnum">Б3</span><span class="pill oge">ОГЭ №24</span></div>
+<p>Докажите, что для любого острого угла A справедливо sin²A + cos²A = 1.</p>
+<div class="sol">sin²A + cos²A = (BC² + AC²) / AB² = AB² / AB² = 1 по теореме Пифагора.</div>
+</div>
+</div>
+</section>
+
+</div>
+
+<script src="../assets/core.js"></script>
+<script>
+
+(function(){
+  var G = GeoSVG, svg = document.getElementById('labT'), sl = document.getElementById('tSl'), R = 260, A = {x:60, y:300};
+  function f(v){ return (Math.round(v * 1000) / 1000).toString().replace('.', ','); }
+  function draw(){
+    var d = +sl.value, r = d * Math.PI / 180; document.getElementById('tVal').textContent = d + '°';
+    G.clear(svg);
+    var B = {x:A.x + R * Math.cos(r), y:A.y - R * Math.sin(r)}, C = {x:B.x, y:A.y};
+    G.el('path', {d:'M' + (A.x + R) + ' ' + A.y + ' A' + R + ' ' + R + ' 0 0 0 ' + A.x + ' ' + (A.y - R), fill:'none', stroke:'var(--line)', 'stroke-width':2, 'stroke-dasharray':'5 5'}, svg);
+    G.el('path', {d:'M'+A.x+' '+A.y+' L'+B.x+' '+B.y+' L'+C.x+' '+C.y+' Z', 'class':'st fl'}, svg);
+    G.el('line', {x1:B.x, y1:B.y, x2:C.x, y2:C.y, stroke:'#e5484d', 'stroke-width':4}, svg);
+    G.el('line', {x1:A.x, y1:A.y, x2:C.x, y2:C.y, stroke:'#2f7de1', 'stroke-width':4}, svg);
+    if(d < 84) G.rightMark(svg, C, A, B, 12);
+    G.arc(svg, A, C, B, 40, 'currentColor', 2);
+    G.text(svg, A.x - 12, A.y + 20, 'A'); G.text(svg, B.x + 6, B.y - 10, 'B'); G.text(svg, C.x + 12, C.y + 20, 'C');
+    G.text(svg, C.x + 46, (B.y + C.y) / 2, 'sin = ' + f(Math.sin(r)), 'tx', 'fill:#e5484d;font-size:14px');
+    G.text(svg, (A.x + C.x) / 2, A.y + 22, 'cos = ' + f(Math.cos(r)), 'tx', 'fill:#2f7de1;font-size:14px');
+    document.getElementById('tRead').innerHTML = '<span>AB = 1</span><span style="color:#e5484d">sin A = BC = ' + f(Math.sin(r)) + '</span><span style="color:#2f7de1">cos A = AC = ' + f(Math.cos(r)) + '</span>' +
+      '<span>tg A = ' + f(Math.tan(r)) + '</span><span>sin² + cos² = 1</span>';
+  }
+  sl.addEventListener('input', draw);
+  document.querySelectorAll('[data-a]').forEach(function(b){ if(b.closest('.lab')) b.addEventListener('click', function(){ sl.value = b.getAttribute('data-a'); draw(); }); });
+  draw();
+})();
+document.addEventListener('geo:ready', function(){
+  var T = [[3,4,5],[5,12,13],[8,15,17],[7,24,25],[6,8,10]];
+  function fr(a, b){ var g = function(x, y){ return y ? g(y, x % y) : x; }, d = g(a, b); return (a / d) + '/' + (b / d); }
+  GeoTrainer(document.getElementById('trainerBox'), {rounds:6, id:'trainer', gen:function(){
+    var t = GeoPick(T), bc = t[0], ac = t[1], ab = t[2], q = GeoRand(1, 5);
+    if(GeoRand(0, 1)){ bc = t[1]; ac = t[0]; }
+    if(q === 1) return {q:'∠C = 90°, BC = ' + bc + ', AB = ' + ab + '. Найдите sin A.', a:fr(bc, ab), why:'sin A = BC / AB = ' + fr(bc, ab) + '.'};
+    if(q === 2) return {q:'∠C = 90°, AC = ' + ac + ', AB = ' + ab + '. Найдите cos A.', a:fr(ac, ab), why:'cos A = AC / AB = ' + fr(ac, ab) + '.'};
+    if(q === 3) return {q:'∠C = 90°, BC = ' + bc + ', AC = ' + ac + '. Найдите tg A.', a:fr(bc, ac), why:'tg A = BC / AC = ' + fr(bc, ac) + '.'};
+    var k = GeoRand(1, 3);
+    if(q === 4) return {q:'∠C = 90°, AB = ' + ab * k + ', sin A = ' + fr(bc, ab) + '. Найдите BC.', a:String(bc * k), why:'BC = AB · sin A = ' + bc * k + '.'};
+    return {q:'∠C = 90°, AC = ' + ac * k + ', tg A = ' + fr(bc, ac) + '. Найдите BC.', a:String(bc * k), why:'BC = AC · tg A = ' + bc * k + '.'};
+  }});
+});
+
+</script>
+</body>
+</html>

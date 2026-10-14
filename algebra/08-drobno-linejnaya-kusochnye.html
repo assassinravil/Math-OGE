@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Алгебра · занятие 8 · Дробно-линейная функция и кусочные графики</title>
+<link rel="stylesheet" href="../assets/core.css">
+</head>
+<body data-lesson="A08">
+
+<nav class="topnav"><div class="in">
+  <a class="home" href="../algebra.html">🧮 <span>Алгебра · ОГЭ</span></a>
+  <div class="links"></div>
+  <a class="home" href="../spravochnik-algebra.html" title="Справочник">📖</a>
+  <div class="progress-pill">Решено <b>0 / 0</b><div class="progress-bar"><i></i></div></div>
+</div></nav>
+
+<div class="container">
+
+<header class="hero">
+  <span class="tag">Раздел 2 · Функции и графики</span><span class="tag">Алгебра · занятие 8 из 23</span><span class="tag">Учебник: гл. II §4, п. 12 + дополнение к ОГЭ</span>
+  <h1>Дробно-линейная функция и кусочные графики</h1>
+  <p>Гипербола y = k/(x − m) + n, выколотые точки, графики с модулем и кусочные функции. Подготовка к №22.</p>
+  <div class="timeline">
+    <a href="#warmup">① Проверка ДЗ <small>0–10′</small></a>
+    <a href="#theory">② Теория <small>10–25′</small></a>
+    <a href="#practice">③ Практика <small>25–45′</small></a>
+    <a href="#oge">④ ОГЭ <small>45–55′</small></a>
+    <a href="#hw">⑤ Итог и ДЗ <small>55–60′</small></a>
+    <a href="#bonus">★ Бонус</a>
+  </div>
+</header>
+
+<div class="teacher-panel teacher-only">
+  <h3>План занятия (60 минут)</h3>
+  <ol><li><b>0–10′</b> Проверка ДЗ занятия 7.</li><li><b>10–25′</b> Теория. Лаборатория: три графика из №22, двигать прямую y = m и считать общие точки. Записать ответ «на особых значениях» m.</li><li><b>25–45′</b> Тренажёр, затем П1–П8.</li><li><b>45–55′</b> ОГЭ №22: оформить решение письменно (график + ответ).</li><li><b>55–60′</b> Шпаргалка, ДЗ. Раздел «Функции» завершён.</li></ol>
+  <p class="muted" style="margin:0">Типичные ошибки: забывают выколоть точку после сокращения дроби; не проверяют, что прямая проходит через выколотую точку; в графиках с модулем отражают не ту часть.</p>
+</div>
+
+<section class="card" id="warmup" data-nav="Проверка ДЗ">
+  <h2><span class="step">1</span> Проверка ДЗ <span class="mins">0–10 мин</span></h2>
+  <div class="tasks"><div class="task" data-id="h1"><div class="task-head"><span class="tnum">ДЗ 1</span></div>
+<p>Вершина параболы y = x² + 4x − 1.</p>
+<div class="ans-row"><label>x = <input class="ans" data-a="-2" data-label="x"></label><label>y = <input class="ans" data-a="-5" data-label="y"></label></div>
+</div>
+<div class="task" data-id="h2"><div class="task-head"><span class="tnum">ДЗ 2</span></div>
+<p>Нули функции y = −x² + 2x + 8.</p>
+<div class="ans-row"><label>меньший = <input class="ans" data-a="-2" data-label="меньший"></label><label>больший = <input class="ans" data-a="4" data-label="больший"></label></div>
+</div>
+<div class="task" data-id="h3"><div class="task-head"><span class="tnum">ДЗ 3</span></div>
+<p>Наименьшее значение функции y = x² − 10x + 30.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="5"></label></div>
+</div>
+<div class="task" data-id="h4"><div class="task-head"><span class="tnum">ДЗ 4</span></div>
+<p>Абсцисса оси симметрии параболы y = 3x² − 12x + 1.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="2"></label></div>
+</div>
+<div class="task" data-id="h5" data-mode="digits"><div class="task-head"><span class="tnum">ДЗ 5</span><span class="pill oge">ОГЭ №19</span></div>
+<p>1) При a &lt; 0 ветви вниз. 2) Если D &lt; 0, парабола пересекает Ox в двух точках. 3) x₀ = −b/(2a).</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="13"></label></div>
+</div>
+</div>
+</section>
+
+<section class="card" id="theory" data-nav="Теория">
+  <h2><span class="step">2</span> Теория <span class="mins">10–25 мин</span></h2>
+
+  <div class="grid2">
+    <div class="box def"><span class="title">y = k/(x − m) + n — сдвинутая гипербола</span>
+      <ul class="rules"><li>Вертикальная асимптота <b>x = m</b> (там функция не определена).</li><li>Горизонтальная асимптота <b>y = n</b>.</li><li>Дробь (ax + b)/(cx + d) приводят к этому виду выделением целой части.</li></ul>
+      <div class="eg">y = 2/(x − 1) + 3 → асимптоты x = 1 и y = 3.</div>
+      <div class="eg">(2x + 1)/(x − 1) = (2(x − 1) + 3)/(x − 1) = 2 + 3/(x − 1) → асимптоты x = 1, y = 2.</div></div>
+    <div class="box rule"><span class="title">Выколотая точка</span>
+      Сократили дробь → точку, где знаменатель был равен нулю, <b>обязательно выколоть</b>.
+      <div class="eg">y = (x² − 4)/(x − 2) = x + 2, но x ≠ 2. График — прямая y = x + 2 без точки (2; 4).</div>
+      <div class="eg trap">Прямая y = 4 с этим графиком общих точек <b>не имеет</b> — единственная точка с y = 4 выколота.</div></div>
+  </div>
+  <div class="grid2" style="margin-top:14px">
+    <div class="box def"><span class="title">Модуль <span class="pill oge">дополнение к учебнику · №22</span></span>
+      <ul class="rules"><li><b>y = |f(x)|</b> — часть графика ниже Ox отражается вверх.</li><li><b>y = f(|x|)</b> — правая половина отражается влево (график чётный).</li></ul>
+      <div class="eg">y = |x² − 2x − 3|: кусок параболы между нулями −1 и 3 (вершина (1; −4)) переворачивается вверх, вершина становится (1; 4).</div></div>
+    <div class="box tip"><span class="title">Алгоритм №22 «сколько общих точек с y = m» <span class="pill oge">дополнение к учебнику</span></span>
+      <ol class="rules"><li>Упростить и построить график (выколоть точки).</li><li>Двигать горизонтальную прямую снизу вверх.</li><li>Записать m, при которых число точек нужное: обычно это вершины, выколотые точки и «стыки» кусков.</li></ol>
+      <div class="eg">y = |x² − 2x − 3|: ровно 3 общие точки с y = m при m = 4 (касание в перевёрнутой вершине).</div></div>
+  </div>
+  <h3>Лаборатория: прямая y = m</h3>
+  <div class="lab">
+    <svg id="labK" class="plot"></svg>
+    <div class="readout" id="kRead"></div>
+    <div class="controls">
+      <button class="btn small" type="button" data-f="0">y = (x² − 4)/(x − 2)</button>
+      <button class="btn small ghost" type="button" data-f="1">y = |x² − 2x − 3|</button>
+      <button class="btn small ghost" type="button" data-f="2">y = x² − 6|x| + 5</button>
+    </div>
+    <div class="controls"><label>m: <input type="range" id="kM" min="-6" max="8" step="0.5" value="2"></label><span class="pill" id="kMv">2</span></div>
+  </div>
+
+</section>
+
+<section class="card" id="examples" data-nav="Примеры">
+  <h2><span class="step">↳</span> Разбор примеров</h2>
+  <div class="grid3"><div class="box example"><span class="title">Пример 1. Асимптоты</span><p>y = 3/(x − 2) + 1. Где не определена и какая горизонтальная асимптота?</p><details class="reveal"><summary>Показать решение</summary><p><b>Решение.</b> x ≠ 2; асимптота y = 1.</p><p><b>Ответ:</b> x = 2, y = 1.</p></details></div><div class="box example"><span class="title">Пример 2. Выколотая точка</span><p>y = (x² − 9)/(x − 3). Найдите выколотую точку.</p><details class="reveal"><summary>Показать решение</summary><p><b>Решение.</b> y = x + 3, x ≠ 3 → точка (3; 6).</p><p><b>Ответ:</b> (3; 6).</p></details></div><div class="box example"><span class="title">Пример 3. №22</span><p>При каких m прямая y = m не имеет общих точек с графиком y = (x² − 4)/(x − 2)?</p><details class="reveal"><summary>Показать решение</summary><p><b>Решение.</b> График — прямая y = x + 2 без точки (2; 4). Горизонтальная прямая не пересекает его только при m = 4.</p><p><b>Ответ:</b> 4.</p></details></div></div>
+</section>
+
+<section class="card" id="practice" data-nav="Практика">
+  <h2><span class="step">3</span> Интерактивная практика <span class="mins">25–45 мин</span></h2>
+  <h3>🎯 Тренажёр «Гиперболы и выколотые точки»</h3>
+  <div class="lab task" id="trainer" data-id="trainer" data-noauto><div id="trainerBox"></div>
+    <div class="sol">Задачи генерируются случайно. Засчитывается при 5 верных из 6.</div></div>
+
+  <h3>Блок А. База</h3>
+  <div class="tasks"><div class="task" data-id="p1"><div class="task-head"><span class="tnum">П1</span><span class="pill lvl1">база</span></div>
+<p>При каком x не определена функция y = 3/(x − 2) + 1?</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="2"></label></div>
+</div>
+<div class="task" data-id="p2"><div class="task-head"><span class="tnum">П2</span><span class="pill lvl1">база</span></div>
+<p>Найдите уравнение горизонтальной асимптоты графика y = 3/(x − 2) + 1. Запишите число n из y = n.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="1"></label></div>
+</div>
+<div class="task" data-id="p3"><div class="task-head"><span class="tnum">П3</span><span class="pill lvl1">база</span></div>
+<p>Найдите ординату выколотой точки графика y = (x² − 9)/(x − 3).</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="6"></label></div>
+</div>
+<div class="task" data-id="p4"><div class="task-head"><span class="tnum">П4</span><span class="pill lvl1">база</span></div>
+<p>y = (x² − 9)/(x + 3). Найдите y(5).</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="2"></label></div>
+</div>
+<div class="task" data-id="p5"><div class="task-head"><span class="tnum">П5</span><span class="pill lvl1">база</span></div>
+<p>При каком x функция y = |x − 3| принимает наименьшее значение?</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="3"></label></div>
+</div>
+<div class="task" data-id="p6"><div class="task-head"><span class="tnum">П6</span><span class="pill lvl1">база</span></div>
+<p>Найдите нуль функции y = −4/x + 2.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="2"></label></div>
+</div>
+</div>
+  <h3>Блок Б. Посложнее</h3>
+  <div class="tasks"><div class="task" data-id="p7"><div class="task-head"><span class="tnum">П7</span><span class="pill lvl2">средний</span></div>
+<p>При каком m прямая y = m имеет с графиком y = |x² − 2x − 3| ровно три общие точки?</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="4"></label></div>
+<div class="hint">Включите этот график в лаборатории.</div>
+<div class="sol">Вершина параболы (1; −4) отражается в (1; 4). При m = 4 — три точки.</div>
+</div>
+<div class="task" data-id="p8"><div class="task-head"><span class="tnum">П8</span><span class="pill lvl2">средний</span></div>
+<p>При каком m прямая y = m не имеет общих точек с графиком y = (x² − 4)/(x − 2)?</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="4"></label></div>
+</div>
+<div class="task" data-id="p9"><div class="task-head"><span class="tnum">П9</span><span class="pill lvl2">средний</span></div>
+<p>Функция задана так: y = −x + 1 при x &lt; 1 и y = x² − 4x + 3 при x ≥ 1. При каком m прямая y = m имеет с графиком ровно одну общую точку?</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="-1"></label></div>
+<div class="sol">Левая часть принимает значения больше 0, парабола на [1; +∞) — от −1. Одна точка только при m = −1 (вершина).</div>
+</div>
+<div class="task" data-id="p10"><div class="task-head"><span class="tnum">П10</span><span class="pill lvl3">сложнее</span></div>
+<p>При каком k прямая y = kx не имеет общих точек с графиком y = (x² + 4x)/x?</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="1"></label></div>
+<div class="sol">y = x + 4, x ≠ 0. kx = x + 4 → x(k − 1) = 4. Нет решений при k = 1.</div>
+</div>
+</div>
+</section>
+
+<section class="card oge" id="oge" data-nav="ОГЭ">
+  <h2><span class="step">4</span> Задачи в формате ОГЭ <span class="mins">45–55 мин</span></h2>
+  <div class="tasks"><div class="task" data-id="o1"><div class="task-head"><span class="tnum">О1</span><span class="pill oge">ОГЭ №22</span></div>
+<p>Постройте график функции y = (x² − 1)/(x + 1). При каком m прямая y = m не имеет с графиком общих точек?</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="-2"></label></div>
+<div class="sol">y = x − 1, x ≠ −1, выколота точка (−1; −2). Ответ: m = −2.</div>
+</div>
+<div class="task" data-id="o2"><div class="task-head"><span class="tnum">О2</span><span class="pill oge">ОГЭ №22</span></div>
+<p>Постройте график функции y = |x² − 4x|. При каком m прямая y = m имеет с графиком ровно три общие точки?</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="4"></label></div>
+<div class="sol">Вершина (2; −4) отражается в (2; 4).</div>
+</div>
+<div class="task" data-id="o3"><div class="task-head"><span class="tnum">О3</span><span class="pill oge">ОГЭ №22</span></div>
+<p>Постройте график функции y = x² − 6|x| + 5. При каком m прямая y = m имеет с графиком ровно три общие точки?</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="5"></label></div>
+<div class="sol">Вершины (±3; −4), точка (0; 5). При m = 5 — три точки.</div>
+</div>
+<div class="task" data-id="o4" data-mode="digits"><div class="task-head"><span class="tnum">О4</span><span class="pill oge">ОГЭ №19</span></div>
+<p>Какие утверждения верны?</p><ol style="margin:6px 0"><li>График функции y = 1/(x − 2) не пересекает прямую x = 2.</li><li>График функции y = (x² − 1)/(x − 1) совпадает с прямой y = x + 1.</li><li>График функции y = |x| симметричен относительно оси Oy.</li></ol>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="13"></label></div>
+<div class="sol">2 — неверно: точка (1; 2) выколота.</div>
+</div>
+</div>
+</section>
+
+<section class="card" id="hw" data-nav="Итог и ДЗ">
+  <h2><span class="step">5</span> Итог и домашнее задание <span class="mins">55–60 мин</span></h2>
+  <h3>Шпаргалка</h3>
+  <div class="cheat"><div><b>y = k/(x − m) + n:</b> асимптоты x = m, y = n</div><div><b>Сократили дробь</b> → выколоть точку</div><div><b>|f(x)|</b> — отразить низ вверх</div><div><b>f(|x|)</b> — отразить правую часть влево</div><div><b>№22:</b> особые m — вершины, выколотые точки, стыки</div></div>
+  <h3>📚 Домашнее задание</h3>
+  <p class="muted">Ответы проверяются в начале занятия 9.</p>
+  <ol class="hw"><li>При каком x не определена функция y = 5/(x + 1) − 3?<div class="sol"><span class="ansline">Ответ: −1.</span> </div></li><li>Найдите ординату выколотой точки графика y = (x² − 16)/(x − 4).<div class="sol"><span class="ansline">Ответ: 8.</span> </div></li><li>При каком m прямая y = m имеет с графиком y = |x² − 6x + 5| ровно три общие точки?<div class="sol"><span class="ansline">Ответ: 4.</span> Вершина (3; −4) → (3; 4).</div></li><li>y = (x² − 25)/(x + 5). Найдите y(3).<div class="sol"><span class="ansline">Ответ: −2.</span> </div></li><li>(ОГЭ №19) 1) Горизонтальная асимптота графика y = k/x + n — прямая y = n. 2) Функция y = |x| имеет наибольшее значение. 3) График y = (x − 3)(x + 3)/(x − 3) — прямая с выколотой точкой.<div class="sol"><span class="ansline">Ответ: 13.</span> </div></li></ol>
+  <h3>⭐ Бонусное ДЗ</h3>
+  <ol class="hw"><li>При каком m прямая y = m имеет с графиком y = x² − 4|x| + 3 ровно три общие точки?<div class="sol"><span class="ansline">Ответ: 3.</span> Точка (0; 3), вершины (±2; −1).</div></li><li>y = (x³ − x²)/(x − 1). Найдите наибольшее m, при котором прямая y = m имеет с графиком ровно одну общую точку.<div class="sol"><span class="ansline">Ответ: 1.</span> y = x², x ≠ 1. Одна точка при m = 0 (вершина) и m = 1 (вторая точка выколота).</div></li></ol>
+  <p style="margin-top:18px"><button class="btn small ghost" type="button" onclick="GeoResetLesson()">Сбросить прогресс занятия</button></p>
+</section>
+
+<section class="card bonus" id="bonus" data-nav="★ Бонус">
+  <h2><span class="step">★</span> Бонусная практика</h2>
+  <div class="tasks"><div class="task" data-id="b1"><div class="task-head"><span class="tnum">Б1</span><span class="pill lvl3">сложнее</span></div>
+<p>Сколько существует целых m, при которых прямая y = m имеет с графиком y = |x² − 2x − 3| ровно четыре общие точки?</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="3"></label></div>
+<div class="sol">0 &lt; m &lt; 4: m = 1, 2, 3.</div>
+</div>
+<div class="task" data-id="b2"><div class="task-head"><span class="tnum">Б2</span><span class="pill lvl3">сложнее</span></div>
+<p>Сколько существует целых m, при которых прямая y = m имеет с графиком y = x² − 6|x| + 5 ровно четыре общие точки?</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="8"></label></div>
+<div class="sol">−4 &lt; m &lt; 5: от −3 до 4.</div>
+</div>
+</div>
+</section>
+
+</div>
+
+<script src="../assets/core.js"></script>
+<script>
+
+function miniPlot(id, f, o){
+  o = o || {}; var svg = document.getElementById(id); if(!svg) return;
+  var P = GeoPlot(svg, {xmin:o.xmin || -5, xmax:o.xmax || 5, ymin:o.ymin || -5, ymax:o.ymax || 5, w:300, h:300});
+  P.grid(); P.curve(f, o.color || '#2f5bea', {width:3}); if(o.after) o.after(P); return P;
+}
+
+(function(){
+  var svg = document.getElementById('labK'), M = document.getElementById('kM'), fi = 0;
+  var F = [
+    {f:function(x){ return Math.abs(x - 2) < 1e-9 ? NaN : x + 2; }, hole:[2, 4], cnt:function(m){ return m === 4 ? 0 : 1; }, name:'y = x + 2, x ≠ 2'},
+    {f:function(x){ return Math.abs(x * x - 2 * x - 3); }, cnt:function(m){ return m < 0 ? 0 : (m === 0 ? 2 : (m < 4 ? 4 : (m === 4 ? 3 : 2))); }, name:'y = |x² − 2x − 3|'},
+    {f:function(x){ return x * x - 6 * Math.abs(x) + 5; }, cnt:function(m){ return m < -4 ? 0 : (m === -4 ? 2 : (m < 5 ? 4 : (m === 5 ? 3 : 2))); }, name:'y = x² − 6|x| + 5'}
+  ];
+  function n(v){ return String(v).replace('.', ',').replace('-', '−'); }
+  function draw(){
+    var m = +M.value, cur = F[fi], P = GeoPlot(svg, {xmin:-8, xmax:8, ymin:-7, ymax:9, w:600, h:440}); P.clear(); P.grid();
+    P.curve(cur.f, '#2f5bea'); if(cur.hole) P.point(cur.hole[0], cur.hole[1], '#2f5bea', '', true);
+    P.seg(-8, m, 8, m, '#e5484d', 2.5); var k = cur.cnt(m);
+    document.getElementById('kMv').textContent = n(m);
+    document.getElementById('kRead').innerHTML = '<span>' + cur.name + '</span><span style="color:#e5484d">y = ' + n(m) + '</span><span><b>общих точек: ' + k + '</b></span>';
+  }
+  M.addEventListener('input', draw);
+  document.querySelectorAll('[data-f]').forEach(function(b){ b.addEventListener('click', function(){ fi = +b.getAttribute('data-f'); document.querySelectorAll('[data-f]').forEach(function(x){ x.classList.toggle('ghost', x !== b); }); draw(); }); });
+  draw();
+})();
+document.addEventListener('geo:ready', function(){
+  GeoTrainer(document.getElementById('trainerBox'), {rounds:6, id:'trainer', gen:function(){
+    var q = GeoRand(1, 4), k = GeoPick([1, 2, 3, 5, 6]), m = GeoRand(-6, 6) || 3, nn = GeoRand(-6, 6), a = GeoRand(1, 7), t = GeoRand(-5, 6);
+    var sh = '(x ' + (m > 0 ? '− ' + m : '+ ' + (-m)) + ')';
+    if(q === 1) return {q:'При каком x не определена функция y = ' + k + '/' + sh + (nn ? (nn > 0 ? ' + ' + nn : ' − ' + (-nn)) : '') + '?', a:String(m), why:'Знаменатель равен 0 при x = ' + m + '.'};
+    if(q === 2) return {q:'Горизонтальная асимптота графика y = ' + k + '/' + sh + (nn > 0 ? ' + ' + nn : (nn < 0 ? ' − ' + (-nn) : '')) + ' — прямая y = n. Найдите n.', a:String(nn), why:'n = ' + nn + '.'};
+    if(q === 3) return {q:'y = (x² − ' + a * a + ')/(x − ' + a + '). Найдите ординату выколотой точки.', a:String(2 * a), why:'y = x + ' + a + ', x ≠ ' + a + ', точка (' + a + '; ' + 2 * a + ').'};
+    if(t === a) t++;
+    return {q:'y = (x² − ' + a * a + ')/(x − ' + a + '). Найдите y(' + t + ').', a:String(t + a), why:'y = x + ' + a + ' = ' + (t + a) + '.'};
+  }});
+});
+
+</script>
+</body>
+</html>

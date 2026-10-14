@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Занятие 12 · Площади четырёхугольников</title>
+<link rel="stylesheet" href="../assets/core.css">
+</head>
+<body data-lesson="L12">
+
+<nav class="topnav"><div class="in">
+  <a class="home" href="../geometry.html">📐 <span>Геометрия · ОГЭ</span></a>
+  <div class="links"></div>
+  <a class="home" href="../spravochnik.html" title="Справочник">📖</a>
+  <div class="progress-pill">Решено <b>0 / 0</b><div class="progress-bar"><i></i></div></div>
+</div></nav>
+
+<div class="container">
+
+<header class="hero">
+  <span class="tag">Раздел 3 · Четырёхугольники</span><span class="tag">Занятие 12 из 23</span><span class="tag">Учебник: гл. VII §1–2</span>
+  <h1>Площади четырёхугольников</h1>
+  <p>Площадь прямоугольника, параллелограмма, ромба, трапеции и четырёхугольника с перпендикулярными диагоналями.</p>
+  <div class="timeline">
+    <a href="#warmup">① Проверка ДЗ <small>0–10′</small></a>
+    <a href="#theory">② Теория <small>10–25′</small></a>
+    <a href="#practice">③ Практика <small>25–45′</small></a>
+    <a href="#oge">④ ОГЭ <small>45–55′</small></a>
+    <a href="#hw">⑤ Итог и ДЗ <small>55–60′</small></a>
+    <a href="#bonus">★ Бонус</a>
+  </div>
+</header>
+
+<div class="teacher-panel teacher-only">
+  <h3>План занятия (60 минут)</h3>
+  <ol><li><b>0–10′</b> Проверка ДЗ занятия 11.</li><li><b>10–25′</b> Теория. Лаборатория на клетчатой бумаге: сдвигать вершину B параллелограмма вдоль прямой — площадь не меняется (то же основание, та же высота). Трапеция: S = средняя линия · высота. Диагонали ⊥: S = ½ d₁d₂.</li><li><b>25–45′</b> Тренажёр, затем П1–П10.</li><li><b>45–55′</b> ОГЭ №17, №18 (клетчатая бумага), №19.</li><li><b>55–60′</b> Шпаргалка, ДЗ. Раздел «Четырёхугольники» завершён.</li></ol>
+  <p class="muted" style="margin:0">Типичные ошибки: площадь параллелограмма считают как произведение сторон; в трапеции забывают ½ или берут боковую сторону вместо высоты; в ромбе забывают ½ в формуле d₁d₂ / 2; умножают основание на высоту, проведённую к другой стороне.</p>
+</div>
+
+<section class="card" id="warmup" data-nav="Проверка ДЗ">
+  <h2><span class="step">1</span> Проверка ДЗ <span class="mins">0–10 мин</span></h2>
+  <div class="tasks"><div class="task" data-id="h1"><div class="task-head"><span class="tnum">ДЗ 1</span></div>
+<p>Основания трапеции 9 и 17. Найдите среднюю линию.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="13"></label></div>
+</div>
+<div class="task" data-id="h2"><div class="task-head"><span class="tnum">ДЗ 2</span></div>
+<p>В трапеции ABCD (AD ∥ BC) ∠D = 65°. Найдите ∠C.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="115"></label></div>
+</div>
+<div class="task" data-id="h3"><div class="task-head"><span class="tnum">ДЗ 3</span></div>
+<p>Основания равнобедренной трапеции 6 и 16, боковая сторона 13. Найдите высоту.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="12"></label></div>
+</div>
+<div class="task" data-id="h4"><div class="task-head"><span class="tnum">ДЗ 4</span></div>
+<p>Меньшее основание равнобедренной трапеции 5, боковая сторона 8, острый угол 60°. Найдите большее основание.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="13"></label></div>
+</div>
+<div class="task" data-id="h5" data-mode="digits"><div class="task-head"><span class="tnum">ДЗ 5</span><span class="pill oge">ОГЭ №19</span></div>
+<p>1) Средняя линия трапеции параллельна её основаниям. 2) В равнобедренной трапеции углы при каждом основании равны. 3) Средняя линия трапеции равна полуразности её оснований.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="12"></label></div>
+</div>
+</div>
+</section>
+
+<section class="card" id="theory" data-nav="Теория">
+  <h2><span class="step">2</span> Теория <span class="mins">10–25 мин</span></h2>
+
+  <div class="grid2">
+    <div class="box rule"><span class="title">Прямоугольник и квадрат</span>
+      <div class="formula">S = a · b &nbsp;&nbsp; S<sub>кв</sub> = a² = d² / 2</div>
+      Площадь прямоугольника равна произведению смежных сторон.
+      <div class="eg">5 × 8 → S = 40. Квадрат с диагональю 6 → S = 36 / 2 = 18.</div></div>
+    <div class="box rule"><span class="title">Параллелограмм</span>
+      <div class="formula">S = a · h<sub>a</sub> = a · b · sin α</div>
+      h<sub>a</sub> — высота, проведённая <b>к стороне a</b>. Вторая формула — из теоремы о площади треугольника (гл. XII): диагональ делит параллелограмм на два равных треугольника.
+      <div class="eg">a = 10, h = 4 → S = 40. Стороны 6 и 8, угол 30° → S = 6 · 8 · ½ = 24.</div>
+      <div class="eg trap">S ≠ a · b (это только для прямоугольника). И высоту берём к <b>той же</b> стороне: a · h<sub>a</sub> = b · h<sub>b</sub>.</div></div>
+  </div>
+  <div class="grid3" style="margin-top:14px">
+    <div class="box rule"><span class="title">Ромб</span>
+      <div class="formula">S = ½ · d₁ · d₂</div>
+      Также S = a · h = a² · sin α (ромб — параллелограмм).
+      <div class="eg">Диагонали 10 и 24 → S = 120.</div></div>
+    <div class="box rule"><span class="title">Трапеция</span>
+      <div class="formula">S = ½ · (a + b) · h</div>
+      a, b — основания. Иначе: S = средняя линия · высота.
+      <div class="eg">Основания 6 и 14, h = 5 → S = 10 · 5 = 50.</div>
+      <div class="eg trap">h — высота, а не боковая сторона.</div></div>
+    <div class="box tip"><span class="title">Диагонали перпендикулярны</span>
+      Для любого выпуклого четырёхугольника с d₁ ⊥ d₂:
+      <div class="formula">S = ½ · d₁ · d₂</div>
+      В общем случае S = ½ · d₁ · d₂ · sin φ.
+      <div class="eg">d₁ = 8, d₂ = 10, ⊥ → S = 40; угол 30° → S = 20.</div></div>
+  </div>
+  <h3>Лаборатория: площадь на клетчатой бумаге</h3>
+  <div class="lab">
+    <svg id="labA" viewBox="0 0 600 330"></svg>
+    <div class="readout" id="aRead"></div>
+    <div class="controls">
+      <button class="btn small" type="button" data-am="par">Параллелограмм</button>
+      <button class="btn small ghost" type="button" data-am="trap">Трапеция</button>
+      <button class="btn small ghost" type="button" data-am="diag">Диагонали ⊥</button>
+    </div>
+    <p class="muted" style="margin:8px 0 0;font-size:14px">Сторона клетки — 1. Вершины прилипают к узлам сетки. Сдвиньте B вбок: основание и высота те же — площадь та же.</p>
+  </div>
+
+</section>
+
+<section class="card" id="examples" data-nav="Примеры">
+  <h2><span class="step">↳</span> Разбор примеров</h2>
+  <div class="grid3"><div class="box example"><span class="title">Пример 1. Параллелограмм</span><p>Стороны параллелограмма 8 и 10, угол между ними 30°. Найдите площадь.</p><details class="reveal"><summary>Показать решение</summary><p><b>Решение.</b> S = 8 · 10 · sin 30° = 80 · ½ = 40.</p><p><b>Ответ:</b> 40.</p></details></div><div class="box example"><span class="title">Пример 2. Ромб</span><p>Сторона ромба 10, одна из диагоналей 12. Найдите площадь ромба.</p><details class="reveal"><summary>Показать решение</summary><p><b>Решение.</b> Половина диагонали 6, вторая половина √(100 − 36) = 8, вторая диагональ 16. S = ½ · 12 · 16 = 96.</p><p><b>Ответ:</b> 96.</p></details></div><div class="box example"><span class="title">Пример 3. Трапеция</span><p>Основания равнобедренной трапеции 6 и 14, боковая сторона 5. Найдите площадь.</p><details class="reveal"><summary>Показать решение</summary><p><b>Решение.</b> AH = (14 − 6) / 2 = 4, h = √(25 − 16) = 3. S = (6 + 14) / 2 · 3 = 30.</p><p><b>Ответ:</b> 30.</p></details></div></div>
+</section>
+
+<section class="card" id="practice" data-nav="Практика">
+  <h2><span class="step">3</span> Интерактивная практика <span class="mins">25–45 мин</span></h2>
+  <h3>🎯 Тренажёр «Площади»</h3>
+  <div class="lab task" id="trainer" data-id="trainer" data-noauto><div id="trainerBox"></div>
+    <div class="sol">Задачи генерируются случайно. Засчитывается при 5 верных из 6.</div></div>
+
+  <h3>Блок А. База</h3>
+  <div class="tasks"><div class="task" data-id="p1"><div class="task-head"><span class="tnum">П1</span><span class="pill lvl1">база</span></div>
+<p>Стороны прямоугольника равны 7 и 12. Найдите его площадь.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="84"></label></div>
+</div>
+<div class="task" data-id="p2"><div class="task-head"><span class="tnum">П2</span><span class="pill lvl1">база</span></div>
+<p>Сторона параллелограмма равна 15, а высота, проведённая к ней, равна 4. Найдите площадь.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="60"></label></div>
+</div>
+<div class="task" data-id="p3"><div class="task-head"><span class="tnum">П3</span><span class="pill lvl1">база</span></div>
+<p>Диагонали ромба равны 14 и 6. Найдите его площадь.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="42"></label></div>
+</div>
+<div class="task" data-id="p4"><div class="task-head"><span class="tnum">П4</span><span class="pill lvl1">база</span></div>
+<p>Основания трапеции равны 5 и 11, высота 6. Найдите площадь трапеции.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="48"></label></div>
+</div>
+<div class="task" data-id="p5"><div class="task-head"><span class="tnum">П5</span><span class="pill lvl1">база</span></div>
+<p>Стороны параллелограмма равны 9 и 14, угол между ними 30°. Найдите площадь.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="63"></label></div>
+<div class="sol">S = 9 · 14 · ½ = 63.</div>
+</div>
+<div class="task" data-id="p6"><div class="task-head"><span class="tnum">П6</span><span class="pill lvl1">база</span></div>
+<p>Диагональ квадрата равна 10. Найдите его площадь.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="50"></label></div>
+<div class="sol">S = d² / 2 = 100 / 2.</div>
+</div>
+</div>
+  <h3>Блок Б. Посложнее</h3>
+  <div class="tasks"><div class="task" data-id="p7"><div class="task-head"><span class="tnum">П7</span><span class="pill lvl2">средний</span></div>
+<p>Сторона ромба равна 13, одна из диагоналей 10. Найдите площадь ромба.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="120"></label></div>
+<div class="sol">Половины диагоналей 5 и 12, d₂ = 24, S = ½ · 10 · 24 = 120.</div>
+</div>
+<div class="task" data-id="p8"><div class="task-head"><span class="tnum">П8</span><span class="pill lvl2">средний</span></div>
+<p>Площадь параллелограмма 48, стороны 6 и 12. Найдите большую высоту.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="8"></label></div>
+<div class="sol">Большая высота проведена к меньшей стороне: 48 / 6 = 8.</div>
+</div>
+<div class="task" data-id="p9"><div class="task-head"><span class="tnum">П9</span><span class="pill lvl2">средний</span></div>
+<p>Основания равнобедренной трапеции 10 и 26, боковая сторона 17. Найдите площадь.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="270"></label></div>
+<div class="sol">AH = 8, h = √(289 − 64) = 15, S = 18 · 15 = 270.</div>
+</div>
+<div class="task" data-id="p10"><div class="task-head"><span class="tnum">П10</span><span class="pill lvl3">сложнее</span></div>
+<p>Периметр ромба 40, площадь 50. Найдите острый угол ромба.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="30"></label></div>
+<div class="sol">Сторона 10, S = 10² · sin α = 50 → sin α = ½, α = 30°.</div>
+</div>
+</div>
+</section>
+
+<section class="card oge" id="oge" data-nav="ОГЭ">
+  <h2><span class="step">4</span> Задачи в формате ОГЭ <span class="mins">45–55 мин</span></h2>
+  <div class="tasks"><div class="task" data-id="o1"><div class="task-head"><span class="tnum">О1</span><span class="pill oge">ОГЭ №17</span></div>
+<p>Основания трапеции равны 18 и 6, боковая сторона, равная 7, образует с одним из оснований трапеции угол 150°. Найдите площадь трапеции.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="42"></label></div>
+<div class="sol">Угол при другом основании 30°, h = 7 · sin 30° = 3,5. S = (18 + 6) / 2 · 3,5 = 42.</div>
+</div>
+<div class="task" data-id="o2"><div class="task-head"><span class="tnum">О2</span><span class="pill oge">ОГЭ №17</span></div>
+<p>Периметр ромба равен 24, а один из углов равен 30°. Найдите площадь этого ромба.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="18"></label></div>
+<div class="sol">Сторона 6, S = 6² · sin 30° = 18.</div>
+</div>
+<div class="task" data-id="o3"><div class="task-head"><span class="tnum">О3</span><span class="pill oge">ОГЭ №17</span></div>
+<p>Высота BH параллелограмма ABCD делит его сторону AD на отрезки AH = 1 и HD = 28. Диагональ параллелограмма BD равна 53. Найдите площадь параллелограмма.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="1305"></label></div>
+<div class="sol">BH = √(53² − 28²) = √2025 = 45, AD = 29, S = 29 · 45 = 1305.</div>
+</div>
+<div class="task" data-id="o4"><div class="task-head"><span class="tnum">О4</span><span class="pill oge">ОГЭ №17</span></div>
+<p>В равнобедренной трапеции основания равны 3 и 9, а один из углов между боковой стороной и основанием равен 45°. Найдите площадь трапеции.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="18"></label></div>
+<div class="sol">AH = (9 − 3) / 2 = 3 = h, S = 6 · 3 = 18.</div>
+</div>
+<div class="task" data-id="o5"><div class="task-head"><span class="tnum">О5</span><span class="pill oge">ОГЭ №18</span></div>
+<p>На клетчатой бумаге с размером клетки 1 × 1 изображена трапеция. Найдите её площадь.</p><figure style="margin:8px 0"><svg viewBox="0 0 252 156" width="252">
+  <g stroke="var(--line)" stroke-width="1"><line x1="6" y1="6" x2="6" y2="150"/><line x1="30" y1="6" x2="30" y2="150"/><line x1="54" y1="6" x2="54" y2="150"/><line x1="78" y1="6" x2="78" y2="150"/><line x1="102" y1="6" x2="102" y2="150"/><line x1="126" y1="6" x2="126" y2="150"/><line x1="150" y1="6" x2="150" y2="150"/><line x1="174" y1="6" x2="174" y2="150"/><line x1="198" y1="6" x2="198" y2="150"/><line x1="222" y1="6" x2="222" y2="150"/><line x1="246" y1="6" x2="246" y2="150"/></g>
+  <path class="st fl" d="M30 126 L222 126 L150 30 L78 30 Z" style="stroke-width:2.5"/>
+</svg></figure><line x1="6" y1="6" x2="246" y2="6"/><line x1="6" y1="30" x2="246" y2="30"/><line x1="6" y1="54" x2="246" y2="54"/><line x1="6" y1="78" x2="246" y2="78"/><line x1="6" y1="102" x2="246" y2="102"/><line x1="6" y1="126" x2="246" y2="126"/><line x1="6" y1="150" x2="246" y2="150"/>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="22"></label></div>
+<div class="sol">Основания 8 и 3, высота 4: S = (8 + 3) / 2 · 4 = 22.</div>
+</div>
+<div class="task" data-id="o6" data-mode="digits"><div class="task-head"><span class="tnum">О6</span><span class="pill oge">ОГЭ №19</span></div>
+<p>Какие из следующих утверждений верны?</p><ol style="margin:6px 0"><li>Площадь ромба равна половине произведения его диагоналей.</li><li>Площадь трапеции равна произведению средней линии на высоту.</li><li>Площадь параллелограмма равна произведению двух его соседних сторон.</li></ol>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="12"></label></div>
+<div class="sol">3 — неверно: нужна высота или синус угла.</div>
+</div>
+</div>
+</section>
+
+<section class="card" id="hw" data-nav="Итог и ДЗ">
+  <h2><span class="step">5</span> Итог и домашнее задание <span class="mins">55–60 мин</span></h2>
+  <h3>Шпаргалка</h3>
+  <div class="cheat"><div><b>Прямоугольник:</b> S = ab</div><div><b>Параллелограмм:</b> S = a·h = ab·sin α</div><div><b>Ромб:</b> S = ½ d₁d₂</div><div><b>Трапеция:</b> S = ½ (a + b)·h</div><div><b>Диагонали ⊥:</b> S = ½ d₁d₂</div><div><b>Квадрат:</b> S = a² = d²/2</div></div>
+  <h3>📚 Домашнее задание</h3>
+  <p class="muted">Ответы проверяются в начале занятия 13.</p>
+  <ol class="hw"><li>Сторона параллелограмма 13, высота, проведённая к ней, 6. Найдите площадь.<div class="sol"><span class="ansline">Ответ: 78.</span> </div></li><li>Диагонали ромба 16 и 30. Найдите площадь ромба.<div class="sol"><span class="ansline">Ответ: 240.</span> </div></li><li>Основания трапеции 7 и 13, высота 8. Найдите площадь.<div class="sol"><span class="ansline">Ответ: 80.</span> </div></li><li>Стороны параллелограмма 10 и 12, угол между ними 150°. Найдите площадь.<div class="sol"><span class="ansline">Ответ: 60.</span> sin 150° = ½.</div></li><li>(ОГЭ №19) 1) Площадь квадрата равна квадрату его стороны. 2) Площадь трапеции равна произведению суммы оснований на высоту. 3) Площадь параллелограмма равна произведению его стороны на высоту, проведённую к этой стороне.<div class="sol"><span class="ansline">Ответ: 13.</span> 2 — неверно: полусуммы.</div></li></ol>
+  <h3>⭐ Бонусное ДЗ</h3>
+  <ol class="hw"><li>Докажите, что площадь выпуклого четырёхугольника с перпендикулярными диагоналями равна половине произведения диагоналей.<div class="sol">Диагональ AC делит четырёхугольник на △ABC и △ADC с высотами BO и DO к AC. S = ½ · AC · BO + ½ · AC · DO = ½ · AC · BD.</div></li><li>Диагонали равнобедренной трапеции перпендикулярны, основания 4 и 16. Найдите площадь трапеции.<div class="sol"><span class="ansline">Ответ: 100.</span> Высота равна полусумме оснований (треугольники BOC и AOD прямоугольные равнобедренные): h = 10, S = 10 · 10 = 100.</div></li></ol>
+  <p style="margin-top:18px"><button class="btn small ghost" type="button" onclick="GeoResetLesson()">Сбросить прогресс занятия</button></p>
+</section>
+
+<section class="card bonus" id="bonus" data-nav="★ Бонус">
+  <h2><span class="step">★</span> Бонусная практика</h2>
+  <div class="tasks"><div class="task" data-id="b1"><div class="task-head"><span class="tnum">Б1</span><span class="pill lvl3">сложнее</span></div>
+<p>Высоты параллелограмма равны 4 и 6, периметр 40. Найдите площадь параллелограмма.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="48"></label></div>
+<div class="sol">4a = 6b, a + b = 20 → a = 12, b = 8. S = 12 · 4 = 48.</div>
+</div>
+<div class="task" data-id="b2"><div class="task-head"><span class="tnum">Б2</span><span class="pill oge">ОГЭ №23</span></div>
+<p>Основания трапеции равны 20 и 6, боковые стороны 13 и 15. Найдите площадь трапеции.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="156"></label></div>
+<div class="sol">Через C проведём CE ∥ AB: △CED со сторонами 13, 15 и 20 − 6 = 14. Его площадь по формуле Герона √(21 · 8 · 6 · 7) = 84, высота к стороне 14: 2 · 84 / 14 = 12. S = (20 + 6) / 2 · 12 = 156.</div>
+</div>
+<div class="task" data-id="b3"><div class="task-head"><span class="tnum">Б3</span><span class="pill oge">ОГЭ №24</span></div>
+<p>Точка E — середина боковой стороны CD трапеции ABCD. Докажите, что площадь треугольника ABE равна половине площади трапеции.</p>
+<div class="sol">Продлим AE до пересечения с прямой BC в точке F. △ECF = △EDA (CE = ED, вертикальные углы при E, накрест лежащие углы при BC ∥ AD). Значит, S(ABCD) = S(ABF), и AE = EF. BE — медиана △ABF, она делит его на равновеликие части: S(ABE) = ½ S(ABF) = ½ S(ABCD).</div>
+</div>
+</div>
+</section>
+
+</div>
+
+<script src="../assets/core.js"></script>
+<script>
+
+(function(){
+  var G = GeoSVG, svg = document.getElementById('labA'), Q = 30, mode = 'par';
+  var ST = {par:{A:{x:2, y:9}, B:{x:5, y:4}, D:{x:10, y:9}}, trap:{A:{x:2, y:9}, B:{x:5, y:4}, C:{x:10, y:4}, D:{x:16, y:9}}, diag:{A:{x:5, y:5}, B:{x:10, y:1}, C:{x:17, y:5}, D:{x:10, y:9}}};
+  var S1 = '#2f7de1', H1 = '#e5484d', M1 = '#8b5cf6', D2 = '#0ea5a4';
+  function f(v){ return (Math.round(v * 100) / 100).toString().replace('.', ','); }
+  function X(p){ return {x:p.x * Q, y:p.y * Q}; }
+  function seg(p, q, col, w, dash){ p = X(p); q = X(q); return G.el('line', {x1:p.x, y1:p.y, x2:q.x, y2:q.y, stroke:col, 'stroke-width':w || 3, 'stroke-dasharray':dash || '', 'stroke-linecap':'round'}, svg); }
+  function poly(ps, attrs){ G.el('path', Object.assign({d:'M' + ps.map(function(p){ return p.x * Q + ' ' + p.y * Q; }).join(' L') + ' Z'}, attrs), svg); }
+  function grid(){ for(var i = 0; i <= 20; i++) G.el('line', {x1:i * Q, y1:0, x2:i * Q, y2:330, stroke:'var(--line)', 'stroke-width':1}, svg); for(var j = 0; j <= 11; j++) G.el('line', {x1:0, y1:j * Q, x2:600, y2:j * Q, stroke:'var(--line)', 'stroke-width':1}, svg); }
+  function nm(p, t, dx, dy){ G.text(svg, p.x * Q + dx, p.y * Q + dy, t); }
+  function draw(){
+    G.clear(svg); grid(); var s = ST[mode], r = document.getElementById('aRead');
+    if(mode === 'par'){
+      var A = s.A, B = s.B, D = s.D, C = {x:B.x + D.x - A.x, y:B.y + D.y - A.y}, H = {x:B.x, y:A.y}, a = D.x - A.x, h = A.y - B.y, b = Math.hypot(B.x - A.x, h);
+      poly([A, B, C, D], {'class':'st fl', style:'stroke-width:2.5'});
+      if(H.x < A.x) seg(H, A, '#94a3b8', 1.5, '4 4'); if(H.x > D.x) seg(D, H, '#94a3b8', 1.5, '4 4');
+      seg(A, D, S1, 4); seg(B, H, H1, 3, '7 5'); G.rightMark(svg, X(H), X(B), X(H.x < D.x ? D : A), 10, H1);
+      nm(A, 'A', -12, 22); nm(B, 'B', -12, -10); nm(C, 'C', 12, -10); nm(D, 'D', 12, 22); nm(H, 'H', 0, 22);
+      var sA = h / b;
+      r.innerHTML = '<span style="color:' + S1 + '">AD = a = ' + a + '</span><span style="color:' + H1 + '">h = BH = ' + h + '</span><span>S = a · h = ' + a + ' · ' + h + ' = ' + a * h + '</span>' +
+        '<span>AB = ' + f(b) + ', ∠A = ' + Math.round(G.angle(A, B, D)) + '°</span><span>AD · AB · sin A = ' + a + ' · ' + f(b) + ' · ' + f(sA) + ' ≈ ' + f(a * b * sA) + '</span>';
+    } else if(mode === 'trap'){
+      var A2 = s.A, B2 = s.B, C2 = s.C, D2p = s.D, a2 = D2p.x - A2.x, b2 = C2.x - B2.x, h2 = A2.y - B2.y, M = {x:(A2.x + B2.x) / 2, y:(A2.y + B2.y) / 2}, N = {x:(D2p.x + C2.x) / 2, y:(D2p.y + C2.y) / 2}, H2 = {x:B2.x, y:A2.y};
+      poly([A2, B2, C2, D2p], {'class':'st fl', style:'stroke-width:2.5'});
+      seg(A2, D2p, S1, 4); seg(B2, C2, S1, 4); seg(M, N, M1, 3); seg(B2, H2, H1, 3, '7 5');
+      if(H2.x < A2.x) seg(H2, A2, '#94a3b8', 1.5, '4 4');
+      nm(A2, 'A', -12, 22); nm(B2, 'B', -12, -10); nm(C2, 'C', 12, -10); nm(D2p, 'D', 12, 22);
+      r.innerHTML = '<span style="color:' + S1 + '">a = AD = ' + a2 + ', b = BC = ' + b2 + '</span><span style="color:' + H1 + '">h = ' + h2 + '</span>' +
+        '<span style="color:' + M1 + '">средняя линия = ' + f((a2 + b2) / 2) + '</span><span>S = ½ · (' + a2 + ' + ' + b2 + ') · ' + h2 + ' = ' + f((a2 + b2) * h2 / 2) + '</span>';
+    } else {
+      var A3 = s.A, B3 = s.B, C3 = s.C, D3 = s.D, O = {x:B3.x, y:A3.y}, d1 = C3.x - A3.x, d2 = D3.y - B3.y;
+      poly([A3, B3, C3, D3], {'class':'st fl', style:'stroke-width:2.5'});
+      seg(A3, C3, S1, 3); seg(B3, D3, D2, 3); G.rightMark(svg, X(O), X(C3), X(B3), 10);
+      nm(A3, 'A', -24, 6); nm(B3, 'B', 20, -6); nm(C3, 'C', 24, 6); nm(D3, 'D', 20, 18); nm(O, 'O', 12, 20);
+      var romb = (O.x - A3.x === C3.x - O.x) && (O.y - B3.y === D3.y - O.y), sq = romb && d1 === d2;
+      r.innerHTML = '<span style="color:' + S1 + '">d₁ = AC = ' + d1 + '</span><span style="color:' + D2 + '">d₂ = BD = ' + d2 + '</span><span>S = ½ · ' + d1 + ' · ' + d2 + ' = ' + f(d1 * d2 / 2) + '</span>' +
+        (romb ? '<span style="color:#16a34a">' + (sq ? 'квадрат' : 'ромб') + ': диагонали делятся пополам</span>' : '<span>диагонали ⊥, но это не ромб — формула та же</span>');
+    }
+    ['A','B','C','D'].forEach(function(n){ if(s[n] && (n !== 'A' || mode === 'diag')) G.handle(svg, X(s[n]), n); });
+  }
+  G.draggable(svg, function(n, p){
+    var g = {x:Math.round(p.x / Q), y:Math.round(p.y / Q)}, s = ST[mode], o = JSON.parse(JSON.stringify(s));
+    if(mode === 'par'){
+      if(n === 'A') return;
+      if(n === 'D') o.D = {x:g.x, y:o.A.y}; else o.B = g;
+      var C = {x:o.B.x + o.D.x - o.A.x, y:o.B.y + o.D.y - o.A.y};
+      if(o.D.x - o.A.x < 2 || o.A.y - o.B.y < 1 || o.B.x < 1 || C.x > 19 || C.x < 1 || o.B.y < 1 || o.D.x > 19) return;
+    } else if(mode === 'trap'){
+      if(n === 'A') return;
+      if(n === 'D') o.D = {x:g.x, y:o.A.y};
+      if(n === 'B' || n === 'C'){ var y = g.y; o.B.y = o.C.y = y; o[n].x = g.x; }
+      if(o.B.y < 1 || o.B.y > o.A.y - 1 || o.D.x > 19 || o.B.x < 1 || o.C.x > 19 || o.C.x - o.B.x < 1 || o.D.x - o.A.x < 2 || (o.C.x - o.B.x) === (o.D.x - o.A.x)) return;
+    } else {
+      if(n === 'A') o.A.x = g.x; if(n === 'C') o.C.x = g.x; if(n === 'B') o.B.y = g.y; if(n === 'D') o.D.y = g.y;
+      if(o.A.x < 1 || o.A.x > o.B.x - 1 || o.C.x > 19 || o.C.x < o.B.x + 1 || o.B.y < 1 || o.B.y > o.A.y - 1 || o.D.y > 10 || o.D.y < o.A.y + 1) return;
+    }
+    if(JSON.stringify(o) === JSON.stringify(s)) return;
+    ST[mode] = o; draw();
+  });
+  document.querySelectorAll('[data-am]').forEach(function(b){ b.addEventListener('click', function(){ mode = b.getAttribute('data-am'); document.querySelectorAll('[data-am]').forEach(function(x){ x.classList.toggle('ghost', x !== b); }); draw(); }); });
+  draw();
+})();
+document.addEventListener('geo:ready', function(){
+  var TR = [[3,4,5],[6,8,10],[5,12,13],[8,15,17],[4,3,5],[8,6,10],[12,5,13]];
+  GeoTrainer(document.getElementById('trainerBox'), {rounds:6, id:'trainer', gen:function(){
+    var q = GeoRand(1, 6);
+    if(q === 1){ var a = GeoRand(3, 15), h = GeoRand(2, 12); return GeoRand(0, 1) ? {q:'Сторона параллелограмма ' + a + ', высота, проведённая к ней, ' + h + '. Найдите площадь.', a:String(a * h), why:'S = ' + a + ' · ' + h + ' = ' + a * h + '.'}
+      : {q:'Площадь параллелограмма ' + a * h + ', одна из сторон ' + a + '. Найдите высоту, проведённую к этой стороне.', a:String(h), why:'h = ' + a * h + ' : ' + a + ' = ' + h + '.'}; }
+    if(q === 2){ var x = 2 * GeoRand(2, 8), y = GeoRand(3, 15), ang = GeoPick([30, 150]); return {q:'Стороны параллелограмма ' + x + ' и ' + y + ', угол между ними ' + ang + '°. Найдите площадь.', a:String(x * y / 2), why:'S = ' + x + ' · ' + y + ' · sin ' + ang + '° = ' + x * y + ' · ½ = ' + x * y / 2 + '.'}; }
+    if(q === 3){ var d1 = 2 * GeoRand(2, 12), d2 = GeoRand(3, 20); return {q:'Диагонали ромба равны ' + d1 + ' и ' + d2 + '. Найдите площадь ромба.', a:String(d1 * d2 / 2), why:'S = ½ · ' + d1 + ' · ' + d2 + ' = ' + d1 * d2 / 2 + '.'}; }
+    if(q === 4){ var b = GeoRand(2, 12), a2 = b + GeoRand(1, 10), h2 = 2 * GeoRand(1, 7); return {q:'Основания трапеции ' + b + ' и ' + a2 + ', высота ' + h2 + '. Найдите площадь.', a:String((a2 + b) * h2 / 2), why:'S = (' + b + ' + ' + a2 + ') / 2 · ' + h2 + ' = ' + (a2 + b) * h2 / 2 + '.'}; }
+    if(q === 5){ var t = GeoPick(TR), s = GeoRand(2, 10), big = s + 2 * t[0]; return {q:'Основания равнобедренной трапеции ' + s + ' и ' + big + ', боковая сторона ' + t[2] + '. Найдите площадь.', a:String((s + t[0]) * t[1]), why:'AH = ' + t[0] + ', h = ' + t[1] + ', S = ' + (s + t[0]) + ' · ' + t[1] + ' = ' + (s + t[0]) * t[1] + '.'}; }
+    var d = 2 * GeoRand(2, 10); return {q:'Диагональ квадрата равна ' + d + '. Найдите его площадь.', a:String(d * d / 2), why:'S = d² / 2 = ' + d * d + ' / 2 = ' + d * d / 2 + '.'};
+  }});
+});
+
+</script>
+</body>
+</html>

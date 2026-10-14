@@ -1,0 +1,390 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Занятие 2 · Равнобедренный треугольник</title>
+<link rel="stylesheet" href="../assets/core.css">
+</head>
+<body data-lesson="L02">
+
+<nav class="topnav"><div class="in">
+  <a class="home" href="../geometry.html">📐 <span>Геометрия · ОГЭ</span></a>
+  <div class="links"></div>
+  <a class="home" href="../spravochnik.html" title="Справочник">📖</a>
+  <div class="progress-pill">Решено <b>0 / 0</b><div class="progress-bar"><i></i></div></div>
+</div></nav>
+
+<div class="container">
+
+<header class="hero">
+  <span class="tag">Раздел 1 · Треугольники</span><span class="tag">Занятие 2 из 23</span><span class="tag">Учебник: гл. II, IV §2</span>
+  <h1>Равнобедренный треугольник. Медиана, биссектриса, высота</h1>
+  <p>Признаки равенства треугольников, свойства равнобедренного треугольника, неравенство треугольника.</p>
+  <div class="timeline">
+    <a href="#warmup">① Проверка ДЗ <small>0–10′</small></a>
+    <a href="#theory">② Теория <small>10–25′</small></a>
+    <a href="#practice">③ Практика <small>25–45′</small></a>
+    <a href="#oge">④ ОГЭ <small>45–55′</small></a>
+    <a href="#hw">⑤ Итог и ДЗ <small>55–60′</small></a>
+    <a href="#bonus">★ Бонус</a>
+  </div>
+</header>
+
+<div class="teacher-panel teacher-only">
+  <h3>План занятия (60 минут)</h3>
+  <ol>
+    <li><b>0–10′</b> Проверка ДЗ занятия 1. Разобрать задачи с ошибками.</li>
+    <li><b>10–25′</b> Теория. В лаборатории: сделать треугольник равнобедренным и увидеть, что три отрезка из B совпали.</li>
+    <li><b>25–45′</b> Игра «Что за отрезок?» (учим читать обозначения на чертежах ОГЭ), затем П1–П8; П9–П10 по времени.</li>
+    <li><b>45–55′</b> ОГЭ: О3 разобрать подробно — классическая задача банка ФИПИ.</li>
+    <li><b>55–60′</b> Шпаргалка, ДЗ.</li>
+  </ol>
+  <p class="muted" style="margin:0">Типичные ошибки: путают угол при вершине и угол при основании; в задачах «один из углов равен…» не проверяют, может ли этот угол быть при основании; считают, что медиана любого треугольника — биссектриса.</p>
+</div>
+
+<!-- ============ 1. ПРОВЕРКА ДЗ ============ -->
+<section class="card" id="warmup" data-nav="Проверка ДЗ">
+  <h2><span class="step">1</span> Проверка ДЗ <span class="mins">0–10 мин</span></h2>
+  <div class="tasks">
+    <div class="task" data-id="h1"><div class="task-head"><span class="tnum">ДЗ 1</span></div>
+      <p>Один из смежных углов в 4 раза меньше другого. Найдите меньший угол.</p>
+      <div class="ans-row"><label>Ответ: <input class="ans" data-a="36"></label></div>
+      <div class="sol">x + 4x = 180 → x = 36°.</div></div>
+    <div class="task" data-id="h2"><div class="task-head"><span class="tnum">ДЗ 2</span></div>
+      <p>Сумма двух накрест лежащих углов при параллельных прямых равна 150°. Найдите каждый из них.</p>
+      <div class="ans-row"><label>Ответ: <input class="ans" data-a="75"></label></div>
+      <div class="sol">Накрест лежащие углы равны: 150° : 2 = 75°.</div></div>
+    <div class="task" data-id="h3"><div class="task-head"><span class="tnum">ДЗ 3</span></div>
+      <p>В △ABC ∠A = 38°, внешний угол при вершине C равен 104°. Найдите ∠B.</p>
+      <div class="ans-row"><label>Ответ: <input class="ans" data-a="66"></label></div>
+      <div class="sol">∠A + ∠B = 104°, ∠B = 66°.</div></div>
+    <div class="task" data-id="h4"><div class="task-head"><span class="tnum">ДЗ 4</span></div>
+      <p>Углы треугольника относятся как 1 : 2 : 3. Найдите больший угол.</p>
+      <div class="ans-row"><label>Ответ: <input class="ans" data-a="90"></label></div>
+      <div class="sol">180° : 6 = 30°, больший 90°.</div></div>
+    <div class="task" data-id="h5" data-mode="digits"><div class="task-head"><span class="tnum">ДЗ 5</span><span class="pill oge">№19</span></div>
+      <p>1) Сумма острых углов прямоугольного треугольника 90°. 2) При параллельных прямых односторонние углы равны. 3) Треугольник может иметь два прямых угла.</p>
+      <div class="ans-row"><label>Ответ: <input class="ans" data-a="1"></label></div>
+      <div class="sol">Верно только 1.</div></div>
+  </div>
+</section>
+
+<!-- ============ 2. ТЕОРИЯ ============ -->
+<section class="card" id="theory" data-nav="Теория">
+  <h2><span class="step">2</span> Теория <span class="mins">10–25 мин</span></h2>
+
+  <h3>2.1. Медиана, биссектриса, высота</h3>
+  <div class="grid3">
+    <div class="box def"><span class="title" style="color:#16a34a">Медиана BM</span>Соединяет вершину с <b>серединой</b> противоположной стороны: AM = MC.<div class="eg">AC = 18, BM — медиана → AM = MC = 9.</div></div>
+    <div class="box def"><span class="title" style="color:#8b5cf6">Биссектриса BL</span>Делит угол <b>пополам</b>: ∠ABL = ∠LBC.<div class="eg">∠B = 80°, BL — биссектриса → ∠ABL = 40°.</div></div>
+    <div class="box def"><span class="title" style="color:#e5484d">Высота BH</span><b>Перпендикуляр</b> из вершины на прямую, содержащую сторону: BH ⊥ AC.<div class="eg">BH — высота, ∠A = 38° → в △ABH ∠ABH = 90° − 38° = 52°.</div></div>
+  </div>
+  <p class="muted" style="font-size:15px">На чертежах ОГЭ: медиану выдают одинаковые штрихи на половинах стороны, биссектрису — одинаковые дужки у вершины, высоту — значок прямого угла.</p>
+
+  <h3>2.2. Признаки равенства треугольников</h3>
+  <div class="grid3">
+    <div class="box rule"><span class="title">I признак (СУС)</span>Две стороны и угол <b>между ними</b>.</div>
+    <div class="box rule"><span class="title">II признак (УСУ)</span>Сторона и два <b>прилежащих</b> к ней угла.</div>
+    <div class="box rule"><span class="title">III признак (ССС)</span>Три стороны.</div>
+  </div>
+
+  <h3>2.3. Равнобедренный треугольник</h3>
+  <div class="grid2">
+    <div class="box rule">
+      <p><b>AB = BC</b> — боковые стороны, AC — основание, ∠B — угол при вершине.</p>
+      <ul style="margin:0;padding-left:20px">
+        <li>углы при основании равны: <b>∠A = ∠C</b>;</li>
+        <li>∠A = (180° − ∠B) : 2;</li>
+        <li>медиана, биссектриса и высота, проведённые <b>к основанию</b>, совпадают;</li>
+        <li>признак: если два угла треугольника равны, он равнобедренный.</li>
+      </ul>
+      <p style="margin-top:10px"><b>Равносторонний</b> треугольник: все стороны равны, все углы по 60°, любая медиана — биссектриса и высота.</p>
+      <div class="eg">AB = BC, ∠B = 40° → ∠A = ∠C = (180° − 40°) : 2 = 70°.</div>
+      <div class="eg">AB = BC, ∠A = 65° → ∠C = 65°, ∠B = 180° − 130° = 50°.</div>
+    </div>
+    <figure><svg viewBox="0 0 300 220" width="300">
+      <path class="st fl" d="M40 190 L150 30 L260 190 Z"/>
+      <line x1="150" y1="30" x2="150" y2="190" stroke="#8b5cf6" stroke-width="2.5"/>
+      <path d="M150 178 L162 178 L162 190" fill="none" stroke="#e5484d" stroke-width="2"/>
+      <path d="M68 190 A28 28 0 0 0 55.8 168" fill="none" stroke="#2f7de1" stroke-width="3"/>
+      <path d="M232 190 A28 28 0 0 1 244.2 168" fill="none" stroke="#2f7de1" stroke-width="3"/>
+      <line x1="89" y1="104" x2="101" y2="112" stroke="currentColor" stroke-width="2"/><line x1="199" y1="112" x2="211" y2="104" stroke="currentColor" stroke-width="2"/>
+      <text class="tx" x="28" y="206">A</text><text class="tx" x="145" y="22">B</text><text class="tx" x="262" y="206">C</text><text class="tx" x="146" y="210">H</text>
+    </svg><figcaption>BH — медиана, биссектриса и высота</figcaption></figure>
+  </div>
+
+  <div class="box tip" style="margin-top:16px">
+    <span class="title">Неравенство треугольника</span>
+    <ul class="rules"><li>Каждая сторона меньше суммы двух других: a &lt; b + c.</li><li>Против большей стороны лежит больший угол.</li></ul>
+    <div class="eg">Стороны 3, 4, 8: 3 + 4 = 7 &lt; 8 — такого треугольника не существует.</div>
+    <div class="eg">Стороны 5, 6, 10: 5 + 6 = 11 &gt; 10 — треугольник существует.</div>
+  </div>
+
+  <h3>2.4. Лаборатория: когда три отрезка совпадают</h3>
+  <div class="lab">
+    <svg id="labC" viewBox="0 0 600 340"></svg>
+    <div class="readout" id="labRead"></div>
+    <div class="controls">
+      <label><input type="checkbox" data-show="m" checked> <b style="color:#16a34a">медиана</b></label>
+      <label><input type="checkbox" data-show="l" checked> <b style="color:#8b5cf6">биссектриса</b></label>
+      <label><input type="checkbox" data-show="h" checked> <b style="color:#e5484d">высота</b></label>
+      <button class="btn small ghost" type="button" id="makeIso">Сделать AB = BC</button>
+    </div>
+    <p class="muted" style="margin:8px 0 0;font-size:14px">Перетаскивайте вершины.</p>
+  </div>
+</section>
+
+<!-- ============ ПРИМЕРЫ ============ -->
+<section class="card" id="examples" data-nav="Примеры">
+  <h2><span class="step">↳</span> Разбор примеров</h2>
+  <div class="grid3">
+    <div class="box example"><span class="title">Пример 1</span>
+      <p>В равнобедренном треугольнике угол при вершине 40°. Найдите угол при основании.</p>
+      <details class="reveal"><summary>Показать решение</summary><p><b>Решение.</b> (180° − 40°) : 2 = 70°.</p><p><b>Ответ:</b> 70.</p></details></div>
+    <div class="box example"><span class="title">Пример 2</span>
+      <p>Периметр равнобедренного треугольника 32, основание 10. Найдите боковую сторону.</p>
+      <details class="reveal"><summary>Показать решение</summary><p><b>Решение.</b> Две боковые: 32 − 10 = 22, одна: 11.</p><p><b>Ответ:</b> 11.</p></details></div>
+    <div class="box example"><span class="title">Пример 3</span>
+      <p>AB = BC, BD — медиана, ∠ABC = 70°. Найдите ∠BDC.</p>
+      <details class="reveal"><summary>Показать решение</summary><p><b>Решение.</b> Медиана к основанию — это и высота, значит ∠BDC = 90°.</p><p><b>Ответ:</b> 90.</p></details></div>
+  </div>
+</section>
+
+<!-- ============ 3. ПРАКТИКА ============ -->
+<section class="card" id="practice" data-nav="Практика">
+  <h2><span class="step">3</span> Интерактивная практика <span class="mins">25–45 мин</span></h2>
+
+  <h3>🎯 Игра «Что за отрезок?»</h3>
+  <div class="lab task" id="game" data-id="game" data-noauto>
+    <svg id="gameSvg" viewBox="0 0 600 300"></svg>
+    <div class="controls" style="justify-content:space-between"><b id="gRound"></b><span class="pill" id="gScore">Верно: 0</span></div>
+    <p style="margin:8px 0 0">Что за отрезок <b>BK</b>? Смотрите на обозначения.</p>
+    <div class="choice-btns" id="gBtns">
+      <button type="button" data-t="m">Медиана</button><button type="button" data-t="l">Биссектриса</button><button type="button" data-t="h">Высота</button>
+    </div>
+    <div class="controls"><span class="feedback" id="gFb"></span><button class="btn small" type="button" id="gNext" style="display:none">Дальше →</button></div>
+    <div class="sol">Засчитывается при 6 верных из 8.</div>
+  </div>
+
+  <h3>Блок А. База</h3>
+  <div class="tasks">
+    <div class="task" data-id="p1"><div class="task-head"><span class="tnum">П1</span><span class="pill lvl1">база</span></div>
+      <p>Угол при основании равнобедренного треугольника равен 72°. Найдите угол при вершине.</p>
+      <div class="ans-row"><label>Ответ: <input class="ans" data-a="36"></label></div>
+      <div class="sol">180° − 2 · 72° = 36°.</div></div>
+    <div class="task" data-id="p2"><div class="task-head"><span class="tnum">П2</span><span class="pill lvl1">база</span></div>
+      <p>Угол при вершине равнобедренного треугольника равен 120°. Найдите угол при основании.</p>
+      <div class="ans-row"><label>Ответ: <input class="ans" data-a="30"></label></div>
+      <div class="sol">(180° − 120°) : 2 = 30°.</div></div>
+    <div class="task" data-id="p3"><div class="task-head"><span class="tnum">П3</span><span class="pill lvl1">база</span></div>
+      <p>Периметр равнобедренного треугольника равен 50, основание — 12. Найдите боковую сторону.</p>
+      <div class="ans-row"><label>Ответ: <input class="ans" data-a="19"></label></div>
+      <div class="sol">(50 − 12) : 2 = 19.</div></div>
+    <div class="task" data-id="p4"><div class="task-head"><span class="tnum">П4</span><span class="pill lvl1">база</span></div>
+      <p>Боковая сторона равнобедренного треугольника равна 17, периметр — 46. Найдите основание.</p>
+      <div class="ans-row"><label>Ответ: <input class="ans" data-a="12"></label></div>
+      <div class="sol">46 − 2 · 17 = 12.</div></div>
+    <div class="task" data-id="p5"><div class="task-head"><span class="tnum">П5</span><span class="pill lvl1">база</span></div>
+      <p>В △ABC AB = BC, BD — медиана, ∠ABC = 80°. Найдите ∠ABD и ∠BDA.</p>
+      <div class="ans-row"><label>∠ABD = <input class="ans" data-a="40" data-label="∠ABD"></label><label>∠BDA = <input class="ans" data-a="90" data-label="∠BDA"></label></div>
+      <div class="hint">Медиана к основанию является биссектрисой и высотой.</div>
+      <div class="sol">BD — биссектриса: 80° : 2 = 40°. BD — высота: ∠BDA = 90°.</div></div>
+    <div class="task" data-id="p6"><div class="task-head"><span class="tnum">П6</span><span class="pill lvl1">база</span></div>
+      <p>В △ABC AB = BC, внешний угол при вершине C равен 130°. Найдите ∠B.</p>
+      <div class="ans-row"><label>Ответ: <input class="ans" data-a="80"></label></div>
+      <div class="hint">Найдите ∠C, затем вспомните, что ∠A = ∠C.</div>
+      <div class="sol">∠C = 50°, ∠A = 50°, ∠B = 180° − 100° = 80°.</div></div>
+  </div>
+
+  <h3>Блок Б. Посложнее</h3>
+  <div class="tasks">
+    <div class="task" data-id="p7"><div class="task-head"><span class="tnum">П7</span><span class="pill lvl2">средний</span></div>
+      <p>В △ABC AD — биссектриса, ∠C = 30°, ∠BAD = 22°. Найдите ∠ADB.</p>
+      <div class="ans-row"><label>Ответ: <input class="ans" data-a="52"></label></div>
+      <div class="hint">∠ADB — внешний угол треугольника ADC.</div>
+      <div class="sol">∠CAD = ∠BAD = 22°. ∠ADB = ∠C + ∠CAD = 30° + 22° = 52°.</div></div>
+    <div class="task" data-id="p8"><div class="task-head"><span class="tnum">П8</span><span class="pill lvl2">средний</span></div>
+      <p>В △ABC BH — высота, ∠BAC = 38°. Найдите ∠ABH.</p>
+      <div class="ans-row"><label>Ответ: <input class="ans" data-a="52"></label></div>
+      <div class="sol">△ABH прямоугольный: 90° − 38° = 52°.</div></div>
+    <div class="task" data-id="p9"><div class="task-head"><span class="tnum">П9</span><span class="pill lvl2">средний</span></div>
+      <p>Один из углов равнобедренного треугольника равен 100°. Найдите угол при основании.</p>
+      <div class="ans-row"><label>Ответ: <input class="ans" data-a="40"></label></div>
+      <div class="hint">Может ли тупой угол быть при основании?</div>
+      <div class="sol">Тупой угол может быть только при вершине (два тупых угла не бывает). (180° − 100°) : 2 = 40°.</div></div>
+    <div class="task" data-id="p10"><div class="task-head"><span class="tnum">П10</span><span class="pill lvl3">сложнее</span></div>
+      <p>Один из углов равнобедренного треугольника равен 50°. Рассмотрите оба случая.</p>
+      <div class="ans-row">
+        <label>Если 50° — угол при основании, угол при вершине = <input class="ans" data-a="80" data-label="при вершине"></label>
+        <label>Если 50° — угол при вершине, угол при основании = <input class="ans" data-a="65" data-label="при основании"></label>
+      </div>
+      <div class="sol">1) 180° − 2 · 50° = 80°. 2) (180° − 50°) : 2 = 65°.</div></div>
+  </div>
+</section>
+
+<!-- ============ 4. ОГЭ ============ -->
+<section class="card oge" id="oge" data-nav="ОГЭ">
+  <h2><span class="step">4</span> Задачи в формате ОГЭ <span class="mins">45–55 мин</span></h2>
+  <div class="tasks">
+    <div class="task" data-id="o1"><div class="task-head"><span class="tnum">О1</span><span class="pill oge">ОГЭ №15</span></div>
+      <p>В треугольнике ABC известно, что AB = BC, ∠ABC = 132°. Найдите угол BCA. Ответ дайте в градусах.</p>
+      <div class="ans-row"><label>Ответ: <input class="ans" data-a="24"></label></div>
+      <div class="sol">(180° − 132°) : 2 = 24°.</div></div>
+    <div class="task" data-id="o2"><div class="task-head"><span class="tnum">О2</span><span class="pill oge">ОГЭ №15</span></div>
+      <p>В треугольнике ABC AC = BC. Внешний угол при вершине B равен 146°. Найдите угол C. Ответ дайте в градусах.</p>
+      <div class="ans-row"><label>Ответ: <input class="ans" data-a="112"></label></div>
+      <div class="hint">AC = BC, значит основание — AB, и равны углы A и B.</div>
+      <div class="sol">∠B = 180° − 146° = 34° = ∠A. ∠C = 180° − 68° = 112°.</div></div>
+    <div class="task" data-id="o3"><div class="task-head"><span class="tnum">О3</span><span class="pill oge">ОГЭ №15</span></div>
+      <p>В треугольнике ABC BM — медиана и BH — высота. Известно, что AC = 84 и BC = BM. Найдите AH.</p>
+      <div class="ans-row"><label>Ответ: <input class="ans" data-a="63"></label></div>
+      <div class="hint">Треугольник BMC равнобедренный, а BH в нём — высота к основанию MC.</div>
+      <div class="sol">AM = MC = 42. В равнобедренном △BMC высота BH — медиана, MH = 21. AH = AM + MH = 63.</div></div>
+    <div class="task" data-id="o4"><div class="task-head"><span class="tnum">О4</span><span class="pill oge">ОГЭ №15</span></div>
+      <p>В равностороннем треугольнике ABC проведена биссектриса AD. Найдите угол ADB. Ответ дайте в градусах.</p>
+      <div class="ans-row"><label>Ответ: <input class="ans" data-a="90"></label></div>
+      <div class="sol">В равностороннем треугольнике биссектриса является высотой: ∠ADB = 90°.</div></div>
+    <div class="task" data-id="o5" data-mode="digits"><div class="task-head"><span class="tnum">О5</span><span class="pill oge">ОГЭ №19</span></div>
+      <p>Какие из следующих утверждений верны? В ответ запишите их номера.</p>
+      <ol style="margin:6px 0"><li>Если два угла треугольника равны, то треугольник равнобедренный.</li><li>В любом треугольнике медиана является биссектрисой.</li><li>Все углы равностороннего треугольника равны 60°.</li></ol>
+      <div class="ans-row"><label>Ответ: <input class="ans" data-a="13"></label></div>
+      <div class="sol">2 — неверно: это верно только для медианы к основанию равнобедренного треугольника.</div></div>
+    <div class="task" data-id="o6" data-mode="digits"><div class="task-head"><span class="tnum">О6</span><span class="pill oge">ОГЭ №19</span></div>
+      <p>Какие из следующих утверждений верны? В ответ запишите их номера.</p>
+      <ol style="margin:6px 0"><li>Треугольник со сторонами 1, 2, 4 существует.</li><li>Если две стороны и угол одного треугольника равны двум сторонам и углу другого треугольника, то такие треугольники равны.</li><li>Высота равнобедренного треугольника, проведённая к основанию, является его медианой.</li></ol>
+      <div class="ans-row"><label>Ответ: <input class="ans" data-a="3"></label></div>
+      <div class="sol">1 — неверно: 1 + 2 &lt; 4. 2 — неверно: угол должен лежать между сторонами. 3 — верно.</div></div>
+  </div>
+</section>
+
+<!-- ============ 5. ИТОГ И ДЗ ============ -->
+<section class="card" id="hw" data-nav="Итог и ДЗ">
+  <h2><span class="step">5</span> Итог и домашнее задание <span class="mins">55–60 мин</span></h2>
+  <h3>Шпаргалка</h3>
+  <div class="cheat">
+    <div><b>Медиана</b> → в середину стороны</div>
+    <div><b>Биссектриса</b> → делит угол пополам</div>
+    <div><b>Высота</b> → перпендикуляр к стороне</div>
+    <div><b>Равнобедренный:</b> ∠A = ∠C = (180° − ∠B) : 2</div>
+    <div><b>К основанию:</b> медиана = биссектриса = высота</div>
+    <div><b>Неравенство:</b> a &lt; b + c</div>
+  </div>
+  <h3>📚 Домашнее задание</h3>
+  <p class="muted">Ответы проверяются в начале занятия 3.</p>
+  <ol class="hw">
+    <li>Угол при вершине равнобедренного треугольника равен 56°. Найдите угол при основании.<div class="sol"><span class="ansline">Ответ: 62.</span> (180° − 56°) : 2 = 62°.</div></li>
+    <li>Периметр равнобедренного треугольника равен 36, боковая сторона — 13. Найдите основание.<div class="sol"><span class="ansline">Ответ: 10.</span> 36 − 26 = 10.</div></li>
+    <li>В △ABC AB = BC, ∠A = 65°. Найдите ∠B.<div class="sol"><span class="ansline">Ответ: 50.</span> ∠C = 65°, ∠B = 180° − 130° = 50°.</div></li>
+    <li>В △ABC BM — медиана, AC = 26. Найдите MC.<div class="sol"><span class="ansline">Ответ: 13.</span></div></li>
+    <li>(ОГЭ №19) 1) Медиана треугольника делит сторону, к которой проведена, пополам. 2) Если в треугольнике есть угол 60°, то он равносторонний. 3) Существует треугольник со сторонами 3, 4, 8.<div class="sol"><span class="ansline">Ответ: 1.</span></div></li>
+  </ol>
+  <h3>⭐ Бонусное ДЗ</h3>
+  <ol class="hw">
+    <li>В △ABC AB = BC, ∠B = 36°, AD — биссектриса. Найдите ∠ADC.<div class="sol"><span class="ansline">Ответ: 72.</span> ∠A = ∠C = 72°, ∠DAC = 36°, ∠ADC = 180° − 36° − 72° = 72°.</div></li>
+    <li>Докажите, что медиана равнобедренного треугольника, проведённая к основанию, является биссектрисой.<div class="sol">△ABM = △CBM по трём сторонам (AB = CB, AM = CM, BM — общая), значит ∠ABM = ∠CBM.</div></li>
+  </ol>
+  <p style="margin-top:18px"><button class="btn small ghost" type="button" onclick="GeoResetLesson()">Сбросить прогресс занятия</button></p>
+</section>
+
+<!-- ============ БОНУС ============ -->
+<section class="card bonus" id="bonus" data-nav="★ Бонус">
+  <h2><span class="step">★</span> Бонусная практика</h2>
+  <div class="tasks">
+    <div class="task" data-id="b1"><div class="task-head"><span class="tnum">Б1</span><span class="pill lvl3">сложнее</span></div>
+      <p>Периметр равнобедренного треугольника равен 40, а одна из его сторон — 10. Найдите боковую сторону.</p>
+      <div class="ans-row"><label>Ответ: <input class="ans" data-a="15"></label></div>
+      <div class="hint">Проверьте оба случая с помощью неравенства треугольника.</div>
+      <div class="sol">Если 10 — боковая, основание 20, но 10 + 10 = 20 — треугольника нет. Значит 10 — основание, боковая (40 − 10) : 2 = 15.</div></div>
+    <div class="task" data-id="b2"><div class="task-head"><span class="tnum">Б2</span><span class="pill lvl3">сложнее</span></div>
+      <p>В △ABC ∠A = 40°, ∠C = 60°. BH — высота, BL — биссектриса. Найдите угол HBL.</p>
+      <div class="ans-row"><label>Ответ: <input class="ans" data-a="10"></label></div>
+      <div class="sol">∠B = 80°, ∠ABL = 40°. ∠ABH = 90° − 40° = 50°. ∠HBL = 50° − 40° = 10°.</div></div>
+    <div class="task" data-id="b3"><div class="task-head"><span class="tnum">Б3</span><span class="pill oge">ОГЭ №24</span></div>
+      <p>В △ABC AB = BC. Точки D и E лежат на сторонах AB и BC, причём BD = BE. Докажите, что AE = CD.</p>
+      <div class="sol">△ABE = △CBD по I признаку: AB = CB, BE = BD, ∠B — общий. Значит AE = CD.</div></div>
+  </div>
+</section>
+
+</div>
+
+<script src="../assets/core.js"></script>
+<script>
+/* ===== Лаборатория: медиана, биссектриса, высота ===== */
+(function(){
+  var G = GeoSVG, svg = document.getElementById('labC');
+  var P = {A:{x:90,y:290}, B:{x:220,y:70}, C:{x:500,y:290}};
+  var show = {m:true, l:true, h:true};
+  function L(p){ return (p / 40).toFixed(1).replace('.', ','); }
+  function draw(){
+    G.clear(svg); var A = P.A, B = P.B, C = P.C;
+    G.el('path', {d:'M'+A.x+' '+A.y+' L'+B.x+' '+B.y+' L'+C.x+' '+C.y+' Z', 'class':'st fl'}, svg);
+    var M = G.mid(A, C), ab = G.dist(A, B), bc = G.dist(B, C), t = ab / (ab + bc);
+    var Lp = {x:A.x + (C.x - A.x) * t, y:A.y + (C.y - A.y) * t}, H = G.foot(B, A, C);
+    var iso = Math.abs(ab - bc) / Math.max(ab, bc) < 0.012;
+    if(H.t < 0 || H.t > 1){ var E = H.t < 0 ? A : C; G.el('line', {x1:E.x, y1:E.y, x2:H.x, y2:H.y, 'class':'st', 'stroke-dasharray':'5 5'}, svg); }
+    if(show.h){ G.el('line', {x1:B.x, y1:B.y, x2:H.x, y2:H.y, stroke:'#e5484d', 'stroke-width':3}, svg); G.rightMark(svg, H, B, (H.t > 0.5 ? A : C), 12, '#e5484d'); }
+    if(show.l){ G.el('line', {x1:B.x, y1:B.y, x2:Lp.x, y2:Lp.y, stroke:'#8b5cf6', 'stroke-width':3}, svg); G.arc(svg, B, A, Lp, 30, '#8b5cf6', 2.5); G.arc(svg, B, Lp, C, 36, '#8b5cf6', 2.5); }
+    if(show.m){ G.el('line', {x1:B.x, y1:B.y, x2:M.x, y2:M.y, stroke:'#16a34a', 'stroke-width':3}, svg); G.tick(svg, A, M, 1, '#16a34a'); G.tick(svg, M, C, 1, '#16a34a'); }
+    ['A','B','C'].forEach(function(n){ G.handle(svg, P[n], n); G.text(svg, P[n].x, P[n].y + (n === 'B' ? -18 : 30), n); });
+    var a = Math.round(G.angle(A, B, C)), c = Math.round(G.angle(C, A, B));
+    document.getElementById('labRead').innerHTML = '<span>AB = ' + L(ab) + '</span><span>BC = ' + L(bc) + '</span><span>∠A = ' + a + '°</span><span>∠C = ' + c + '°</span>' +
+      (iso ? '<span style="color:var(--res)">AB = BC → ∠A = ∠C, три отрезка совпали</span>' : '');
+  }
+  G.draggable(svg, function(n, p){
+    p = {x:Math.max(15, Math.min(585, p.x)), y:Math.max(30, Math.min(320, p.y))};
+    var o = {A:P.A, B:P.B, C:P.C}; o[n] = p; if(G.triArea(o.A, o.B, o.C) < 2500) return; P[n] = p; draw();
+  });
+  document.querySelectorAll('[data-show]').forEach(function(cb){ cb.addEventListener('change', function(){ show[cb.getAttribute('data-show')] = cb.checked; draw(); }); });
+  document.getElementById('makeIso').addEventListener('click', function(){
+    var M = G.mid(P.A, P.C), u = G.unit(P.A, P.C), h = Math.max(120, Math.abs(G.foot(P.B, P.A, P.C).y - P.B.y) || 180);
+    var nx = u.y, ny = -u.x; if(ny > 0){ nx = -nx; ny = -ny; }
+    P.B = {x:M.x + nx * h, y:Math.max(30, M.y + ny * h)}; draw();
+  });
+  draw();
+})();
+
+/* ===== Игра «Что за отрезок?» ===== */
+document.addEventListener('geo:ready', function(){
+  var G = GeoSVG, svg = document.getElementById('gameSvg'), ROUNDS = 8, round = 0, score = 0, cur, answered;
+  var fb = document.getElementById('gFb'), nx = document.getElementById('gNext'), btns = document.querySelectorAll('#gBtns button');
+  var NAMES = {m:'медиана — штрихи показывают, что AK = KC', l:'биссектриса — дужки показывают равные углы', h:'высота — значок прямого угла'};
+  function tri(){ // остроугольный разносторонний треугольник
+    for(var k = 0; k < 200; k++){
+      var A = {x:GeoRand(60,160), y:GeoRand(230,260)}, C = {x:GeoRand(420,540), y:GeoRand(230,260)}, B = {x:GeoRand(200,400), y:GeoRand(40,90)};
+      var a = G.angle(A,B,C), b = G.angle(B,A,C), c = G.angle(C,A,B), ab = G.dist(A,B), bc = G.dist(B,C);
+      if(a < 80 && b < 85 && c < 80 && Math.abs(ab - bc) / ab > 0.18) return {A:A, B:B, C:C};
+    } return {A:{x:80,y:250}, B:{x:240,y:60}, C:{x:520,y:250}};
+  }
+  function newRound(){
+    answered = false; round++; var T = tri(), t = GeoPick(['m','l','h']), A = T.A, B = T.B, C = T.C, K;
+    if(t === 'm') K = G.mid(A, C);
+    if(t === 'l'){ var ab = G.dist(A,B), bc = G.dist(B,C), s = ab / (ab + bc); K = {x:A.x + (C.x - A.x) * s, y:A.y + (C.y - A.y) * s}; }
+    if(t === 'h') K = G.foot(B, A, C);
+    cur = t; G.clear(svg);
+    G.el('path', {d:'M'+A.x+' '+A.y+' L'+B.x+' '+B.y+' L'+C.x+' '+C.y+' Z', 'class':'st fl'}, svg);
+    G.el('line', {x1:B.x, y1:B.y, x2:K.x, y2:K.y, stroke:'#8b5cf6', 'stroke-width':3}, svg);
+    if(t === 'm'){ G.tick(svg, A, K, 2); G.tick(svg, K, C, 2); }
+    if(t === 'l'){ G.arc(svg, B, A, K, 30, 'currentColor', 2); G.arc(svg, B, K, C, 30, 'currentColor', 2); G.arc(svg, B, A, K, 35, 'currentColor', 2); G.arc(svg, B, K, C, 35, 'currentColor', 2); }
+    if(t === 'h') G.rightMark(svg, K, B, C, 13);
+    [['A',A,0,26],['B',B,0,-14],['C',C,0,26],['K',K,0,26]].forEach(function(q){ G.text(svg, q[1].x + q[2], q[1].y + q[3], q[0]); });
+    document.getElementById('gRound').textContent = 'Раунд ' + round + ' / ' + ROUNDS;
+    fb.textContent = ''; nx.style.display = 'none'; btns.forEach(function(b){ b.classList.remove('good','wrong'); });
+  }
+  btns.forEach(function(b){ b.addEventListener('click', function(){
+    if(answered) return; answered = true; var ok = b.getAttribute('data-t') === cur;
+    if(ok){ score++; b.classList.add('good'); } else { b.classList.add('wrong'); btns.forEach(function(x){ if(x.getAttribute('data-t') === cur) x.classList.add('good'); }); }
+    fb.className = 'feedback ' + (ok ? 'ok' : 'bad'); fb.textContent = (ok ? '✓ ' : '✗ ') + 'Это ' + NAMES[cur] + '.';
+    document.getElementById('gScore').textContent = 'Верно: ' + score;
+    if(round >= ROUNDS){ var pass = score >= 6; fb.textContent += pass ? ' Пройдено: ' + score + ' из 8 🎉' : ' Итог ' + score + ' из 8, нужно 6.';
+      if(pass){ GeoMarkSolved('game'); document.getElementById('game').classList.add('ok'); } nx.textContent = 'Ещё раз ↻'; }
+    else nx.textContent = 'Дальше →';
+    nx.style.display = '';
+  }); });
+  nx.addEventListener('click', function(){ if(round >= ROUNDS){ round = 0; score = 0; document.getElementById('gScore').textContent = 'Верно: 0'; } newRound(); });
+  if(GeoIsSolved('game')) document.getElementById('game').classList.add('ok');
+  newRound();
+});
+</script>
+</body>
+</html>

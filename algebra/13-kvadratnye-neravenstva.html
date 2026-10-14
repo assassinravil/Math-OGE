@@ -1,0 +1,367 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Алгебра · занятие 13 · Квадратные неравенства</title>
+<link rel="stylesheet" href="../assets/core.css">
+</head>
+<body data-lesson="A13">
+
+<nav class="topnav"><div class="in">
+  <a class="home" href="../algebra.html">🧮 <span>Алгебра · ОГЭ</span></a>
+  <div class="links"></div>
+  <a class="home" href="../spravochnik-algebra.html" title="Справочник">📖</a>
+  <div class="progress-pill">Решено <b>0 / 0</b><div class="progress-bar"><i></i></div></div>
+</div></nav>
+
+<div class="container">
+
+<header class="hero">
+  <span class="tag">Раздел 3 · Уравнения и неравенства с одной переменной</span><span class="tag">Алгебра · занятие 13 из 23</span><span class="tag">Учебник: гл. III §6, п. 16</span>
+  <h1>Квадратные неравенства</h1>
+  <p>Решение неравенств второй степени с помощью параболы: корни, ветви, нужные промежутки. Случаи D = 0 и D &lt; 0. ОГЭ №13.</p>
+  <div class="timeline">
+    <a href="#warmup">① Проверка ДЗ <small>0–10′</small></a>
+    <a href="#theory">② Теория <small>10–25′</small></a>
+    <a href="#practice">③ Практика <small>25–45′</small></a>
+    <a href="#oge">④ ОГЭ <small>45–55′</small></a>
+    <a href="#hw">⑤ Итог и ДЗ <small>55–60′</small></a>
+    <a href="#bonus">★ Бонус</a>
+  </div>
+</header>
+
+<div class="teacher-panel teacher-only">
+  <h3>План занятия (60 минут)</h3>
+  <ol><li><b>0–10′</b> Проверка ДЗ занятия 12.</li><li><b>10–25′</b> Теория: алгоритм «корни — ветви — промежутки». В лаборатории поставить D &lt; 0 и D = 0 и прочитать ответ для всех четырёх знаков.</li><li><b>25–45′</b> Игра «Выбери рисунок» (№13), тренажёр, затем П1–П10.</li><li><b>45–55′</b> ОГЭ №13 и №19.</li><li><b>55–60′</b> Шпаргалка, ДЗ.</li></ol>
+  <p class="muted" style="margin:0">Типичные ошибки: из x² &lt; 9 пишут x &lt; ±3; не учитывают направление ветвей при a &lt; 0; путают закрашенные и выколотые точки; при D &lt; 0 отвечают «нет решений» независимо от знака.</p>
+</div>
+
+<section class="card" id="warmup" data-nav="Проверка ДЗ">
+  <h2><span class="step">1</span> Проверка ДЗ <span class="mins">0–10 мин</span></h2>
+  <div class="tasks"><div class="task" data-id="h1"><div class="task-head"><span class="tnum">ДЗ 1</span></div>
+<p>Первый мастер выполняет заказ за 10 ч, второй — за 15 ч. За сколько часов они выполнят заказ, работая вместе?</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="6"></label></div>
+</div>
+<div class="task" data-id="h2"><div class="task-head"><span class="tnum">ДЗ 2</span></div>
+<p>Цена товара 1200 руб. снизилась на 25%. Найдите новую цену (руб.).</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="900"></label></div>
+</div>
+<div class="task" data-id="h3"><div class="task-head"><span class="tnum">ДЗ 3</span></div>
+<p>Смешали 2 кг 30%-го и 3 кг 20%-го раствора. Найдите концентрацию смеси (%).</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="24"></label></div>
+</div>
+<div class="task" data-id="h4"><div class="task-head"><span class="tnum">ДЗ 4</span></div>
+<p>Первая труба пропускает на 2 литра в минуту меньше, чем вторая. Резервуар объёмом 96 литров она заполняет на 4 минуты дольше, чем вторая. Сколько литров в минуту пропускает первая труба?</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="6"></label></div>
+</div>
+<div class="task" data-id="h5" data-mode="digits"><div class="task-head"><span class="tnum">ДЗ 5</span><span class="pill oge">ОГЭ №19</span></div>
+<p>1) При совместной работе производительности складываются. 2) Если цену повысить на 10%, а затем понизить на 10%, она не изменится. 3) Масса вещества в растворе равна произведению массы раствора на концентрацию.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="13"></label></div>
+</div>
+</div>
+</section>
+
+<section class="card" id="theory" data-nav="Теория">
+  <h2><span class="step">2</span> Теория <span class="mins">10–25 мин</span></h2>
+
+  <div class="grid2">
+    <div class="box rule"><span class="title">Алгоритм: ax² + bx + c &gt; 0 (&lt;, ≥, ≤)</span>
+      <ol class="rules"><li>Решить уравнение ax² + bx + c = 0.</li><li>Схематично нарисовать параболу: ветви по знаку a, корни на оси Ox.</li><li>«&gt; 0» — где парабола <b>выше</b> оси, «&lt; 0» — где <b>ниже</b>.</li><li>Строгий знак (&gt;, &lt;) — точки выколоты, нестрогий (≥, ≤) — закрашены.</li></ol>
+      <div class="eg">x² − x − 6 &lt; 0. Корни −2 и 3, ветви вверх, ниже оси — между корнями: (−2; 3).<div data-nl='{"p": [["−2", false], ["3", false]], "r": [false, true, false], "s": ["+", "−", "+"]}'></div></div>
+      <div class="eg">x² − x − 6 ≥ 0 → (−∞; −2] ∪ [3; +∞).<div data-nl='{"p": [["−2", true], ["3", true]], "r": [true, false, true], "s": ["+", "−", "+"]}'></div></div></div>
+    <div class="box def"><span class="title">Запомнить (a &gt; 0, корни x₁ &lt; x₂)</span>
+      <ul class="rules"><li><b>&lt; 0</b> — между корнями: x₁ &lt; x &lt; x₂.</li><li><b>&gt; 0</b> — снаружи: x &lt; x₁ или x &gt; x₂.</li><li>Если a &lt; 0 — умножить на −1 и поменять знак неравенства.</li></ul>
+      <div class="eg">−x² + 4x ≤ 0 → x² − 4x ≥ 0 → x(x − 4) ≥ 0 → (−∞; 0] ∪ [4; +∞).</div>
+      <div class="eg trap">x² &lt; 9 — это не «x &lt; ±3». Корни ±3, ответ (−3; 3).</div></div>
+  </div>
+  <div class="grid2" style="margin-top:14px">
+    <div class="box tip"><span class="title">D &lt; 0: парабола не пересекает Ox</span>
+      При a &gt; 0 вся парабола выше оси.
+      <div class="eg">x² + 2x + 5 &gt; 0 (D = −16) → x — любое число, (−∞; +∞).</div>
+      <div class="eg">x² + 2x + 5 &lt; 0 → решений нет.</div></div>
+    <div class="box tip"><span class="title">D = 0: парабола касается Ox</span>
+      ax² + bx + c = a(x − x₀)².
+      <div class="eg">(x − 3)² &gt; 0 → все x, кроме 3: (−∞; 3) ∪ (3; +∞).</div>
+      <div class="eg trap">(x − 3)² ≤ 0 → только x = 3 (не «нет решений»). (x − 3)² &lt; 0 → решений нет.</div></div>
+  </div>
+  <div class="box" style="margin-top:14px"><span class="title">ОГЭ №13: как выбрать рисунок <span class="pill oge">№13</span></span>
+    <ol class="rules"><li>Найти корни — сверить числа под точками.</li><li>Закрашены или выколоты точки (≥, ≤ или &gt;, &lt;).</li><li>Заштрихована середина или края.</li></ol></div>
+  <h3>Лаборатория: парабола и неравенство</h3>
+  <div class="lab">
+    <svg id="labQ" class="plot"></svg>
+    <div id="qNL" style="margin:6px auto 0;max-width:300px"></div>
+    <div class="readout" id="qRead"></div>
+    <div class="controls">
+      <label>a: <input type="range" id="qA" min="-2" max="2" step="0.5" value="1"></label><span class="pill" id="qAv">1</span>
+      <label>b: <input type="range" id="qB" min="-6" max="6" step="1" value="-1"></label><span class="pill" id="qBv">−1</span>
+      <label>c: <input type="range" id="qC" min="-8" max="8" step="1" value="-6"></label><span class="pill" id="qCv">−6</span>
+    </div>
+    <div class="controls">
+      <button class="btn small ghost" type="button" data-op="&gt;">&gt; 0</button><button class="btn small ghost" type="button" data-op="&gt;=">≥ 0</button>
+      <button class="btn small" type="button" data-op="&lt;">&lt; 0</button><button class="btn small ghost" type="button" data-op="&lt;=">≤ 0</button>
+    </div>
+    <p class="muted" style="margin:8px 0 0;font-size:14px">Зелёным на оси Ox отмечены решения неравенства.</p>
+  </div>
+
+</section>
+
+<section class="card" id="examples" data-nav="Примеры">
+  <h2><span class="step">↳</span> Разбор примеров</h2>
+  <div class="grid3"><div class="box example"><span class="title">Пример 1. Между корнями</span><p>Решите неравенство x² − 3x − 10 &lt; 0.</p><details class="reveal"><summary>Показать решение</summary><p><b>Решение.</b> Корни −2 и 5, ветви вверх, ниже оси — между корнями.</p><p><b>Ответ:</b> (−2; 5).</p></details></div><div class="box example"><span class="title">Пример 2. a &lt; 0</span><p>Решите неравенство −x² + 4x ≤ 0.</p><details class="reveal"><summary>Показать решение</summary><p><b>Решение.</b> Умножим на −1: x² − 4x ≥ 0, x(x − 4) ≥ 0. Корни 0 и 4, нужны края, точки закрашены.</p><p><b>Ответ:</b> (−∞; 0] ∪ [4; +∞).</p></details></div><div class="box example"><span class="title">Пример 3. D = 0</span><p>Решите неравенство x² − 6x + 9 &gt; 0.</p><details class="reveal"><summary>Показать решение</summary><p><b>Решение.</b> (x − 3)² &gt; 0 — верно при всех x, кроме x = 3.</p><p><b>Ответ:</b> (−∞; 3) ∪ (3; +∞).</p></details></div></div>
+</section>
+
+<section class="card" id="practice" data-nav="Практика">
+  <h2><span class="step">3</span> Интерактивная практика <span class="mins">25–45 мин</span></h2>
+  <h3>🎯 Тренажёр «Квадратные неравенства»</h3>
+  <div class="lab task" id="trainer" data-id="trainer" data-noauto><div id="trainerBox"></div>
+    <div class="sol">Задачи генерируются случайно. Засчитывается при 5 верных из 6.</div></div>
+
+  <h3>🎯 Игра «Выбери рисунок» <span class="pill oge">№13</span></h3>
+  <div class="lab task" id="game" data-id="game" data-noauto>
+    <div class="controls" style="justify-content:space-between;margin:0"><b id="gRound"></b><span class="pill" id="gScore">Верно: 0</span></div>
+    <p id="gQ" style="margin:10px 0 0"></p>
+    <div class="choice-btns" id="gBtns" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))"></div>
+    <div class="controls"><span class="feedback" id="gFb"></span><button class="btn small" type="button" id="gNext" style="display:none">Дальше →</button></div>
+    <div class="sol">Засчитывается при 6 верных из 8.</div>
+  </div>
+
+  <h3>Блок А. База</h3>
+  <div class="tasks"><div class="task" data-id="p1"><div class="task-head"><span class="tnum">П1</span><span class="pill lvl1">база</span></div>
+<p>Сколько целых решений имеет неравенство x² − 16 &lt; 0?</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="7"></label></div>
+<div class="sol">(−4; 4): от −3 до 3.</div>
+</div>
+<div class="task" data-id="p2"><div class="task-head"><span class="tnum">П2</span><span class="pill lvl1">база</span></div>
+<p>Решите неравенство x² − 5x + 4 ≤ 0. Укажите наименьшее и наибольшее решения.</p>
+<div class="ans-row"><label>наименьшее = <input class="ans" data-a="1" data-label="наименьшее"></label><label>наибольшее = <input class="ans" data-a="4" data-label="наибольшее"></label></div>
+</div>
+<div class="task" data-id="p3"><div class="task-head"><span class="tnum">П3</span><span class="pill lvl1">база</span></div>
+<p>Укажите решение неравенства x² + 3x &gt; 0.</p><ol style="margin:6px 0"><li>(−3; 0)</li><li>(−∞; −3) ∪ (0; +∞)</li><li>(−∞; 0) ∪ (3; +∞)</li><li>(0; 3)</li></ol>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="2"></label></div>
+</div>
+<div class="task" data-id="p4"><div class="task-head"><span class="tnum">П4</span><span class="pill lvl1">база</span></div>
+<p>Сколько целых решений имеет неравенство −x² + 2x + 8 ≥ 0?</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="7"></label></div>
+<div class="sol">x² − 2x − 8 ≤ 0 → [−2; 4].</div>
+</div>
+<div class="task" data-id="p5"><div class="task-head"><span class="tnum">П5</span><span class="pill lvl1">база</span></div>
+<p>Укажите решение неравенства x² + 4x + 5 &gt; 0.</p><ol style="margin:6px 0"><li>решений нет</li><li>(−∞; +∞)</li><li>(−∞; −2) ∪ (−2; +∞)</li><li>(−5; 1)</li></ol>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="2"></label></div>
+<div class="sol">D = 16 − 20 &lt; 0, a &gt; 0.</div>
+</div>
+<div class="task" data-id="p6"><div class="task-head"><span class="tnum">П6</span><span class="pill lvl1">база</span></div>
+<p>Решите неравенство (x − 2)² ≤ 0.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="2"></label></div>
+</div>
+</div>
+  <h3>Блок Б. Посложнее</h3>
+  <div class="tasks"><div class="task" data-id="p7"><div class="task-head"><span class="tnum">П7</span><span class="pill lvl2">средний</span></div>
+<p>Найдите наибольшее целое решение неравенства x² &lt; 9x.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="8"></label></div>
+<div class="sol">x(x − 9) &lt; 0 → (0; 9).</div>
+</div>
+<div class="task" data-id="p8"><div class="task-head"><span class="tnum">П8</span><span class="pill lvl2">средний</span></div>
+<p>При каких x имеет смысл выражение √(12 + x − x²)? Укажите количество целых таких x.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="8"></label></div>
+<div class="sol">12 + x − x² ≥ 0 → x² − x − 12 ≤ 0 → [−3; 4].</div>
+</div>
+<div class="task" data-id="p9"><div class="task-head"><span class="tnum">П9</span><span class="pill lvl2">средний</span></div>
+<p>Найдите наименьшее целое c, при котором неравенство x² + 6x + c &gt; 0 верно при всех x.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="10"></label></div>
+<div class="sol">D = 36 − 4c &lt; 0 → c &gt; 9.</div>
+</div>
+<div class="task" data-id="p10"><div class="task-head"><span class="tnum">П10</span><span class="pill lvl3">сложнее</span></div>
+<p>Сколько целых решений имеет неравенство 2x² − 7x + 3 &lt; 0?</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="2"></label></div>
+<div class="sol">Корни 0,5 и 3 → (0,5; 3): x = 1; 2.</div>
+</div>
+</div>
+</section>
+
+<section class="card oge" id="oge" data-nav="ОГЭ">
+  <h2><span class="step">4</span> Задачи в формате ОГЭ <span class="mins">45–55 мин</span></h2>
+  <div class="tasks"><div class="task" data-id="o1"><div class="task-head"><span class="tnum">О1</span><span class="pill oge">ОГЭ №13</span></div>
+<p>Укажите решение неравенства x² − 3x − 4 ≤ 0.</p><div class="grid2" style="margin:8px 0;gap:10px"><figure style="margin:0"><figcaption style="text-align:left"><b>1)</b></figcaption><div data-nl='{"p": [["−1", false], ["4", false]], "r": [false, true, false]}'></div></figure><figure style="margin:0"><figcaption style="text-align:left"><b>2)</b></figcaption><div data-nl='{"p": [["−1", true], ["4", true]], "r": [false, true, false]}'></div></figure><figure style="margin:0"><figcaption style="text-align:left"><b>3)</b></figcaption><div data-nl='{"p": [["−1", true], ["4", true]], "r": [true, false, true]}'></div></figure><figure style="margin:0"><figcaption style="text-align:left"><b>4)</b></figcaption><div data-nl='{"p": [["−4", true], ["1", true]], "r": [false, true, false]}'></div></figure></div>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="2"></label></div>
+<div class="sol">Корни −1 и 4, ветви вверх, ≤ 0 — между корнями, точки закрашены.</div>
+</div>
+<div class="task" data-id="o2"><div class="task-head"><span class="tnum">О2</span><span class="pill oge">ОГЭ №13</span></div>
+<p>Укажите неравенство, которое не имеет решений.</p><ol style="margin:6px 0"><li>x² − 4x + 5 &lt; 0</li><li>x² − 4x − 5 &gt; 0</li><li>x² − 4x + 5 &gt; 0</li><li>x² − 4x − 5 &lt; 0</li></ol>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="1"></label></div>
+<div class="sol">У x² − 4x + 5 D &lt; 0, парабола выше оси.</div>
+</div>
+<div class="task" data-id="o3"><div class="task-head"><span class="tnum">О3</span><span class="pill oge">ОГЭ №13</span></div>
+<p>Укажите решение неравенства 4x − x² &lt; 0.</p><ol style="margin:6px 0"><li>(0; 4)</li><li>(−∞; 4)</li><li>(−∞; 0) ∪ (4; +∞)</li><li>(4; +∞)</li></ol>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="3"></label></div>
+<div class="sol">x² − 4x &gt; 0 → снаружи корней 0 и 4.</div>
+</div>
+<div class="task" data-id="o4" data-mode="digits"><div class="task-head"><span class="tnum">О4</span><span class="pill oge">ОГЭ №19</span></div>
+<p>Какие утверждения верны?</p><ol style="margin:6px 0"><li>Если a &gt; 0 и D &lt; 0, то ax² + bx + c &gt; 0 при всех x.</li><li>Решение неравенства x² ≥ 9 — отрезок [−3; 3].</li><li>Неравенство x² − 2x + 1 ≤ 0 имеет единственное решение.</li></ol>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="13"></label></div>
+<div class="sol">2 — неверно: (−∞; −3] ∪ [3; +∞).</div>
+</div>
+</div>
+</section>
+
+<section class="card" id="hw" data-nav="Итог и ДЗ">
+  <h2><span class="step">5</span> Итог и домашнее задание <span class="mins">55–60 мин</span></h2>
+  <h3>Шпаргалка</h3>
+  <div class="cheat"><div><b>Корни → ветви → промежутки</b></div><div><b>a &gt; 0:</b> «&lt; 0» между корнями, «&gt; 0» снаружи</div><div><b>≥, ≤</b> — точки закрашены; <b>&gt;, &lt;</b> — выколоты</div><div><b>D &lt; 0, a &gt; 0:</b> «&gt; 0» — все x, «&lt; 0» — нет решений</div><div><b>(x − 3)² ≤ 0</b> → x = 3</div></div>
+  <h3>📚 Домашнее задание</h3>
+  <p class="muted">Ответы проверяются в начале занятия 14.</p>
+  <ol class="hw"><li>Сколько целых решений имеет неравенство x² − 36 ≤ 0?<div class="sol"><span class="ansline">Ответ: 13.</span> [−6; 6].</div></li><li>Сколько целых решений имеет неравенство x² − 7x + 10 &lt; 0?<div class="sol"><span class="ansline">Ответ: 2.</span> (2; 5): 3 и 4.</div></li><li>Найдите наибольшее целое отрицательное решение неравенства x² + 5x ≥ 0.<div class="sol"><span class="ansline">Ответ: −5.</span> (−∞; −5] ∪ [0; +∞).</div></li><li>Найдите наименьшее целое c, при котором неравенство x² − 4x + c &gt; 0 верно при всех x.<div class="sol"><span class="ansline">Ответ: 5.</span> D = 16 − 4c &lt; 0 → c &gt; 4.</div></li><li>(ОГЭ №19) 1) Неравенство x² + 1 &gt; 0 верно при всех x. 2) Решением неравенства x² &lt; 4 является x &lt; 2. 3) Неравенство (x − 1)² &lt; 0 не имеет решений.<div class="sol"><span class="ansline">Ответ: 13.</span> </div></li></ol>
+  <h3>⭐ Бонусное ДЗ</h3>
+  <ol class="hw"><li>Сколько целых чисел не входят в область определения функции y = √(x² − 4x − 5)?<div class="sol"><span class="ansline">Ответ: 5.</span> x² − 4x − 5 ≥ 0 → x ≤ −1 или x ≥ 5; не входят 0, 1, 2, 3, 4.</div></li><li>При скольких целых m уравнение x² + mx + 4 = 0 не имеет корней?<div class="sol"><span class="ansline">Ответ: 7.</span> m² − 16 &lt; 0 → −4 &lt; m &lt; 4.</div></li></ol>
+  <p style="margin-top:18px"><button class="btn small ghost" type="button" onclick="GeoResetLesson()">Сбросить прогресс занятия</button></p>
+</section>
+
+<section class="card bonus" id="bonus" data-nav="★ Бонус">
+  <h2><span class="step">★</span> Бонусная практика</h2>
+  <div class="tasks"><div class="task" data-id="b1"><div class="task-head"><span class="tnum">Б1</span><span class="pill lvl3">сложнее</span></div>
+<p>Сколько целых решений имеет неравенство −2x² + 5x + 3 &gt; 0?</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="3"></label></div>
+<div class="sol">2x² − 5x − 3 &lt; 0, корни −0,5 и 3 → 0; 1; 2.</div>
+</div>
+<div class="task" data-id="b2"><div class="task-head"><span class="tnum">Б2</span><span class="pill lvl3">сложнее</span></div>
+<p>Найдите наибольшее целое k, при котором неравенство x² − 2kx + 9 &gt; 0 верно при всех x.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="2"></label></div>
+<div class="sol">D = 4k² − 36 &lt; 0 → −3 &lt; k &lt; 3.</div>
+</div>
+<div class="task" data-id="b3"><div class="task-head"><span class="tnum">Б3</span><span class="pill lvl3">сложнее</span></div>
+<p>Найдите сумму целых решений неравенства x² ≤ 2x + 15.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="9"></label></div>
+<div class="sol">x² − 2x − 15 ≤ 0 → [−3; 5]; сумма −3 + … + 5 = 9.</div>
+</div>
+</div>
+</section>
+
+</div>
+
+<script src="../assets/core.js"></script>
+<script>
+
+function fN(v){
+  var r = Math.round(v * 1000) / 1000, s;
+  if(Math.abs(r - Math.round(r)) < 1e-9) s = String(Math.round(r));
+  else if(Math.abs(r * 4 - Math.round(r * 4)) < 1e-9) s = String(r);
+  else s = '≈' + (Math.round(v * 100) / 100);
+  return s.replace('.', ',').replace('-', '−');
+}
+function poly(cs, vs){
+  var s = '';
+  for(var i = 0; i < cs.length; i++){ var c = cs[i]; if(!c) continue; var a = Math.abs(c), body = (a === 1 && vs[i] ? '' : String(a).replace('.', ',')) + vs[i];
+    s += s === '' ? (c < 0 ? '−' : '') + body : (c < 0 ? ' − ' : ' + ') + body; }
+  return s || '0';
+}
+function fct(a){ return a === 0 ? 'x' : '(x ' + (a > 0 ? '− ' + a : '+ ' + (-a)) + ')'; }
+function ineqSolve(num, den, lead, op){
+  var all = num.concat(den).slice().sort(function(a, b){ return a - b; }), pts = [];
+  all.forEach(function(p){ if(!pts.length || Math.abs(p - pts[pts.length - 1]) > 1e-9) pts.push(p); });
+  function sg(x){ var s = lead; num.concat(den).forEach(function(r){ s *= (x > r ? 1 : -1); }); return s; }
+  var n = pts.length, regs = [], signs = [], closed = [], strict = op.length === 1, i;
+  for(i = 0; i <= n; i++){ var t = n === 0 ? 0 : (i === 0 ? pts[0] - 1 : (i === n ? pts[n - 1] + 1 : (pts[i - 1] + pts[i]) / 2)), s = sg(t); signs.push(s > 0 ? '+' : '−'); regs.push(op[0] === '>' ? s > 0 : s < 0); }
+  pts.forEach(function(p){ var d = den.some(function(r){ return Math.abs(r - p) < 1e-9; }); closed.push(!strict && !d); });
+  var el = [], parts = [], cur = null, prev = null;
+  for(i = 0; i <= n; i++){ el.push({inc:regs[i], reg:i}); if(i < n) el.push({inc:closed[i], pt:i}); }
+  function close(rt, rc){ parts.push(cur.single != null ? '{' + cur.l + '}' : (cur.lc ? '[' : '(') + cur.l + '; ' + rt + (rc ? ']' : ')')); cur = null; }
+  el.forEach(function(e){
+    if(e.inc && !cur) cur = e.pt != null ? {l:fN(pts[e.pt]), lc:true, single:e.pt} : {l:e.reg === 0 ? '−∞' : fN(pts[e.reg - 1]), lc:false, single:null};
+    else if(e.inc && cur) cur.single = null;
+    else if(!e.inc && cur){ if(prev.pt != null) close(fN(pts[prev.pt]), true); else close(fN(pts[prev.reg]), false); }
+    prev = e;
+  });
+  if(cur) close('+∞', false);
+  return {pts:pts, regs:regs, closed:closed, signs:signs, str:parts.join(' ∪ ') || 'нет решений'};
+}
+function nlSVG(pts, regs, signs){
+  var W = 260, H = signs ? 62 : 46, y = H - 18, n = pts.length, L = 12, R = W - 16, xs = [], s, i, x;
+  for(i = 0; i < n; i++) xs.push(L + (R - L) * (i + 1) / (n + 1));
+  s = '<svg viewBox="0 0 ' + W + ' ' + H + '" style="width:100%;max-width:300px;display:block">';
+  for(i = 0; i <= n; i++){
+    var a = i ? xs[i - 1] : 4, b = i < n ? xs[i] : W - 10;
+    if(regs[i]) for(x = a + 2; x < b; x += 7){ var x2 = Math.min(x + 9, b); s += '<line x1="' + x + '" y1="' + y + '" x2="' + x2 + '" y2="' + (y - 13 * (x2 - x) / 9) + '" stroke="var(--primary)" stroke-width="1.6"/>'; }
+    if(signs) s += '<text x="' + (a + b) / 2 + '" y="14" text-anchor="middle" style="font-size:16px;font-weight:700;fill:' + (signs[i] === '+' ? 'var(--res)' : 'var(--a)') + '">' + signs[i] + '</text>';
+  }
+  s += '<line x1="2" y1="' + y + '" x2="' + (W - 2) + '" y2="' + y + '" stroke="var(--ink)" stroke-width="1.6"/><path d="M' + (W - 10) + ' ' + (y - 5) + ' L' + (W - 2) + ' ' + y + ' L' + (W - 10) + ' ' + (y + 5) + '" fill="none" stroke="var(--ink)" stroke-width="1.6"/>';
+  s += '<text x="' + (W - 8) + '" y="' + (H - 2) + '" text-anchor="middle" style="font-size:13px;fill:var(--muted)">x</text>';
+  for(i = 0; i < n; i++){
+    s += '<circle cx="' + xs[i] + '" cy="' + y + '" r="4.5" fill="' + (pts[i][1] ? 'var(--ink)' : 'var(--card)') + '" stroke="var(--ink)" stroke-width="1.6"/>';
+    s += '<text x="' + xs[i] + '" y="' + (H - 2) + '" text-anchor="middle" style="font-size:13px;fill:var(--ink)">' + pts[i][0] + '</text>';
+  }
+  return s + '</svg>';
+}
+document.querySelectorAll('[data-nl]').forEach(function(d){ var o = JSON.parse(d.getAttribute('data-nl')); d.innerHTML = nlSVG(o.p, o.r, o.s); });
+
+var OPS = {'>':'&gt;', '>=':'≥', '<':'&lt;', '<=':'≤'};
+function intSol(f, op){ var s = []; for(var x = -60; x <= 60; x++){ var v = f(x); if(v === null) continue; if(op === '>' ? v > 0 : (op === '>=' ? v >= 0 : (op === '<' ? v < 0 : v <= 0))) s.push(x); } return s; }
+function askInt(s, txt, why){
+  var Q = function(w, a){ return {q:w + ' неравенства ' + txt + '.', a:String(a), why:why}; };
+  if(!s.length) return {q:'Сколько целых решений имеет неравенство ' + txt + '?', a:'0', why:why};
+  var lo = s[0] === -60, hi = s[s.length - 1] === 60;
+  if(!lo && !hi) return GeoRand(0, 1) ? {q:'Сколько целых решений имеет неравенство ' + txt + '?', a:String(s.length), why:why} : Q('Найдите наименьшее целое решение', s[0]);
+  if(!lo) return Q('Найдите наименьшее целое решение', s[0]);
+  if(!hi) return Q('Найдите наибольшее целое решение', s[s.length - 1]);
+  return {q:'Сколько существует целых чисел, которые <b>не являются</b> решениями неравенства ' + txt + '?', a:String(121 - s.length), why:why};
+}
+
+(function(){
+  var svg = document.getElementById('labQ'), A = document.getElementById('qA'), B = document.getElementById('qB'), C = document.getElementById('qC'), op = '<';
+  function draw(){
+    if(+A.value === 0) A.value = 0.5;
+    var a = +A.value, b = +B.value, c = +C.value, D = b * b - 4 * a * c, num = [];
+    if(D >= 0){ var r1 = (-b - Math.sqrt(D)) / (2 * a), r2 = (-b + Math.sqrt(D)) / (2 * a); num = [Math.min(r1, r2), Math.max(r1, r2)]; }
+    var S = ineqSolve(num, [], a > 0 ? 1 : -1, op), P = GeoPlot(svg, {xmin:-8, xmax:8, ymin:-8, ymax:8, w:600, h:380}); P.clear(); P.grid();
+    var e = [-8].concat(S.pts).concat([8]), i;
+    for(i = 0; i < S.regs.length; i++) if(S.regs[i]) P.seg(Math.max(e[i], -8), 0, Math.min(e[i + 1], 8), 0, '#16a34a', 7);
+    P.curve(function(x){ return a * x * x + b * x + c; }, '#2f5bea');
+    S.pts.forEach(function(p, k){ P.point(p, 0, '#16a34a', '', !S.closed[k]); });
+    document.getElementById('qAv').textContent = fN(a); document.getElementById('qBv').textContent = fN(b); document.getElementById('qCv').textContent = fN(c);
+    document.getElementById('qNL').innerHTML = nlSVG(S.pts.map(function(p, k){ return [fN(p), S.closed[k]]; }), S.regs, S.signs);
+    document.getElementById('qRead').innerHTML = '<span>' + poly([a, b, c], ['x²', 'x', '']) + ' ' + OPS[op] + ' 0</span><span>D = ' + fN(D) + (num.length ? ', корни ' + num.map(fN).join(' и ') : ' — корней нет') + '</span><span>ветви ' + (a > 0 ? 'вверх' : 'вниз') + '</span><span><b>ответ: ' + S.str + '</b></span>';
+  }
+  [A, B, C].forEach(function(el){ el.addEventListener('input', draw); });
+  document.querySelectorAll('[data-op]').forEach(function(bt){ bt.addEventListener('click', function(){ op = bt.getAttribute('data-op'); document.querySelectorAll('[data-op]').forEach(function(x){ x.classList.toggle('ghost', x !== bt); }); draw(); }); });
+  draw();
+})();
+document.addEventListener('geo:ready', function(){
+  GeoTrainer(document.getElementById('trainerBox'), {rounds:6, id:'trainer', gen:function(){
+    var k = GeoRand(1, 5), op = GeoPick(['>', '>=', '<', '<=']), lead = GeoPick([1, 1, -1]), cs, f, num, r1, r2, m, q;
+    if(k <= 3){ r1 = GeoRand(-7, 6); r2 = GeoRand(r1 + 1, 7); cs = [lead, -lead * (r1 + r2), lead * r1 * r2]; num = [r1, r2]; }
+    else if(k === 4){ m = GeoRand(-4, 4); q = GeoRand(1, 6); cs = [lead, -2 * m * lead, lead * (m * m + q)]; num = []; }
+    else { m = GeoRand(-5, 5); cs = [lead, -2 * m * lead, lead * m * m]; num = [m, m]; }
+    f = function(x){ return cs[0] * x * x + cs[1] * x + cs[2]; };
+    var S = ineqSolve(num, [], lead, op);
+    return askInt(intSol(f, op), poly(cs, ['x²', 'x', '']) + ' ' + OPS[op] + ' 0', 'Решение: ' + S.str + '.');
+  }});
+  var ROUNDS = 8, round = 0, score = 0, answered, okI, fb = document.getElementById('gFb'), nx = document.getElementById('gNext'), box = document.getElementById('gBtns'), expl;
+  function newRound(){
+    answered = false; round++;
+    var r1 = GeoRand(-6, 5), r2 = GeoRand(r1 + 1, 6), lead = GeoPick([1, 1, -1]), op = GeoPick(['>', '>=', '<', '<=']);
+    var S = ineqSolve([r1, r2], [], lead, op), ins = S.regs[1], cl = S.closed[0], lab = [fN(r1), fN(r2)];
+    var opts = [{l:lab, i:ins, c:cl, ok:true}, {l:lab, i:!ins, c:cl}, {l:lab, i:ins, c:!cl}];
+    opts.push(r1 !== -r2 ? {l:[fN(-r2), fN(-r1)], i:ins, c:cl} : {l:lab, i:!ins, c:!cl});
+    opts.sort(function(){ return Math.random() - 0.5; });
+    document.getElementById('gQ').innerHTML = 'Укажите решение неравенства <b>' + poly([lead, -lead * (r1 + r2), lead * r1 * r2], ['x²', 'x', '']) + ' ' + OPS[op] + ' 0</b>.';
+    box.innerHTML = opts.map(function(o, j){ if(o.ok) okI = j; return '<button type="button" data-i="' + j + '" style="text-align:left"><b>' + (j + 1) + ')</b>' + nlSVG([[o.l[0], o.c], [o.l[1], o.c]], o.i ? [false, true, false] : [true, false, true]) + '</button>'; }).join('');
+    expl = 'Корни ' + lab.join(' и ') + ', ответ ' + S.str + '.';
+    document.getElementById('gRound').textContent = 'Раунд ' + round + ' / ' + ROUNDS; fb.textContent = ''; fb.className = 'feedback'; nx.style.display = 'none';
+    box.querySelectorAll('button').forEach(function(b){ b.addEventListener('click', function(){ pick(b); }); });
+  }
+  function pick(b){
+    if(answered) return; answered = true; var ok = +b.getAttribute('data-i') === okI;
+    if(ok){ score++; b.classList.add('good'); } else { b.classList.add('wrong'); box.querySelectorAll('button')[okI].classList.add('good'); }
+    fb.className = 'feedback ' + (ok ? 'ok' : 'bad'); fb.textContent = (ok ? '✓ Верно! ' : '✗ ') + expl;
+    document.getElementById('gScore').textContent = 'Верно: ' + score;
+    if(round >= ROUNDS){ var pass = score >= 6; fb.textContent += pass ? ' Пройдено: ' + score + ' из 8 🎉' : ' Итог ' + score + ' из 8, нужно 6.'; if(pass){ GeoMarkSolved('game'); document.getElementById('game').classList.add('ok'); } nx.textContent = 'Ещё раз ↻'; }
+    else nx.textContent = 'Дальше →';
+    nx.style.display = '';
+  }
+  nx.addEventListener('click', function(){ if(round >= ROUNDS){ round = 0; score = 0; document.getElementById('gScore').textContent = 'Верно: 0'; } newRound(); });
+  if(GeoIsSolved('game')) document.getElementById('game').classList.add('ok');
+  newRound();
+});
+
+</script>
+</body>
+</html>

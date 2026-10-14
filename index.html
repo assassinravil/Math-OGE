@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Математика 9 · Подготовка к ОГЭ</title>
+<link rel="stylesheet" href="assets/core.css">
+<style>
+.subjects{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
+.subj{display:block;text-decoration:none;color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:18px;padding:24px;box-shadow:0 2px 10px rgba(16,24,40,.05);transition:transform .15s,box-shadow .15s}
+.subj:hover{transform:translateY(-3px);box-shadow:0 10px 24px rgba(16,24,40,.1)}
+.subj .ic{font-size:40px}
+.subj h2{margin:6px 0 4px;font-size:26px}
+.subj p{margin:0 0 14px;color:var(--muted)}
+.subj .bar{height:8px;background:var(--line);border-radius:99px;overflow:hidden}
+.subj .bar i{display:block;height:100%;width:0;background:var(--res)}
+.subj .row{display:flex;justify-content:space-between;font-size:14px;color:var(--muted);margin-top:8px}
+.quick{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+</style>
+</head>
+<body>
+<div class="container">
+  <header class="hero">
+    <span class="tag">9 класс</span><span class="tag">Занятия по 60 минут</span><span class="tag">Подготовка к ОГЭ</span>
+    <h1>Математика: геометрия и алгебра</h1>
+    <p>Теория с интерактивными лабораториями, практика с автопроверкой, задачи в формате ОГЭ, домашние задания и справочники.</p>
+  </header>
+  <div class="subjects">
+    <a class="subj" href="geometry.html"><div class="ic">📐</div><h2>Геометрия</h2><p>По учебнику Атанасяна 7–9 · 23 занятия + 7 занятий ОГЭ</p>
+      <div class="bar"><i id="bg"></i></div><div class="row"><span>Прогресс</span><b id="pg">0%</b></div></a>
+    <a class="subj" href="algebra.html"><div class="ic">🧮</div><h2>Алгебра</h2><p>По учебнику Макарычева 9 · 23 занятия + повторение + 8 занятий ОГЭ</p>
+      <div class="bar"><i id="ba"></i></div><div class="row"><span>Прогресс</span><b id="pa">0%</b></div></a>
+  </div>
+  <div class="quick">
+    <a class="btn ghost" href="spravochnik.html">📖 Справочник по геометрии</a>
+    <a class="btn ghost" href="spravochnik-algebra.html">📖 Справочник по алгебре</a>
+  </div>
+</div>
+<script src="assets/courses.js"></script>
+<script>
+(function(){
+  function get(k){ try{ return localStorage.getItem(k); }catch(e){ return null; } }
+  [['geometry','pg','bg'],['algebra','pa','ba']].forEach(function(x){
+    var sum = 0, all = 0;
+    COURSES[x[0]].parts.forEach(function(p){ p.lessons.forEach(function(l){ all++; var pr = null; try{ pr = JSON.parse(get('geo:progress:' + l.id) || 'null'); }catch(e){} if(pr && pr.total) sum += 100 * pr.solved / pr.total; }); });
+    var t = all ? Math.round(sum / all) : 0; document.getElementById(x[1]).textContent = t + '%'; document.getElementById(x[2]).style.width = t + '%';
+  });
+  if(/#algebra/.test(location.hash)) location.replace('algebra.html');
+})();
+</script>
+<script src="assets/core.js"></script>
+</body>
+</html>

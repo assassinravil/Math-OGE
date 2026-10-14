@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Алгебра · занятие 12 · Задачи на работу, смеси, проценты</title>
+<link rel="stylesheet" href="../assets/core.css">
+</head>
+<body data-lesson="A12">
+
+<nav class="topnav"><div class="in">
+  <a class="home" href="../algebra.html">🧮 <span>Алгебра · ОГЭ</span></a>
+  <div class="links"></div>
+  <a class="home" href="../spravochnik-algebra.html" title="Справочник">📖</a>
+  <div class="progress-pill">Решено <b>0 / 0</b><div class="progress-bar"><i></i></div></div>
+</div></nav>
+
+<div class="container">
+
+<header class="hero">
+  <span class="tag">Раздел 3 · Уравнения и неравенства с одной переменной</span><span class="tag">Алгебра · занятие 12 из 23</span><span class="tag">Учебник: гл. III §5, п. 15</span>
+  <h1>Текстовые задачи: работа, смеси, проценты</h1>
+  <p>Совместная работа и трубы, проценты (повышение, понижение), концентрация растворов и сплавы. ОГЭ №21.</p>
+  <div class="timeline">
+    <a href="#warmup">① Проверка ДЗ <small>0–10′</small></a>
+    <a href="#theory">② Теория <small>10–25′</small></a>
+    <a href="#practice">③ Практика <small>25–45′</small></a>
+    <a href="#oge">④ ОГЭ <small>45–55′</small></a>
+    <a href="#hw">⑤ Итог и ДЗ <small>55–60′</small></a>
+    <a href="#bonus">★ Бонус</a>
+  </div>
+</header>
+
+<div class="teacher-panel teacher-only">
+  <h3>План занятия (60 минут)</h3>
+  <ol><li><b>0–10′</b> Проверка ДЗ занятия 11.</li><li><b>10–25′</b> Теория: три таблицы — «производительность, время, работа» и «масса, концентрация, вещество». Ловушка с +20% и −20%.</li><li><b>25–45′</b> Тренажёр, затем П1–П10.</li><li><b>45–55′</b> ОГЭ №21: оформление с таблицей.</li><li><b>55–60′</b> Шпаргалка, ДЗ.</li></ol>
+  <p class="muted" style="margin:0">Типичные ошибки: складывают времена вместо производительностей; проценты от разных величин считают как от одной; при смешивании складывают концентрации; забывают, что вода — раствор с концентрацией 0%.</p>
+</div>
+
+<section class="card" id="warmup" data-nav="Проверка ДЗ">
+  <h2><span class="step">1</span> Проверка ДЗ <span class="mins">0–10 мин</span></h2>
+  <div class="tasks"><div class="task" data-id="h1"><div class="task-head"><span class="tnum">ДЗ 1</span></div>
+<p>Из двух городов, расстояние между которыми 450 км, одновременно навстречу вышли два поезда со скоростями 80 км/ч и 70 км/ч. Через сколько часов они встретятся?</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="3"></label></div>
+</div>
+<div class="task" data-id="h2"><div class="task-head"><span class="tnum">ДЗ 2</span></div>
+<p>Собственная скорость лодки 10 км/ч, скорость течения 2 км/ч. За сколько часов лодка пройдёт 36 км по течению?</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="3"></label></div>
+</div>
+<div class="task" data-id="h3"><div class="task-head"><span class="tnum">ДЗ 3</span></div>
+<p>Первую половину пути автомобиль ехал со скоростью 20 км/ч, вторую — 30 км/ч. Найдите среднюю скорость (км/ч).</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="24"></label></div>
+</div>
+<div class="task" data-id="h4"><div class="task-head"><span class="tnum">ДЗ 4</span></div>
+<p>Автобус проехал 120 км из A в B. Обратно он ехал со скоростью на 20 км/ч больше и затратил на 1 ч меньше. Найдите скорость автобуса на пути из A в B.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="40"></label></div>
+</div>
+<div class="task" data-id="h5" data-mode="digits"><div class="task-head"><span class="tnum">ДЗ 5</span><span class="pill oge">ОГЭ №19</span></div>
+<p>1) При движении навстречу скорость сближения равна сумме скоростей. 2) Скорость против течения равна сумме собственной скорости и скорости течения. 3) Средняя скорость равна отношению всего пути ко всему времени движения.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="13"></label></div>
+</div>
+</div>
+</section>
+
+<section class="card" id="theory" data-nav="Теория">
+  <h2><span class="step">2</span> Теория <span class="mins">10–25 мин</span></h2>
+
+  <div class="grid2">
+    <div class="box def"><span class="title">Работа</span>
+      <div class="formula">A = p · t, &nbsp; p = A / t</div>
+      <ul class="rules"><li>Если объём работы не дан, вся работа = 1, тогда p = 1/t.</li><li>При совместной работе <b>складываются производительности</b>, а не времена.</li></ul>
+      <div class="eg">Первый выполняет работу за 6 ч, второй — за 3 ч. Вместе: 1/6 + 1/3 = 1/2 работы в час → 2 ч.</div>
+      <div class="eg trap">Не 6 + 3 = 9 и не (6 + 3)/2! Вместе всегда быстрее, чем каждый по отдельности.</div></div>
+    <div class="box rule"><span class="title">Трубы — та же работа</span>
+      Производительность трубы — литры в минуту.
+      <div class="eg">Первая труба пропускает на 1 л/мин меньше второй и заполняет бак 110 л на 1 мин дольше. Пусть x л/мин — первая.
+      <div style="overflow-x:auto"><table style="border-collapse:collapse;width:100%;margin:8px 0;font-size:15px"><tr><th style="border:1px solid var(--line);padding:5px 8px;text-align:center;background:var(--primary-soft)"></th><th style="border:1px solid var(--line);padding:5px 8px;text-align:center;background:var(--primary-soft)">p, л/мин</th><th style="border:1px solid var(--line);padding:5px 8px;text-align:center;background:var(--primary-soft)">t, мин</th><th style="border:1px solid var(--line);padding:5px 8px;text-align:center;background:var(--primary-soft)">A, л</th></tr><tr><td style="border:1px solid var(--line);padding:5px 8px;text-align:center">1-я</td><td style="border:1px solid var(--line);padding:5px 8px;text-align:center">x</td><td style="border:1px solid var(--line);padding:5px 8px;text-align:center">110/x</td><td style="border:1px solid var(--line);padding:5px 8px;text-align:center">110</td></tr><tr><td style="border:1px solid var(--line);padding:5px 8px;text-align:center">2-я</td><td style="border:1px solid var(--line);padding:5px 8px;text-align:center">x + 1</td><td style="border:1px solid var(--line);padding:5px 8px;text-align:center">110/(x + 1)</td><td style="border:1px solid var(--line);padding:5px 8px;text-align:center">110</td></tr></table></div>
+      110/x − 110/(x + 1) = 1 → x² + x − 110 = 0 → x = 10.</div></div>
+  </div>
+  <div class="grid2" style="margin-top:14px">
+    <div class="box def"><span class="title">Проценты</span>
+      <ul class="rules"><li>p% — это p/100 части.</li><li>Повысить на p%: умножить на (1 + p/100).</li><li>Понизить на p%: умножить на (1 − p/100).</li></ul>
+      <div class="eg">Цена 800 руб. выросла на 15%: 800 · 1,15 = 920 руб.</div>
+      <div class="eg trap">+20%, потом −20%: 100 → 120 → 96. Цена <b>уменьшилась на 4%</b>, а не вернулась к 100: второй процент берётся от новой цены.</div></div>
+    <div class="box rule"><span class="title">Смеси и сплавы</span>
+      <div class="formula">вещество = концентрация · масса</div>
+      <ul class="rules"><li>При смешивании складываются массы и массы вещества, но <b>не концентрации</b>.</li><li>Вода — раствор с концентрацией 0%.</li></ul>
+      <div class="eg">Смешали 3 кг 20%-го и 2 кг 40%-го раствора.
+      <div style="overflow-x:auto"><table style="border-collapse:collapse;width:100%;margin:8px 0;font-size:15px"><tr><th style="border:1px solid var(--line);padding:5px 8px;text-align:center;background:var(--primary-soft)"></th><th style="border:1px solid var(--line);padding:5px 8px;text-align:center;background:var(--primary-soft)">масса, кг</th><th style="border:1px solid var(--line);padding:5px 8px;text-align:center;background:var(--primary-soft)">конц.</th><th style="border:1px solid var(--line);padding:5px 8px;text-align:center;background:var(--primary-soft)">вещество, кг</th></tr><tr><td style="border:1px solid var(--line);padding:5px 8px;text-align:center">1-й</td><td style="border:1px solid var(--line);padding:5px 8px;text-align:center">3</td><td style="border:1px solid var(--line);padding:5px 8px;text-align:center">0,2</td><td style="border:1px solid var(--line);padding:5px 8px;text-align:center">0,6</td></tr><tr><td style="border:1px solid var(--line);padding:5px 8px;text-align:center">2-й</td><td style="border:1px solid var(--line);padding:5px 8px;text-align:center">2</td><td style="border:1px solid var(--line);padding:5px 8px;text-align:center">0,4</td><td style="border:1px solid var(--line);padding:5px 8px;text-align:center">0,8</td></tr><tr><td style="border:1px solid var(--line);padding:5px 8px;text-align:center">смесь</td><td style="border:1px solid var(--line);padding:5px 8px;text-align:center">5</td><td style="border:1px solid var(--line);padding:5px 8px;text-align:center">x</td><td style="border:1px solid var(--line);padding:5px 8px;text-align:center">1,4</td></tr></table></div>
+      x = 1,4/5 = 0,28 → 28%.</div></div>
+  </div>
+
+</section>
+
+<section class="card" id="examples" data-nav="Примеры">
+  <h2><span class="step">↳</span> Разбор примеров</h2>
+  <div class="grid3"><div class="box example"><span class="title">Пример 1. Работа</span><p>Две трубы вместе наполняют бассейн за 4 ч, первая одна — за 6 ч. За сколько часов наполнит бассейн одна вторая труба?</p><details class="reveal"><summary>Показать решение</summary><p><b>Решение.</b> p₂ = 1/4 − 1/6 = 1/12 бассейна в час → 12 ч.</p><p><b>Ответ:</b> 12 ч.</p></details></div><div class="box example"><span class="title">Пример 2. Разбавление</span><p>Сколько килограммов воды нужно добавить к 10 кг 30%-го раствора, чтобы получить 20%-й раствор?</p><details class="reveal"><summary>Показать решение</summary><p><b>Решение.</b> Вещества 0,3 · 10 = 3 кг, его масса не меняется: 3 = 0,2 · (10 + x) → x = 5.</p><p><b>Ответ:</b> 5 кг.</p></details></div><div class="box example"><span class="title">Пример 3. Два процента подряд</span><p>Цена выросла на 20%, затем снизилась на 20%. На сколько процентов новая цена меньше первоначальной?</p><details class="reveal"><summary>Показать решение</summary><p><b>Решение.</b> Множители: 1,2 · 0,8 = 0,96, то есть 96% от исходной.</p><p><b>Ответ:</b> на 4%.</p></details></div></div>
+</section>
+
+<section class="card" id="practice" data-nav="Практика">
+  <h2><span class="step">3</span> Интерактивная практика <span class="mins">25–45 мин</span></h2>
+  <h3>🎯 Тренажёр «Работа, проценты, смеси»</h3>
+  <div class="lab task" id="trainer" data-id="trainer" data-noauto><div id="trainerBox"></div>
+    <div class="sol">Задачи генерируются случайно. Засчитывается при 5 верных из 6.</div></div>
+
+  <h3>Блок А. База</h3>
+  <div class="tasks"><div class="task" data-id="p1"><div class="task-head"><span class="tnum">П1</span><span class="pill lvl1">база</span></div>
+<p>Первая бригада выполняет работу за 12 дней, вторая — за 6 дней. За сколько дней они выполнят работу, работая вместе?</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="4"></label></div>
+</div>
+<div class="task" data-id="p2"><div class="task-head"><span class="tnum">П2</span><span class="pill lvl1">база</span></div>
+<p>Цена товара 800 руб. повысилась на 15%. Найдите новую цену (руб.).</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="920"></label></div>
+</div>
+<div class="task" data-id="p3"><div class="task-head"><span class="tnum">П3</span><span class="pill lvl1">база</span></div>
+<p>Смешали 4 л 15%-го и 6 л 25%-го раствора кислоты. Найдите концентрацию смеси (%).</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="21"></label></div>
+<div class="sol">(0,6 + 1,5)/10 = 0,21.</div>
+</div>
+<div class="task" data-id="p4"><div class="task-head"><span class="tnum">П4</span><span class="pill lvl1">база</span></div>
+<p>Две трубы вместе наполняют бак за 6 ч, первая одна — за 10 ч. За сколько часов наполнит бак одна вторая труба?</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="15"></label></div>
+</div>
+<div class="task" data-id="p5"><div class="task-head"><span class="tnum">П5</span><span class="pill lvl1">база</span></div>
+<p>Товар стоил 2500 руб., после снижения цены — 2000 руб. На сколько процентов снизили цену?</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="20"></label></div>
+</div>
+<div class="task" data-id="p6"><div class="task-head"><span class="tnum">П6</span><span class="pill lvl1">база</span></div>
+<p>Сколько килограммов соли в 40 кг 12%-го раствора?</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="4,8"></label></div>
+</div>
+</div>
+  <h3>Блок Б. Посложнее</h3>
+  <div class="tasks"><div class="task" data-id="p7"><div class="task-head"><span class="tnum">П7</span><span class="pill lvl2">средний</span></div>
+<p>Первая труба пропускает на 1 литр в минуту меньше, чем вторая. Сколько литров в минуту пропускает первая труба, если резервуар объёмом 110 литров она заполняет на 1 минуту дольше, чем вторая?</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="10"></label></div>
+<div class="hint">Таблица из теории.</div>
+</div>
+<div class="task" data-id="p8"><div class="task-head"><span class="tnum">П8</span><span class="pill lvl2">средний</span></div>
+<p>Первый сплав содержит 10% меди, второй — 40% меди. Масса второго сплава больше массы первого на 3 кг. Из этих двух сплавов получили третий сплав, содержащий 30% меди. Найдите массу третьего сплава (кг).</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="9"></label></div>
+<div class="sol">0,1x + 0,4(x + 3) = 0,3(2x + 3) → x = 3; масса 3 + 6 = 9.</div>
+</div>
+<div class="task" data-id="p9"><div class="task-head"><span class="tnum">П9</span><span class="pill lvl2">средний</span></div>
+<p>Два оператора, работая вместе, наберут текст за 12 ч. Первый, работая один, наберёт его на 10 ч быстрее второго. За сколько часов наберёт текст второй оператор?</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="30"></label></div>
+<div class="sol">1/x + 1/(x − 10) = 1/12 → x² − 34x + 120 = 0 → x = 30 (x = 4 не подходит: x − 10 &lt; 0).</div>
+</div>
+<div class="task" data-id="p10"><div class="task-head"><span class="tnum">П10</span><span class="pill lvl3">сложнее</span></div>
+<p>Смешав 30%-й и 60%-й растворы кислоты и добавив 10 кг чистой воды, получили 36%-й раствор. Если бы вместо 10 кг воды добавили 10 кг 50%-го раствора той же кислоты, то получили бы 41%-й раствор. Сколько килограммов 30%-го раствора использовали?</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="60"></label></div>
+<div class="sol">0,3x + 0,6y = 0,36(x + y + 10); 0,3x + 0,6y + 5 = 0,41(x + y + 10). Вычитаем: 5 = 0,05(x + y + 10) → x + y = 90; тогда 0,3x + 0,6(90 − x) = 36 → x = 60.</div>
+</div>
+</div>
+</section>
+
+<section class="card oge" id="oge" data-nav="ОГЭ">
+  <h2><span class="step">4</span> Задачи в формате ОГЭ <span class="mins">45–55 мин</span></h2>
+  <div class="tasks"><div class="task" data-id="o1"><div class="task-head"><span class="tnum">О1</span><span class="pill oge">ОГЭ №21</span></div>
+<p>Свежие фрукты содержат 80% воды, а высушенные — 28%. Сколько сухих фруктов получится из 288 кг свежих?</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="80"></label></div>
+<div class="sol">Сухого вещества 0,2 · 288 = 57,6 кг; оно составляет 72% сухих фруктов: 57,6/0,72 = 80.</div>
+</div>
+<div class="task" data-id="o2"><div class="task-head"><span class="tnum">О2</span><span class="pill oge">ОГЭ №21</span></div>
+<p>Имеются два сосуда, содержащие 30 кг и 20 кг раствора кислоты различной концентрации. Если их слить вместе, то получится раствор, содержащий 81% кислоты. Если же слить равные массы этих растворов, то получится раствор, содержащий 83% кислоты. Сколько килограммов кислоты содержится во втором сосуде?</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="18,6"></label></div>
+<div class="sol">30a + 20b = 40,5; a + b = 1,66 → a = 0,73, b = 0,93; 20 · 0,93 = 18,6.</div>
+</div>
+<div class="task" data-id="o3"><div class="task-head"><span class="tnum">О3</span><span class="pill oge">ОГЭ №21</span></div>
+<p>Первая труба заполняет бак на 6 минут дольше, чем вторая. Обе трубы вместе заполняют этот бак за 4 минуты. За сколько минут заполняет бак одна вторая труба?</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="6"></label></div>
+<div class="sol">1/x + 1/(x + 6) = 1/4 → x² − 2x − 24 = 0 → x = 6.</div>
+</div>
+<div class="task" data-id="o4" data-mode="digits"><div class="task-head"><span class="tnum">О4</span><span class="pill oge">ОГЭ №19</span></div>
+<p>Какие утверждения верны?</p><ol style="margin:6px 0"><li>При совместной работе производительности складываются.</li><li>Если цену повысить на 10%, а затем понизить на 10%, она не изменится.</li><li>Масса вещества в растворе равна произведению массы раствора на концентрацию.</li></ol>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="13"></label></div>
+<div class="sol">2 — неверно: 1,1 · 0,9 = 0,99.</div>
+</div>
+</div>
+</section>
+
+<section class="card" id="hw" data-nav="Итог и ДЗ">
+  <h2><span class="step">5</span> Итог и домашнее задание <span class="mins">55–60 мин</span></h2>
+  <h3>Шпаргалка</h3>
+  <div class="cheat"><div><b>A = p · t</b>; вся работа = 1, p = 1/t</div><div><b>Вместе:</b> складываем производительности</div><div><b>±p%:</b> умножить на (1 ± p/100)</div><div><b>Вещество = концентрация · масса</b></div><div><b>Вода</b> — 0%, сухое вещество не меняется</div></div>
+  <h3>📚 Домашнее задание</h3>
+  <p class="muted">Ответы проверяются в начале занятия 13.</p>
+  <ol class="hw"><li>Первый мастер выполняет заказ за 10 ч, второй — за 15 ч. За сколько часов они выполнят заказ, работая вместе?<div class="sol"><span class="ansline">Ответ: 6.</span> 1/10 + 1/15 = 1/6.</div></li><li>Цена товара 1200 руб. снизилась на 25%. Найдите новую цену (руб.).<div class="sol"><span class="ansline">Ответ: 900.</span> </div></li><li>Смешали 2 кг 30%-го и 3 кг 20%-го раствора. Найдите концентрацию смеси (%).<div class="sol"><span class="ansline">Ответ: 24.</span> (0,6 + 0,6)/5 = 0,24.</div></li><li>Первая труба пропускает на 2 литра в минуту меньше, чем вторая. Сколько литров в минуту пропускает первая труба, если резервуар объёмом 96 литров она заполняет на 4 минуты дольше, чем вторая?<div class="sol"><span class="ansline">Ответ: 6.</span> 96/x − 96/(x + 2) = 4 → x² + 2x − 48 = 0.</div></li><li>(ОГЭ №19) 1) При совместной работе производительности складываются. 2) Если цену повысить на 10%, а затем понизить на 10%, она не изменится. 3) Масса вещества в растворе равна произведению массы раствора на концентрацию.<div class="sol"><span class="ansline">Ответ: 13.</span> </div></li></ol>
+  <h3>⭐ Бонусное ДЗ</h3>
+  <ol class="hw"><li>Сколько килограммов воды нужно выпарить из 20 кг 10%-го раствора соли, чтобы получить 25%-й раствор?<div class="sol"><span class="ansline">Ответ: 12.</span> Соли 2 кг; 2 = 0,25m → m = 8; выпарить 20 − 8 = 12.</div></li><li>Двое рабочих, работая вместе, выполняют работу за 6 дней. Первый, работая один, выполнит её за 10 дней. За сколько дней выполнит работу один второй?<div class="sol"><span class="ansline">Ответ: 15.</span> 1/6 − 1/10 = 1/15.</div></li></ol>
+  <p style="margin-top:18px"><button class="btn small ghost" type="button" onclick="GeoResetLesson()">Сбросить прогресс занятия</button></p>
+</section>
+
+<section class="card bonus" id="bonus" data-nav="★ Бонус">
+  <h2><span class="step">★</span> Бонусная практика</h2>
+  <div class="tasks"><div class="task" data-id="b1"><div class="task-head"><span class="tnum">Б1</span><span class="pill lvl3">сложнее</span></div>
+<p>Товар подорожал на 25%, а затем подешевел на 20%. На сколько процентов изменилась цена по сравнению с первоначальной?</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="0"></label></div>
+<div class="sol">1,25 · 0,8 = 1.</div>
+</div>
+<div class="task" data-id="b2"><div class="task-head"><span class="tnum">Б2</span><span class="pill lvl3">сложнее</span></div>
+<p>Вклад 10 000 руб. положили под 10% годовых на 2 года (проценты начисляются на текущую сумму). Сколько рублей будет на счёте?</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="12100"></label></div>
+<div class="sol">10 000 · 1,1² = 12 100.</div>
+</div>
+<div class="task" data-id="b3"><div class="task-head"><span class="tnum">Б3</span><span class="pill lvl3">сложнее</span></div>
+<p>Первая и вторая трубы наполняют бассейн за 12 ч, вторая и третья — за 15 ч, первая и третья — за 20 ч. За сколько часов наполнят бассейн три трубы вместе?</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="10"></label></div>
+<div class="sol">2(p₁ + p₂ + p₃) = 1/12 + 1/15 + 1/20 = 1/5 → p₁ + p₂ + p₃ = 1/10.</div>
+</div>
+</div>
+</section>
+
+</div>
+
+<script src="../assets/core.js"></script>
+<script>
+
+document.addEventListener('geo:ready', function(){
+  var PR = [[3,6],[4,12],[6,12],[10,15],[12,24],[20,30],[12,4],[10,40],[5,20],[6,30],[15,10],[6,3],[30,15],[9,18],[8,24]];
+  function c(v){ return String(v).replace('.', ','); }
+  GeoTrainer(document.getElementById('trainerBox'), {rounds:6, id:'trainer', gen:function(){
+    var q = GeoRand(1, 5), z, a, b, t;
+    if(q === 1){ z = GeoPick(PR); a = z[0]; b = z[1]; t = a * b / (a + b);
+      return {q:'Первая бригада выполняет работу за ' + a + ' дн., вторая — за ' + b + ' дн. За сколько дней они выполнят работу вместе?', a:String(t), why:'1/' + a + ' + 1/' + b + ' = 1/' + t + '.'}; }
+    if(q === 2){ z = GeoPick(PR); a = z[0]; b = z[1]; t = a * b / (a + b);
+      return {q:'Две трубы вместе наполняют бак за ' + t + ' ч, первая одна — за ' + a + ' ч. За сколько часов наполнит бак одна вторая труба?', a:String(b), why:'1/' + t + ' − 1/' + a + ' = 1/' + b + '.'}; }
+    if(q === 3){ var P = 100 * GeoRand(2, 50), p = GeoPick([5, 10, 15, 20, 25, 30, 40, 50]), up = GeoRand(0, 1), N = up ? P + P * p / 100 : P - P * p / 100;
+      return {q:'Цена товара ' + P + ' руб. ' + (up ? 'повысилась' : 'снизилась') + ' на ' + p + '%. Найдите новую цену (руб.).', a:String(N), why:P + ' · ' + c(up ? 1 + p / 100 : 1 - p / 100) + ' = ' + N + '.'}; }
+    if(q === 4){ var m1, m2, c1, c2, r;
+      do { m1 = GeoRand(1, 9); m2 = GeoRand(1, 9); c1 = 5 * GeoRand(1, 8); c2 = 5 * GeoRand(6, 14); r = (m1 * c1 + m2 * c2) / (m1 + m2); } while(r !== Math.round(r));
+      return {q:'Смешали ' + m1 + ' кг ' + c1 + '%-го и ' + m2 + ' кг ' + c2 + '%-го раствора. Найдите концентрацию смеси (%).', a:String(r), why:'(' + c(m1 * c1 / 100) + ' + ' + c(m2 * c2 / 100) + ') / ' + (m1 + m2) + ' = ' + c(r / 100) + ' → ' + r + '%.'}; }
+    var B, pc; do { B = GeoPick([20, 25, 40, 50, 80, 120, 200, 250, 400, 500]); pc = GeoPick([5, 10, 15, 20, 25, 30, 40, 60, 75]); } while(B * pc % 100);
+    return {q:'Сколько процентов составляет число ' + B * pc / 100 + ' от числа ' + B + '?', a:String(pc), why:B * pc / 100 + '/' + B + ' · 100% = ' + pc + '%.'};
+  }});
+});
+
+</script>
+</body>
+</html>

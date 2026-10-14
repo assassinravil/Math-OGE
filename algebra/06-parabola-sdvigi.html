@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Алгебра · занятие 6 · y = ax² и сдвиги графика</title>
+<link rel="stylesheet" href="../assets/core.css">
+</head>
+<body data-lesson="A06">
+
+<nav class="topnav"><div class="in">
+  <a class="home" href="../algebra.html">🧮 <span>Алгебра · ОГЭ</span></a>
+  <div class="links"></div>
+  <a class="home" href="../spravochnik-algebra.html" title="Справочник">📖</a>
+  <div class="progress-pill">Решено <b>0 / 0</b><div class="progress-bar"><i></i></div></div>
+</div></nav>
+
+<div class="container">
+
+<header class="hero">
+  <span class="tag">Раздел 2 · Функции и графики</span><span class="tag">Алгебра · занятие 6 из 23</span><span class="tag">Учебник: гл. II §4, п. 9–10</span>
+  <h1>Функция y = ax² и сдвиги графика</h1>
+  <p>Как коэффициент a меняет параболу, графики y = ax² + n и y = a(x − m)², вершина параболы.</p>
+  <div class="timeline">
+    <a href="#warmup">① Проверка ДЗ <small>0–10′</small></a>
+    <a href="#theory">② Теория <small>10–25′</small></a>
+    <a href="#practice">③ Практика <small>25–45′</small></a>
+    <a href="#oge">④ ОГЭ <small>45–55′</small></a>
+    <a href="#hw">⑤ Итог и ДЗ <small>55–60′</small></a>
+    <a href="#bonus">★ Бонус</a>
+  </div>
+</header>
+
+<div class="teacher-panel teacher-only">
+  <h3>План занятия (60 минут)</h3>
+  <ol><li><b>0–10′</b> Проверка ДЗ занятия 5.</li><li><b>10–25′</b> Теория. В лаборатории по очереди менять a, m, n. Главная ловушка: y = (x + 3)² сдвинут <b>влево</b>.</li><li><b>25–45′</b> Тренажёр «Вершина», затем П1–П8.</li><li><b>45–55′</b> ОГЭ №11 и №19.</li><li><b>55–60′</b> Шпаргалка, ДЗ.</li></ol>
+  <p class="muted" style="margin:0">Типичные ошибки: сдвиг y = (x + m)² делают вправо; путают вершину (m; n) со знаками в формуле; считают, что при |a| &gt; 1 парабола шире.</p>
+</div>
+
+<section class="card" id="warmup" data-nav="Проверка ДЗ">
+  <h2><span class="step">1</span> Проверка ДЗ <span class="mins">0–10 мин</span></h2>
+  <div class="tasks"><div class="task" data-id="h1"><div class="task-head"><span class="tnum">ДЗ 1</span></div>
+<p>y = −2x + 5. Найдите y при x = −3.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="11"></label></div>
+</div>
+<div class="task" data-id="h2"><div class="task-head"><span class="tnum">ДЗ 2</span></div>
+<p>График y = kx проходит через (−2; 8). Найдите k.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="-4"></label></div>
+</div>
+<div class="task" data-id="h3"><div class="task-head"><span class="tnum">ДЗ 3</span></div>
+<p>График y = k/x проходит через (4; 3). Найдите k.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="12"></label></div>
+</div>
+<div class="task" data-id="h4"><div class="task-head"><span class="tnum">ДЗ 4</span></div>
+<p>Абсцисса точки пересечения y = 3x − 2 и y = x + 4.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="3"></label></div>
+</div>
+<div class="task" data-id="h5" data-mode="digits"><div class="task-head"><span class="tnum">ДЗ 5</span><span class="pill oge">ОГЭ №19</span></div>
+<p>1) Прямая y = 5 параллельна оси Ox. 2) График y = x² проходит через (−3; −9). 3) y = √x определена при x ≥ 0.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="13"></label></div>
+</div>
+</div>
+</section>
+
+<section class="card" id="theory" data-nav="Теория">
+  <h2><span class="step">2</span> Теория <span class="mins">10–25 мин</span></h2>
+
+  <div class="grid2">
+    <div class="box def"><span class="title">y = ax²</span>
+      Вершина (0; 0), ось симметрии — Oy.<br><b>a &gt; 0</b> — ветви вверх, <b>a &lt; 0</b> — вниз.<br>
+      <b>|a| &gt; 1</b> — парабола уже (растяжение), <b>|a| &lt; 1</b> — шире (сжатие).
+      <div class="eg">y = −3x²: ветви вниз, уже, чем y = x².</div><div class="eg">y = 0,5x²: ветви вверх, шире.</div></div>
+    <div class="box rule"><span class="title">Сдвиги графика</span>
+      <ul class="rules"><li><b>y = ax² + n</b> — сдвиг на n вверх (n &lt; 0 — вниз).</li><li><b>y = a(x − m)²</b> — сдвиг на m вправо (m &lt; 0 — влево).</li></ul>
+      <div class="formula">y = a(x − m)² + n → вершина (m; n)</div>
+      <div class="eg">y = (x − 1)² + 4 → вершина (1; 4): вправо на 1, вверх на 4.</div>
+      <div class="eg trap">y = (x + 3)² − 2 → вершина (<b>−3</b>; −2): «плюс» в скобке — сдвиг <b>влево</b>.</div></div>
+  </div>
+  <h3>Лаборатория: a, m, n</h3>
+  <div class="lab">
+    <svg id="labP" class="plot"></svg>
+    <div class="readout" id="pRead"></div>
+    <div class="controls">
+      <label>a: <input type="range" id="pA" min="-3" max="3" step="0.5" value="1"></label><span class="pill" id="pAv">1</span>
+      <label>m: <input type="range" id="pM" min="-4" max="4" step="1" value="0"></label><span class="pill" id="pMv">0</span>
+      <label>n: <input type="range" id="pN" min="-4" max="4" step="1" value="0"></label><span class="pill" id="pNv">0</span>
+    </div>
+    <p class="muted" style="margin:8px 0 0;font-size:14px">Серым — исходная парабола y = x².</p>
+  </div>
+
+</section>
+
+<section class="card" id="examples" data-nav="Примеры">
+  <h2><span class="step">↳</span> Разбор примеров</h2>
+  <div class="grid3"><div class="box example"><span class="title">Пример 1. Вершина</span><p>Найдите вершину параболы y = −2(x + 3)² − 5.</p><details class="reveal"><summary>Показать решение</summary><p><b>Решение.</b> m = −3, n = −5.</p><p><b>Ответ:</b> (−3; −5).</p></details></div><div class="box example"><span class="title">Пример 2. Найти a</span><p>График y = ax² проходит через (−2; −8). Найдите a.</p><details class="reveal"><summary>Показать решение</summary><p><b>Решение.</b> −8 = a · 4 → a = −2.</p><p><b>Ответ:</b> −2.</p></details></div><div class="box example"><span class="title">Пример 3. Нули</span><p>Нули функции y = (x − 1)² − 4.</p><details class="reveal"><summary>Показать решение</summary><p><b>Решение.</b> (x − 1)² = 4 → x − 1 = ±2 → x = −1 и 3.</p><p><b>Ответ:</b> −1; 3.</p></details></div></div>
+</section>
+
+<section class="card" id="practice" data-nav="Практика">
+  <h2><span class="step">3</span> Интерактивная практика <span class="mins">25–45 мин</span></h2>
+  <h3>🎯 Тренажёр «Вершина параболы»</h3>
+  <div class="lab task" id="trainer" data-id="trainer" data-noauto><div id="trainerBox"></div>
+    <div class="sol">Задачи генерируются случайно. Засчитывается при 5 верных из 6.</div></div>
+
+  <h3>Блок А. База</h3>
+  <div class="tasks"><div class="task" data-id="p1"><div class="task-head"><span class="tnum">П1</span><span class="pill lvl1">база</span></div>
+<p>y = 3x². Найдите y(−2).</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="12"></label></div>
+</div>
+<div class="task" data-id="p2"><div class="task-head"><span class="tnum">П2</span><span class="pill lvl1">база</span></div>
+<p>Найдите координаты вершины параболы y = (x − 4)² + 1.</p>
+<div class="ans-row"><label>x = <input class="ans" data-a="4" data-label="x"></label><label>y = <input class="ans" data-a="1" data-label="y"></label></div>
+</div>
+<div class="task" data-id="p3"><div class="task-head"><span class="tnum">П3</span><span class="pill lvl1">база</span></div>
+<p>Найдите координаты вершины параболы y = −2(x + 3)² − 5.</p>
+<div class="ans-row"><label>x = <input class="ans" data-a="-3" data-label="x"></label><label>y = <input class="ans" data-a="-5" data-label="y"></label></div>
+</div>
+<div class="task" data-id="p4"><div class="task-head"><span class="tnum">П4</span><span class="pill lvl1">база</span></div>
+<p>Параболу y = x² сдвинули на 3 вправо и на 2 вниз. Найдите вершину новой параболы.</p>
+<div class="ans-row"><label>x = <input class="ans" data-a="3" data-label="x"></label><label>y = <input class="ans" data-a="-2" data-label="y"></label></div>
+</div>
+<div class="task" data-id="p5"><div class="task-head"><span class="tnum">П5</span><span class="pill lvl1">база</span></div>
+<p>Найдите наименьшее значение функции y = 2(x − 1)² + 7.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="7"></label></div>
+</div>
+<div class="task" data-id="p6" data-mode="text"><div class="task-head"><span class="tnum">П6</span><span class="pill lvl1">база</span></div>
+<p>Принадлежит ли точка (2; 12) графику y = 3x²? Впишите «да» или «нет».</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="да"></label></div>
+</div>
+</div>
+  <h3>Блок Б. Посложнее</h3>
+  <div class="tasks"><div class="task" data-id="p7"><div class="task-head"><span class="tnum">П7</span><span class="pill lvl2">средний</span></div>
+<p>График y = ax² проходит через точку (−2; −8). Найдите a.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="-2"></label></div>
+</div>
+<div class="task" data-id="p8"><div class="task-head"><span class="tnum">П8</span><span class="pill lvl2">средний</span></div>
+<p>Найдите наибольшее значение функции y = −(x + 2)² + 9.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="9"></label></div>
+</div>
+<div class="task" data-id="p9"><div class="task-head"><span class="tnum">П9</span><span class="pill lvl2">средний</span></div>
+<p>Найдите нули функции y = (x − 1)² − 4.</p>
+<div class="ans-row"><label>меньший = <input class="ans" data-a="-1" data-label="меньший"></label><label>больший = <input class="ans" data-a="3" data-label="больший"></label></div>
+</div>
+<div class="task" data-id="p10"><div class="task-head"><span class="tnum">П10</span><span class="pill lvl3">сложнее</span></div>
+<p>График y = a(x − 2)² + n проходит через точки (2; 3) и (0; 7). Найдите a и n.</p>
+<div class="ans-row"><label>a = <input class="ans" data-a="1" data-label="a"></label><label>n = <input class="ans" data-a="3" data-label="n"></label></div>
+<div class="sol">(2; 3) — вершина, n = 3. 7 = a · 4 + 3 → a = 1.</div>
+</div>
+</div>
+</section>
+
+<section class="card oge" id="oge" data-nav="ОГЭ">
+  <h2><span class="step">4</span> Задачи в формате ОГЭ <span class="mins">45–55 мин</span></h2>
+  <div class="tasks"><div class="task" data-id="o1" data-mode="text"><div class="task-head"><span class="tnum">О1</span><span class="pill oge">ОГЭ №11</span></div>
+<p>Установите соответствие между графиками и формулами. Ответ — цифры в порядке А, Б, В.</p><div class="grid3" style="margin:8px 0"><figure style="margin:0"><svg id="o1a" class="mini"></svg><figcaption><b>А</b></figcaption></figure><figure style="margin:0"><svg id="o1b" class="mini"></svg><figcaption><b>Б</b></figcaption></figure><figure style="margin:0"><svg id="o1c" class="mini"></svg><figcaption><b>В</b></figcaption></figure></div><ol style="margin:6px 0"><li>y = x² + 2</li><li>y = (x + 2)²</li><li>y = −x² + 2</li></ol>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="312"></label></div>
+</div>
+<div class="task" data-id="o2"><div class="task-head"><span class="tnum">О2</span><span class="pill oge">ОГЭ №11</span></div>
+<p>Найдите абсциссу вершины параболы y = −(x − 5)² + 3.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="5"></label></div>
+</div>
+<div class="task" data-id="o3"><div class="task-head"><span class="tnum">О3</span><span class="pill oge">ОГЭ №11</span></div>
+<p>Найдите наименьшее значение функции y = (x + 1)² − 6.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="-6"></label></div>
+</div>
+<div class="task" data-id="o4" data-mode="digits"><div class="task-head"><span class="tnum">О4</span><span class="pill oge">ОГЭ №19</span></div>
+<p>Какие утверждения верны?</p><ol style="margin:6px 0"><li>Ветви параболы y = −2x² направлены вниз.</li><li>График y = (x + 3)² получается сдвигом графика y = x² на 3 единицы вправо.</li><li>Вершина параболы y = x² − 4 — точка (0; −4).</li></ol>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="13"></label></div>
+<div class="sol">2 — неверно: влево.</div>
+</div>
+</div>
+</section>
+
+<section class="card" id="hw" data-nav="Итог и ДЗ">
+  <h2><span class="step">5</span> Итог и домашнее задание <span class="mins">55–60 мин</span></h2>
+  <h3>Шпаргалка</h3>
+  <div class="cheat"><div><b>a &gt; 0</b> — вверх, <b>a &lt; 0</b> — вниз</div><div><b>|a| &gt; 1</b> — уже, <b>|a| &lt; 1</b> — шире</div><div><b>y = a(x − m)² + n</b> → вершина (m; n)</div><div><b>(x + 3)²</b> — сдвиг влево</div></div>
+  <h3>📚 Домашнее задание</h3>
+  <p class="muted">Ответы проверяются в начале занятия 7.</p>
+  <ol class="hw"><li>y = −x². Найдите y(3).<div class="sol"><span class="ansline">Ответ: −9.</span> </div></li><li>Найдите вершину параболы y = (x + 1)² − 8.<div class="sol"><span class="ansline">Ответ: (−1; −8).</span> </div></li><li>График y = ax² проходит через (3; 18). Найдите a.<div class="sol"><span class="ansline">Ответ: 2.</span> </div></li><li>Найдите нули функции y = (x + 2)² − 9.<div class="sol"><span class="ansline">Ответ: −5; 1.</span> </div></li><li>(ОГЭ №19) 1) Парабола y = 5x² уже параболы y = x². 2) Вершина параболы y = (x − 1)² + 2 — точка (−1; 2). 3) Функция y = −x² имеет наибольшее значение 0.<div class="sol"><span class="ansline">Ответ: 13.</span> </div></li></ol>
+  <h3>⭐ Бонусное ДЗ</h3>
+  <ol class="hw"><li>Сколько общих точек у графиков y = (x − 3)² и y = 4?<div class="sol"><span class="ansline">Ответ: 2.</span> x = 1 и x = 5.</div></li><li>Парабола y = (x − 2)² + n проходит через точку (5; 6). Найдите n.<div class="sol"><span class="ansline">Ответ: −3.</span> </div></li></ol>
+  <p style="margin-top:18px"><button class="btn small ghost" type="button" onclick="GeoResetLesson()">Сбросить прогресс занятия</button></p>
+</section>
+
+<section class="card bonus" id="bonus" data-nav="★ Бонус">
+  <h2><span class="step">★</span> Бонусная практика</h2>
+  <div class="tasks"><div class="task" data-id="b1"><div class="task-head"><span class="tnum">Б1</span><span class="pill lvl3">сложнее</span></div>
+<p>Найдите нули функции y = 2(x − 1)² − 8.</p>
+<div class="ans-row"><label>меньший = <input class="ans" data-a="-1" data-label="меньший"></label><label>больший = <input class="ans" data-a="3" data-label="больший"></label></div>
+</div>
+<div class="task" data-id="b2"><div class="task-head"><span class="tnum">Б2</span><span class="pill lvl3">сложнее</span></div>
+<p>Найдите расстояние между вершинами парабол y = x² и y = (x − 3)² + 4.</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="5"></label></div>
+</div>
+<div class="task" data-id="b3"><div class="task-head"><span class="tnum">Б3</span><span class="pill lvl3">сложнее</span></div>
+<p>При каком n парабола y = −(x + 1)² + n проходит через начало координат?</p>
+<div class="ans-row"><label>Ответ: <input class="ans" data-a="1"></label></div>
+</div>
+</div>
+</section>
+
+</div>
+
+<script src="../assets/core.js"></script>
+<script>
+
+function miniPlot(id, f, o){
+  o = o || {}; var svg = document.getElementById(id); if(!svg) return;
+  var P = GeoPlot(svg, {xmin:o.xmin || -5, xmax:o.xmax || 5, ymin:o.ymin || -5, ymax:o.ymax || 5, w:300, h:300});
+  P.grid(); P.curve(f, o.color || '#2f5bea', {width:3}); if(o.after) o.after(P); return P;
+}
+
+miniPlot('o1a', function(x){ return -x * x + 2; }); miniPlot('o1b', function(x){ return x * x + 2; }, {ymin:-2, ymax:8}); miniPlot('o1c', function(x){ return (x + 2) * (x + 2); }, {ymin:-2, ymax:8});
+(function(){
+  var svg = document.getElementById('labP'), A = document.getElementById('pA'), M = document.getElementById('pM'), N = document.getElementById('pN');
+  function n(v){ return String(v).replace('.', ',').replace('-', '−'); }
+  function draw(){
+    var a = +A.value || 0.5, m = +M.value, nn = +N.value; if(+A.value === 0){ A.value = 0.5; }
+    var P = GeoPlot(svg, {xmin:-7, xmax:7, ymin:-6, ymax:8, w:600, h:440}); P.clear(); P.grid();
+    P.curve(function(x){ return x * x; }, 'var(--line)', {width:2, dash:'6 5'});
+    P.curve(function(x){ return a * (x - m) * (x - m) + nn; }, '#2f5bea');
+    P.seg(m, -6, m, 8, '#8b5cf6', 1.5, '4 4'); P.point(m, nn, '#e5484d', '(' + n(m) + '; ' + n(nn) + ')');
+    document.getElementById('pAv').textContent = n(a); document.getElementById('pMv').textContent = n(m); document.getElementById('pNv').textContent = n(nn);
+    var f = 'y = ' + (a === 1 ? '' : (a === -1 ? '−' : n(a))) + (m === 0 ? 'x²' : '(x ' + (m > 0 ? '− ' + m : '+ ' + (-m)) + ')²') + (nn === 0 ? '' : (nn > 0 ? ' + ' + nn : ' − ' + (-nn)));
+    document.getElementById('pRead').innerHTML = '<span>' + f + '</span><span>вершина (' + n(m) + '; ' + n(nn) + ')</span><span>ветви ' + (a > 0 ? 'вверх' : 'вниз') + '</span><span>' + (Math.abs(a) > 1 ? 'уже y = x²' : (Math.abs(a) < 1 ? 'шире y = x²' : 'та же форма')) + '</span>';
+  }
+  [A, M, N].forEach(function(e){ e.addEventListener('input', draw); }); draw();
+})();
+document.addEventListener('geo:ready', function(){
+  GeoTrainer(document.getElementById('trainerBox'), {rounds:6, id:'trainer', gen:function(){
+    var a = GeoPick([-3, -2, -1, 1, 2, 3]), m = GeoRand(-6, 6), nn = GeoRand(-9, 9), q = GeoRand(1, 4);
+    var f = 'y = ' + (a === 1 ? '' : (a === -1 ? '−' : String(a).replace('-', '−'))) + (m === 0 ? 'x²' : '(x ' + (m > 0 ? '− ' + m : '+ ' + (-m)) + ')²') + (nn === 0 ? '' : (nn > 0 ? ' + ' + nn : ' − ' + (-nn)));
+    if(q === 1) return {q:'Найдите абсциссу вершины параболы ' + f + '.', a:String(m), why:'Вершина (' + m + '; ' + nn + ').'};
+    if(q === 2) return {q:'Найдите ординату вершины параболы ' + f + '.', a:String(nn), why:'Вершина (' + m + '; ' + nn + ').'};
+    if(q === 3) return {q:'Найдите ' + (a > 0 ? 'наименьшее' : 'наибольшее') + ' значение функции ' + f + '.', a:String(nn), why:'Это ордината вершины.'};
+    var x = m + GeoPick([-2, -1, 1, 2]); return {q:f + '. Найдите y(' + x + ').', a:String(a * (x - m) * (x - m) + nn), why:a + ' · ' + (x - m) * (x - m) + ' ' + (nn < 0 ? '− ' + (-nn) : '+ ' + nn) + ' = ' + (a * (x - m) * (x - m) + nn) + '.'};
+  }});
+});
+
+</script>
+</body>
+</html>
